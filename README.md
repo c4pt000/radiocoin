@@ -1,6 +1,6 @@
 # radioCOIN
 
-
+* fedora 34
 source build
 ```
 yum groupinstall "C Development Tools and Libraries" -y
