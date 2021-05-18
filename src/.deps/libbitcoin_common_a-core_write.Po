@@ -716,7 +716,8 @@ libbitcoin_common_a-core_write.o: core_write.cpp \
  /usr/include/c++/11/bits/fstream.tcc logging.h tinyformat.h \
  /usr/include/c++/11/iostream sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h util/memory.h util/time.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h util/memory.h util/time.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h \
  /usr/include/boost/thread/condition_variable.hpp \
@@ -1896,6 +1897,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 util/memory.h:
 util/time.h:
 /usr/include/c++/11/unordered_set:

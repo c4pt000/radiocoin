@@ -928,7 +928,8 @@ qt/libbitcoinqt_a-signverifymessagedialog.o: \
  core_memusage.h memusage.h indirectmap.h crypto/siphash.h \
  policy/feerate.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h versionbits.h chain.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h versionbits.h chain.h \
  arith_uint256.h tinyformat.h /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc wallet/wallet.h interfaces/chain.h \
  optional.h /usr/include/boost/optional.hpp \
@@ -2506,6 +2507,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 versionbits.h:
 chain.h:
 arith_uint256.h:

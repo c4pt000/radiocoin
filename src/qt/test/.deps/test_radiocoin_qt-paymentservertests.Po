@@ -943,7 +943,8 @@ qt/test/test_radiocoin_qt-paymentservertests.o: \
  /usr/include/c++/11/bits/fstream.tcc net.h addrman.h random.h \
  crypto/chacha20.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h timedata.h util/system.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h timedata.h util/system.h \
  attributes.h compat/assumptions.h logging.h tinyformat.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  util/memory.h util/time.h \
@@ -2446,6 +2447,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 timedata.h:
 util/system.h:
 attributes.h:

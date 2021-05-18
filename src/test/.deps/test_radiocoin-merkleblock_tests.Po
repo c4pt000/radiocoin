@@ -1077,8 +1077,9 @@ test/test_radiocoin-merkleblock_tests.o: test/merkleblock_tests.cpp \
  /usr/include/boost/thread/detail/atomic_undef_macros.hpp \
  /usr/include/boost/thread/detail/atomic_redef_macros.hpp sync.h \
  threadsafety.h /usr/include/c++/11/condition_variable \
- /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h txdb.h \
- coins.h compressor.h core_memusage.h memusage.h indirectmap.h \
+ /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h txdb.h coins.h compressor.h \
+ core_memusage.h memusage.h indirectmap.h \
  /usr/include/c++/11/unordered_set \
  /usr/include/c++/11/bits/unordered_set.h crypto/siphash.h dbwrapper.h \
  clientversion.h streams.h support/allocators/zeroafterfree.h \
@@ -2776,6 +2777,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 txdb.h:
 coins.h:
 compressor.h:

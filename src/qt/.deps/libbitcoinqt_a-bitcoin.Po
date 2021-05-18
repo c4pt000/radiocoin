@@ -912,7 +912,8 @@ qt/libbitcoinqt_a-bitcoin.o: qt/bitcoin.cpp /usr/include/stdc-predef.h \
  /usr/include/boost/variant/visitor_ptr.hpp \
  /usr/include/boost/variant/bad_visit.hpp qt/walletmodeltransaction.h \
  interfaces/wallet.h script/ismine.h ui_interface.h qt/walletcontroller.h \
- sync.h threadsafety.h /usr/include/c++/11/thread interfaces/handler.h \
+ sync.h threadsafety.h /usr/include/c++/11/thread \
+ /usr/include/c++/11/bits/this_thread_sleep.h interfaces/handler.h \
  interfaces/node.h addrdb.h net.h addrman.h random.h crypto/chacha20.h \
  timedata.h util/system.h attributes.h compat/assumptions.h logging.h \
  tinyformat.h /usr/include/c++/11/sstream \
@@ -2639,6 +2640,7 @@ qt/walletcontroller.h:
 sync.h:
 threadsafety.h:
 /usr/include/c++/11/thread:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 interfaces/handler.h:
 interfaces/node.h:
 addrdb.h:

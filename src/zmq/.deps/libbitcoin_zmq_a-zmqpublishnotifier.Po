@@ -503,7 +503,8 @@ zmq/libbitcoin_zmq_a-zmqpublishnotifier.o: zmq/zmqpublishnotifier.cpp \
  /usr/include/c++/11/bits/fstream.tcc policy/feerate.h \
  script/script_error.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h versionbits.h util/system.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h versionbits.h util/system.h \
  attributes.h compat/assumptions.h logging.h util/memory.h util/time.h \
  /usr/include/boost/thread/condition_variable.hpp \
  /usr/include/boost/thread/detail/platform.hpp \
@@ -1479,6 +1480,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 versionbits.h:
 util/system.h:
 attributes.h:

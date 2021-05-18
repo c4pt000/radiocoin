@@ -710,7 +710,8 @@ qt/libbitcoinqt_a-utilitydialog.o: qt/utilitydialog.cpp \
  /usr/include/ifaddrs.h /usr/include/netdb.h /usr/include/rpc/netdb.h \
  /usr/include/bits/netdb.h compat/assumptions.h logging.h tinyformat.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc sync.h \
- threadsafety.h /usr/include/c++/11/thread util/memory.h util/time.h \
+ threadsafety.h /usr/include/c++/11/thread \
+ /usr/include/c++/11/bits/this_thread_sleep.h util/memory.h util/time.h \
  /usr/include/boost/thread/condition_variable.hpp \
  /usr/include/boost/thread/detail/platform.hpp \
  /usr/include/boost/config/requires_threads.hpp \
@@ -1990,6 +1991,7 @@ tinyformat.h:
 sync.h:
 threadsafety.h:
 /usr/include/c++/11/thread:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 util/memory.h:
 util/time.h:
 /usr/include/boost/thread/condition_variable.hpp:

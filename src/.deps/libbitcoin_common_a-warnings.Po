@@ -120,7 +120,8 @@ libbitcoin_common_a-warnings.o: warnings.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/mutex \
  clientversion.h config/bitcoin-config.h /usr/include/c++/11/vector \
  /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
@@ -994,6 +995,7 @@ threadsafety.h:
 /usr/include/c++/11/ext/concurrence.h:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/c++/11/mutex:
 clientversion.h:
 config/bitcoin-config.h:

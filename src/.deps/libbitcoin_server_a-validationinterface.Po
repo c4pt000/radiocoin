@@ -164,7 +164,8 @@ libbitcoin_server_a-validationinterface.o: validationinterface.cpp \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/mutex \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
  primitives/block.h scheduler.h /usr/include/boost/chrono/chrono.hpp \
  /usr/include/boost/chrono/duration.hpp \
@@ -1705,6 +1706,7 @@ threadsafety.h:
 /usr/include/c++/11/bits/unique_lock.h:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/c++/11/mutex:
 /usr/include/c++/11/functional:
 /usr/include/c++/11/bits/std_function.h:

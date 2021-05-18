@@ -190,7 +190,8 @@ test/test_radiocoin-addrman_tests.o: test/addrman_tests.cpp \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/mutex \
  timedata.h util/system.h attributes.h compat/assumptions.h fs.h \
  /usr/include/boost/filesystem.hpp \
  /usr/include/boost/filesystem/config.hpp /usr/include/boost/config.hpp \
@@ -1829,6 +1830,7 @@ threadsafety.h:
 /usr/include/c++/11/bits/unique_lock.h:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/c++/11/mutex:
 timedata.h:
 util/system.h:

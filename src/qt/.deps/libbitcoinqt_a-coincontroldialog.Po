@@ -627,7 +627,8 @@ qt/libbitcoinqt_a-coincontroldialog.o: qt/coincontroldialog.cpp \
  /usr/include/c++/11/bits/unordered_set.h crypto/siphash.h \
  policy/feerate.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h random.h crypto/chacha20.h \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h random.h crypto/chacha20.h \
  /usr/include/boost/multi_index_container.hpp \
  /usr/include/boost/core/no_exceptions_support.hpp \
  /usr/include/boost/move/core.hpp \
@@ -2321,6 +2322,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 random.h:
 crypto/chacha20.h:
 /usr/include/boost/multi_index_container.hpp:

@@ -727,6 +727,7 @@ qt/libbitcoinqt_a-walletcontroller.o: qt/walletcontroller.cpp \
  script/ismine.h ui_interface.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/qt5/QtWidgets/QMessageBox \
  /usr/include/qt5/QtWidgets/qmessagebox.h \
  /usr/include/qt5/QtWidgets/qtwidgetsglobal.h \
@@ -2081,6 +2082,7 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
+/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/qt5/QtWidgets/QMessageBox:
 /usr/include/qt5/QtWidgets/qmessagebox.h:
 /usr/include/qt5/QtWidgets/qtwidgetsglobal.h:
