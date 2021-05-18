@@ -183,13 +183,13 @@ am__append_40 = qt/radiocoin-qt
 am__append_41 = qt/libbitcoinqt.a
 #am__append_42 = $(BITCOIN_QT_WINDOWS_CPP)
 am__append_43 = $(BITCOIN_QT_WALLET_CPP)
-#am__append_44 = $(BITCOIN_QT_WALLET_BIP70_CPP)
+am__append_44 = $(BITCOIN_QT_WALLET_BIP70_CPP)
 #am__append_45 = $(BITCOIN_MM)
 #am__append_46 = $(BITCOIN_RC)
 am__append_47 = $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
 am__append_48 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
-#am__append_49 = $(SSL_LIBS)
-#am__append_50 = $(SSL_LIBS)
+am__append_49 = $(SSL_LIBS)
+##am__append_50 = $(SSL_LIBS)
 am__append_51 = $(CLEAN_QT)
 am__append_52 = qt/test/test_radiocoin-qt
 am__append_53 = qt/test/test_radiocoin-qt
@@ -197,16 +197,16 @@ am__append_54 = \
   qt/test/moc_addressbooktests.cpp \
   qt/test/moc_wallettests.cpp
 
-#am__append_55 = \
-#  qt/test/moc_paymentservertests.cpp
+am__append_55 = \
+  qt/test/moc_paymentservertests.cpp
 
 am__append_56 = \
   qt/test/addressbooktests.cpp \
   qt/test/wallettests.cpp \
   wallet/test/wallet_test_fixture.cpp
 
-#am__append_57 = \
-#  qt/test/paymentservertests.cpp
+am__append_57 = \
+  qt/test/paymentservertests.cpp
 
 am__append_58 = $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
 am__append_59 = $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
@@ -926,7 +926,7 @@ am__objects_10 =  \
 am__objects_11 =  \
 	$(am__objects_10)
 am__objects_12 = qt/libbitcoinqt_a-paymentrequestplus.$(OBJEXT)
-#am__objects_13 = $(am__objects_12)
+am__objects_13 = $(am__objects_12)
 am__objects_14 = $(am__objects_7) $(am__objects_9) \
 	$(am__objects_11) $(am__objects_13)
 am__objects_15 = qt/libbitcoinqt_a-macdockiconhandler.$(OBJEXT) \
@@ -987,7 +987,7 @@ am__objects_17 = qt/libbitcoinqt_a-moc_addressbookpage.$(OBJEXT) \
 	qt/libbitcoinqt_a-moc_walletframe.$(OBJEXT) \
 	qt/libbitcoinqt_a-moc_walletmodel.$(OBJEXT) \
 	qt/libbitcoinqt_a-moc_walletview.$(OBJEXT)
-#am__objects_18 = qt/libbitcoinqt_a-paymentrequest.pb.$(OBJEXT)
+am__objects_18 = qt/libbitcoinqt_a-paymentrequest.pb.$(OBJEXT)
 am__objects_19 =  \
 	qt/libbitcoinqt_a-qrc_bitcoin.$(OBJEXT)
 am__objects_20 = qt/libbitcoinqt_a-qrc_bitcoin_locale.$(OBJEXT)
@@ -1130,9 +1130,9 @@ qt_radiocoin_qt_OBJECTS = $(am_qt_radiocoin_qt_OBJECTS)
 am__DEPENDENCIES_6 =  \
 	$(LIBBITCOIN_ZMQ) \
 	$(am__DEPENDENCIES_1)
-#am__DEPENDENCIES_7 =  \
-#	$(am__DEPENDENCIES_1)
-#am__DEPENDENCIES_8 = $(am__DEPENDENCIES_1)
+am__DEPENDENCIES_7 =  \
+	$(am__DEPENDENCIES_1)
+##am__DEPENDENCIES_8 = $(am__DEPENDENCIES_1)
 qt_radiocoin_qt_DEPENDENCIES = qt/libbitcoinqt.a \
 	$(LIBBITCOIN_SERVER) $(am__append_47) \
 	$(am__DEPENDENCIES_6) $(LIBBITCOIN_CLI) \
@@ -1166,7 +1166,7 @@ am__objects_29 = test/qt_test_test_radiocoin_qt-test_bitcoin.$(OBJEXT)
 am__objects_30 = qt/test/test_radiocoin_qt-addressbooktests.$(OBJEXT) \
 	qt/test/test_radiocoin_qt-wallettests.$(OBJEXT) \
 	wallet/test/qt_test_test_radiocoin_qt-wallet_test_fixture.$(OBJEXT)
-#am__objects_31 = qt/test/test_radiocoin_qt-paymentservertests.$(OBJEXT)
+am__objects_31 = qt/test/test_radiocoin_qt-paymentservertests.$(OBJEXT)
 am_qt_test_test_radiocoin_qt_OBJECTS = qt/test/test_radiocoin_qt-apptests.$(OBJEXT) \
 	qt/test/test_radiocoin_qt-compattests.$(OBJEXT) \
 	qt/test/test_radiocoin_qt-rpcnestedtests.$(OBJEXT) \
@@ -1178,7 +1178,7 @@ am_qt_test_test_radiocoin_qt_OBJECTS = qt/test/test_radiocoin_qt-apptests.$(OBJE
 	$(am__objects_31)
 am__objects_32 = qt/test/test_radiocoin_qt-moc_addressbooktests.$(OBJEXT) \
 	qt/test/test_radiocoin_qt-moc_wallettests.$(OBJEXT)
-#am__objects_33 = qt/test/test_radiocoin_qt-moc_paymentservertests.$(OBJEXT)
+am__objects_33 = qt/test/test_radiocoin_qt-moc_paymentservertests.$(OBJEXT)
 am__objects_34 = qt/test/test_radiocoin_qt-moc_apptests.$(OBJEXT) \
 	qt/test/test_radiocoin_qt-moc_compattests.$(OBJEXT) \
 	qt/test/test_radiocoin_qt-moc_rpcnestedtests.$(OBJEXT) \
@@ -2858,19 +2858,19 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /opt/radioCOIN/altcoin/radiocoin/radioCOIN/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /radiocoin/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
 ARFLAGS = cr
-AUTOCONF = ${SHELL} /opt/radioCOIN/altcoin/radiocoin/radioCOIN/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /opt/radioCOIN/altcoin/radiocoin/radioCOIN/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /opt/radioCOIN/altcoin/radiocoin/radioCOIN/build-aux/missing automake-1.16
+AUTOCONF = ${SHELL} /radiocoin/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /radiocoin/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /radiocoin/build-aux/missing automake-1.16
 AVX2_CXXFLAGS = -mavx -mavx2
 AWK = gawk
 BDB_CFLAGS = 
 BDB_CPPFLAGS =  -I/usr/include/libdb/
-BDB_LIBS = -ldb_cxx-4.8
+BDB_LIBS = -ldb_cxx
 BITCOIN_CLI_NAME = radiocoin-cli
 BITCOIN_DAEMON_NAME = radiocoind
 BITCOIN_GUI_NAME = radiocoin-qt
@@ -2950,7 +2950,7 @@ INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LCOV = 
 LCOV_OPTS = 
-LD = /usr/bin/ld -m elf_x86_64
+LD = /usr/bin/ld
 LDFLAGS = 
 LEVELDB_CPPFLAGS =  $(am__append_20)
 LEVELDB_TARGET_FLAGS = -DOS_LINUX
@@ -2967,7 +2967,7 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = /usr/lib64/qt5/bin/lupdate-qt5
 MAINT = 
-MAKEINFO = ${SHELL} /opt/radioCOIN/altcoin/radiocoin/radioCOIN/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /radiocoin/build-aux/missing makeinfo
 MAKENSIS = 
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
@@ -3000,15 +3000,15 @@ PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 PROTOBUF_CFLAGS = 
-PROTOBUF_LIBS = 
-PROTOC = 
+PROTOBUF_LIBS = -lprotobuf -lpthread 
+PROTOC = /usr/bin/protoc
 PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
 PYTHON = /usr/bin/python3
 PYTHONPATH = 
 QR_CFLAGS = 
-QR_LIBS = 
+QR_LIBS = -lqrencode 
 QT5_CFLAGS = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -DQT_WIDGETS_LIB -I/usr/include/qt5/QtWidgets -DQT_GUI_LIB -DQT_CORE_LIB 
 QT5_LIBS = -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Core 
 QTACCESSIBILITY_CFLAGS = 
@@ -3062,7 +3062,7 @@ SSE42_CXXFLAGS = -msse4.2
 SSL_CFLAGS = 
 SSL_LIBS = -lssl 
 STRIP = /usr/bin/strip
-TESTDEFS = 
+TESTDEFS =  -DBOOST_TEST_DYN_LINK
 TIFFCP = 
 UIC = /usr/lib64/qt5/bin/uic-qt5
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
@@ -3079,10 +3079,10 @@ X11XCB_LIBS =
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = -lzmq 
-abs_builddir = /opt/radioCOIN/altcoin/radiocoin/radioCOIN/src
-abs_srcdir = /opt/radioCOIN/altcoin/radiocoin/radioCOIN/src
-abs_top_builddir = /opt/radioCOIN/altcoin/radiocoin/radioCOIN
-abs_top_srcdir = /opt/radioCOIN/altcoin/radiocoin/radioCOIN
+abs_builddir = /radiocoin/src
+abs_srcdir = /radiocoin/src
+abs_top_builddir = /radiocoin
+abs_top_srcdir = /radiocoin
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -3114,7 +3114,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /opt/radioCOIN/altcoin/radiocoin/radioCOIN/build-aux/install-sh
+install_sh = ${SHELL} /radiocoin/build-aux/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -4378,12 +4378,12 @@ QT_QRC_CPP = qt/qrc_bitcoin.cpp
 QT_QRC = qt/bitcoin.qrc
 QT_QRC_LOCALE_CPP = qt/qrc_bitcoin_locale.cpp
 QT_QRC_LOCALE = qt/bitcoin_locale.qrc
-PROTOBUF_CC = 
-#PROTOBUF_CC = qt/paymentrequest.pb.cc
-PROTOBUF_H = 
-#PROTOBUF_H = qt/paymentrequest.pb.h
-PROTOBUF_PROTO = 
-#PROTOBUF_PROTO = qt/paymentrequest.proto
+#PROTOBUF_CC = 
+PROTOBUF_CC = qt/paymentrequest.pb.cc
+#PROTOBUF_H = 
+PROTOBUF_H = qt/paymentrequest.pb.h
+#PROTOBUF_PROTO = 
+PROTOBUF_PROTO = qt/paymentrequest.proto
 BITCOIN_QT_H = \
   qt/addressbookpage.h \
   qt/addresstablemodel.h \
@@ -14577,9 +14577,9 @@ check-security: $(bin_PROGRAMS)
 	@echo "Checking binary security..."
 	$(AM_V_at) READELF=$(READELF) OBJDUMP=$(OBJDUMP) $(top_srcdir)/contrib/devtools/security-check.py $(bin_PROGRAMS)
 
-#%.pb.cc %.pb.h: %.proto
-#	@test -f $(PROTOC)
-#	$(AM_V_GEN) $(PROTOC) --cpp_out=$(@D) --proto_path=$(<D) $<
+%.pb.cc %.pb.h: %.proto
+	@test -f $(PROTOC)
+	$(AM_V_GEN) $(PROTOC) --cpp_out=$(@D) --proto_path=$(<D) $<
 
 $(BITCOIN_TESTS): $(GENERATED_TEST_FILES)
 

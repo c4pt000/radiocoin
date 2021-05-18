@@ -9,11 +9,11 @@ SetCompressor /SOLID lzma
 !define URL https://radiocoin.org/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/opt/radioCOIN/altcoin/radiocoin/radioCOIN/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/opt/radioCOIN/altcoin/radiocoin/radioCOIN/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/radiocoin/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/radiocoin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/opt/radioCOIN/altcoin/radiocoin/radioCOIN/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/radiocoin/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_FINISHPAGE_RUN "$WINDIR\explorer.exe"
 !define MUI_FINISHPAGE_RUN_PARAMETERS $INSTDIR\radiocoin-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/opt/radioCOIN/altcoin/radiocoin/radioCOIN/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/radiocoin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /opt/radioCOIN/altcoin/radiocoin/radioCOIN/radiocoin-0.18.1-win-setup.exe
+OutFile /radiocoin/radiocoin-0.18.1-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\RadioCoin
 !else
@@ -73,16 +73,16 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /opt/radioCOIN/altcoin/radiocoin/radioCOIN/release/radiocoin-qt
-    File /oname=COPYING.txt /opt/radioCOIN/altcoin/radiocoin/radioCOIN/COPYING
-    File /oname=readme.txt /opt/radioCOIN/altcoin/radiocoin/radioCOIN/doc/README_windows.txt
+    File /radiocoin/release/radiocoin-qt
+    File /oname=COPYING.txt /radiocoin/COPYING
+    File /oname=readme.txt /radiocoin/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /opt/radioCOIN/altcoin/radiocoin/radioCOIN/release/radiocoind
-    File /opt/radioCOIN/altcoin/radiocoin/radioCOIN/release/radiocoin-cli
-    File /opt/radioCOIN/altcoin/radiocoin/radioCOIN/release/radiocoin-tx
-    File /opt/radioCOIN/altcoin/radiocoin/radioCOIN/release/radiocoin-wallet
+    File /radiocoin/release/radiocoind
+    File /radiocoin/release/radiocoin-cli
+    File /radiocoin/release/radiocoin-tx
+    File /radiocoin/release/radiocoin-wallet
     SetOutPath $INSTDIR\doc
-    File /r /x Makefile* /opt/radioCOIN/altcoin/radiocoin/radioCOIN/doc\*.*
+    File /r /x Makefile* /radiocoin/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
