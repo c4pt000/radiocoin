@@ -723,7 +723,6 @@ test/test_radiocoin-rpc_tests.o: test/rpc_tests.cpp \
  /usr/include/boost/variant/bad_visit.hpp sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/boost/signals2/signal.hpp /usr/include/boost/function.hpp \
  /usr/include/boost/function/detail/prologue.hpp \
  /usr/include/boost/function/function_base.hpp \
@@ -2503,7 +2502,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/boost/signals2/signal.hpp:
 /usr/include/boost/function.hpp:
 /usr/include/boost/function/detail/prologue.hpp:

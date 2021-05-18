@@ -499,7 +499,7 @@ libbitcoin_server_a-txdb.o: txdb.cpp /usr/include/stdc-predef.h txdb.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc sync.h \
  threadsafety.h /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h util/memory.h util/time.h \
+ util/memory.h util/time.h \
  /usr/include/boost/thread/condition_variable.hpp \
  /usr/include/boost/thread/detail/platform.hpp \
  /usr/include/boost/config/requires_threads.hpp \
@@ -1762,7 +1762,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 util/memory.h:
 util/time.h:
 /usr/include/boost/thread/condition_variable.hpp:

@@ -496,8 +496,7 @@ node/libbitcoin_server_a-transaction.o: node/transaction.cpp \
  /usr/include/bits/types/__sigval_t.h /usr/include/bits/netdb.h \
  protocol.h random.h crypto/chacha20.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h timedata.h util/system.h \
+ /usr/include/c++/11/bits/std_thread.h timedata.h util/system.h \
  attributes.h compat/assumptions.h logging.h tinyformat.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc util/memory.h util/time.h \
@@ -1916,7 +1915,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 timedata.h:
 util/system.h:
 attributes.h:

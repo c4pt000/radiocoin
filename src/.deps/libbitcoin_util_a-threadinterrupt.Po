@@ -120,8 +120,7 @@ libbitcoin_util_a-threadinterrupt.o: threadinterrupt.cpp \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/ext/concurrence.h /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/mutex \
+ /usr/include/c++/11/bits/std_thread.h /usr/include/c++/11/mutex \
  /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h
 /usr/include/stdc-predef.h:
@@ -308,7 +307,6 @@ threadsafety.h:
 /usr/include/c++/11/ext/concurrence.h:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/c++/11/mutex:
 /usr/include/c++/11/atomic:
 /usr/include/c++/11/bits/atomic_base.h:

@@ -504,8 +504,7 @@ libbitcoin_server_a-checkpoints.o: checkpoints.cpp \
  /usr/include/c++/11/bits/fstream.tcc policy/feerate.h \
  script/script_error.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h versionbits.h
+ /usr/include/c++/11/bits/std_thread.h versionbits.h
 /usr/include/stdc-predef.h:
 checkpoints.h:
 uint256.h:
@@ -1169,5 +1168,4 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 versionbits.h:

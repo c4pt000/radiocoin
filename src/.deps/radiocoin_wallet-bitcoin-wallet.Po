@@ -496,8 +496,7 @@ radiocoin_wallet-bitcoin-wallet.o: bitcoin-wallet.cpp \
  /usr/include/c++/11/bits/sstream.tcc util/system.h attributes.h \
  compat/assumptions.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h util/memory.h util/time.h \
+ /usr/include/c++/11/bits/std_thread.h util/memory.h util/time.h \
  /usr/include/c++/11/unordered_set /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/unordered_set.h \
@@ -1748,7 +1747,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 util/memory.h:
 util/time.h:
 /usr/include/c++/11/unordered_set:

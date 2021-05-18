@@ -636,7 +636,6 @@ qt/libbitcoinqt_a-receivecoinsdialog.o: qt/receivecoinsdialog.cpp \
  /usr/include/boost/variant/bad_visit.hpp sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h \
  /usr/include/boost/signals2/signal.hpp /usr/include/boost/function.hpp \
  /usr/include/boost/function/detail/prologue.hpp \
  /usr/include/c++/11/cassert \
@@ -1237,14 +1236,90 @@ qt/libbitcoinqt_a-receivecoinsdialog.o: qt/receivecoinsdialog.cpp \
  /usr/include/qt5/QtCore/QAbstractListModel qt/optionsmodel.h \
  qt/platformstyle.h /usr/include/qt5/QtGui/QIcon \
  /usr/include/qt5/QtGui/QPixmap /usr/include/qt5/QtGui/qpixmap.h \
- qt/receiverequestdialog.h qt/walletmodel.h qt/walletmodeltransaction.h \
- interfaces/wallet.h /usr/include/qt5/QtGui/QImage \
- /usr/include/qt5/QtGui/qimage.h /usr/include/qt5/QtGui/QPainter \
- /usr/include/qt5/QtGui/qpainter.h qt/recentrequeststablemodel.h \
- /usr/include/qt5/QtCore/QDateTime /usr/include/qt5/QtCore/qdatetime.h \
- /usr/include/qt5/QtWidgets/QAction /usr/include/qt5/QtWidgets/qaction.h \
- /usr/include/qt5/QtGui/QCursor /usr/include/qt5/QtGui/qcursor.h \
- /usr/include/qt5/QtWidgets/QScrollBar \
+ qt/receiverequestdialog.h qt/walletmodel.h qt/paymentrequestplus.h \
+ qt/paymentrequest.pb.h /usr/include/google/protobuf/port_def.inc \
+ /usr/include/google/protobuf/port_undef.inc \
+ /usr/include/google/protobuf/io/coded_stream.h /usr/include/sys/param.h \
+ /usr/include/signal.h /usr/include/bits/signum-generic.h \
+ /usr/include/bits/signum-arch.h /usr/include/bits/types/sig_atomic_t.h \
+ /usr/include/bits/types/siginfo_t.h /usr/include/bits/siginfo-arch.h \
+ /usr/include/bits/siginfo-consts.h \
+ /usr/include/bits/siginfo-consts-arch.h \
+ /usr/include/bits/types/sigval_t.h /usr/include/bits/sigevent-consts.h \
+ /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
+ /usr/include/bits/types/stack_t.h /usr/include/sys/ucontext.h \
+ /usr/include/bits/sigstack.h /usr/include/bits/ss_flags.h \
+ /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/signal_ext.h /usr/include/bits/param.h \
+ /usr/include/linux/param.h /usr/include/asm/param.h \
+ /usr/include/asm-generic/param.h \
+ /usr/include/google/protobuf/stubs/common.h \
+ /usr/include/google/protobuf/stubs/macros.h \
+ /usr/include/google/protobuf/stubs/port.h \
+ /usr/include/google/protobuf/stubs/platform_macros.h \
+ /usr/include/google/protobuf/stubs/stringpiece.h \
+ /usr/include/google/protobuf/stubs/hash.h \
+ /usr/include/google/protobuf/stubs/logging.h \
+ /usr/include/google/protobuf/stubs/strutil.h \
+ /usr/include/google/protobuf/port.h /usr/include/google/protobuf/arena.h \
+ /usr/include/google/protobuf/arena_impl.h \
+ /usr/include/google/protobuf/arenastring.h \
+ /usr/include/google/protobuf/generated_message_table_driven.h \
+ /usr/include/google/protobuf/map.h \
+ /usr/include/google/protobuf/generated_enum_util.h \
+ /usr/include/google/protobuf/message_lite.h \
+ /usr/include/google/protobuf/metadata_lite.h \
+ /usr/include/google/protobuf/stubs/once.h \
+ /usr/include/google/protobuf/map_type_handler.h \
+ /usr/include/google/protobuf/parse_context.h \
+ /usr/include/google/protobuf/io/zero_copy_stream.h \
+ /usr/include/google/protobuf/implicit_weak_message.h \
+ /usr/include/google/protobuf/repeated_field.h \
+ /usr/include/google/protobuf/stubs/casts.h \
+ /usr/include/google/protobuf/wire_format_lite.h \
+ /usr/include/google/protobuf/map_entry_lite.h \
+ /usr/include/google/protobuf/generated_message_util.h \
+ /usr/include/google/protobuf/any.h \
+ /usr/include/google/protobuf/has_bits.h \
+ /usr/include/google/protobuf/map_field_lite.h \
+ /usr/include/google/protobuf/generated_message_reflection.h \
+ /usr/include/google/protobuf/descriptor.h \
+ /usr/include/google/protobuf/stubs/mutex.h \
+ /usr/include/google/protobuf/generated_enum_reflection.h \
+ /usr/include/google/protobuf/unknown_field_set.h \
+ /usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h \
+ /usr/include/google/protobuf/stubs/callback.h \
+ /usr/include/google/protobuf/stubs/stl_util.h \
+ /usr/include/google/protobuf/message.h \
+ /usr/include/google/protobuf/extension_set.h /usr/include/openssl/x509.h \
+ /usr/include/openssl/e_os2.h /usr/include/openssl/opensslconf.h \
+ /usr/include/openssl/opensslconf-x86_64.h \
+ /usr/include/openssl/opensslv.h /usr/include/openssl/ossl_typ.h \
+ /usr/include/openssl/symhacks.h /usr/include/openssl/buffer.h \
+ /usr/include/openssl/crypto.h /usr/include/openssl/safestack.h \
+ /usr/include/openssl/stack.h /usr/include/openssl/cryptoerr.h \
+ /usr/include/openssl/buffererr.h /usr/include/openssl/evp.h \
+ /usr/include/openssl/bio.h /usr/include/openssl/bioerr.h \
+ /usr/include/openssl/evperr.h /usr/include/openssl/objects.h \
+ /usr/include/openssl/obj_mac.h /usr/include/openssl/asn1.h \
+ /usr/include/openssl/asn1err.h /usr/include/openssl/bn.h \
+ /usr/include/openssl/bnerr.h /usr/include/openssl/objectserr.h \
+ /usr/include/openssl/ec.h /usr/include/openssl/ecerr.h \
+ /usr/include/openssl/rsa.h /usr/include/openssl/rsaerr.h \
+ /usr/include/openssl/dsa.h /usr/include/openssl/dh.h \
+ /usr/include/openssl/dherr.h /usr/include/openssl/dsaerr.h \
+ /usr/include/openssl/sha.h /usr/include/openssl/x509err.h \
+ /usr/include/openssl/x509_vfy.h /usr/include/openssl/lhash.h \
+ /usr/include/openssl/pkcs7.h /usr/include/openssl/pkcs7err.h \
+ /usr/include/qt5/QtCore/QByteArray /usr/include/qt5/QtCore/qbytearray.h \
+ /usr/include/qt5/QtCore/QList /usr/include/qt5/QtCore/qlist.h \
+ qt/walletmodeltransaction.h interfaces/wallet.h \
+ /usr/include/qt5/QtGui/QImage /usr/include/qt5/QtGui/qimage.h \
+ /usr/include/qt5/QtGui/QPainter /usr/include/qt5/QtGui/qpainter.h \
+ qt/recentrequeststablemodel.h /usr/include/qt5/QtCore/QDateTime \
+ /usr/include/qt5/QtCore/qdatetime.h /usr/include/qt5/QtWidgets/QAction \
+ /usr/include/qt5/QtWidgets/qaction.h /usr/include/qt5/QtGui/QCursor \
+ /usr/include/qt5/QtGui/qcursor.h /usr/include/qt5/QtWidgets/QScrollBar \
  /usr/include/qt5/QtWidgets/qscrollbar.h \
  /usr/include/qt5/QtGui/QTextDocument \
  /usr/include/qt5/QtGui/qtextdocument.h
@@ -2030,7 +2105,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 /usr/include/boost/signals2/signal.hpp:
 /usr/include/boost/function.hpp:
 /usr/include/boost/function/detail/prologue.hpp:
@@ -2759,6 +2833,117 @@ qt/platformstyle.h:
 /usr/include/qt5/QtGui/qpixmap.h:
 qt/receiverequestdialog.h:
 qt/walletmodel.h:
+qt/paymentrequestplus.h:
+qt/paymentrequest.pb.h:
+/usr/include/google/protobuf/port_def.inc:
+/usr/include/google/protobuf/port_undef.inc:
+/usr/include/google/protobuf/io/coded_stream.h:
+/usr/include/sys/param.h:
+/usr/include/signal.h:
+/usr/include/bits/signum-generic.h:
+/usr/include/bits/signum-arch.h:
+/usr/include/bits/types/sig_atomic_t.h:
+/usr/include/bits/types/siginfo_t.h:
+/usr/include/bits/siginfo-arch.h:
+/usr/include/bits/siginfo-consts.h:
+/usr/include/bits/siginfo-consts-arch.h:
+/usr/include/bits/types/sigval_t.h:
+/usr/include/bits/sigevent-consts.h:
+/usr/include/bits/sigaction.h:
+/usr/include/bits/sigcontext.h:
+/usr/include/bits/types/stack_t.h:
+/usr/include/sys/ucontext.h:
+/usr/include/bits/sigstack.h:
+/usr/include/bits/ss_flags.h:
+/usr/include/bits/types/struct_sigstack.h:
+/usr/include/bits/sigthread.h:
+/usr/include/bits/signal_ext.h:
+/usr/include/bits/param.h:
+/usr/include/linux/param.h:
+/usr/include/asm/param.h:
+/usr/include/asm-generic/param.h:
+/usr/include/google/protobuf/stubs/common.h:
+/usr/include/google/protobuf/stubs/macros.h:
+/usr/include/google/protobuf/stubs/port.h:
+/usr/include/google/protobuf/stubs/platform_macros.h:
+/usr/include/google/protobuf/stubs/stringpiece.h:
+/usr/include/google/protobuf/stubs/hash.h:
+/usr/include/google/protobuf/stubs/logging.h:
+/usr/include/google/protobuf/stubs/strutil.h:
+/usr/include/google/protobuf/port.h:
+/usr/include/google/protobuf/arena.h:
+/usr/include/google/protobuf/arena_impl.h:
+/usr/include/google/protobuf/arenastring.h:
+/usr/include/google/protobuf/generated_message_table_driven.h:
+/usr/include/google/protobuf/map.h:
+/usr/include/google/protobuf/generated_enum_util.h:
+/usr/include/google/protobuf/message_lite.h:
+/usr/include/google/protobuf/metadata_lite.h:
+/usr/include/google/protobuf/stubs/once.h:
+/usr/include/google/protobuf/map_type_handler.h:
+/usr/include/google/protobuf/parse_context.h:
+/usr/include/google/protobuf/io/zero_copy_stream.h:
+/usr/include/google/protobuf/implicit_weak_message.h:
+/usr/include/google/protobuf/repeated_field.h:
+/usr/include/google/protobuf/stubs/casts.h:
+/usr/include/google/protobuf/wire_format_lite.h:
+/usr/include/google/protobuf/map_entry_lite.h:
+/usr/include/google/protobuf/generated_message_util.h:
+/usr/include/google/protobuf/any.h:
+/usr/include/google/protobuf/has_bits.h:
+/usr/include/google/protobuf/map_field_lite.h:
+/usr/include/google/protobuf/generated_message_reflection.h:
+/usr/include/google/protobuf/descriptor.h:
+/usr/include/google/protobuf/stubs/mutex.h:
+/usr/include/google/protobuf/generated_enum_reflection.h:
+/usr/include/google/protobuf/unknown_field_set.h:
+/usr/include/google/protobuf/io/zero_copy_stream_impl_lite.h:
+/usr/include/google/protobuf/stubs/callback.h:
+/usr/include/google/protobuf/stubs/stl_util.h:
+/usr/include/google/protobuf/message.h:
+/usr/include/google/protobuf/extension_set.h:
+/usr/include/openssl/x509.h:
+/usr/include/openssl/e_os2.h:
+/usr/include/openssl/opensslconf.h:
+/usr/include/openssl/opensslconf-x86_64.h:
+/usr/include/openssl/opensslv.h:
+/usr/include/openssl/ossl_typ.h:
+/usr/include/openssl/symhacks.h:
+/usr/include/openssl/buffer.h:
+/usr/include/openssl/crypto.h:
+/usr/include/openssl/safestack.h:
+/usr/include/openssl/stack.h:
+/usr/include/openssl/cryptoerr.h:
+/usr/include/openssl/buffererr.h:
+/usr/include/openssl/evp.h:
+/usr/include/openssl/bio.h:
+/usr/include/openssl/bioerr.h:
+/usr/include/openssl/evperr.h:
+/usr/include/openssl/objects.h:
+/usr/include/openssl/obj_mac.h:
+/usr/include/openssl/asn1.h:
+/usr/include/openssl/asn1err.h:
+/usr/include/openssl/bn.h:
+/usr/include/openssl/bnerr.h:
+/usr/include/openssl/objectserr.h:
+/usr/include/openssl/ec.h:
+/usr/include/openssl/ecerr.h:
+/usr/include/openssl/rsa.h:
+/usr/include/openssl/rsaerr.h:
+/usr/include/openssl/dsa.h:
+/usr/include/openssl/dh.h:
+/usr/include/openssl/dherr.h:
+/usr/include/openssl/dsaerr.h:
+/usr/include/openssl/sha.h:
+/usr/include/openssl/x509err.h:
+/usr/include/openssl/x509_vfy.h:
+/usr/include/openssl/lhash.h:
+/usr/include/openssl/pkcs7.h:
+/usr/include/openssl/pkcs7err.h:
+/usr/include/qt5/QtCore/QByteArray:
+/usr/include/qt5/QtCore/qbytearray.h:
+/usr/include/qt5/QtCore/QList:
+/usr/include/qt5/QtCore/qlist.h:
 qt/walletmodeltransaction.h:
 interfaces/wallet.h:
 /usr/include/qt5/QtGui/QImage:

@@ -748,8 +748,8 @@ qt/libbitcoinqt_a-transactionrecord.o: qt/transactionrecord.cpp \
  /usr/include/c++/11/bits/fstream.tcc policy/feerate.h sync.h \
  threadsafety.h /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h versionbits.h \
- /usr/include/qt5/QtCore/QDateTime /usr/include/qt5/QtCore/qdatetime.h \
+ versionbits.h /usr/include/qt5/QtCore/QDateTime \
+ /usr/include/qt5/QtCore/qdatetime.h \
  /usr/include/qt5/QtCore/qshareddata.h /usr/include/qt5/QtCore/qhash.h
 /usr/include/stdc-predef.h:
 qt/transactionrecord.h:
@@ -1698,7 +1698,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 versionbits.h:
 /usr/include/qt5/QtCore/QDateTime:
 /usr/include/qt5/QtCore/qdatetime.h:

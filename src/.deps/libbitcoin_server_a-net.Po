@@ -494,8 +494,7 @@ libbitcoin_server_a-net.o: net.cpp /usr/include/stdc-predef.h \
  protocol.h uint256.h version.h random.h crypto/chacha20.h \
  crypto/common.h sync.h threadsafety.h \
  /usr/include/c++/11/condition_variable /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/std_thread.h \
- /usr/include/c++/11/bits/this_thread_sleep.h timedata.h util/system.h \
+ /usr/include/c++/11/bits/std_thread.h timedata.h util/system.h \
  attributes.h compat/assumptions.h logging.h tinyformat.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc util/memory.h util/time.h \
@@ -1750,7 +1749,6 @@ threadsafety.h:
 /usr/include/c++/11/condition_variable:
 /usr/include/c++/11/thread:
 /usr/include/c++/11/bits/std_thread.h:
-/usr/include/c++/11/bits/this_thread_sleep.h:
 timedata.h:
 util/system.h:
 attributes.h:
