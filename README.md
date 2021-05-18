@@ -1,6 +1,6 @@
 # radioCOIN
 
-./configure --with-incompatible-bdb --prefix=/opt/RADIOCOIN-ALTCOIN/BINARY --enable-sse2
+./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
 
 
 RadioCoin Core integration/staging tree
