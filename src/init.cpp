@@ -547,9 +547,9 @@ std::string LicenseInfo()
   
 	//  display_image();
 
-    const std::string URL_SOURCE_CODE = "<https://github.com/c4pt000/dogecoin>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/c4pt000/radioCOIN>";
     const std::string MYDEPOSIT_QT = "<https://raw.githubusercontent.com/c4pt000/dogecoin/master/my-doge-deposit.png>";
-    const std::string URL_WEBSITE = "<https://dogecoin.com>";
+    const std::string URL_WEBSITE = "<https://github.com/c4pt000/radioCOIN>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2013, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
