@@ -1,5 +1,7 @@
 # radioCOIN
 
+* for similar forks see https://github.com/c4pt000/docker-BLOCKCHAIN-GENERATOR
+
 # to help the music industry secure money from the loss of recordable music and mp3 leaks, and to control noisy car radios with fees for playing the volume too loud at odd hours
 
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/src/qt/res/icons/paper_wallet.png.back.png)
