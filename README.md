@@ -4,6 +4,64 @@
 
 requires requires boost-1.75
 
+cat /root/.radiocoin/debug.log
+```
+2021-05-21T05:57:47Z 
+2021-05-21T05:57:47Z RadioCoin Core version v0.18.1.0-e4beaa4-dirty (release build)
+2021-05-21T05:57:47Z Assuming ancestors of block b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8 have valid signatures.
+2021-05-21T05:57:47Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000002ee655bf00bf13b4cca
+2021-05-21T05:57:47Z Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
+2021-05-21T05:57:47Z Using RdRand as an additional entropy source
+2021-05-21T05:57:47Z Default data directory /root/.radiocoin
+2021-05-21T05:57:47Z Using data directory /root/.radiocoin
+2021-05-21T05:57:47Z Config file: /root/.radiocoin/radiocoin.conf (not found, skipping)
+2021-05-21T05:57:47Z Using at most 125 automatic connections (1024 file descriptors available)
+2021-05-21T05:57:47Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+2021-05-21T05:57:47Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+2021-05-21T05:57:47Z Using 16 threads for script verification
+2021-05-21T05:57:47Z scheduler thread start
+2021-05-21T05:57:47Z Using wallet directory /root/.radiocoin/wallets
+2021-05-21T05:57:47Z init message: Verifying wallet(s)...
+2021-05-21T05:57:47Z Using BerkeleyDB version Berkeley DB 5.3.28: (September  9, 2013)
+2021-05-21T05:57:47Z Using wallet /root/.radiocoin/wallets
+2021-05-21T05:57:47Z BerkeleyEnvironment::Open: LogDir=/root/.radiocoin/wallets/database ErrorFile=/root/.radiocoin/wallets/db.log
+2021-05-21T05:57:47Z init message: Loading banlist...
+2021-05-21T05:57:47Z ERROR: DeserializeFileDB: Failed to open file /root/.radiocoin/banlist.dat
+2021-05-21T05:57:47Z Invalid or missing banlist.dat; recreating
+2021-05-21T05:57:47Z Cache configuration:
+2021-05-21T05:57:47Z * Using 2.0 MiB for block index database
+2021-05-21T05:57:47Z * Using 8.0 MiB for chain state database
+2021-05-21T05:57:47Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2021-05-21T05:57:47Z init message: Loading block index...
+2021-05-21T05:57:47Z Opening LevelDB in /root/.radiocoin/blocks/index
+2021-05-21T05:57:47Z Opened LevelDB successfully
+2021-05-21T05:57:47Z Using obfuscation key for /root/.radiocoin/blocks/index: 0000000000000000
+2021-05-21T05:57:47Z LoadBlockIndexDB: last block file = 0
+2021-05-21T05:57:47Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2021-05-21T05:57:47Z Checking all blk files are present...
+2021-05-21T05:57:47Z Initializing databases...
+2021-05-21T05:57:47Z Pre-allocating up to position 0x1000000 in blk00000.dat
+2021-05-21T05:57:47Z Opening LevelDB in /root/.radiocoin/chainstate
+2021-05-21T05:57:47Z Opened LevelDB successfully
+2021-05-21T05:57:47Z Wrote new obfuscate key for /root/.radiocoin/chainstate: 59cf85edd5d4ab5d
+2021-05-21T05:57:47Z Using obfuscation key for /root/.radiocoin/chainstate: 59cf85edd5d4ab5d
+2021-05-21T05:57:47Z init message: Rewinding blocks...
+2021-05-21T05:57:47Z  block index             245ms
+2021-05-21T05:57:47Z init message: Loading wallet...
+2021-05-21T05:57:47Z BerkeleyEnvironment::Open: LogDir=/root/.radiocoin/wallets/database ErrorFile=/root/.radiocoin/wallets/db.log
+2021-05-21T05:57:48Z [default wallet] nFileVersion = 180100
+2021-05-21T05:57:48Z [default wallet] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+2021-05-21T05:57:48Z [default wallet] Performing wallet upgrade to 169900
+2021-05-21T05:57:49Z [default wallet] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+2021-05-21T05:57:49Z [default wallet] Wallet completed loading in            1859ms
+2021-05-21T05:57:49Z [default wallet] setKeyPool.size() = 2000
+2021-05-21T05:57:49Z [default wallet] mapWallet.size() = 0
+2021-05-21T05:57:49Z [default wallet] mapAddressBook.size() = 0
+2021-05-21T05:57:49Z ERROR: ReadBlockFromDisk: Errors in block header at CDiskBlockPos(nFile=0, nPos=8)
+2021-05-21T05:57:49Z *** Failed to read block
+2021-05-21T05:57:49Z Error: Error: A fatal internal error occurred, see debug.log for details
+```
+
 ```
 optional ->  yum groupinstall "C Development Tools and Libraries" -y
 yum install git-core libdb-cxx-devel libdb-cxx openssl-devel libevent-devel java-11-openjdk-devel cppzmq-devel  qrencode-devel qt5-qtbase-devel.x86_64 qt5-linguist-5.15.2-5.fc34.x86_64 protobuf-devel  cargo boost* boost-devel miniupnpc-devel.x86_64 diffutils qt-devel qt4-devel wget -y
