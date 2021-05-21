@@ -13,6 +13,7 @@ rpcuser=radio
 rpcpassword=radiocoin
 rpcport=9332
 port=9333
+addnode=172.104.97.114
 ```
 
 
