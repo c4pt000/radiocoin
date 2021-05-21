@@ -1,7 +1,9 @@
 * BIP34 has been reset to 0 block
 ```
 #!/bin/bash
-radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -reindex &
+
+radiocoind -listen -bind=127.0.0.1 -addnode=127.0.0.1 -reindex -daemon &
+
 ```
 
 todo: mine block 0 
