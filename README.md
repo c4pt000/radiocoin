@@ -2,9 +2,10 @@
 
 ```
 optional ->  yum groupinstall "C Development Tools and Libraries" -y
- yum install git-core libdb-cxx-devel libdb-cxx openssl-devel libevent-devel java-11-openjdk-devel cppzmq-devel  qrencode-devel qt5-qtbase-devel.x86_64 qt5-linguist-5.15.2-5.fc34.x86_64 protobuf-devel  cargo boost* boost-devel miniupnpc-devel.x86_64 diffutils qt-devel qt4-devel 
+yum install git-core libdb-cxx-devel libdb-cxx openssl-devel libevent-devel java-11-openjdk-devel cppzmq-devel  qrencode-devel qt5-qtbase-devel.x86_64 qt5-linguist-5.15.2-5.fc34.x86_64 protobuf-devel  cargo boost* boost-devel miniupnpc-devel.x86_64 diffutils qt-devel qt4-devel wget -y
 
-
+wget https://github.com/c4pt000/radioCOIN/releases/download/1.1.0-fedora34-build-environment/radiocoin-1.1.0_fedora34-2.x86_64.rpm
+ 
 for selinux 4kb error
 --------------------
 cp -rf radiocoin-1.1.0_fedora34-2.x86_64.rpm /
