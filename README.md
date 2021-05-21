@@ -4,6 +4,8 @@
 
 radiocoind -listen -bind=127.0.0.1 -addnode=127.0.0.1 -reindex -daemon &
 ```
+https://medium.com/@kay.odenthal_25114/create-a-private-bitcoin-network-with-simulated-mining-b35f5b03e534
+
 
 sample conf
 /root/.radiocoin/radiocoinconf set accordingly
