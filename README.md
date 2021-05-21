@@ -6,7 +6,7 @@ radiocoind
 ```
 #!/bin/bash
 
-radiocoind -listen -bind=127.0.0.1 -addnode=45.33.72.145 -addnode=172.104.97.114 -reindex -daemon &
+radiocoind -listen -addnode=45.33.72.145 -addnode=172.104.97.114 -server -bind=127.0.0.1 &
 ```
 https://medium.com/@kay.odenthal_25114/create-a-private-bitcoin-network-with-simulated-mining-b35f5b03e534
 
