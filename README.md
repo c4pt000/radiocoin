@@ -6,6 +6,10 @@ requires requires boost-1.75
 
 cat /root/.radiocoin/debug.log
 ```
+2021-05-21T05:57:47Z LoadBlockIndexDB: last block file = 0
+2021-05-21T05:57:47Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+```
+```
 2021-05-21T05:57:47Z 
 2021-05-21T05:57:47Z RadioCoin Core version v0.18.1.0-e4beaa4-dirty (release build)
 2021-05-21T05:57:47Z Assuming ancestors of block b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8 have valid signatures.
