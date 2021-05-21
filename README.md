@@ -1,4 +1,8 @@
 * BIP34 has been reset to 0 block
+radiocoind 
+```
+ yum install libdb-cxx-devel-5.3.28-46.fc34.x86_64 miniupnpc-devel-2.2.2-1.fc34.x86_64 zeromq-devel-4.3.4-1.fc34.x86_64 boost*-y
+```
 ```
 #!/bin/bash
 
