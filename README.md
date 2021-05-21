@@ -1,3 +1,9 @@
+* BIP34 has been reset to 0 block
+```
+#!/bin/bash
+radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -reindex &
+```
+
 todo: mine block 0 
 https://github.com/c4pt000/cpp_miner
 ```
