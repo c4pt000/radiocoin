@@ -1,4 +1,4 @@
-# radioCOIN
+# radioCOIN (needs nodes testing at block 0 genesis block might be configured wrong)
 
 # to help the music industry secure money from the loss of recordable music and mp3 leaks, and to control noisy car radios with fees for playing the volume too loud at odd hours
 
