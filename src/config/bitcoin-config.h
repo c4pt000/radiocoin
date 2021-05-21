@@ -116,7 +116,7 @@
 
 /* Define to 1 if you have the declaration of `EVP_MD_CTX_new', and to 0 if
    you don't. */
-#define HAVE_DECL_EVP_MD_CTX_NEW 0
+#define HAVE_DECL_EVP_MD_CTX_NEW 1
 
 /* Define to 1 if you have the declaration of `freeifaddrs', and to 0 if you
    don't. */
@@ -198,11 +198,11 @@
 #define HAVE_FUNC_ATTRIBUTE_VISIBILITY 1
 
 /* Define this symbol if the BSD getentropy system call is available */
-/* #undef HAVE_GETENTROPY */
+#define HAVE_GETENTROPY 1
 
 /* Define this symbol if the BSD getentropy system call is available with
    sys/random.h */
-/* #undef HAVE_GETENTROPY_RAND */
+#define HAVE_GETENTROPY_RAND 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
