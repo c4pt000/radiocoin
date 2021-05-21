@@ -3,8 +3,18 @@
 #!/bin/bash
 
 radiocoind -listen -bind=127.0.0.1 -addnode=127.0.0.1 -reindex -daemon &
-
 ```
+
+sample conf
+/root/.radiocoin/radiocoinconf set accordingly
+----------------------------
+```
+rpcuser=radio
+rpcpassword=radiocoin
+rpcport=9332
+port=9333
+```
+
 
 todo: mine block 0 
 https://github.com/c4pt000/cpp_miner
