@@ -1,3 +1,5 @@
+WIP** (3 days+)
+ 
 * BIP34 has been reset to 0 block
 radiocoind 
 ```
