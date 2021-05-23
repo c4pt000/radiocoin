@@ -290,7 +290,6 @@ consensus.defaultAssumeValid = uint256(); //1174621
         m_assumed_chain_state_size = 1;
 
         genesis = CreateGenesisBlock(1486949366, 323919, 0x1e0ffff0, 1, 50 * COIN);
-        consensus.hashGenesisBlock = genesis.GetHash();
 
 
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -426,7 +425,7 @@ public:
 
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
-            std::cout << std::string("Begin calculating Testnet Genesis Block:\n");
+            std::cout << std::string("Begin calculating RegTestnet Genesis Block:\n");
             arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
             uint256 hash;
             genesis.nNonce = 0;
@@ -440,7 +439,7 @@ public:
                     std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
                 }
             }
-            std::cout << "Testnet ---\n";
+            std::cout << "RegTestnet ---\n";
             std::cout << "  nonce: " << genesis.nNonce <<  "\n";
             std::cout << "   time: " << genesis.nTime << "\n";
             std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
