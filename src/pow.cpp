@@ -15,6 +15,17 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     assert(pindexLast != nullptr);
     unsigned int nProofOfWorkLimit = UintToArith256(params.powLimit).GetCompact();
 
+
+arith_uint256 lastTarget;
+
+// Immediately adjust to min. difficulty (genesis block was mined with very low difficulty)
+if (lastTarget.SetCompact(pindexLast->nBits) > UintToArith256(params.powLimit))
+{
+    return nProofOfWorkLimit;
+}
+
+
+
     // Only change once per difficulty adjustment interval
     if ((pindexLast->nHeight+1) % params.DifficultyAdjustmentInterval() != 0)
     {
@@ -23,11 +34,12 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
             // Special difficulty rule for testnet:
             // If the new block's timestamp is more than 2* 10 minutes
             // then allow mining of a min-difficulty block.
+
             if (pblock->GetBlockTime() > pindexLast->GetBlockTime() + params.nPowTargetSpacing*2)
                 return nProofOfWorkLimit;
             else
             {
-                // Return the last non-special-min-difficulty-rules-block
+              // Return the last non-special-min-difficulty-rules-block
                 const CBlockIndex* pindex = pindexLast;
                 while (pindex->pprev && pindex->nHeight % params.DifficultyAdjustmentInterval() != 0 && pindex->nBits == nProofOfWorkLimit)
                     pindex = pindex->pprev;
@@ -36,6 +48,16 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
         }
         return pindexLast->nBits;
     }
+//st
+	if (pindexLast->nHeight == 0) // If genesis block, return PoW limit
+	{
+	    return nProofOfWorkLimit;
+	}
+	else
+	{
+	    return pindexLast->nBits;
+	}
+//en
 
     // Go back by what we want to be 14 days worth of blocks
     // RadioCoin: This fixes an issue where a 51% attack can change difficulty at will.
