@@ -11,6 +11,10 @@ radiocoind
 ```
  radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 --daemon
  radiocoind -regtest -port=2222 -datadir=./newreg -rpcport=5467 --daemon
+ 
+ node1="radiocoin-cli -regtest -datadir=./ -rpcport=1234"
+ node2="radiocoin-cli -regtest -datadir=./newreg -rpcport=5467"
+ 
 ```
 
 ```
