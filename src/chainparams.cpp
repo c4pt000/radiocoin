@@ -162,7 +162,7 @@ public:
             std::cout << std::string(" main_time: ") << ("%" PRIu32, genesis.nTime) << std::endl;
             std::cout << std::string(" main_hash: ") << ("%" PRIu32, genesis.GetHash().ToString().c_str()) << std::endl;
             std::cout << std::string(" main_merklehash: ") << ("%" PRIu32, genesis.hashMerkleRoot.ToString().c_str()) << std::endl;
-            std::cout << std::string("min Main PowLimit nBit: ") << ("%" PRIu32, consensus.powLimit) << std::endl;
+            printf("min Main nBit:  %08x\n", consensus.powLimit);
             std::cout << std::string("Finished calculating Mainnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
 
             
@@ -330,7 +330,7 @@ consensus.defaultAssumeValid = uint256(); //1174621
             std::cout << std::string(" test_time: ") << ("%" PRIu32, genesis.nTime) << std::endl;
             std::cout << std::string(" test_hash: ") << ("%" PRIu32, genesis.GetHash().ToString().c_str()) << std::endl;
             std::cout << std::string(" test_merklehash: ") << ("%" PRIu32, genesis.hashMerkleRoot.ToString().c_str()) << std::endl;
-            std::cout << std::string("min Test PowLimit nBit: ") << ("%" PRIu32, consensus.powLimit) << std::endl;
+            printf("min Testnet nBit:  %08x\n", consensus.powLimit);
             std::cout << std::string("Finished calculating Testnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
 
             
@@ -467,7 +467,7 @@ public:
             std::cout << std::string(" reg_time: ") << ("%" PRIu32, genesis.nTime) << std::endl;
             std::cout << std::string(" reg_hash: ") << ("%" PRIu32, genesis.GetHash().ToString().c_str()) << std::endl;
             std::cout << std::string(" reg_merklehash: ") << ("%" PRIu32, genesis.hashMerkleRoot.ToString().c_str()) << std::endl;
-            std::cout << std::string("min Regtest PowLimit nBit: ") << ("%" PRIu32, consensus.powLimit) << std::endl;
+            printf("min Regnet nBit:  %08x\n", consensus.powLimit);
             std::cout << std::string("Finished calculating Regnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
 
            
