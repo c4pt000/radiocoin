@@ -2,7 +2,24 @@
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
+/*
+main_nonce: 167677
+ main_time: 1621725598
+ main_hash: 00000b775fa7ba881a000f958c773c4748cb657f5c6fbcb9fc0c205b73485657
+ main_merklehash: d111190afe9cea9e90515816c0941a4665645e2d41c4360b6bc80ca72bd93dc2
+ test_nonce: 299987
+ test_time: 1486949366
+ test_hash: 000002c68f4925012d0aa37bcc2ac8247bc4c0bb2c0a43fe25cb1edcd9e047e5
+ test_merklehash: d111190afe9cea9e90515816c0941a4665645e2d41c4360b6bc80ca72bd93dc2
+ reg_nonce: 2
+ reg_time: 1296688602
+ reg_hash: 26f4ef86da24399f8c59c47065062656fe3d2f7d5ab2725ddb728bbfd9a1552a
+ reg_merklehash: d111190afe9cea9e90515816c0941a4665645e2d41c4360b6bc80ca72bd93dc2
+ main_nonce: 167677
+ main_time: 1621725598
+ main_hash: 00000b775fa7ba881a000f958c773c4748cb657f5c6fbcb9fc0c205b73485657
+ main_merklehash: d111190afe9cea9e90515816c0941a4665645e2d41c4360b6bc80ca72bd93dc2
+*/
 
 #include <stdio.h>
 #include <inttypes.h>
@@ -137,9 +154,10 @@ public:
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 22;
         m_assumed_chain_state_size = 3;
-        genesis = CreateGenesisBlock(1621725598, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
+        //genesis = CreateGenesisBlock(1621725598, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
        
-        
+        genesis = CreateGenesisBlock(1621725598, 167677, 0x1e0ffff0, 1, 50 * COIN);
+
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
             std::cout << std::string("Begin calculating Mainnet Genesis Block:\n");
@@ -305,8 +323,7 @@ consensus.defaultAssumeValid = uint256(); //1174621
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1486949366, 323919, 0x1e0ffff0, 1, 50 * COIN);
-
+        genesis = CreateGenesisBlock(1486949366, 299987, 0x1e0ffff0, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
@@ -442,7 +459,7 @@ public:
 
         UpdateVersionBitsParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1296688602, 2, 0x207fffff, 1, 50 * COIN);
 
 
 
