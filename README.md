@@ -44,6 +44,14 @@ Check account balance:
 node1 getbalance
 
 
+node1 generate 1
+[
+  "5c684e70cd96928bdf01820a0a60ecdc38d53bd02bea4d7804a632f97f0b7ba3"
+]
+[root@localhost /]# node1 getbalance
+2600.00000000
+
+
  
 ```
 
