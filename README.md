@@ -57,8 +57,10 @@ node1 generate 1
 
 # MAIN
 ```
+mkdir anode
+mkdir bnode
 radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=1111 -datadir=./anode -rpcport=1234  -deprecatedrpc=generate --daemon
-radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=2222 -datadir=./anode -rpcport=5467  -deprecatedrpc=generate --daemon
+radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=2222 -datadir=./bnode -rpcport=5467  -deprecatedrpc=generate --daemon
 
 
 alias node1="radiocoin-cli -regtest -datadir=./ -rpcport=1234"
