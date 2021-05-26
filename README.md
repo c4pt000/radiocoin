@@ -9,8 +9,8 @@ radiocoind
 
 # regtest
 ```
- radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 --daemon
- radiocoind -regtest -port=2222 -datadir=./newreg -rpcport=5467 --daemon
+ radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
+ radiocoind -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=generate --daemon
  
 alias node1="radiocoin-cli -regtest -datadir=./ -rpcport=1234"
 alias node2="radiocoin-cli -regtest -datadir=./newreg -rpcport=5467"
