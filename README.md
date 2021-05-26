@@ -282,6 +282,12 @@ source build
   
   make -j24
   make -j24 install
+ 
+  optional to make deb package and or rpm package
+  -----------------------------------------------
+  checkinstall --install=no --exclude=/sys/fs/selinux
+  alien --scripts --to-rpm radio*.deb
+
   
   radiocoin-qt
   or radiocoind      (radiocoin-cli getinfo)
