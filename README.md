@@ -5,6 +5,14 @@ radiocoind
 ```
  yum install libdb-cxx-devel-5.3.28-46.fc34.x86_64 miniupnpc-devel-2.2.2-1.fc34.x86_64 zeromq-devel-4.3.4-1.fc34.x86_64 boost*-y
 ```
+
+
+# regtest
+```
+ radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 --daemon
+ radiocoind -regtest -port=2222 -datadir=./newreg -rpcport=5467 --daemon
+```
+
 ```
 #!/bin/bash
 
