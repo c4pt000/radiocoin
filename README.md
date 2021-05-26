@@ -7,6 +7,12 @@ radiocoind
 ```
 
 
+# testing frontend through REGtest
+```
+radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
+radiocoin-qt -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=generate --daemon
+```
+
 # regtest
 ```
  radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
