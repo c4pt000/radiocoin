@@ -156,7 +156,7 @@ public:
         m_assumed_chain_state_size = 3;
         //genesis = CreateGenesisBlock(1621725598, 2084524493, 0x1e0ffff0, 1, 50 * COIN);
        
-        genesis = CreateGenesisBlock(1621725598, 167677, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1621725598, 167677, 0x1f0fffff, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
@@ -323,7 +323,7 @@ consensus.defaultAssumeValid = uint256(); //1174621
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1486949366, 299987, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1486949366, 299987, 0x1f0fffff, 1, 50 * COIN);
 
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
