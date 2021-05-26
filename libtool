@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (radiocoin) 0.18.1
-# Libtool was configured on host 8f8c7790a0ca:
+# Libtool was configured on host fedora:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -282,10 +282,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/8 /usr/lib64 /lib64 /usr/lib /lib "
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/11 /usr/lib64 /lib64 /usr/lib /lib "
 
 # Detected run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib64/llvm5.0/lib /usr/lib64/llvm5.0/lib "
+sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib64/iscsi /usr/lib64/llvm11/lib /usr/lib64/pipewire-0.3/jack/ /usr/lib64/qt-3.3/lib /usr/lib64/qt5-qtwebengine-freeworld /usr/lib64/tcl8.6 "
 
 # Explicit LT_SYS_LIBRARY_PATH set during ./configure time.
 configure_time_lt_sys_library_path=""
@@ -2636,7 +2636,7 @@ fi
 # a configuration failure hint, and exit.
 func_fatal_configuration ()
 {
-    func__fatal_error ${1+"$@"} \
+    func_fatal_error ${1+"$@"} \
       "See the $PACKAGE documentation for more information." \
       "Fatal configuration error."
 }
@@ -11794,17 +11794,17 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/8 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/8/../../.."
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-redhat-linux/11 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /usr/lib/gcc/x86_64-redhat-linux/11/../../.."
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
-predep_objects="/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbeginS.o"
-postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/8/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o"
+predep_objects="/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbeginS.o"
+postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/11/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o"
 predeps=""
 postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.."
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.."
 
 # ### END LIBTOOL TAG CONFIG: CXX

@@ -11,8 +11,8 @@
 /** Amount in satoshis (Can be negative) */
 typedef int64_t CAmount;
 
-static const CAmount COIN = 100000000;
-
+static const CAmount COIN = 1000000000;
+			  
 /** No amount larger than this (in satoshi) is valid.
  *
  * Note that this constant is *not* the total money supply, which in Bitcoin

@@ -48,7 +48,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "Litecoin cannot be compiled without assertions."
+# error "RadioCoin cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -257,7 +257,7 @@ std::atomic_bool g_is_mempool_loaded{false};
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "Litecoin Signed Message:\n";
+const std::string strMessageMagic = "RadioCoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -942,7 +942,7 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         // Remove conflicting transactions from the mempool
         for (CTxMemPool::txiter it : allConflicting)
         {
-            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s LTC additional fees, %d delta bytes\n",
+            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s RADC additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -1099,15 +1099,6 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 
     if (!ReadBlockFromDisk(block, blockPos, consensusParams))
         return false;
-
-
-if (block.GetHash() != consensusParams.hashGenesisBlock)
-{
-    if (!CheckProofOfWork(block.GetHash(), block.nBits, consensusParams))
-        return error("ReadBlockFromDisk: Errors in block header at %s", pindex->ToString(), pindex->GetBlockPos().ToString());
-}
-
-
     if (block.GetHash() != pindex->GetBlockHash())
         return error("ReadBlockFromDisk(CBlock&, CBlockIndex*): GetHash() doesn't match index for %s at %s",
                 pindex->ToString(), pindex->GetBlockPos().ToString());
@@ -1167,6 +1158,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     if (halvings >= 64)
         return 0;
 
+    if (nHeight == 1) return COIN * 1000000;
     CAmount nSubsidy = 50 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
@@ -1686,7 +1678,7 @@ static bool WriteUndoDataForBlock(const CBlockUndo& blockundo, CValidationState&
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("litecoin-scriptch");
+    RenameThread("radiocoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -1827,22 +1819,6 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
             view.SetBestBlock(pindex->GetBlockHash());
         return true;
     }
-
-
-if (block.GetHash() != chainparams.GetConsensus().hashGenesisBlock)
-{
-    if (!CheckBlock(block, state, chainparams.GetConsensus(), !fJustCheck, !fJustCheck)) {
-        if (state.CorruptionPossible()) {
-            // We don't write down blocks to disk if they may have been
-            // corrupted, so this should be impossible unless we're having hardware
-            // problems.
-            return AbortNode(state, "Corrupt block found indicating potential hardware failure; shutting down");
-        }
-        return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
-    }
-}
-
-
 
     nBlocksTotal++;
 
@@ -3105,16 +3081,9 @@ static bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state,
     return true;
 }
 
-
-
 bool CheckBlock(const CBlock& block, CValidationState& state, const Consensus::Params& consensusParams, bool fCheckPOW, bool fCheckMerkleRoot)
 {
     // These are checks that are independent of context.
-if (block.GetHash() == consensusParams.hashGenesisBlock)
-    fCheckPOW = false;
-if (!CheckBlockHeader(block, state, consensusParams, fCheckPOW))
-    return false;
-
 
     if (block.fChecked)
         return true;

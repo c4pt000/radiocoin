@@ -1,0 +1,141 @@
+2021-05-26T23:16:03Z 
+
+
+
+
+2021-05-26T23:16:03Z RadioCoin Core version v0.18.1.0-8429e06-dirty (release build)
+2021-05-26T23:16:03Z Validating signatures for all blocks.
+2021-05-26T23:16:03Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2021-05-26T23:16:03Z Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
+2021-05-26T23:16:03Z Using RdRand as an additional entropy source
+2021-05-26T23:16:03Z Default data directory /root/.radiocoin
+2021-05-26T23:16:03Z Using data directory /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest
+2021-05-26T23:16:03Z Config file: /home/c4pt/opt/COIN/radiocoin/radioCOIN/./radiocoin.conf (not found, skipping)
+2021-05-26T23:16:03Z Using at most 125 automatic connections (1024 file descriptors available)
+2021-05-26T23:16:03Z Warning: relative datadir option './' specified, which will be interpreted relative to the current working directory '/home/c4pt/opt/COIN/radiocoin/radioCOIN'. This is fragile, because if radiocoin is started in the future from a different location, it will be unable to locate the current data files. There could also be data loss if radiocoin is started while in a temporary directory.
+2021-05-26T23:16:03Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+2021-05-26T23:16:03Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+2021-05-26T23:16:03Z Using 16 threads for script verification
+2021-05-26T23:16:03Z scheduler thread start
+2021-05-26T23:16:03Z HTTP: creating work queue of depth 16
+2021-05-26T23:16:03Z No rpcpassword set - using random cookie authentication.
+2021-05-26T23:16:03Z Generated RPC authentication cookie /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/.cookie
+2021-05-26T23:16:03Z HTTP: starting 4 worker threads
+2021-05-26T23:16:03Z scrypt: using scrypt-sse2 as built.
+2021-05-26T23:16:03Z Using wallet directory /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets
+2021-05-26T23:16:03Z init message: Verifying wallet(s)...
+2021-05-26T23:16:03Z Using BerkeleyDB version Berkeley DB 5.3.28: (September  9, 2013)
+2021-05-26T23:16:03Z Using wallet /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets
+2021-05-26T23:16:03Z BerkeleyEnvironment::Open: LogDir=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/database ErrorFile=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/db.log
+2021-05-26T23:16:03Z init message: Loading banlist...
+2021-05-26T23:16:03Z ERROR: DeserializeFileDB: Failed to open file /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/banlist.dat
+2021-05-26T23:16:03Z Invalid or missing banlist.dat; recreating
+2021-05-26T23:16:03Z Cache configuration:
+2021-05-26T23:16:03Z * Using 2.0 MiB for block index database
+2021-05-26T23:16:03Z * Using 8.0 MiB for chain state database
+2021-05-26T23:16:03Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2021-05-26T23:16:03Z init message: Loading block index...
+2021-05-26T23:16:03Z Opening LevelDB in /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/blocks/index
+2021-05-26T23:16:04Z Opened LevelDB successfully
+2021-05-26T23:16:04Z Using obfuscation key for /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/blocks/index: 0000000000000000
+2021-05-26T23:16:04Z LoadBlockIndexDB: last block file = 0
+2021-05-26T23:16:04Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2021-05-26T23:16:04Z Checking all blk files are present...
+2021-05-26T23:16:04Z Initializing databases...
+2021-05-26T23:16:04Z Pre-allocating up to position 0x1000000 in blk00000.dat
+2021-05-26T23:16:04Z Opening LevelDB in /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/chainstate
+2021-05-26T23:16:04Z Opened LevelDB successfully
+2021-05-26T23:16:04Z Wrote new obfuscate key for /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/chainstate: f8307ccea90f800a
+2021-05-26T23:16:04Z Using obfuscation key for /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/chainstate: f8307ccea90f800a
+2021-05-26T23:16:04Z init message: Rewinding blocks...
+2021-05-26T23:16:04Z  block index             311ms
+2021-05-26T23:16:04Z init message: Loading wallet...
+2021-05-26T23:16:04Z BerkeleyEnvironment::Open: LogDir=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/database ErrorFile=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/db.log
+2021-05-26T23:16:04Z [default wallet] nFileVersion = 180100
+2021-05-26T23:16:04Z [default wallet] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
+2021-05-26T23:16:04Z [default wallet] Performing wallet upgrade to 169900
+2021-05-26T23:16:07Z [default wallet] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
+2021-05-26T23:16:07Z [default wallet] Wallet completed loading in            3049ms
+2021-05-26T23:16:07Z [default wallet] setKeyPool.size() = 2000
+2021-05-26T23:16:07Z [default wallet] mapWallet.size() = 0
+2021-05-26T23:16:07Z [default wallet] mapAddressBook.size() = 0
+2021-05-26T23:16:07Z ERROR: ReadBlockFromDisk: Errors in block header at CDiskBlockPos(nFile=0, nPos=8)
+2021-05-26T23:16:07Z *** Failed to read block
+2021-05-26T23:16:07Z Error: Error: A fatal internal error occurred, see debug.log for details
+2021-05-26T23:21:10Z 
+
+
+
+
+2021-05-26T23:21:10Z RadioCoin Core version v0.18.1.0-8429e06-dirty (release build)
+2021-05-26T23:21:10Z Validating signatures for all blocks.
+2021-05-26T23:21:10Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000000000000000000000000
+2021-05-26T23:21:10Z Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
+2021-05-26T23:21:10Z Using RdRand as an additional entropy source
+2021-05-26T23:21:10Z Default data directory /root/.radiocoin
+2021-05-26T23:21:10Z Using data directory /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest
+2021-05-26T23:21:10Z Config file: /home/c4pt/opt/COIN/radiocoin/radioCOIN/./radiocoin.conf (not found, skipping)
+2021-05-26T23:21:10Z Using at most 125 automatic connections (1024 file descriptors available)
+2021-05-26T23:21:10Z Warning: relative datadir option './' specified, which will be interpreted relative to the current working directory '/home/c4pt/opt/COIN/radiocoin/radioCOIN'. This is fragile, because if radiocoin is started in the future from a different location, it will be unable to locate the current data files. There could also be data loss if radiocoin is started while in a temporary directory.
+2021-05-26T23:21:10Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
+2021-05-26T23:21:10Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
+2021-05-26T23:21:10Z Using 16 threads for script verification
+2021-05-26T23:21:10Z scheduler thread start
+2021-05-26T23:21:10Z HTTP: creating work queue of depth 16
+2021-05-26T23:21:10Z No rpcpassword set - using random cookie authentication.
+2021-05-26T23:21:10Z Generated RPC authentication cookie /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/.cookie
+2021-05-26T23:21:10Z HTTP: starting 4 worker threads
+2021-05-26T23:21:10Z scrypt: using scrypt-sse2 as built.
+2021-05-26T23:21:10Z Using wallet directory /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets
+2021-05-26T23:21:10Z init message: Verifying wallet(s)...
+2021-05-26T23:21:10Z Using BerkeleyDB version Berkeley DB 5.3.28: (September  9, 2013)
+2021-05-26T23:21:10Z Using wallet /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets
+2021-05-26T23:21:10Z BerkeleyEnvironment::Open: LogDir=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/database ErrorFile=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/db.log
+2021-05-26T23:21:11Z init message: Loading banlist...
+2021-05-26T23:21:11Z Cache configuration:
+2021-05-26T23:21:11Z * Using 2.0 MiB for block index database
+2021-05-26T23:21:11Z * Using 8.0 MiB for chain state database
+2021-05-26T23:21:11Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
+2021-05-26T23:21:11Z init message: Loading block index...
+2021-05-26T23:21:11Z Opening LevelDB in /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/blocks/index
+2021-05-26T23:21:11Z Opened LevelDB successfully
+2021-05-26T23:21:11Z Using obfuscation key for /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/blocks/index: 0000000000000000
+2021-05-26T23:21:11Z LoadBlockIndexDB: last block file = 0
+2021-05-26T23:21:11Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
+2021-05-26T23:21:11Z Checking all blk files are present...
+2021-05-26T23:21:11Z Initializing databases...
+2021-05-26T23:21:11Z Pre-allocating up to position 0x1000000 in blk00000.dat
+2021-05-26T23:21:11Z Opening LevelDB in /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/chainstate
+2021-05-26T23:21:11Z Opened LevelDB successfully
+2021-05-26T23:21:11Z Using obfuscation key for /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/chainstate: f8307ccea90f800a
+2021-05-26T23:21:11Z init message: Rewinding blocks...
+2021-05-26T23:21:11Z  block index             384ms
+2021-05-26T23:21:11Z init message: Loading wallet...
+2021-05-26T23:21:11Z BerkeleyEnvironment::Open: LogDir=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/database ErrorFile=/home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/wallets/db.log
+2021-05-26T23:21:11Z [default wallet] nFileVersion = 180100
+2021-05-26T23:21:11Z [default wallet] Keys: 2001 plaintext, 0 encrypted, 2001 w/ metadata, 2001 total. Unknown wallet records: 0
+2021-05-26T23:21:11Z [default wallet] Wallet completed loading in              70ms
+2021-05-26T23:21:11Z [default wallet] setKeyPool.size() = 2000
+2021-05-26T23:21:11Z [default wallet] mapWallet.size() = 0
+2021-05-26T23:21:11Z [default wallet] mapAddressBook.size() = 0
+2021-05-26T23:21:11Z UpdateTip: new best=26ccbbbd6bca463d29447c24257419ff77c45cc1d9d0e8db4b7cbd5cd0b8984a height=0 version=0x00000001 log2_work=1 tx=1 date='2011-02-02T23:16:42Z' progress=1.000000 cache=0.0MiB(0txo)
+2021-05-26T23:21:11Z mapBlockIndex.size() = 1
+2021-05-26T23:21:11Z nBestHeight = 0
+2021-05-26T23:21:11Z Failed to open mempool file from disk. Continuing anyway.
+2021-05-26T23:21:11Z torcontrol thread start
+2021-05-26T23:21:11Z Bound to [::]:1111
+2021-05-26T23:21:11Z Bound to 0.0.0.0:1111
+2021-05-26T23:21:11Z init message: Loading P2P addresses...
+2021-05-26T23:21:11Z ERROR: DeserializeFileDB: Failed to open file /home/c4pt/opt/COIN/radiocoin/radioCOIN/./regtest/peers.dat
+2021-05-26T23:21:11Z Invalid or missing peers.dat; recreating
+2021-05-26T23:21:11Z init message: Starting network threads...
+2021-05-26T23:21:11Z net thread start
+2021-05-26T23:21:11Z dnsseed thread start
+2021-05-26T23:21:11Z Loading addresses from DNS seeds (could take a while)
+2021-05-26T23:21:11Z 0 addresses found from DNS seeds
+2021-05-26T23:21:11Z dnsseed thread exit
+2021-05-26T23:21:11Z addcon thread start
+2021-05-26T23:21:11Z init message: Done loading
+2021-05-26T23:21:11Z opencon thread start
+2021-05-26T23:21:11Z msghand thread start
+2021-05-26T23:22:12Z Adding fixed seed nodes as DNS doesn't seem to be available.
