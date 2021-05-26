@@ -15,6 +15,11 @@ radiocoind
  node1="radiocoin-cli -regtest -datadir=./ -rpcport=1234"
  node2="radiocoin-cli -regtest -datadir=./newreg -rpcport=5467"
  
+ Call a RPC-Method on both nodes to check that they’re up and running:
+
+node1 getblockchaininfo
+node2 getblockchaininfo
+ 
 ```
 
 ```
