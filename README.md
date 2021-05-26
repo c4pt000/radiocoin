@@ -54,6 +54,8 @@ node1 generate 1
 
  
 ```
+todo:
+https://stackoverflow.com/questions/47828172/encountering-readblockfromdisk-errors-in-block-header-at-cblockdiskposnfile-0/48606397#48606397
 
 # MAIN
 ```
