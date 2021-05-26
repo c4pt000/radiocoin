@@ -22,6 +22,28 @@ alias node2="radiocoin-cli -regtest -datadir=./newreg -rpcport=5467"
 
 node1 getblockchaininfo
 node2 getblockchaininfo
+
+
+
+Introduce the nodes to each other and mine some blocks
+Register node2 as peer on node1:
+
+
+node1 addnode "127.0.0.1:2222" "add"
+
+
+Mine the genesis block on node1:
+
+
+node1 generate 1
+
+
+Check account balance:
+
+
+node1 getbalance
+
+
  
 ```
 
