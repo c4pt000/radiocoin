@@ -77,7 +77,7 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // 87afb798a3ad9378fcd56123c81fb31cfd9a8df4719b9774d71730c16315a092 - October 1, 2012
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("");
+        consensus.BIP34Hash = uint256S("00000b775fa7ba881a000f958c773c4748cb657f5c6fbcb9fc0c205b73485657");
         consensus.BIP65Height = 0; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 0; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
@@ -147,12 +147,15 @@ public:
                     std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
                 }
             }
-            std::cout << "Mainnet ---\n";
-            std::cout << "  nonce: " << genesis.nNonce <<  "\n";
-            std::cout << "   time: " << genesis.nTime << "\n";
-            std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
-            std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-            std::cout << std::string("Finished calculating Mainnet Genesis Block:\n");
+
+            printf(" Mainnet ---\n");
+            std::cout << std::string(" main_nonce: ") << ("%" PRIu32, genesis.nNonce) << std::endl;
+            std::cout << std::string(" main_time: ") << ("%" PRIu32, genesis.nTime) << std::endl;
+            std::cout << std::string(" main_hash: ") << ("%" PRIu32, genesis.GetHash().ToString().c_str()) << std::endl;
+            std::cout << std::string(" main_merklehash: ") << ("%" PRIu32, genesis.hashMerkleRoot.ToString().c_str()) << std::endl;
+            std::cout << std::string("min main PowLimit nBit:  %08x\n", consensus.powLimit) << std::endl;
+            std::cout << std::string("Finished calculating Mainnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
+
             
            
         }
@@ -238,7 +241,7 @@ public:
         consensus.nSubsidyHalvingInterval = 840000;
         consensus.BIP16Height = 0; // always enforce P2SH BIP16 on testnet
         consensus.BIP34Height = 0;
-        consensus.BIP34Hash = uint256S("");
+        consensus.BIP34Hash = uint256S("000002c68f4925012d0aa37bcc2ac8247bc4c0bb2c0a43fe25cb1edcd9e047e5");
         consensus.BIP65Height = 0; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
         consensus.BIP66Height = 0; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -310,12 +313,15 @@ consensus.defaultAssumeValid = uint256(); //1174621
                     std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
                 }
             }
-            std::cout << "Testnet ---\n";
-            std::cout << "  nonce: " << genesis.nNonce <<  "\n";
-            std::cout << "   time: " << genesis.nTime << "\n";
-            std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
-            std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-            std::cout << std::string("Finished calculating Testnet Genesis Block:\n");
+
+            printf(" Testnet ---\n");
+            std::cout << std::string(" test_nonce: ") << ("%" PRIu32, genesis.nNonce) << std::endl;
+            std::cout << std::string(" test_time: ") << ("%" PRIu32, genesis.nTime) << std::endl;
+            std::cout << std::string(" test_hash: ") << ("%" PRIu32, genesis.GetHash().ToString().c_str()) << std::endl;
+            std::cout << std::string(" test_merklehash: ") << ("%" PRIu32, genesis.hashMerkleRoot.ToString().c_str()) << std::endl;
+            std::cout << std::string("min test PowLimit nBit:  %08x\n", consensus.powLimit) << std::endl;
+            std::cout << std::string("Finished calculating Testnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
+
             
         }
 
@@ -385,7 +391,7 @@ public:
         consensus.nSubsidyHalvingInterval = 150;
         consensus.BIP16Height = 0;
         consensus.BIP34Height = 0; // BIP34 activated on regtest (Used in functional tests)
-        consensus.BIP34Hash = uint256();
+        consensus.BIP34Hash = uint256S("26f4ef86da24399f8c59c47065062656fe3d2f7d5ab2725ddb728bbfd9a1552a");
         consensus.BIP65Height = 0; // BIP65 activated on regtest (Used in functional tests)
         consensus.BIP66Height = 0; // BIP66 activated on regtest (Used in functional tests)
         consensus.powLimit = uint256S("7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
@@ -442,12 +448,14 @@ public:
                     std::cout << strNetworkID << " nonce: " << genesis.nNonce << " time: " << genesis.nTime << " hash: " << genesis.GetHash().ToString().c_str() << "\n";
                 }
             }
-            std::cout << "RegTestnet ---\n";
-            std::cout << "  nonce: " << genesis.nNonce <<  "\n";
-            std::cout << "   time: " << genesis.nTime << "\n";
-            std::cout << "   hash: " << genesis.GetHash().ToString().c_str() << "\n";
-            std::cout << "   merklehash: "  << genesis.hashMerkleRoot.ToString().c_str() << "\n";
-            std::cout << std::string("Finished calculating RegTestnet Genesis Block:\n");
+             printf(" Regnet ---\n");
+            std::cout << std::string(" reg_nonce: ") << ("%" PRIu32, genesis.nNonce) << std::endl;
+            std::cout << std::string(" reg_time: ") << ("%" PRIu32, genesis.nTime) << std::endl;
+            std::cout << std::string(" reg_hash: ") << ("%" PRIu32, genesis.GetHash().ToString().c_str()) << std::endl;
+            std::cout << std::string(" reg_merklehash: ") << ("%" PRIu32, genesis.hashMerkleRoot.ToString().c_str()) << std::endl;
+            std::cout << std::string("min reg_test PowLimit nBit:  %08x\n", consensus.powLimit) << std::endl;
+            std::cout << std::string("Finished calculating Regnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
+
            
         }
 
