@@ -8,6 +8,7 @@ radiocoind
 
 
 # testing frontend through REGtest
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/mined-minted.png)
 ```
 radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
 radiocoin-qt -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=generate --daemon
