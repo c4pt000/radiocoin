@@ -5,7 +5,9 @@ WIP** (3 days+)
  <br>
  wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.0.5-exp-1_amd64.deb
   <br>
+  yum install radiocoin-2.0.5_exp-2.x86_64.rpm -y
   
+  # MAINnet
   ```
   radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon &
   
@@ -13,125 +15,21 @@ WIP** (3 days+)
   node1 addnode "162.216.17.71:9332" "add"
   node1 addnode "127.0.0.1:9332" "add"
   node1 addnode "172.104.72.150:9332" "add"
-
-```
-  
-  
- # MAIN
-```
-mkdir anode
-mkdir bnode
-radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=1111 -datadir=./anode -rpcport=1234 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon
-radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=2222 -datadir=./bnode -rpcport=5678 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon
-
-
-
-
-
-
-
-
-alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -datadir=./anode -rpcport=1234"
-alias node2="radiocoin-cli -rpcpassword=radio -rpcuser=coin -datadir=./bnode -rpcport=5678"
-
-
-Call a RPC-Method on both nodes to check that they’re up and running:
-
-node1 getblockchaininfo
-node2 getblockchaininfo
-
-              Introduce the nodes to each other and mine some blocks
-              Register node2 as peer on node1:
-
-
-node1 addnode "127.0.0.1:2222" "add"
-
-
-Mine the genesis block on node1:
-
-
+  node1 getblockchaininfo
 node1 generate 1
-
-
-Check account balance:
-
 node1 getbalance
 
-node1 generate 1
-
-[
-  "5c684e70cd96928bdf01820a0a60ecdc38d53bd02bea4d7804a632f97f0b7ba3"
-]
-
+```
+  
+  
+ ```
 [root@localhost /]# node1 getbalance
 2600.00000000
 ```
 
 
-#!/bin/bash
-```
-radiocoind -listen -addnode=45.33.72.145 -addnode=172.104.97.114 -server -bind=127.0.0.1 &
-```
- 
- ```
- {
-  "chain": "main",
-  "blocks": 0,
-  "headers": 0,
-  "bestblockhash": "000001e9acc96b8e81f0aca297e3a5e5a9823bf3d3c3f380e9cda02e181de8be",
-  "difficulty": 0.000244140625,
-  "mediantime": 1621725598,
-  "verificationprogress": 1,
-  "initialblockdownload": true,
-  "chainwork": "0000000000000000000000000000000000000000000000000000000000100010",
-  "size_on_disk": 260,
-  "pruned": false,
-  "softforks": [
-    {
-      "id": "bip34",
-      "version": 2,
-      "reject": {
-        "status": true
-      }
-    },
-    {
-      "id": "bip66",
-      "version": 3,
-      "reject": {
-        "status": true
-      }
-    },
-    {
-      "id": "bip65",
-      "version": 4,
-      "reject": {
-        "status": true
-      }
-    }
-  ],
-  "bip9_softforks": {
-    "csv": {
-      "status": "active",
-      "startTime": -1,
-      "timeout": 9223372036854775807,
-      "since": 0
-    },
-    "segwit": {
-      "status": "active",
-      "startTime": -1,
-      "timeout": 9223372036854775807,
-      "since": 0
-    }
-  },
-  "warnings": ""
-}
-```
- 
-* BIP34 has been reset to 0 block
-radiocoind 
-```
- yum install libdb-cxx-devel-5.3.28-46.fc34.x86_64 miniupnpc-devel-2.2.2-1.fc34.x86_64 zeromq-devel-4.3.4-1.fc34.x86_64 boost*-y
-```
+
+
 
 sample conf
 /root/.radiocoin/radiocoinconf set accordingly
@@ -142,6 +40,7 @@ rpcpassword=YOURrpcPASS
 rpcport=9332
 port=9333
 addnode=162.216.17.71
+addnode=172.104.72.150
 listen=1
 upnp=1
 daemon=1
@@ -156,72 +55,10 @@ daemon=1
 radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
 radiocoin-qt -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=generate --daemon
 ```
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-# regtest
-```
- radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
- radiocoind -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=generate --daemon
- 
-alias node1="radiocoin-cli -regtest -datadir=./ -rpcport=1234"
-alias node2="radiocoin-cli -regtest -datadir=./newreg -rpcport=5467"
 
 
  
- 
- Call a RPC-Method on both nodes to check that they’re up and running:
 
-node1 getblockchaininfo
-node2 getblockchaininfo
-
-
-
-Introduce the nodes to each other and mine some blocks
-Register node2 as peer on node1:
-
-
-node1 addnode "127.0.0.1:2222" "add"
-
-
-Mine the genesis block on node1:
-
-
-node1 generate 1
-
-
-Check account balance:
-
-
-node1 getbalance
-
-
-node1 generate 1
-[
-  "5c684e70cd96928bdf01820a0a60ecdc38d53bd02bea4d7804a632f97f0b7ba3"
-]
-[root@localhost /]# node1 getbalance
-2600.00000000
-
-
- 
-```
 todo:
 https://stackoverflow.com/questions/47828172/encountering-readblockfromdisk-errors-in-block-header-at-cblockdiskposnfile-0/48606397#48606397
 
