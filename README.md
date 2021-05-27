@@ -6,6 +6,19 @@ radiocoind
  yum install libdb-cxx-devel-5.3.28-46.fc34.x86_64 miniupnpc-devel-2.2.2-1.fc34.x86_64 zeromq-devel-4.3.4-1.fc34.x86_64 boost*-y
 ```
 
+sample conf
+/root/.radiocoin/radiocoinconf set accordingly
+----------------------------
+```
+rpcuser=radio
+rpcpassword=radiocoin
+rpcport=9332
+port=9333
+addnode=162.216.17.71
+
+```
+
+
 
 # testing frontend through REGtest
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/mined-minted.png)
@@ -138,16 +151,7 @@ radiocoind -listen -addnode=45.33.72.145 -addnode=172.104.97.114 -server -bind=1
 https://medium.com/@kay.odenthal_25114/create-a-private-bitcoin-network-with-simulated-mining-b35f5b03e534
 
 
-sample conf
-/root/.radiocoin/radiocoinconf set accordingly
-----------------------------
-```
-rpcuser=radio
-rpcpassword=radiocoin
-rpcport=9332
-port=9333
-addnode=172.104.97.114
-```
+
 
 
 todo: mine block 0 
