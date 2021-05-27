@@ -93,8 +93,10 @@ radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=1111 -dat
 radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=2222 -datadir=./bnode -rpcport=5467  -deprecatedrpc=generate --daemon
 
 
-alias node1="radiocoin-cli -regtest -datadir=./ -rpcport=1234"
-alias node2="radiocoin-cli -regtest -datadir=./newreg -rpcport=5467"
+
+alias node1="radiocoin-cli -datadir=./anode -rpcport=1234"
+alias node2="radiocoin-cli -datadir=./bnode -rpcport=5467"
+
 
 Call a RPC-Method on both nodes to check that they’re up and running:
 
