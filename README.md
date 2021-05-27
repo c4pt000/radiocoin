@@ -10,8 +10,8 @@ sample conf
 /root/.radiocoin/radiocoinconf set accordingly
 ----------------------------
 ```
-rpcuser=radio
-rpcpassword=radiocoin
+rpcuser=YOURrpcUSER
+rpcpassword=YOURrpcPASS
 rpcport=9332
 port=9333
 addnode=162.216.17.71
