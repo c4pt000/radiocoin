@@ -1,5 +1,60 @@
 WIP** (3 days+)
  
+ 
+ ```
+ {
+  "chain": "main",
+  "blocks": 0,
+  "headers": 0,
+  "bestblockhash": "000001e9acc96b8e81f0aca297e3a5e5a9823bf3d3c3f380e9cda02e181de8be",
+  "difficulty": 0.000244140625,
+  "mediantime": 1621725598,
+  "verificationprogress": 1,
+  "initialblockdownload": true,
+  "chainwork": "0000000000000000000000000000000000000000000000000000000000100010",
+  "size_on_disk": 260,
+  "pruned": false,
+  "softforks": [
+    {
+      "id": "bip34",
+      "version": 2,
+      "reject": {
+        "status": true
+      }
+    },
+    {
+      "id": "bip66",
+      "version": 3,
+      "reject": {
+        "status": true
+      }
+    },
+    {
+      "id": "bip65",
+      "version": 4,
+      "reject": {
+        "status": true
+      }
+    }
+  ],
+  "bip9_softforks": {
+    "csv": {
+      "status": "active",
+      "startTime": -1,
+      "timeout": 9223372036854775807,
+      "since": 0
+    },
+    "segwit": {
+      "status": "active",
+      "startTime": -1,
+      "timeout": 9223372036854775807,
+      "since": 0
+    }
+  },
+  "warnings": ""
+}
+```
+ 
 * BIP34 has been reset to 0 block
 radiocoind 
 ```
