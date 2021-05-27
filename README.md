@@ -15,6 +15,9 @@ rpcpassword=YOURrpcPASS
 rpcport=9332
 port=9333
 addnode=162.216.17.71
+listen=1
+upnp=1
+daemon=1
 
 ```
 
