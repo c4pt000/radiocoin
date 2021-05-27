@@ -2,8 +2,9 @@ WIP** (3 days+)
  
  
  wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.0.5_exp-2.x86_64.rpm
+ <br>
  wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.0.5-exp-1_amd64.deb
- 
+ <br>
  # MAIN
 ```
 mkdir anode
