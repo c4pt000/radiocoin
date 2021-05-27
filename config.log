@@ -4442,14 +4442,15 @@ config.status:1467: creating share/qt/Info.plist
 config.status:1467: creating test/config.ini
 config.status:1467: creating contrib/devtools/split-debug.sh
 config.status:1467: creating src/config/bitcoin-config.h
+config.status:1648: src/config/bitcoin-config.h is unchanged
 config.status:1727: executing depfiles commands
 config.status:1804: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
 make: Nothing to be done for 'am--depfiles'.
 config.status:1809: $? = 0
 config.status:1727: executing libtool commands
-configure:35468: === configuring in src/univalue (/home/c4pt/opt/COIN/radiocoin/radioCOIN/src/univalue)
+configure:35468: === configuring in src/univalue (/home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/src/univalue)
 configure:35531: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--with-incompatible-bdb' '--enable-sse2' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' '--disable-jni' --cache-file=/dev/null --srcdir=.
-configure:35468: === configuring in src/secp256k1 (/home/c4pt/opt/COIN/radiocoin/radioCOIN/src/secp256k1)
+configure:35468: === configuring in src/secp256k1 (/home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/src/secp256k1)
 configure:35531: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--with-incompatible-bdb' '--enable-sse2' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' '--disable-jni' --cache-file=/dev/null --srcdir=.
 configure:35550: result: Fixing libtool for -rpath problems.
 
@@ -4810,7 +4811,7 @@ pkg_cv_ZMQ_LIBS='-lzmq '
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/c4pt/opt/COIN/radiocoin/radioCOIN/build-aux/missing aclocal-1.16'
+ACLOCAL='${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing aclocal-1.16'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -4821,9 +4822,9 @@ AM_DEFAULT_VERBOSITY='0'
 AM_V='$(V)'
 AR='/usr/bin/ar'
 ARFLAGS='cr'
-AUTOCONF='${SHELL} /home/c4pt/opt/COIN/radiocoin/radioCOIN/build-aux/missing autoconf'
-AUTOHEADER='${SHELL} /home/c4pt/opt/COIN/radiocoin/radioCOIN/build-aux/missing autoheader'
-AUTOMAKE='${SHELL} /home/c4pt/opt/COIN/radiocoin/radioCOIN/build-aux/missing automake-1.16'
+AUTOCONF='${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing autoconf'
+AUTOHEADER='${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing autoheader'
+AUTOMAKE='${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing automake-1.16'
 AVX2_CXXFLAGS='-mavx -mavx2'
 AWK='gawk'
 BDB_CFLAGS=''
@@ -4976,7 +4977,7 @@ LUPDATE='/usr/lib64/qt5/bin/lupdate-qt5'
 MAINT=''
 MAINTAINER_MODE_FALSE='#'
 MAINTAINER_MODE_TRUE=''
-MAKEINFO='${SHELL} /home/c4pt/opt/COIN/radiocoin/radioCOIN/build-aux/missing makeinfo'
+MAKEINFO='${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing makeinfo'
 MAKENSIS=''
 MANIFEST_TOOL=':'
 MINIUPNPC_CPPFLAGS=''
@@ -5140,7 +5141,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/c4pt/opt/COIN/radiocoin/radioCOIN/build-aux/install-sh'
+install_sh='${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/install-sh'
 libdir='${exec_prefix}/lib64'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

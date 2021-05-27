@@ -11,6 +11,7 @@ static std::atomic<bool> fRequestShutdown(false);
 
 void StartShutdown()
 {
+//    fRequestShutdown = true;
     fRequestShutdown = true;
 }
 void AbortShutdown()
