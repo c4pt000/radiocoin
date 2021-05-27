@@ -289,7 +289,6 @@ public:
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
-
         genesis = CreateGenesisBlock(1486949366, 293345, 0x1e0ffff0 , 1, 50 * COIN);
 
 
