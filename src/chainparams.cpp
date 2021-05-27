@@ -35,6 +35,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     // orig 486604799
     // 504365040
     // https://github.com/radiocoin-project/radiocoin/issues/388
+					  
     txNew.vin[0].scriptSig = CScript() << 504365040 << CScriptNum(4) << std::vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
    
     
@@ -137,7 +138,7 @@ public:
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 22;
         m_assumed_chain_state_size = 3;
-        genesis = CreateGenesisBlock(1621725598, 167677, 0x1f0fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1621725598, 167677, 0x1e0ffff0 , 1, 50 * COIN);
         
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
@@ -289,7 +290,7 @@ public:
         m_assumed_blockchain_size = 2;
         m_assumed_chain_state_size = 1;
 
-        genesis = CreateGenesisBlock(1486949366, 293345, 0x1f0fffff, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1486949366, 293345, 0x1e0ffff0 , 1, 50 * COIN);
 
 
 	 consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
