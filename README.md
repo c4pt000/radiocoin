@@ -1,5 +1,57 @@
 WIP** (3 days+)
  
+ # MAIN
+```
+mkdir anode
+mkdir bnode
+radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=1111 -datadir=./anode -rpcport=1234 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon
+radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=2222 -datadir=./bnode -rpcport=5678 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon
+
+
+
+
+
+alias node1="radiocoin-cli -datadir=./anode -rpcport=1234"
+alias node2="radiocoin-cli -datadir=./bnode -rpcport=5467"
+
+
+Call a RPC-Method on both nodes to check that they’re up and running:
+
+node1 getblockchaininfo
+node2 getblockchaininfo
+
+              Introduce the nodes to each other and mine some blocks
+              Register node2 as peer on node1:
+
+
+node1 addnode "127.0.0.1:2222" "add"
+
+
+Mine the genesis block on node1:
+
+
+node1 generate 1
+
+
+Check account balance:
+
+node1 getbalance
+
+node1 generate 1
+
+[
+  "5c684e70cd96928bdf01820a0a60ecdc38d53bd02bea4d7804a632f97f0b7ba3"
+]
+
+[root@localhost /]# node1 getbalance
+2600.00000000
+```
+
+
+#!/bin/bash
+```
+radiocoind -listen -addnode=45.33.72.145 -addnode=172.104.97.114 -server -bind=127.0.0.1 &
+```
  
  ```
  {
@@ -156,56 +208,7 @@ https://stackoverflow.com/questions/47828172/encountering-readblockfromdisk-erro
 https://bitcoin.stackexchange.com/questions/67060/error-readblockfromdisk-errors-in-block-header-at-cblockdiskposnfile-0-npos
 
 
-# MAIN
-```
-mkdir anode
-mkdir bnode
-radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=1111 -datadir=./anode -rpcport=1234  -deprecatedrpc=generate --daemon
-radiocoind -listen -noconnect -bind=127.0.0.1 -addnode=127.0.0.1 -port=2222 -datadir=./bnode -rpcport=5467  -deprecatedrpc=generate --daemon
 
-
-
-alias node1="radiocoin-cli -datadir=./anode -rpcport=1234"
-alias node2="radiocoin-cli -datadir=./bnode -rpcport=5467"
-
-
-Call a RPC-Method on both nodes to check that they’re up and running:
-
-node1 getblockchaininfo
-node2 getblockchaininfo
-
-              Introduce the nodes to each other and mine some blocks
-              Register node2 as peer on node1:
-
-
-node1 addnode "127.0.0.1:2222" "add"
-
-
-Mine the genesis block on node1:
-
-
-node1 generate 1
-
-
-Check account balance:
-
-node1 getbalance
-
-node1 generate 1
-
-[
-  "5c684e70cd96928bdf01820a0a60ecdc38d53bd02bea4d7804a632f97f0b7ba3"
-]
-
-[root@localhost /]# node1 getbalance
-2600.00000000
-```
-
-```
-#!/bin/bash
-
-radiocoind -listen -addnode=45.33.72.145 -addnode=172.104.97.114 -server -bind=127.0.0.1 &
-```
 https://medium.com/@kay.odenthal_25114/create-a-private-bitcoin-network-with-simulated-mining-b35f5b03e534
 
 
