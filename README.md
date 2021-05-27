@@ -8,6 +8,12 @@ WIP** (3 days+)
   
   ```
   radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon &
+  
+  alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -rpcport=9332"
+  node1 addnode "162.216.17.71:9332" "add"
+  node1 addnode "127.0.0.1:9332" "add"
+  node1 addnode "172.104.72.150:9332" "add"
+
 ```
   
   
