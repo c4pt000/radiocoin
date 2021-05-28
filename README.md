@@ -7,7 +7,7 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 <br>
   yum install radiocoin-2.0.6_exp-2.x86_64.rpm  -y
   
-  
+  or from source
   ```
   sh autogen.sh 
 ./configure --prefix=/usr --with-incompatible-bdb
