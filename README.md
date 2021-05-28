@@ -152,16 +152,24 @@ sample conf
 ```
 rpcuser=radio
 rpcpassword=coin
-rpcallowip=0.0.0.0/0
+
 rpcport=9332
-port=9333
+port=9335
+rpcbind=127.0.0.1
+
 addnode=162.216.17.71
 addnode=172.104.72.150
-bind=127.0.0.1
-listen=1
-upnp=1
 daemon=1
-deprecatedrpc=generate
+
+#your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
+#rpcallowip=0.0.0.0/24
+rpcallowip=162.216.17.71/24
+
+bind=127.0.0.1
+
+rpcallowport=9332
+
+
 
 
 
