@@ -14,6 +14,19 @@ WIP**
   "pruned": false,
 ```
 
+```
+mkdir anodes
+
+radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./anodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin -rpcport=9334 -port=9335 --daemon --server
+ 
+alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -rpcport=9334"
+
+ node1 getblockhash 0 
+ node1 getblock 000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204 false
+ 
+ 010000000000000000000000000000000000000000000000000000000000000000000000f5247939a78482b7824f5f359ce35e78773216d4355b098b69fdfaed0b0df9d24c60b060f0ff0f1e714901000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1e04f0ff0f1e010416526164696f436f696e206d757369632077616c6c6574ffffffff010058850c02000000434104770ee175cb5530e95cd615c061738719116d871ad9fcc9292ea6b0d396f7d270c12f351ff674b030299b537e9fa062511ac67b8bfc4d68cfcc2fd86158e0e6b3ac00000000
+```
+
 still a work in progress, trying to mint block 0 so the network can propegate,
 made changes for DOGE, instead of litecoin source, added paper-wallet back, fixed the "about"
 
