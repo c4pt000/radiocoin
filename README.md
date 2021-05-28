@@ -1,5 +1,19 @@
 WIP** 
 
+```
+"chain": "main",
+  "blocks": 0,
+  "headers": 0,
+  "bestblockhash": "000002e2e76fef07722c875e9a68b1ce32bd2964e2df8ce70d9d31ab263f5fd2",
+  "difficulty": 0.000244140625,
+  "mediantime": 1622171724,
+  "verificationprogress": 1.330529405468109e-08,
+  "initialblockdownload": true,
+  "chainwork": "0000000000000000000000000000000000000000000000000000000000100010",
+  "size_on_disk": 486,
+  "pruned": false,
+```
+
 still a work in progress, trying to mint block 0 so the network can propegate,
 made changes for DOGE, instead of litecoin source, added paper-wallet back, fixed the "about"
 
