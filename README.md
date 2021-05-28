@@ -1,7 +1,18 @@
 WIP** 
 https://www.youtube.com/watch?v=U-IIKVaEhrA
 
+still a work in progress, trying to mint block 0 so the network can propegate,
+made changes for DOGE, instead of litecoin source, added paper-wallet back, fixed the "about"
 
+
+*NON-functional demo   semi functional stuck at block zer0   needs to mint block 0
+<br> 
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.1.1_exp-2.x86_64.rpm
+<br>
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.1-exp-1_amd64.deb
+<br>
+  yum install radiocoin-2.1.1_exp-2.x86_64.rpm -y
+  
 
 # RADIOCOIN POOL
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/RADIOCOIN-POOL.png)
@@ -98,18 +109,7 @@ f0ff0f1e
 
 ```
 
-still a work in progress, trying to mint block 0 so the network can propegate,
-made changes for DOGE, instead of litecoin source, added paper-wallet back, fixed the "about"
 
-
-*NON-functional demo   semi functional stuck at block zer0   needs to mint block 0
-<br> 
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.0.7_exp_radio-2.x86_64.rpm
-<br>
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.0.7-exp-radio-1_amd64.deb
-<br>
-  yum install radiocoin-2.0.7_exp_radio-2.x86_64.rpm  -y
-  
   
   or from source
   ```
