@@ -152,6 +152,7 @@ sample conf
 ```
 rpcuser=radio
 rpcpassword=coin
+rpcallowip=0.0.0.0/0
 rpcport=9332
 port=9333
 addnode=162.216.17.71
