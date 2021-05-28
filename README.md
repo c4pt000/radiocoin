@@ -10,7 +10,7 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 <br>
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.0.7-exp-radio-1_amd64.deb
 <br>
-  yum install radiocoin-2.0.6_exp-2.x86_64.rpm  -y
+  yum install radiocoin-2.0.7_exp_radio-2.x86_64.rpm  -y
   
   or from source
   ```
