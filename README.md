@@ -116,6 +116,7 @@ alien --scripts --to-rpm *.deb
 ```
   
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
+  ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
   
   # MAINnet
   ```
