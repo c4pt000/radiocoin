@@ -27,6 +27,9 @@ alien --scripts --to-rpm *.deb
   
   # MAINnet
   ```
+  
+  radiocoin-qt -listen -upnp=1 -bind=127.0.0.1 -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon 
+  
   radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon -rpcport=9334 -port=9335
 
   
