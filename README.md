@@ -157,6 +157,7 @@ rpcport=9332
 rpcallowport=9332
 port=9333
 addnode=162.216.17.71
+addnode=178.79.166.208
 addnode=172.104.72.150
 rpcconnect=0.0.0.0
 rpcallowip=0.0.0.0/0
@@ -175,6 +176,7 @@ deprecatedrpc=generate
 #mintxfee=0.00001
 #minrelaytxfee=0.00001
 #maxconnections=10
+
 
 ```
 
