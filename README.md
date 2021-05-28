@@ -1,5 +1,7 @@
-WIP** (3 days+)
- 
+WIP** 
+
+still a work in progress, trying to mint block 0 so the network can propegate,
+
 <br> 
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.0.6_exp-2.x86_64.rpm 
 <br>
