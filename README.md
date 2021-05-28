@@ -11,7 +11,7 @@ still a work in progress, trying to mint block 0 so the network can propegate,
 made changes for DOGE, instead of litecoin source, added paper-wallet back, fixed the "about"
 
 
-same DOGE block reward design but for radiocoin
+same DOGE block reward design but for radiocoin (random between 0-1,000,000 RADC
 ```
 Block 1 — 100,000: 0-1,000,000 radiocoin(RADC)
 Block 100,001 — 200,000: 0-500,000 radiocoin(RADC)
