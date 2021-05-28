@@ -150,15 +150,19 @@ sample conf
 /root/.radiocoin/radiocoinconf set accordingly
 ----------------------------
 ```
-rpcuser=YOURrpcUSER
-rpcpassword=YOURrpcPASS
+rpcuser=radio
+rpcpassword=coin
 rpcport=9332
 port=9333
 addnode=162.216.17.71
 addnode=172.104.72.150
+bind=127.0.0.1
 listen=1
 upnp=1
 daemon=1
+deprecatedrpc=generate
+
+
 
 ```
 
