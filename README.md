@@ -47,7 +47,7 @@ block hash: 000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204
 
 
 
-
+https://jbaczuk.github.io/blockchain_fundamentals/2-Fundamentals/2.5-Mining.html
 
 for lower powLimit 
 ----------------------
