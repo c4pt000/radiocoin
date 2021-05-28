@@ -7,10 +7,17 @@ made changes for DOGE, instead of litecoin source, added paper-wallet back, fixe
 
 *NON-functional demo   semi functional stuck at block zer0   needs to mint block 0
 <br> 
+```
+fedora/rhel
+
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.1.1_exp-2.x86_64.rpm
-<br>
+
+or for debian based systems
+
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.1-exp-1_amd64.deb
-<br>
+```
+
+
   yum install radiocoin-2.1.1_exp-2.x86_64.rpm -y
   
 
