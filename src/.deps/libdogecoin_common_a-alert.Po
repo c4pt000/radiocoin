@@ -1,4 +1,4 @@
-libdogecoin_common_a-alert.o: alert.cpp /usr/include/stdc-predef.h \
+libradiocoin_common_a-alert.o: alert.cpp /usr/include/stdc-predef.h \
  alert.h serialize.h compat/endian.h config/bitcoin-config.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

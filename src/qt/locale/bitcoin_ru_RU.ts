@@ -64,10 +64,10 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radio Coin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin Core</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -234,14 +234,14 @@
     </message>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radio Coin</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoin Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>dogecoin-core</translation>
+        <translation>radiocoin-core</translation>
     </message>
     <message>
         <source>Information</source>

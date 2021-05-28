@@ -1,4 +1,4 @@
-libdogecoin_server_a-pow.o: pow.cpp /usr/include/stdc-predef.h pow.h \
+libradiocoin_server_a-pow.o: pow.cpp /usr/include/stdc-predef.h pow.h \
  consensus/params.h uint256.h /usr/include/assert.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
@@ -220,7 +220,7 @@ libdogecoin_server_a-pow.o: pow.cpp /usr/include/stdc-predef.h pow.h \
  /usr/include/c++/11/ostream /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/istream /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- dogecoin.h amount.h chainparams.h chainparamsbase.h protocol.h \
+ radiocoin.h amount.h chainparams.h chainparamsbase.h protocol.h \
  netaddress.h config/bitcoin-config.h compat.h /usr/include/sys/fcntl.h \
  /usr/include/fcntl.h /usr/include/bits/fcntl.h \
  /usr/include/bits/fcntl-linux.h /usr/include/bits/types/struct_iovec.h \
@@ -1136,7 +1136,7 @@ tinyformat.h:
 /usr/include/c++/11/bits/istream.tcc:
 /usr/include/c++/11/sstream:
 /usr/include/c++/11/bits/sstream.tcc:
-dogecoin.h:
+radiocoin.h:
 amount.h:
 chainparams.h:
 chainparamsbase.h:

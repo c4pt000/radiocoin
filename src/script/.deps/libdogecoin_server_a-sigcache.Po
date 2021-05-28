@@ -1,4 +1,4 @@
-script/libdogecoin_server_a-sigcache.o: script/sigcache.cpp \
+script/libradiocoin_server_a-sigcache.o: script/sigcache.cpp \
  /usr/include/stdc-predef.h script/sigcache.h script/interpreter.h \
  script/script_error.h primitives/transaction.h amount.h serialize.h \
  compat/endian.h config/bitcoin-config.h \

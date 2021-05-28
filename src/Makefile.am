@@ -24,23 +24,23 @@ BITCOIN_INCLUDES=-I$(builddir) -I$(builddir)/obj $(BDB_CPPFLAGS) $(BOOST_CPPFLAG
 BITCOIN_INCLUDES += -I$(srcdir)/secp256k1/include
 BITCOIN_INCLUDES += $(UNIVALUE_CFLAGS)
 
-LIBRADCCOIN_SERVER=libdogecoin_server.a
-LIBRADCCOIN_COMMON=libdogecoin_common.a
-LIBRADCCOIN_CONSENSUS=libdogecoin_consensus.a
-LIBRADCCOIN_CLI=libdogecoin_cli.a
-LIBRADCCOIN_UTIL=libdogecoin_util.a
-LIBRADCCOIN_CRYPTO=crypto/libdogecoin_crypto.a
-LIBRADCCOINQT=qt/libdogecoinqt.a
+LIBRADIOCOIN_SERVER=libradiocoin_server.a
+LIBRADIOCOIN_COMMON=libradiocoin_common.a
+LIBRADIOCOIN_CONSENSUS=libradiocoin_consensus.a
+LIBRADIOCOIN_CLI=libradiocoin_cli.a
+LIBRADIOCOIN_UTIL=libradiocoin_util.a
+LIBRADIOCOIN_CRYPTO=crypto/libradiocoin_crypto.a
+LIBRADIOCOINQT=qt/libradiocoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
 
 if ENABLE_ZMQ
-LIBRADCCOIN_ZMQ=libdogecoin_zmq.a
+LIBRADIOCOIN_ZMQ=libradiocoin_zmq.a
 endif
 if BUILD_BITCOIN_LIBS
-LIBRADCCOINCONSENSUS=libdogecoinconsensus.la
+LIBRADIOCOINCONSENSUS=libradiocoinconsensus.la
 endif
 if ENABLE_WALLET
-LIBRADCCOIN_WALLET=libdogecoin_wallet.a
+LIBRADIOCOIN_WALLET=libradiocoin_wallet.a
 endif
 
 $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
@@ -49,16 +49,16 @@ $(LIBSECP256K1): $(wildcard secp256k1/src/*) $(wildcard secp256k1/include/*)
 # Make is not made aware of per-object dependencies to avoid limiting building parallelization
 # But to build the less dependent modules first, we manually select their order here:
 EXTRA_LIBRARIES += \
-  $(LIBRADCCOIN_CRYPTO) \
-  $(LIBRADCCOIN_UTIL) \
-  $(LIBRADCCOIN_COMMON) \
-  $(LIBRADCCOIN_CONSENSUS) \
-  $(LIBRADCCOIN_SERVER) \
-  $(LIBRADCCOIN_CLI) \
-  $(LIBRADCCOIN_WALLET) \
-  $(LIBRADCCOIN_ZMQ)
+  $(LIBRADIOCOIN_CRYPTO) \
+  $(LIBRADIOCOIN_UTIL) \
+  $(LIBRADIOCOIN_COMMON) \
+  $(LIBRADIOCOIN_CONSENSUS) \
+  $(LIBRADIOCOIN_SERVER) \
+  $(LIBRADIOCOIN_CLI) \
+  $(LIBRADIOCOIN_WALLET) \
+  $(LIBRADIOCOIN_ZMQ)
 
-lib_LTLIBRARIES = $(LIBRADCCOINCONSENSUS)
+lib_LTLIBRARIES = $(LIBRADIOCOINCONSENSUS)
 
 bin_PROGRAMS =
 noinst_PROGRAMS =
@@ -66,11 +66,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += dogecoind
+  bin_PROGRAMS += radiocoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += dogecoin-cli dogecoin-tx
+  bin_PROGRAMS += radiocoin-cli radiocoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -100,8 +100,8 @@ BITCOIN_CORE_H = \
   core_io.h \
   core_memusage.h \
   cuckoocache.h \
-  dogecoin.cpp \
-  dogecoin.h \
+  radiocoin.cpp \
+  radiocoin.h \
   httprpc.h \
   httpserver.h \
   indirectmap.h \
@@ -175,12 +175,12 @@ obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh $(abs_top_builddir)/src/obj/build.h \
 	  $(abs_top_srcdir)
-libdogecoin_util_a-clientversion.$(OBJEXT): obj/build.h
+libradiocoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
 # server: shared between bitcoind and bitcoin-qt
-libdogecoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
-libdogecoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_server_a_SOURCES = \
+libradiocoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
+libradiocoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_server_a_SOURCES = \
   addrman.cpp \
   addrdb.cpp \
   alert.cpp \
@@ -220,9 +220,9 @@ libdogecoin_server_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if ENABLE_ZMQ
-libdogecoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libdogecoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_zmq_a_SOURCES = \
+libradiocoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+libradiocoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_zmq_a_SOURCES = \
   zmq/zmqabstractnotifier.cpp \
   zmq/zmqnotificationinterface.cpp \
   zmq/zmqpublishnotifier.cpp
@@ -231,9 +231,9 @@ endif
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
 # when wallet enabled
-libdogecoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdogecoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_wallet_a_SOURCES = \
+libradiocoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libradiocoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_wallet_a_SOURCES = \
   wallet/crypter.cpp \
   wallet/db.cpp \
   wallet/rpcdump.cpp \
@@ -244,9 +244,9 @@ libdogecoin_wallet_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 # crypto primitives library
-crypto_libdogecoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
-crypto_libdogecoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-crypto_libdogecoin_crypto_a_SOURCES = \
+crypto_libradiocoin_crypto_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_CONFIG_INCLUDES)
+crypto_libradiocoin_crypto_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+crypto_libradiocoin_crypto_a_SOURCES = \
   crypto/aes.cpp \
   crypto/aes.h \
   crypto/common.h \
@@ -266,9 +266,9 @@ crypto_libdogecoin_crypto_a_SOURCES = \
   crypto/sha512.h
 
 # consensus: shared between all executables that validate any consensus rules.
-libdogecoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdogecoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_consensus_a_SOURCES = \
+libradiocoin_consensus_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libradiocoin_consensus_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_consensus_a_SOURCES = \
   amount.h \
   arith_uint256.cpp \
   arith_uint256.h \
@@ -303,9 +303,9 @@ libdogecoin_consensus_a_SOURCES = \
   version.h
 
 # common: shared between bitcoind, and bitcoin-qt and non-server tools
-libdogecoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdogecoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_common_a_SOURCES = \
+libradiocoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libradiocoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_common_a_SOURCES = \
   alert.cpp \
   amount.cpp \
   arith_uint256.cpp \
@@ -333,9 +333,9 @@ libdogecoin_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libdogecoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdogecoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_util_a_SOURCES = \
+libradiocoin_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libradiocoin_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -354,97 +354,97 @@ libdogecoin_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if GLIBC_BACK_COMPAT
-libdogecoin_util_a_SOURCES += compat/glibc_compat.cpp
+libradiocoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
 # cli: shared between bitcoin-cli and bitcoin-qt
-libdogecoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libdogecoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libdogecoin_cli_a_SOURCES = \
+libradiocoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libradiocoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoin_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libdogecoin_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libradiocoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind binary #
-dogecoind_SOURCES = bitcoind.cpp
-dogecoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-dogecoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-dogecoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+radiocoind_SOURCES = bitcoind.cpp
+radiocoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+radiocoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+radiocoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dogecoind_SOURCES += bitcoind-res.rc
+radiocoind_SOURCES += bitcoind-res.rc
 endif
 
-dogecoind_LDADD = \
-  $(LIBRADCCOIN_SERVER) \
-  $(LIBRADCCOIN_COMMON) \
+radiocoind_LDADD = \
+  $(LIBRADIOCOIN_SERVER) \
+  $(LIBRADIOCOIN_COMMON) \
   $(LIBUNIVALUE) \
-  $(LIBRADCCOIN_UTIL) \
-  $(LIBRADCCOIN_WALLET) \
-  $(LIBRADCCOIN_ZMQ) \
-  $(LIBRADCCOIN_CONSENSUS) \
-  $(LIBRADCCOIN_CRYPTO) \
+  $(LIBRADIOCOIN_UTIL) \
+  $(LIBRADIOCOIN_WALLET) \
+  $(LIBRADIOCOIN_ZMQ) \
+  $(LIBRADIOCOIN_CONSENSUS) \
+  $(LIBRADIOCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-dogecoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+radiocoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
 # bitcoin-cli binary #
-dogecoin_cli_SOURCES = bitcoin-cli.cpp
-dogecoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-dogecoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-dogecoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+radiocoin_cli_SOURCES = bitcoin-cli.cpp
+radiocoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+radiocoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+radiocoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dogecoin_cli_SOURCES += bitcoin-cli-res.rc
+radiocoin_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-dogecoin_cli_LDADD = \
-  $(LIBRADCCOIN_CLI) \
+radiocoin_cli_LDADD = \
+  $(LIBRADIOCOIN_CLI) \
   $(LIBUNIVALUE) \
-  $(LIBRADCCOIN_UTIL) \
-  $(LIBRADCCOIN_CRYPTO)
+  $(LIBRADIOCOIN_UTIL) \
+  $(LIBRADIOCOIN_CRYPTO)
 
-dogecoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+radiocoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-dogecoin_tx_SOURCES = bitcoin-tx.cpp
-dogecoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-dogecoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-dogecoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+radiocoin_tx_SOURCES = bitcoin-tx.cpp
+radiocoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+radiocoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+radiocoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-dogecoin_tx_SOURCES += bitcoin-tx-res.rc
+radiocoin_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-dogecoin_tx_LDADD = \
+radiocoin_tx_LDADD = \
   $(LIBUNIVALUE) \
-  $(LIBRADCCOIN_COMMON) \
-  $(LIBRADCCOIN_UTIL) \
-  $(LIBRADCCOIN_CONSENSUS) \
-  $(LIBRADCCOIN_CRYPTO) \
+  $(LIBRADIOCOIN_COMMON) \
+  $(LIBRADIOCOIN_UTIL) \
+  $(LIBRADIOCOIN_CONSENSUS) \
+  $(LIBRADIOCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-dogecoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+radiocoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
 if BUILD_BITCOIN_LIBS
 include_HEADERS = script/bitcoinconsensus.h
-libdogecoinconsensus_la_SOURCES = $(crypto_libdogecoin_crypto_a_SOURCES) $(libdogecoin_consensus_a_SOURCES)
+libradiocoinconsensus_la_SOURCES = $(crypto_libradiocoin_crypto_a_SOURCES) $(libradiocoin_consensus_a_SOURCES)
 
 if GLIBC_BACK_COMPAT
-  libdogecoinconsensus_la_SOURCES += compat/glibc_compat.cpp
+  libradiocoinconsensus_la_SOURCES += compat/glibc_compat.cpp
 endif
 
-libdogecoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
-libdogecoinconsensus_la_LIBADD = $(LIBSECP256K1)
-libdogecoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
-libdogecoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libradiocoinconsensus_la_LDFLAGS = $(AM_LDFLAGS) -no-undefined $(RELDFLAGS)
+libradiocoinconsensus_la_LIBADD = $(LIBSECP256K1)
+libradiocoinconsensus_la_CPPFLAGS = $(AM_CPPFLAGS) -I$(builddir)/obj -I$(srcdir)/secp256k1/include -DBUILD_BITCOIN_INTERNAL
+libradiocoinconsensus_la_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 
 endif
 #

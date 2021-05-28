@@ -76,7 +76,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Синхронизација са мрежом у току...</translation>
@@ -130,8 +130,8 @@
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Пошаљите новац на dogecoin адресу</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Пошаљите новац на radiocoin адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -442,7 +442,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcije</translation>

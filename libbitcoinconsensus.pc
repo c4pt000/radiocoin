@@ -3,7 +3,7 @@ exec_prefix=${prefix}
 libdir=${exec_prefix}/lib64
 includedir=${prefix}/include
 
-Name: Radio Coin consensus library
+Name: RadioCoin Core consensus library
 Description: Library for the Bitcoin consensus protocol.
 Version: 1.14.3
 Libs: -L${libdir} -lbitcoinconsensus

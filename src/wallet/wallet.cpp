@@ -8,7 +8,7 @@
 #include "base58.h"
 #include "checkpoints.h"
 #include "chain.h"
-#include "dogecoin.h"
+#include "radiocoin.h"
 #include "wallet/coincontrol.h"
 #include "consensus/consensus.h"
 #include "consensus/validation.h"
@@ -43,7 +43,7 @@ bool bSpendZeroConfChange = DEFAULT_SPEND_ZEROCONF_CHANGE;
 bool fSendFreeTransactions = DEFAULT_SEND_FREE_TRANSACTIONS;
 bool fWalletRbf = DEFAULT_WALLET_RBF;
 
-const char * DEFAULT_WALLET_DAT = "radiocoin-wallet.dat";
+const char * DEFAULT_WALLET_DAT = "wallet.dat";
 const uint32_t BIP32_HARDENED_KEY_LIMIT = 0x80000000;
 
 /**
@@ -468,7 +468,7 @@ bool CWallet::Verify()
         // try again
         if (!bitdb.Open(GetDataDir())) {
             // if it still fails, it probably means we can't even create the database env
-            return InitError(strprintf(_("Error initializing radiocoin-wallet.database environment %s!"), GetDataDir()));
+            return InitError(strprintf(_("Error initializing wallet database environment %s!"), GetDataDir()));
         }
     }
 
@@ -1376,7 +1376,7 @@ bool CWallet::SetHDMasterKey(const CPubKey& pubkey)
 {
     LOCK(cs_wallet);
 
-    // ensure this radiocoin-wallet.dat can only be opened by clients supporting HD
+    // ensure this wallet.dat can only be opened by clients supporting HD
     SetMinVersion(FEATURE_HD);
 
     // store the keyid (hash160) together with
@@ -2842,8 +2842,8 @@ bool CWallet::AddAccountingEntry(const CAccountingEntry& acentry, CWalletDB *pwa
 
 CAmount CWallet::GetRequiredFee(const CMutableTransaction& tx, unsigned int nTxBytes)
 {
-    // Radiocoin: Add an increased fee for each dust output
-    return std::max(minTxFee.GetFee(nTxBytes) + GetRadiocoinDustFee(tx.vout, minTxFee), ::minRelayTxFee.GetFee(nTxBytes));
+    // RadioCoin: Add an increased fee for each dust output
+    return std::max(minTxFee.GetFee(nTxBytes) + GetRadioCoinDustFee(tx.vout, minTxFee), ::minRelayTxFee.GetFee(nTxBytes));
 }
 
 CAmount CWallet::GetRequiredFee(unsigned int nTxBytes)
@@ -2869,7 +2869,7 @@ CAmount CWallet::GetMinimumFee(const CMutableTransaction& tx, unsigned int nTxBy
             nFeeNeeded = fallbackFee.GetFee(nTxBytes);
     }
     // prevent user from paying a fee below minRelayTxFee or minTxFee
-    // Radiocoin: Drop the smart fee estimate, use GetRequiredFee
+    // RadioCoin: Drop the smart fee estimate, use GetRequiredFee
     // nFeeNeeded = std::max(nFeeNeeded, GetRequiredFee(tx, nTxBytes));
     nFeeNeeded = GetRequiredFee(tx, nTxBytes);
     // But always obey the maximum
@@ -3605,7 +3605,7 @@ std::string CWallet::GetWalletHelpString(bool showDebug)
     {
         strUsage += HelpMessageGroup(_("Wallet debugging/testing options:"));
 
-        strUsage += HelpMessageOpt("-dblogsize=<n>", strprintf("Flush radiocoin-wallet.database activity from memory to disk log every <n> megabytes (default: %u)", DEFAULT_WALLET_DBLOGSIZE));
+        strUsage += HelpMessageOpt("-dblogsize=<n>", strprintf("Flush wallet database activity from memory to disk log every <n> megabytes (default: %u)", DEFAULT_WALLET_DBLOGSIZE));
         strUsage += HelpMessageOpt("-flushwallet", strprintf("Run a thread to flush wallet periodically (default: %u)", DEFAULT_FLUSHWALLET));
         strUsage += HelpMessageOpt("-privdb", strprintf("Sets the DB_PRIVATE flag in the wallet db environment (default: %u)", DEFAULT_WALLET_PRIVDB));
         strUsage += HelpMessageOpt("-walletrejectlongchains", strprintf(_("Wallet will not create transactions that violate mempool chain limits (default: %u)"), DEFAULT_WALLET_REJECT_LONG_CHAINS));

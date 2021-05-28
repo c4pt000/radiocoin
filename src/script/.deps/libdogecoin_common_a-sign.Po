@@ -1,4 +1,4 @@
-script/libdogecoin_common_a-sign.o: script/sign.cpp \
+script/libradiocoin_common_a-sign.o: script/sign.cpp \
  /usr/include/stdc-predef.h script/sign.h script/interpreter.h \
  script/script_error.h primitives/transaction.h amount.h serialize.h \
  compat/endian.h config/bitcoin-config.h \

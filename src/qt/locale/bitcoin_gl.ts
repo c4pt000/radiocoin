@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Asinar mensaxe...</translation>
@@ -130,8 +130,8 @@
         <translation>Reindexando bloques no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Enviar moedas a unha dirección Radiocoin</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Enviar moedas a unha dirección RadioCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -154,8 +154,8 @@
         <translation>&amp;Verificar mensaxe...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -182,12 +182,12 @@
         <translation>Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións Radiocoin para probar que te pertencen</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>Asina mensaxes coas túas direccións RadioCoin para probar que te pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Radiocoin dadas.</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións RadioCoin dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -466,8 +466,8 @@
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <source>Automatically open the Radiocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente Radiocoin no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <source>Automatically open the RadioCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente o porto do cliente RadioCoin no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -545,8 +545,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Radiocoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Radiocoin despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RadioCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede RadioCoin despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -927,8 +927,8 @@
         <translation>Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Radiocoin address</source>
-        <translation>Asina a mensaxe para probar que posees esta dirección Radiocoin</translation>
+        <source>Sign the message to prove you own this RadioCoin address</source>
+        <translation>Asina a mensaxe para probar que posees esta dirección RadioCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -947,8 +947,8 @@
         <translation>&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Radiocoin address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Radiocoin especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified RadioCoin address</source>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección RadioCoin especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1002,7 +1002,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcións:</translation>
@@ -1028,8 +1028,8 @@
         <translation>Executar no fondo como un demo e aceptar comandos</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Core de Radiocoin</translation>
+        <source>RadioCoin Core</source>
+        <translation>Core de RadioCoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1060,7 +1060,7 @@
         <translation>Erro inicializando a base de datos de bloques</translation>
     </message>
     <message>
-        <source>Error initializing radiocoin-wallet.database environment %s!</source>
+        <source>Error initializing wallet database environment %s!</source>
         <translation>Erro inicializando entorno de base de datos de moedeiro %s!</translation>
     </message>
     <message>

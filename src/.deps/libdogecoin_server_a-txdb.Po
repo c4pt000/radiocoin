@@ -1,4 +1,4 @@
-libdogecoin_server_a-txdb.o: txdb.cpp /usr/include/stdc-predef.h txdb.h \
+libradiocoin_server_a-txdb.o: txdb.cpp /usr/include/stdc-predef.h txdb.h \
  coins.h compressor.h primitives/transaction.h amount.h serialize.h \
  compat/endian.h config/bitcoin-config.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \

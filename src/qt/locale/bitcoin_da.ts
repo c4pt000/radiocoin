@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Vælg adresse at sende dogecoins til</translation>
+        <translation>Vælg adresse at sende radiocoins til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Vælg adresse at modtage dogecoins med</translation>
+        <translation>Vælg adresse at modtage radiocoins med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>Modtagelsesadresser</translation>
     </message>
     <message>
-        <source>These are your Radiocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Disse er dine Radiocoin-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender dogecoins.</translation>
+        <source>These are your RadioCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Disse er dine RadioCoin-adresser til afsendelse af betalinger. Tjek altid beløb og modtagelsesadresse, inden du sender radiocoins.</translation>
     </message>
     <message>
-        <source>These are your Radiocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine Radiocoin-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
+        <source>These are your RadioCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine RadioCoin-adresser til modtagelse af betalinger. Det anbefales at bruge en ny modtagelsesadresse for hver transaktion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Bekræft tegnebogskryptering</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADCCOINS&lt;/b&gt;!</source>
-        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE RADCCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADIOCOINS&lt;/b&gt;!</source>
+        <translation>Advarsel: Hvis du krypterer din tegnebog og mister din adgangskode, vil du &lt;b&gt;MISTE ALLE DINE RADIOCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -180,8 +180,8 @@
         <translation>Tegnebog krypteret</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dogecoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 vil nu lukke for at færdiggøre krypteringsprocessen. Husk at kryptering af din tegnebog kan ikke beskytte dine dogecoin fuldt ud mod at blive stjålet af eventuel malware, der måtte have inficeret din computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your radiocoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 vil nu lukke for at færdiggøre krypteringsprocessen. Husk at kryptering af din tegnebog kan ikke beskytte dine radiocoin fuldt ud mod at blive stjålet af eventuel malware, der måtte have inficeret din computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -232,7 +232,7 @@
     </message>
 </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signér &amp;besked…</translation>
@@ -338,8 +338,8 @@
         <translation>Genindekserer blokke på disken…</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Send dogecoins til en Radiocoin-adresse</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Send radiocoins til en RadioCoin-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>&amp;Verificér besked…</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -390,12 +390,12 @@
         <translation>Kryptér de private nøgler, der hører til din tegnebog</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>Signér beskeder med dine Radiocoin-adresser for at bevise, at de tilhører dig</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>Signér beskeder med dine RadioCoin-adresser for at bevise, at de tilhører dig</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne Radiocoin-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>Verificér beskeder for at sikre, at de er signeret med de angivne RadioCoin-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +434,8 @@
         <translation>Tilvalg for &amp;kommandolinje</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Radiocoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til Radiocoin-netværket</numerusform><numerusform>%n aktive forbindelser til Radiocoin-netværket</numerusform></translation>
+        <source>%n active connection(s) to RadioCoin network</source>
+        <translation><numerusform>%n aktiv forbindelse til RadioCoin-netværket</numerusform><numerusform>%n aktive forbindelser til RadioCoin-netværket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -478,8 +478,8 @@
         <translation>Opdateret</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Radiocoin command-line options</source>
-        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for Radiocoin kommandolinje</translation>
+        <source>Show the %1 help message to get a list with possible RadioCoin command-line options</source>
+        <translation>Vis %1 hjælpebesked for at få en liste over mulige tilvalg for RadioCoin kommandolinje</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -548,8 +548,8 @@
         <translation>Tegnebog er &lt;b&gt;krypteret&lt;/b&gt; og i øjeblikket &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Radiocoin can no longer continue safely and will quit.</source>
-        <translation>Der opstod en fatal fejl. Radiocoin kan ikke længere fortsætte sikkert og vil afslutte.</translation>
+        <source>A fatal error occurred. RadioCoin can no longer continue safely and will quit.</source>
+        <translation>Der opstod en fatal fejl. RadioCoin kan ikke længere fortsætte sikkert og vil afslutte.</translation>
     </message>
 </context>
 <context>
@@ -742,8 +742,8 @@
         <translation>Redigér afsendelsesadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Radiocoin address.</source>
-        <translation>Den indtastede adresse “%1” er ikke en gyldig Radiocoin-adresse.</translation>
+        <source>The entered address "%1" is not a valid RadioCoin address.</source>
+        <translation>Den indtastede adresse “%1” er ikke en gyldig RadioCoin-adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -851,8 +851,8 @@
         <translation>Siden dette er første gang, programmet startes, kan du vælge, hvor %1 skal gemme sin data.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Radiocoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 vil downloade og gemme et kopi af Radiocoin-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
+        <source>%1 will download and store a copy of the RadioCoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 vil downloade og gemme et kopi af RadioCoin-blokkæden. Mindst %2 GB data vil blive gemt i denne mappe, og den vil vokse over tid. Tegnebogen vil også blive gemt i denne mappe.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -886,12 +886,12 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the dogecoin network, as detailed below.</source>
-        <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med dogecoin-netværket, som detaljerne herunder viser.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the radiocoin network, as detailed below.</source>
+        <translation>Nylige transaktioner er måske ikke synlige endnu, og derfor kan din tegnebogs saldo være ukorrekt. Denne information vil være korrekt, når din tegnebog er færdig med at synkronisere med radiocoin-netværket, som detaljerne herunder viser.</translation>
     </message>
     <message>
-        <source>Attempting to spend dogecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Forsøg på at bruge dogecoin, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
+        <source>Attempting to spend radiocoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Forsøg på at bruge radiocoin, som er indeholdt i endnu-ikke-viste transaktioner, accepteres ikke af netværket.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1048,16 +1048,16 @@
         <translation>&amp;Brug ubekræftede byttepenge</translation>
     </message>
     <message>
-        <source>Automatically open the Radiocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åbn automatisk Radiocoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
+        <source>Automatically open the RadioCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åbn automatisk RadioCoin-klientens port på routeren. Dette virker kun, når din router understøtter UPnP, og UPnP er aktiveret.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Konfigurér port vha. &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Radiocoin network through a SOCKS5 proxy.</source>
-        <translation>Forbind til Radiocoin-netværket gennem en SOCKS5-proxy.</translation>
+        <source>Connect to the RadioCoin network through a SOCKS5 proxy.</source>
+        <translation>Forbind til RadioCoin-netværket gennem en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1096,8 +1096,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Radiocoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Forbind til Radiocoin-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
+        <source>Connect to the RadioCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Forbind til RadioCoin-netværket gennem en separat SOCKS5-proxy for skjulte Tor-tjenester.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1145,7 +1145,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af dogecoins.</translation>
+        <translation>Vælg standard for underopdeling af enhed, som skal vises i brugergrænsefladen og ved afsendelse af radiocoins.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1195,8 +1195,8 @@
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Radiocoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med Radiocoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RadioCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den viste information kan være forældet. Din tegnebog synkroniserer automatisk med RadioCoin-netværket, når en forbindelse etableres, men denne proces er ikke gennemført endnu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1286,8 +1286,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Radiocoin address or malformed URI parameters.</source>
-        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig Radiocoin-adresse eller forkert udformede URL-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid RadioCoin address or malformed URI parameters.</source>
+        <translation>URI kan ikke tolkes! Dette kan skyldes en ugyldig RadioCoin-adresse eller forkert udformede URL-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1380,8 +1380,8 @@
         <translation>Beløb</translation>
     </message>
     <message>
-        <source>Enter a Radiocoin address (e.g. %1)</source>
-        <translation>Indtast en Radiocoin-adresse (fx %1)</translation>
+        <source>Enter a RadioCoin address (e.g. %1)</source>
+        <translation>Indtast en RadioCoin-adresse (fx %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1804,8 +1804,8 @@
         <translation>&amp;Genbrug en eksisterende modtagelsesadresse (anbefales ikke)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Radiocoin network.</source>
-        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over Radiocoin-netværket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the RadioCoin network.</source>
+        <translation>En valgfri besked, der føjes til betalingsanmodningen, og som vil vises, når anmodningen åbnes. Bemærk: Beskeden vil ikke sendes sammen med betalingen over RadioCoin-netværket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1958,7 +1958,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send dogecoins</translation>
+        <translation>Send radiocoins</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2037,8 +2037,8 @@
         <translation>total mindst</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dogecoin transactions than the network can process.</source>
-        <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter dogecoin-transaktioner, end hvad netværket kan bearbejde.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for radiocoin transactions than the network can process.</source>
+        <translation>Det er helt fint kun at betale det minimale gebyr, så længe den totale transaktionsvolumen er mindre end den plads, der er tilgængelig i blokkene. Men vær opmærksom på, at dette kan ende ud i transaktioner, der aldrig bliver bekræftet, når der bliver større forespørgsel efter radiocoin-transaktioner, end hvad netværket kan bearbejde.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2150,7 +2150,7 @@
     </message>
     <message>
         <source>Confirm send coins</source>
-        <translation>Bekræft afsendelse af dogecoins</translation>
+        <translation>Bekræft afsendelse af radiocoins</translation>
     </message>
     <message>
         <source>The recipient address is not valid. Please recheck.</source>
@@ -2201,8 +2201,8 @@
         <translation><numerusform>Bekræftelse estimeret til at begynde om %n blok.</numerusform><numerusform>Bekræftelse estimeret til at begynde om %n blokke.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Radiocoin address</source>
-        <translation>Advarsel: Ugyldig Radiocoin-adresse</translation>
+        <source>Warning: Invalid RadioCoin address</source>
+        <translation>Advarsel: Ugyldig RadioCoin-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2244,8 +2244,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The Radiocoin address to send the payment to</source>
-        <translation>Radiocoin-adresse, som betalingen skal sendes til</translation>
+        <source>The RadioCoin address to send the payment to</source>
+        <translation>RadioCoin-adresse, som betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2264,8 +2264,8 @@
         <translation>Fjern denne indgang</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less dogecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre dogecoin, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less radiocoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil blive trukket fra det sendte beløb. Modtageren vil modtage færre radiocoin, end du indtaster i beløbfeltet. Hvis flere modtagere vælges, vil gebyret deles ligeligt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2288,8 +2288,8 @@
         <translation>Indtast et mærkat for denne adresse for at føje den til listen over brugte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the radiocoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Radiocoin network.</source>
-        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over Radiocoin-netværket.</translation>
+        <source>A message that was attached to the radiocoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the RadioCoin network.</source>
+        <translation>En besked, som blev føjet til “bitcon:”-URI'en, som vil gemmes med transaktionen til din reference. Bemærk: Denne besked vil ikke blive sendt over RadioCoin-netværket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2333,12 +2333,12 @@
         <translation>&amp;Singér besked</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive dogecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage dogecoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive radiocoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere beskeder/aftaler med dine adresser for at bevise, at du kan modtage radiocoin, der bliver sendt til adresserne. Vær forsigtig med ikke at signere noget vagt eller tilfældigt, da eventuelle phishing-angreb kan snyde dig til at overlade din identitet til dem. Signér kun fuldt ud detaljerede udsagn, som du er enig i.</translation>
     </message>
     <message>
-        <source>The Radiocoin address to sign the message with</source>
-        <translation>Radiocoin-adresse, som beskeden skal signeres med</translation>
+        <source>The RadioCoin address to sign the message with</source>
+        <translation>RadioCoin-adresse, som beskeden skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2369,8 +2369,8 @@
         <translation>Kopiér den nuværende signatur til systemets udklipsholder</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Radiocoin address</source>
-        <translation>Signér denne besked for at bevise, at Radiocoin-adressen tilhører dig</translation>
+        <source>Sign the message to prove you own this RadioCoin address</source>
+        <translation>Signér denne besked for at bevise, at RadioCoin-adressen tilhører dig</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2393,12 +2393,12 @@
         <translation>Indtast modtagerens adresse, besked (vær sikker på at kopiere linjeskift, mellemrum, tabuleringer, etc. præcist) og signatur herunder for at verificere beskeden. Vær forsigtig med ikke at læse noget ud fra signaturen, som ikke står i selve beskeden, for at undgå at blive snydt af et eventuelt man-in-the-middle-angreb. Bemærk, at dette kun beviser, at den signerende person kan modtage med adressen; det kan ikke bevise hvem der har sendt en given transaktion!</translation>
     </message>
     <message>
-        <source>The Radiocoin address the message was signed with</source>
-        <translation>Radiocoin-adressen, som beskeden blev signeret med</translation>
+        <source>The RadioCoin address the message was signed with</source>
+        <translation>RadioCoin-adressen, som beskeden blev signeret med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Radiocoin address</source>
-        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne Radiocoin-adresse</translation>
+        <source>Verify the message to ensure it was signed with the specified RadioCoin address</source>
+        <translation>Verificér beskeden for at sikre, at den er signeret med den angivne RadioCoin-adresse</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2623,7 +2623,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Minede dogecoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
+        <translation>Minede radiocoins skal modne %1 blokke, før de kan bruges. Da du genererede denne blok, blev den transmitteret til netværket for at blive føjet til blokkæden. Hvis det ikke lykkes at få den i kæden, vil dens tilstand ændres til “ikke accepteret”, og den vil ikke kunne bruges. Dette kan ske nu og da, hvis en anden knude udvinder en blok inden for nogle få sekunder fra din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2949,7 +2949,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send dogecoins</translation>
+        <translation>Send radiocoins</translation>
     </message>
 </context>
 <context>
@@ -2975,7 +2975,7 @@
         <translation>Sikkerhedskopiering mislykkedes</translation>
     </message>
     <message>
-        <source>There was an error trying to save the radiocoin-wallet.data to %1.</source>
+        <source>There was an error trying to save the wallet data to %1.</source>
         <translation>Der skete en fejl under gemning af tegnebogsdata til %1.</translation>
     </message>
     <message>
@@ -2983,12 +2983,12 @@
         <translation>Sikkerhedskopiering problemfri</translation>
     </message>
     <message>
-        <source>The radiocoin-wallet.data was successfully saved to %1.</source>
+        <source>The wallet data was successfully saved to %1.</source>
         <translation>Tegnebogsdata blev gemt til %1.</translation>
     </message>
 </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Indstillinger:</translation>
@@ -3058,8 +3058,8 @@
         <translation>Kunne ikke starte HTTP-server. Se fejlretningslog for detaljer.</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radio Coin</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3254,7 +3254,7 @@
         <translation>Klargøring af blokdatabase mislykkedes</translation>
     </message>
     <message>
-        <source>Error initializing radiocoin-wallet.database environment %s!</source>
+        <source>Error initializing wallet database environment %s!</source>
         <translation>Klargøring af tegnebogsdatabasemiljøet %s mislykkedes!</translation>
     </message>
     <message>

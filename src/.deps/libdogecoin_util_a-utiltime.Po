@@ -1,4 +1,4 @@
-libdogecoin_util_a-utiltime.o: utiltime.cpp /usr/include/stdc-predef.h \
+libradiocoin_util_a-utiltime.o: utiltime.cpp /usr/include/stdc-predef.h \
  config/bitcoin-config.h utiltime.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

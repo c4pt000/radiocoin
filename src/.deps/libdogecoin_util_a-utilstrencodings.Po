@@ -1,4 +1,4 @@
-libdogecoin_util_a-utilstrencodings.o: utilstrencodings.cpp \
+libradiocoin_util_a-utilstrencodings.o: utilstrencodings.cpp \
  /usr/include/stdc-predef.h utilstrencodings.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

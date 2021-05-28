@@ -1,4 +1,4 @@
-libdogecoin_server_a-rest.o: rest.cpp /usr/include/stdc-predef.h chain.h \
+libradiocoin_server_a-rest.o: rest.cpp /usr/include/stdc-predef.h chain.h \
  arith_uint256.h /usr/include/assert.h /usr/include/features.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \

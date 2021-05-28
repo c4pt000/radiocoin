@@ -87,9 +87,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-am__append_1 = dogecoind.1
-am__append_2 = dogecoin-qt.1
-am__append_3 = dogecoin-cli.1 dogecoin-tx.1
+am__append_1 = radiocoind.1
+am__append_2 = radiocoin-qt.1
+am__append_3 = radiocoin-cli.1 radiocoin-tx.1
 subdir = doc/man
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/build-aux/m4/ax_boost_base.m4 \
@@ -107,13 +107,13 @@ am__aclocal_m4_deps = $(top_srcdir)/build-aux/m4/ax_boost_base.m4 \
 	$(top_srcdir)/build-aux/m4/ax_pthread.m4 \
 	$(top_srcdir)/build-aux/m4/bitcoin_qt.m4 \
 	$(top_srcdir)/build-aux/m4/bitcoin_subdir_to_include.m4 \
-	$(top_srcdir)/build-aux/m4/dogecoin_find_bdb51.m4 \
 	$(top_srcdir)/build-aux/m4/l_atomic.m4 \
 	$(top_srcdir)/build-aux/m4/libtool.m4 \
 	$(top_srcdir)/build-aux/m4/ltoptions.m4 \
 	$(top_srcdir)/build-aux/m4/ltsugar.m4 \
 	$(top_srcdir)/build-aux/m4/ltversion.m4 \
 	$(top_srcdir)/build-aux/m4/lt~obsolete.m4 \
+	$(top_srcdir)/build-aux/m4/radiocoin_find_bdb51.m4 \
 	$(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
@@ -175,13 +175,13 @@ MANS = $(dist_man1_MANS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(dist_man1_MANS) $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
-AUTOCONF = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing automake-1.16
+AUTOCONF = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/build-aux/missing automake-1.16
 AWK = gawk
 BDB_CPPFLAGS =  -I/usr/include/libdb/
 BDB_LIBS = -ldb_cxx
@@ -209,8 +209,8 @@ CLIENT_VERSION_MAJOR = 1
 CLIENT_VERSION_MINOR = 14
 CLIENT_VERSION_REVISION = 3
 COPYRIGHT_HOLDERS = The %s developers
-COPYRIGHT_HOLDERS_FINAL = The Bitcoin Core and Radio Coin developers
-COPYRIGHT_HOLDERS_SUBSTITUTION = Bitcoin Core and Radio Coin
+COPYRIGHT_HOLDERS_FINAL = The Bitcoin Core and RadioCoin Core developers
+COPYRIGHT_HOLDERS_SUBSTITUTION = Bitcoin Core and RadioCoin Core
 COPYRIGHT_YEAR = 2021
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
@@ -274,7 +274,7 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = /usr/lib64/qt5/bin/lupdate-qt5
 MAINT = 
-MAKEINFO = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/build-aux/missing makeinfo
 MAKENSIS = 
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
@@ -293,11 +293,11 @@ OBJEXT = o
 OTOOL = 
 OTOOL64 = 
 PACKAGE = radiocoin
-PACKAGE_BUGREPORT = https://github.com/c4pt000/radiocoin/issues
-PACKAGE_NAME = Radio Coin
-PACKAGE_STRING = Radio Coin 1.14.3
+PACKAGE_BUGREPORT = https://github.com/radiocoin/radiocoin/issues
+PACKAGE_NAME = RadioCoin Core
+PACKAGE_STRING = RadioCoin Core 1.14.3
 PACKAGE_TARNAME = radiocoin
-PACKAGE_URL = https://radiocoin.io/
+PACKAGE_URL = https://radiocoin.com/
 PACKAGE_VERSION = 1.14.3
 PATH_SEPARATOR = :
 PIC_FLAGS = -fPIC
@@ -361,10 +361,10 @@ X11XCB_LIBS =
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = -lzmq 
-abs_builddir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc/man
-abs_srcdir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc/man
-abs_top_builddir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet
-abs_top_srcdir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet
+abs_builddir = /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/doc/man
+abs_srcdir = /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/doc/man
+abs_top_builddir = /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin
+abs_top_srcdir = /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -396,7 +396,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/install-sh
+install_sh = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/build-aux/install-sh
 libdir = ${exec_prefix}/lib64
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale

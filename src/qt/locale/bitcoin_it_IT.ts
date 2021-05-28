@@ -88,7 +88,7 @@
     </message>
 </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>Transazioni</translation>
@@ -202,6 +202,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     </context>
 </TS>

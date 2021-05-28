@@ -52,7 +52,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Cysoni â'r rhwydwaith...</translation>
@@ -114,8 +114,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -478,14 +478,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Craidd Radiocoin</translation>
+        <source>RadioCoin Core</source>
+        <translation>Craidd RadioCoin</translation>
     </message>
     <message>
         <source>Information</source>

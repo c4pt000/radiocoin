@@ -1,4 +1,4 @@
-libdogecoin_common_a-auxpow.o: auxpow.cpp /usr/include/stdc-predef.h \
+libradiocoin_common_a-auxpow.o: auxpow.cpp /usr/include/stdc-predef.h \
  auxpow.h consensus/params.h uint256.h /usr/include/assert.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \

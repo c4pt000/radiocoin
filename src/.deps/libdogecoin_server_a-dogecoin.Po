@@ -1,4 +1,4 @@
-libdogecoin_server_a-dogecoin.o: dogecoin.cpp /usr/include/stdc-predef.h \
+libradiocoin_server_a-radiocoin.o: radiocoin.cpp /usr/include/stdc-predef.h \
  /usr/include/boost/random/uniform_int.hpp /usr/include/boost/assert.hpp \
  /usr/include/assert.h /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
@@ -630,7 +630,7 @@ libdogecoin_server_a-dogecoin.o: dogecoin.cpp /usr/include/stdc-predef.h \
  /usr/include/boost/variant/detail/element_index.hpp \
  /usr/include/boost/type_traits/add_pointer.hpp \
  /usr/include/boost/variant/visitor_ptr.hpp \
- /usr/include/boost/variant/bad_visit.hpp arith_uint256.h dogecoin.h \
+ /usr/include/boost/variant/bad_visit.hpp arith_uint256.h radiocoin.h \
  amount.h chain.h primitives/block.h auxpow.h consensus/params.h \
  consensus/validation.h primitives/pureheader.h primitives/transaction.h \
  uint256.h primitives/pureheader.h /usr/include/boost/shared_ptr.hpp \
@@ -2076,7 +2076,7 @@ script/standard.h:
 /usr/include/boost/variant/visitor_ptr.hpp:
 /usr/include/boost/variant/bad_visit.hpp:
 arith_uint256.h:
-dogecoin.h:
+radiocoin.h:
 amount.h:
 chain.h:
 primitives/block.h:

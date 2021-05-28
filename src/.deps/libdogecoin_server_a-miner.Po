@@ -1,4 +1,4 @@
-libdogecoin_server_a-miner.o: miner.cpp /usr/include/stdc-predef.h \
+libradiocoin_server_a-miner.o: miner.cpp /usr/include/stdc-predef.h \
  miner.h primitives/block.h auxpow.h consensus/params.h uint256.h \
  /usr/include/assert.h /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \
@@ -1267,7 +1267,7 @@ libdogecoin_server_a-miner.o: miner.cpp /usr/include/stdc-predef.h \
  /usr/include/bits/types/sigevent_t.h \
  /usr/include/bits/types/__sigval_t.h /usr/include/bits/netdb.h \
  consensus/consensus.h consensus/merkle.h primitives/block.h \
- consensus/validation.h dogecoin.h validation.h script/script_error.h \
+ consensus/validation.h radiocoin.h validation.h script/script_error.h \
  versionbits.h /usr/include/c++/11/atomic \
  /usr/include/boost/filesystem/path.hpp \
  /usr/include/boost/filesystem/config.hpp \
@@ -2961,7 +2961,7 @@ consensus/consensus.h:
 consensus/merkle.h:
 primitives/block.h:
 consensus/validation.h:
-dogecoin.h:
+radiocoin.h:
 validation.h:
 script/script_error.h:
 versionbits.h:

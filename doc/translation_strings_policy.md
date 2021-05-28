@@ -1,7 +1,7 @@
 Translation Strings Policy
 ===========================
 
-This document provides guidelines for internationalization of the Radio Coin software.
+This document provides guidelines for internationalization of the RadioCoin Core software.
 
 How to translate?
 ------------------

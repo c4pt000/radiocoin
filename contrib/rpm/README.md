@@ -67,7 +67,7 @@ according to the instructions in the `build-unix.md` file so that any changes
 the distribution may make in the future will not result in a problem for users.
 
 The problem that can exist, clients built against different versions of
-BerkeleyDB may not be able read each other's `radiocoin-wallet.dat` file which can make it
+BerkeleyDB may not be able read each other's `wallet.dat` file which can make it
 difficult for a user to recover from backup in the event of a system failure.
 
 ## Graphical User Interface and Qt Version

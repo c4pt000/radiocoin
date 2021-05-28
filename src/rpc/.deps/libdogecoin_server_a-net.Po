@@ -1,4 +1,4 @@
-rpc/libdogecoin_server_a-net.o: rpc/net.cpp /usr/include/stdc-predef.h \
+rpc/libradiocoin_server_a-net.o: rpc/net.cpp /usr/include/stdc-predef.h \
  rpc/server.h amount.h serialize.h compat/endian.h \
  config/bitcoin-config.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \

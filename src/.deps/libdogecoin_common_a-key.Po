@@ -1,4 +1,4 @@
-libdogecoin_common_a-key.o: key.cpp /usr/include/stdc-predef.h key.h \
+libradiocoin_common_a-key.o: key.cpp /usr/include/stdc-predef.h key.h \
  pubkey.h hash.h crypto/ripemd160.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

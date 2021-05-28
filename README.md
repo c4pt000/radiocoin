@@ -12,6 +12,7 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 <br>
   yum install radiocoin-2.0.7_exp_radio-2.x86_64.rpm  -y
   
+  
   or from source
   ```
   sh autogen.sh 

@@ -104,7 +104,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Võrguga sünkroniseerimine...</translation>
@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -754,14 +754,14 @@
     </message>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Valikud:</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radio Coin</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

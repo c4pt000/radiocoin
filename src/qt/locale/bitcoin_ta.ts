@@ -52,7 +52,7 @@
     </message>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>&amp;Wow</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -706,10 +706,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radiocoin மையம்</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

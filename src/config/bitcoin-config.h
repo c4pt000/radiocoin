@@ -27,10 +27,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The Bitcoin Core and Radio Coin developers"
+#define COPYRIGHT_HOLDERS_FINAL "The Bitcoin Core and RadioCoin Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "Bitcoin Core and Radio Coin"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "Bitcoin Core and RadioCoin Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2021
@@ -313,19 +313,19 @@
 #define LT_OBJDIR ".libs/"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "https://github.com/c4pt000/radiocoin/issues"
+#define PACKAGE_BUGREPORT "https://github.com/radiocoin/radiocoin/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "Radio Coin"
+#define PACKAGE_NAME "RadioCoin Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "Radio Coin 1.14.3"
+#define PACKAGE_STRING "RadioCoin Core 1.14.3"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "radiocoin"
 
 /* Define to the home page for this package. */
-#define PACKAGE_URL "https://radiocoin.io/"
+#define PACKAGE_URL "https://radiocoin.com/"
 
 /* Define to the version of this package. */
 #define PACKAGE_VERSION "1.14.3"

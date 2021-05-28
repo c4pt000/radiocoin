@@ -76,7 +76,7 @@
     </message>
 </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Semnează &amp;mesajul...</translation>
@@ -142,8 +142,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Trimite monedele către o adresă Radiocoin</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Trimite monedele către o adresă RadioCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Radiocoin pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de RadioCoin pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Radiocoin specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de RadioCoin specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -746,10 +746,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radio Coin</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

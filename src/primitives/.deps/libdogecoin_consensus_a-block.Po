@@ -1,4 +1,4 @@
-primitives/libdogecoin_consensus_a-block.o: primitives/block.cpp \
+primitives/libradiocoin_consensus_a-block.o: primitives/block.cpp \
  /usr/include/stdc-predef.h primitives/block.h auxpow.h \
  consensus/params.h uint256.h /usr/include/assert.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \

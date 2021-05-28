@@ -23,6 +23,7 @@
 #include <arith_uint256.h>
 
 
+
 static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesisOutputScript, uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     CMutableTransaction txNew;
@@ -59,13 +60,10 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
 
-    const char* pszTimestamp = "In Music We, Trust!";
+ const char* pszTimestamp = "In Music We, Trust!";
     const CScript genesisOutputScript = CScript() << ParseHex("04cca295baffd39ed6fa0337495092af074d4c4ec0fee31627436a11a8df9e37f7a0c582f589549443bf9402af19771474c340acc2a311bacf2598e4d78d8ced55") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 
-//    const char* pszTimestamp = "Nintondo";
-//    const CScript genesisOutputScript = CScript() << ParseHex("040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
-//    return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
 /**
@@ -92,12 +90,12 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 1500;
         consensus.nMajorityRejectBlockOutdated = 1900;
         consensus.nMajorityWindow = 2000;
-        // BIP34 is never enforced in radiocoin v2 blocks, so we enforce from v3
+        // BIP34 is never enforced in RadioCoin v2 blocks, so we enforce from v3
         consensus.BIP34Height = 1034383;
-//        consensus.BIP34Hash = uint256S("0x80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a");
+        consensus.BIP34Hash = uint256S("0x00000938a63f20223e77c074dad13eada7ab9525c067e15f7570a76a779b4832");
         consensus.BIP65Height = 3464751; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
         consensus.BIP66Height = 1034383; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
-//        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
+        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
         consensus.nPowTargetTimespan = 4 * 60 * 60; // pre-digishield: 4 hours
         consensus.nPowTargetSpacing = 60; // 1 minute
         consensus.fDigishieldDifficultyCalculation = false;
@@ -108,11 +106,16 @@ public:
         consensus.nRuleChangeActivationThreshold = 9576; // 95% of 10,080
         consensus.nMinerConfirmationWindow = 10080; // 60 * 24 * 7 = 10,080 blocks, or one week
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+
+	 consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+
+
+//        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE; // January 1, 2008
+//        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
-        // XXX: BIP heights and hashes all need to be updated to radiocoin values
+        // XXX: BIP heights and hashes all need to be updated to RadioCoin values
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1462060800; // May 1st, 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1493596800; // May 1st, 2017
@@ -162,14 +165,12 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xc0;
         vAlertPubKey = ParseHex("04d4da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
-        nDefaultPort = 22777;
+        nDefaultPort = 22556;
         nPruneAfterHeight = 100000;
 
-//        genesis = CreateGenesisBlock(1386325540, 99943, 0x1e0ffff0, 1, 88 * COIN);
-        genesis = CreateGenesisBlock(1386325540, 222085, 0x1e0ffff0, 1, 88 * COIN);
+        genesis = CreateGenesisBlock(1622171724, 597316, 0x1e0ffff0, 1, 88 * COIN);
 
-
-        consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
             std::cout << std::string("Begin calculating Mainnet Genesis Block:\n");
             arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
@@ -194,27 +195,29 @@ public:
             printf("min Main nBit:  %08x\n", consensus.powLimit);
             std::cout << std::string("Finished calculating Mainnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
 
-            
-           
+
+
         }
 
+//
+//Mainnet ---
+// main_nonce: 264509
+// main_time: 1386325540
+// main_hash: 00000938a63f20223e77c074dad13eada7ab9525c067e15f7570a76a779b4832
+// main_merklehash: 5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69
+
+//Mainnet ---
+// main_nonce: 597316
+// main_time: 1622171724
+// main_hash: 000002e2e76fef07722c875e9a68b1ce32bd2964e2df8ce70d9d31ab263f5fd2
+// main_merklehash: 8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336
 
 
 
         consensus.hashGenesisBlock = genesis.GetHash();
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-//        assert(consensus.hashGenesisBlock == uint256S("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"));
-//        assert(genesis.hashMerkleRoot == uint256S("0x5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69"));
-
-
-// main_nonce: 222085
-// main_time: 1386325540
-// main_hash: 00000988a6f33163d9db7d6fdaddc407d9d0f286e0d6039d7cffd9583ba279cc
-// main_merklehash: 8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336
-
-
-        assert(consensus.hashGenesisBlock == uint256S("0x00000988a6f33163d9db7d6fdaddc407d9d0f286e0d6039d7cffd9583ba279cc"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000002e2e76fef07722c875e9a68b1ce32bd2964e2df8ce70d9d31ab263f5fd2"));
         assert(genesis.hashMerkleRoot == uint256S("0x8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
@@ -238,7 +241,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            (      0, uint256S("0x1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691"))
+            (      0, uint256S("0x4e951cc171cbd6710a9cfa35cbe0ba0e90ea8017c52acec8280bf54201437460"))
             ( 104679, uint256S("0x35eb87ae90d44b98898fec8c39577b76cb1eb08e1261cfc10706c8ce9a1d01cf"))
             ( 145000, uint256S("0xcc47cae70d7c5c92828d3214a266331dde59087d4a39071fa76ddfff9b7bde72"))
             ( 371337, uint256S("0x60323982f9c5ff1b5a954eac9dc1269352835f47c2c5222691d80f0d50dcf053"))
@@ -294,23 +297,27 @@ public:
         consensus.nMajorityEnforceBlockUpgrade = 501;
         consensus.nMajorityRejectBlockOutdated = 750;
         consensus.nMajorityWindow = 1000;
-        // BIP34 is never enforced in radiocoin v2 blocks, so we enforce from v3
+        // BIP34 is never enforced in RadioCoin v2 blocks, so we enforce from v3
         consensus.BIP34Height = 708658;
-        consensus.BIP34Hash = uint256S("0x21b8b97dcdb94caa67c7f8f6dbf22e61e0cfe0e46e1fff3528b22864659e9b38");
+        consensus.BIP34Hash = uint256S("0x0x00000777d0d45ec8471b583777bc5676766fe03e0c70257d5d4b827157f9f1bc");
         consensus.BIP65Height = 1854705; // 955bd496d23790aba1ecfacb722b089a6ae7ddabaedf7d8fb0878f48308a71f9
         consensus.BIP66Height = 708658; // 21b8b97dcdb94caa67c7f8f6dbf22e61e0cfe0e46e1fff3528b22864659e9b38 - this is the last block that could be v2, 1900 blocks past the last v2 block
-//        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
+        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
         consensus.nPowTargetTimespan = 4 * 60 * 60; // pre-digishield: 4 hours
         consensus.nPowTargetSpacing = 60; // 1 minute
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 2880; // 2 days (note this is significantly lower than Bitcoin standard)
         consensus.nMinerConfirmationWindow = 10080; // 60 * 24 * 7 = 10,080 blocks, or one week
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+
+         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
+         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
+
+//        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE; // January 1, 2008
+//        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
-        // XXX: BIP heights and hashes all need to be updated to radiocoin values
+        // XXX: BIP heights and hashes all need to be updated to RadioCoin values
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1456790400; // March 1st, 2016
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1493596800; // May 1st, 2017
@@ -364,10 +371,10 @@ public:
         pchMessageStart[2] = 0xb7;
         pchMessageStart[3] = 0xdc;
         vAlertPubKey = ParseHex("042756726da3c7ef515d89212ee1705023d14be389e25fe15611585661b9a20021908b2b80a3c7200a0139dd2b26946606aab0eef9aa7689a6dc2c7eee237fa834");
-        nDefaultPort = 22888;
+        nDefaultPort = 44556;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1391503289, 4997966, 0x1e0ffff0, 1, 88 * COIN);
+        genesis = CreateGenesisBlock(1486949366, 279865, 0x1e0ffff0, 1, 88 * COIN);
 
         consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
@@ -394,24 +401,27 @@ public:
             printf("min Test nBit:  %08x\n", consensus.powLimit);
             std::cout << std::string("Finished calculating Testnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
 
-            
-           
         }
+
+// Testnet ---
+// Test_nonce: 107679
+// Test_time: 1391503289
+// Test_hash: 00000777d0d45ec8471b583777bc5676766fe03e0c70257d5d4b827157f9f1bc
+// Test_merklehash: 5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69
+
+// Testnet ---
+// Test_nonce: 279865
+// Test_time: 1486949366
+// Test_hash: 000000b8a7e8b9e0a4d87d8d170054ab699ecf206381ee21628861d11e4c9e39
+// Test_merklehash: 8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336
+
 
 
         consensus.hashGenesisBlock = genesis.GetHash();
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         minDifficultyConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-
-///Testnet ---
-// Test_nonce: 4997966
-// Test_time: 1391503289
-// Test_hash: 0000093b12eccd8bc0b21574a340c2262ce0f0190169a6bb51ae5dd21e7a0e67
-// Test_merklehash: 8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336
-
-
-        assert(consensus.hashGenesisBlock == uint256S("0x0000093b12eccd8bc0b21574a340c2262ce0f0190169a6bb51ae5dd21e7a0e67"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000000b8a7e8b9e0a4d87d8d170054ab699ecf206381ee21628861d11e4c9e39"));
         assert(genesis.hashMerkleRoot == uint256S("0x8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336"));
 
         vFixedSeeds.clear();
@@ -435,7 +445,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-            ( 0, uint256S("0xbb0a78264637406b6360aad926284d544d7049f45189db5664f3c4d07350559e"))
+            ( 0, uint256S("0x151d6d0b4260b0d48eb2e8cddd9a1341523f3774c8750f53760ea3cae034e583"))
             ( 483173, uint256S("0xa804201ca0aceb7e937ef7a3c613a9b7589245b10cc095148c4ce4965b0b73b5"))
             ( 591117, uint256S("0x5f6b93b2c28cedf32467d900369b8be6700f0649388a7dbfd3ebd4a01b1ffad8"))
             ( 658924, uint256S("0xed6c8324d9a77195ee080f225a0fca6346495e08ded99bcda47a8eea5a8a620b"))
@@ -511,7 +521,7 @@ public:
         consensus.fStrictChainId = true;
         consensus.fAllowLegacyBlocks = true;
 
-        // radiocoin parameters
+        // RadioCoin parameters
         consensus.fSimplifiedRewards = true;
         consensus.nCoinbaseMaturity = 60; // For easier testability in RPC tests
 
@@ -537,8 +547,8 @@ public:
         nPruneAfterHeight = 1000;
 
         genesis = CreateGenesisBlock(1296688602, 0, 0x207fffff, 1, 88 * COIN);
-
-        consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
+   
+       consensus.hashGenesisBlock = uint256S("0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
             std::cout << std::string("Begin calculating RegTestnet Genesis Block:\n");
             arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
@@ -563,26 +573,27 @@ public:
             printf("min RegTest nBit:  %08x\n", consensus.powLimit);
             std::cout << std::string("Finished calculating RegTestnet Genesis Block for SED replacement of current assertion and values:") << std::endl;
 
-            
-           
+
+
         }
-   
 
-     consensus.hashGenesisBlock = genesis.GetHash();
-        digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-        auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-
-//RegTest_hash: 61f7a87245f7beae38a73b4558162439cedc2566778a24a416d226dc5159c5f7
-// RegTest_merklehash: cb020b4d00baaee94c77cca20999caf429690d2d3dd8b2b8c068c86251f844bc
+//RegTestnet ---
+// RegTest_nonce: 2
+// RegTest_time: 1296688602
+// RegTest_hash: 3d2160a3b5dc4a9d62e7e66a295f70313ac808440ef7400d6c0772171ce973a5
+// RegTest_merklehash: 5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69
 
 
-// RegTestnet ---
+//RegTestnet ---
 // RegTest_nonce: 0
 // RegTest_time: 1296688602
 // RegTest_hash: 6d803069503326bf4c6815ae358cf8d8fed066b98121faba489c7c9916565e70
 // RegTest_merklehash: 8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336
 
 
+     consensus.hashGenesisBlock = genesis.GetHash();
+        digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
+        auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         assert(consensus.hashGenesisBlock == uint256S("0x6d803069503326bf4c6815ae358cf8d8fed066b98121faba489c7c9916565e70"));
         assert(genesis.hashMerkleRoot == uint256S("0x8382a18d469d405c1aa030c2329cc6f619ae1e1532fee7340809391e637e5336"));
 

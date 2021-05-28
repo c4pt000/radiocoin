@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -142,8 +142,8 @@
         <translation>Reindexando bloques en disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Enviar monedas a una dirección Radiocoin</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Enviar monedas a una dirección RadioCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -166,8 +166,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Radiocoin para demostrar la propiedad</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones RadioCoin para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Radiocoin concretas</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones RadioCoin concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -219,7 +219,7 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and radiocoin: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL's de Radiocoin)</translation>
+        <translation>Solicitar pagos (genera codigo QR y URL's de RadioCoin)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -494,8 +494,8 @@
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically open the Radiocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Radiocoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the RadioCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente RadioCoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -589,8 +589,8 @@
         <translation>Desde</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Radiocoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Radiocoin después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RadioCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red RadioCoin después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -1019,8 +1019,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Radiocoin address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección Radiocoin</translation>
+        <source>Sign the message to prove you own this RadioCoin address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección RadioCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1039,8 +1039,8 @@
         <translation>&amp;Verificar mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Radiocoin address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Radiocoin indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified RadioCoin address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección RadioCoin indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1094,7 +1094,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:
@@ -1123,8 +1123,8 @@
 </translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Núcleo de Radiocoin</translation>
+        <source>RadioCoin Core</source>
+        <translation>Núcleo de RadioCoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1155,7 +1155,7 @@
         <translation>Error al inicializar la base de datos de bloques</translation>
     </message>
     <message>
-        <source>Error initializing radiocoin-wallet.database environment %s!</source>
+        <source>Error initializing wallet database environment %s!</source>
         <translation>Error al inicializar el entorno de la base de datos del monedero  %s</translation>
     </message>
     <message>

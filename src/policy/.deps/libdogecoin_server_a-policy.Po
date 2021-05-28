@@ -1,4 +1,4 @@
-policy/libdogecoin_server_a-policy.o: policy/policy.cpp \
+policy/libradiocoin_server_a-policy.o: policy/policy.cpp \
  /usr/include/stdc-predef.h policy/policy.h consensus/consensus.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

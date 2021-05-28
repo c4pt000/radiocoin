@@ -1,4 +1,4 @@
-libdogecoin_common_a-scheduler.o: scheduler.cpp \
+libradiocoin_common_a-scheduler.o: scheduler.cpp \
  /usr/include/stdc-predef.h scheduler.h /usr/include/boost/function.hpp \
  /usr/include/c++/11/functional \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \

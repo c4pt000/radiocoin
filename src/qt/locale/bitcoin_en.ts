@@ -80,12 +80,12 @@
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Radiocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your RadioCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Radiocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your RadioCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -211,7 +211,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADCCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADIOCOINS&lt;/b&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -227,7 +227,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your dogecoins from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your radiocoins from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -297,7 +297,7 @@
     </message>
 </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <location filename="../bitcoingui.cpp" line="+135"/>
         <source>Wallet</source>
@@ -325,7 +325,7 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Send coins to a Radiocoin address</source>
+        <source>Send coins to a RadioCoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -435,18 +435,18 @@
     </message>
     <message>
         <location line="+1"/>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation type="unfinished">Sign messages with your Radiocoin addresses to prove you own them</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation type="unfinished">Sign messages with your RadioCoin addresses to prove you own them</translation>
     </message>
     <message>
         <location line="-510"/>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Send coins to a Radiocoin address</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Send coins to a RadioCoin address</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation type="unfinished">Verify messages to ensure they were signed with specified Radiocoin addresses</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation type="unfinished">Verify messages to ensure they were signed with specified RadioCoin addresses</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -470,8 +470,8 @@
     </message>
     <message>
         <location line="+516"/>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <location line="-741"/>
@@ -505,7 +505,7 @@
     </message>
     <message>
         <location line="+2"/>
-        <source>Show the %1 help message to get a list with possible Radiocoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible RadioCoin command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -535,10 +535,10 @@
     </message>
     <message numerus="yes">
         <location line="+155"/>
-        <source>%n active connection(s) to Radiocoin network</source>
+        <source>%n active connection(s) to RadioCoin network</source>
         <translation type="unfinished">
-            <numerusform>%n active connection to Radiocoin network</numerusform>
-            <numerusform>%n active connections to Radiocoin network</numerusform>
+            <numerusform>%n active connection to RadioCoin network</numerusform>
+            <numerusform>%n active connections to RadioCoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -563,10 +563,10 @@
     </message>
     <message numerus="yes">
         <location line="+356"/>
-        <source>%n active connection(s) to Radiocoin network</source>
+        <source>%n active connection(s) to RadioCoin network</source>
         <translation>
-            <numerusform>%n active connection to Radiocoin network</numerusform>
-            <numerusform>%n active connections to Radiocoin network</numerusform>
+            <numerusform>%n active connection to RadioCoin network</numerusform>
+            <numerusform>%n active connections to RadioCoin network</numerusform>
         </translation>
     </message>
     <message>
@@ -624,8 +624,8 @@
     </message>
     <message>
         <location line="+13"/>
-        <source>Radiocoin</source>
-        <translation type="unfinished">Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation type="unfinished">RadioCoin</translation>
     </message>
     <message>
         <location line="+14"/>
@@ -649,7 +649,7 @@
     </message>
     <message>
         <location line="-440"/>
-        <source>Show the %1 help message to get a list with possible Radiocoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible RadioCoin command-line options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -729,7 +729,7 @@
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+520"/>
-        <source>A fatal error occurred. Radiocoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. RadioCoin can no longer continue safely and will quit.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -972,7 +972,7 @@
     </message>
     <message>
         <location line="+71"/>
-        <source>The entered address &quot;%1&quot; is not a valid Radiocoin address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid RadioCoin address.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1107,7 +1107,7 @@
     </message>
     <message>
         <location line="+10"/>
-        <source>%1 will download and store a copy of the Radiocoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>%1 will download and store a copy of the RadioCoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1156,12 +1156,12 @@
     </message>
     <message>
         <location line="+119"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the dogecoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the radiocoin network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend dogecoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend radiocoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1362,7 +1362,7 @@
     </message>
     <message>
         <location line="+30"/>
-        <source>Automatically open the Radiocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the RadioCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1372,7 +1372,7 @@
     </message>
     <message>
         <location line="+17"/>
-        <source>Connect to the Radiocoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the RadioCoin network through a SOCKS5 proxy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1427,7 +1427,7 @@
     </message>
     <message>
         <location line="+25"/>
-        <source>Connect to the Radiocoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the RadioCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1552,7 +1552,7 @@
     <message>
         <location line="+62"/>
         <location line="+405"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Radiocoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RadioCoin network after a connection is established, but this process has not completed yet.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1845,7 +1845,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+10"/>
-        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of radiocoin-wallet.dat and coins were spent in the copy but not marked as spent here.</source>
+        <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1885,7 +1885,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+8"/>
-        <source>URI cannot be parsed! This can be caused by an invalid Radiocoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid RadioCoin address or malformed URI parameters.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2007,7 +2007,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+128"/>
-        <source>Enter a Radiocoin address (e.g. %1)</source>
+        <source>Enter a RadioCoin address (e.g. %1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2593,7 +2593,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Radiocoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the RadioCoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2937,7 +2937,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location line="+535"/>
         <location line="+13"/>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for dogecoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for radiocoin transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3101,7 +3101,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+102"/>
-        <source>Warning: Invalid Radiocoin address</source>
+        <source>Warning: Invalid RadioCoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3156,7 +3156,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+39"/>
-        <source>The Radiocoin address to send the payment to</source>
+        <source>The RadioCoin address to send the payment to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3183,7 +3183,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="-1021"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less dogecoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less radiocoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3213,7 +3213,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+47"/>
-        <source>A message that was attached to the radiocoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Radiocoin network.</source>
+        <source>A message that was attached to the radiocoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the RadioCoin network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3270,12 +3270,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive dogecoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive radiocoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+18"/>
-        <source>The Radiocoin address to sign the message with</source>
+        <source>The RadioCoin address to sign the message with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3317,7 +3317,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Radiocoin address</source>
+        <source>Sign the message to prove you own this RadioCoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3348,12 +3348,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+21"/>
-        <source>The Radiocoin address the message was signed with</source>
+        <source>The RadioCoin address the message was signed with</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Radiocoin address</source>
+        <source>Verify the message to ensure it was signed with the specified RadioCoin address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4101,7 +4101,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+0"/>
-        <source>There was an error trying to save the radiocoin-wallet.data to %1.</source>
+        <source>There was an error trying to save the wallet data to %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4111,7 +4111,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+0"/>
-        <source>The radiocoin-wallet.data was successfully saved to %1.</source>
+        <source>The wallet data was successfully saved to %1.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4119,8 +4119,8 @@ p, li { white-space: pre-wrap; }
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+12"/>
-        <source>Radio Coin</source>
-        <translation type="unfinished">Radio Coin</translation>
+        <source>RadioCoin Core</source>
+        <translation type="unfinished">RadioCoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -4674,8 +4674,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+1"/>
-        <source>Error initializing radiocoin-wallet.database environment %s!</source>
-        <translation type="unfinished">Error initializing radiocoin-wallet.database environment %s!</translation>
+        <source>Error initializing wallet database environment %s!</source>
+        <translation type="unfinished">Error initializing wallet database environment %s!</translation>
     </message>
     <message>
         <location line="+1"/>

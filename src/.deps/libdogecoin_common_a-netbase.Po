@@ -1,4 +1,4 @@
-libdogecoin_common_a-netbase.o: netbase.cpp /usr/include/stdc-predef.h \
+libradiocoin_common_a-netbase.o: netbase.cpp /usr/include/stdc-predef.h \
  config/bitcoin-config.h netbase.h compat.h /usr/include/sys/fcntl.h \
  /usr/include/fcntl.h /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \

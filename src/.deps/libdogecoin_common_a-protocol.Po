@@ -1,4 +1,4 @@
-libdogecoin_common_a-protocol.o: protocol.cpp /usr/include/stdc-predef.h \
+libradiocoin_common_a-protocol.o: protocol.cpp /usr/include/stdc-predef.h \
  protocol.h netaddress.h config/bitcoin-config.h compat.h \
  /usr/include/sys/fcntl.h /usr/include/fcntl.h /usr/include/features.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \

@@ -1,4 +1,4 @@
-libdogecoin_util_a-random.o: random.cpp /usr/include/stdc-predef.h \
+libradiocoin_util_a-random.o: random.cpp /usr/include/stdc-predef.h \
  random.h uint256.h /usr/include/assert.h /usr/include/features.h \
  /usr/include/sys/cdefs.h /usr/include/bits/wordsize.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \

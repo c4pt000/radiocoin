@@ -57,11 +57,11 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case MBTC: return QString("Mega-Radiocoins (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
-    case kBTC: return QString("Kilo-Radiocoins (1" THIN_SP_UTF8 "000)");
-    case BTC: return QString("Radiocoins");
-    case mBTC: return QString("Milli-Radiocoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Radiocoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case MBTC: return QString("Mega-RadioCoins (1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case kBTC: return QString("Kilo-RadioCoins (1" THIN_SP_UTF8 "000)");
+    case BTC: return QString("RadioCoins");
+    case mBTC: return QString("Milli-RadioCoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTC: return QString("Micro-RadioCoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }

@@ -30,7 +30,7 @@ class CWalletTx;
 class uint160;
 class uint256;
 
-/** Error statuses for the radiocoin-wallet.database */
+/** Error statuses for the wallet database */
 enum DBErrors
 {
     DB_LOAD_OK,
@@ -112,7 +112,7 @@ public:
     }
 };
 
-/** Access to the radiocoin-wallet.database */
+/** Access to the wallet database */
 class CWalletDB : public CDB
 {
 public:
@@ -160,7 +160,7 @@ public:
 
     /// Write destination data key,value tuple to database
     bool WriteDestData(const std::string &address, const std::string &key, const std::string &value);
-    /// Erase destination data tuple from radiocoin-wallet.database
+    /// Erase destination data tuple from wallet database
     bool EraseDestData(const std::string &address, const std::string &key);
 
     CAmount GetAccountCreditDebit(const std::string& strAccount);

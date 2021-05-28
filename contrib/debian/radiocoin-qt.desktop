@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=RadioCoin Core
+Comment=Connect to the RadioCoin P2P Network
+Comment[de]=Verbinde mit dem RadioCoin peer-to-peer Netzwerk
+Comment[fr]=RadioCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=RadioCoin, eşten eşe kriptografik sanal para birimi
+Exec=radiocoin-qt %u
+Terminal=false
+Type=Application
+Icon=radiocoin128
+MimeType=x-scheme-handler/radiocoin;
+Categories=Office;Finance;

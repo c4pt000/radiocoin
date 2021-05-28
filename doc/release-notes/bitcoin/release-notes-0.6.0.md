@@ -52,7 +52,7 @@ use 33-byte 'compressed' public keys instead of
 65-byte public keys, resulting in smaller
 transactions and less traffic on the bitcoin
 network. The shorter keys are already supported
-by the network but radiocoin-wallet.dat files containing
+by the network but wallet.dat files containing
 short keys are not compatible with earlier
 versions of Bitcoin-Qt/bitcoind.
 

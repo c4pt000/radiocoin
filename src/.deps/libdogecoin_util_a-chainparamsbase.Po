@@ -1,4 +1,4 @@
-libdogecoin_util_a-chainparamsbase.o: chainparamsbase.cpp \
+libradiocoin_util_a-chainparamsbase.o: chainparamsbase.cpp \
  /usr/include/stdc-predef.h chainparamsbase.h /usr/include/c++/11/string \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \

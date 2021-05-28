@@ -1,4 +1,4 @@
-policy/libdogecoin_wallet_a-rbf.o: policy/rbf.cpp \
+policy/libradiocoin_wallet_a-rbf.o: policy/rbf.cpp \
  /usr/include/stdc-predef.h policy/rbf.h txmempool.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \

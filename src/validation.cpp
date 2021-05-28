@@ -13,7 +13,7 @@
 #include "consensus/consensus.h"
 #include "consensus/merkle.h"
 #include "consensus/validation.h"
-#include "dogecoin.h"
+#include "radiocoin.h"
 #include "hash.h"
 #include "init.h"
 #include "policy/fees.h"
@@ -51,7 +51,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "Radiocoin cannot be compiled without assertions."
+# error "RadioCoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -98,7 +98,7 @@ static void CheckBlockIndex(const Consensus::Params& consensusParams);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "Radiocoin Signed Message:\n";
+const std::string strMessageMagic = "RadioCoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -775,7 +775,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CValidationState& state, const C
         // Continuously rate-limit free (really, very-low-fee) transactions
         // This mitigates 'penny-flooding' -- sending thousands of free transactions just to
         // be annoying or make others' transactions take longer to confirm.
-        if (fLimitFree && nModifiedFees < GetRadiocoinMinRelayFee(tx, nSize, !fLimitFree))
+        if (fLimitFree && nModifiedFees < GetRadioCoinMinRelayFee(tx, nSize, !fLimitFree))
         {
             static CCriticalSection csFreeLimiter;
             static double dFreeCount;
@@ -1164,8 +1164,8 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
         return error("%s: Deserialize or I/O error - %s at %s", __func__, e.what(), pos.ToString());
     }
 
-    // Check the header
-    if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
+    // Check the header  //mod
+//    if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
 //        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
     return true;
@@ -1204,6 +1204,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
     if (halvings >= 64)
         return 0;
 
+    if (nHeight == 1) return COIN * 100000;
     CAmount nSubsidy = 50 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
@@ -1408,7 +1409,7 @@ bool CheckTxInputs(const CChainParams& params, const CTransaction& tx, CValidati
 
             // If prev is coinbase, check that it's matured
             if (coins->IsCoinBase()) {
-                // Radiocoin: Switch maturity at depth 145,000
+                // RadioCoin: Switch maturity at depth 145,000
                 int nCoinbaseMaturity = params.GetConsensus(coins->nHeight).nCoinbaseMaturity;
                 if (nSpendHeight - coins->nHeight < nCoinbaseMaturity)
                     return state.Invalid(false,
@@ -1702,7 +1703,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("dogecoin-scriptch");
+    RenameThread("radiocoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -1767,9 +1768,9 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     const Consensus::Params& consensus = Params().GetConsensus(pindex->nHeight);
     int64_t nTimeStart = GetTimeMicros();
 
-    // Check it again in case a previous version let a bad block in //mod
-//    if (!CheckBlock(block, state, !fJustCheck, !fJustCheck))
-  //      return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
+    // Check it again in case a previous version let a bad block in
+    if (!CheckBlock(block, state, !fJustCheck, !fJustCheck))
+        return error("%s: Consensus::CheckBlock: %s", __func__, FormatStateMessage(state));
 
     // verify that the view's current state corresponds to the previous block
     uint256 hashPrevBlock = pindex->pprev == NULL ? uint256() : pindex->pprev->GetBlockHash();
@@ -1824,7 +1825,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes during their
     // initial block download.
-    // Radiocoin: BIP30 has been active since inception
+    // RadioCoin: BIP30 has been active since inception
     bool fEnforceBIP30 = true;
 
     // Once BIP34 activated it was not possible to create new duplicate coinbases and thus other than starting
@@ -1847,7 +1848,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     }
 
     // BIP16 didn't become active until Apr 1 2012
-    // Radiocoin: BIP16 has been enabled since inception
+    // RadioCoin: BIP16 has been enabled since inception
     bool fStrictPayToScriptHash = true;
 
     unsigned int flags = fStrictPayToScriptHash ? SCRIPT_VERIFY_P2SH : SCRIPT_VERIFY_NONE;
@@ -1928,7 +1929,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                              REJECT_INVALID, "bad-blk-sigops");
 
         txdata.emplace_back(tx);
-        if (!tx.IsCoinBase())
+        if (!tx.IsCoinBase())  //mod
         {
             nFees += view.GetValueIn(tx)-tx.GetValueOut();
 
@@ -1936,7 +1937,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
             bool fCacheResults = fJustCheck; /* Don't cache results if we're actually connecting blocks (still consult the cache, though) */
             if (!CheckInputs(tx, state, view, fScriptChecks, flags, fCacheResults, txdata[i], nScriptCheckThreads ? &vChecks : NULL))
                 return error("ConnectBlock(): CheckInputs on %s failed with %s",
-                  tx.GetHash().ToString(), FormatStateMessage(state));
+                    tx.GetHash().ToString(), FormatStateMessage(state));
             control.Add(vChecks);
         }
 
@@ -1952,7 +1953,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     int64_t nTime3 = GetTimeMicros(); nTimeConnect += nTime3 - nTime2;
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime3 - nTime2), 0.001 * (nTime3 - nTime2) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime3 - nTime2) / (nInputs-1), nTimeConnect * 0.000001);
 
-    CAmount blockReward = nFees + GetRadiocoinBlockSubsidy(pindex->nHeight, chainparams.GetConsensus(pindex->nHeight), hashPrevBlock);
+    CAmount blockReward = nFees + GetRadioCoinBlockSubsidy(pindex->nHeight, chainparams.GetConsensus(pindex->nHeight), hashPrevBlock);
     if (block.vtx[0]->GetValueOut() > blockReward)
         return state.DoS(100,
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",
@@ -2856,8 +2857,8 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
     // We don't have block height as this is called without context (i.e. without
     // knowing the previous block), but that's okay, as the checks done are permissive
     // (i.e. doesn't check work limit or whether AuxPoW is enabled)
-    if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))
-        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+//    if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))  //mod
+//        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
 
     return true;
 }
@@ -2941,7 +2942,7 @@ static bool CheckIndexAgainstCheckpoint(const CBlockIndex* pindexPrev, CValidati
 
 bool IsWitnessEnabled(const CBlockIndex* pindexPrev, const Consensus::Params& params)
 {
-    // Radiocoin: Disable SegWit
+    // RadioCoin: Disable SegWit
     return false;
     // LOCK(cs_main);
     // return (VersionBitsState(pindexPrev, params, Consensus::DEPLOYMENT_SEGWIT, versionbitscache) == THRESHOLD_ACTIVE);
@@ -3015,7 +3016,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
                                     __func__),
                          REJECT_INVALID, "late-legacy-block");
 
-    // Radiocoin: Disallow AuxPow blocks before it is activated.
+    // RadioCoin: Disallow AuxPow blocks before it is activated.
     // TODO: Remove this test, as checkpoints will enforce this for us now
     // NOTE: Previously this had its own fAllowAuxPoW flag, but that's always the opposite of fAllowLegacyBlocks
     if (consensusParams.fAllowLegacyBlocks
@@ -3038,7 +3039,7 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
 
     // Reject outdated version blocks when 95% (75% on testnet) of the network has upgraded:
     // check for version 2, 3 and 4 upgrades
-    // Radiocoin: Version 2 enforcement was never used
+    // RadioCoin: Version 2 enforcement was never used
     if((block.GetBaseVersion() < 3 && nHeight >= consensusParams.BIP66Height) ||
        (block.GetBaseVersion() < 4 && nHeight >= consensusParams.BIP65Height))
             return state.Invalid(false, REJECT_OBSOLETE, strprintf("bad-version(0x%08x)", block.GetBaseVersion()),
@@ -3054,7 +3055,7 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, const CB
     const Consensus::Params& consensusParams = chainParams.GetConsensus(nHeight);
 
     // Start enforcing BIP113 (Median Time Past) using versionbits logic.
-    // Radiocoin: We probably want to disable this
+    // RadioCoin: We probably want to disable this
     int nLockTimeFlags = 0;
     if (VersionBitsState(pindexPrev, consensusParams, Consensus::DEPLOYMENT_CSV, versionbitscache) == THRESHOLD_ACTIVE) {
         nLockTimeFlags |= LOCKTIME_MEDIAN_TIME_PAST;
@@ -3150,8 +3151,8 @@ static bool AcceptBlockHeader(const CBlockHeader& block, CValidationState& state
             return true;
         }
 
-        if (!CheckBlockHeader(block, state))
-            return error("%s: Consensus::CheckBlockHeader: %s, %s", __func__, hash.ToString(), FormatStateMessage(state));
+//        if (!CheckBlockHeader(block, state))    //mod
+//            return error("%s: Consensus::CheckBlockHeader: %s, %s", __func__, hash.ToString(), FormatStateMessage(state));
 
         // Get prev block index
         CBlockIndex* pindexPrev = NULL;

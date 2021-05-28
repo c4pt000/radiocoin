@@ -50,7 +50,7 @@ UniValue getinfo(const JSONRPCRequest& request)
             "  \"version\": xxxxx,           (numeric) the server version\n"
             "  \"protocolversion\": xxxxx,   (numeric) the protocol version\n"
             "  \"walletversion\": xxxxx,     (numeric) the wallet version\n"
-            "  \"balance\": xxxxxxx,         (numeric) the total dogecoin balance of the wallet\n"
+            "  \"balance\": xxxxxxx,         (numeric) the total radiocoin balance of the wallet\n"
             "  \"blocks\": xxxxxx,           (numeric) the current number of blocks processed in the server\n"
             "  \"timeoffset\": xxxxx,        (numeric) the time offset\n"
             "  \"connections\": xxxxx,       (numeric) the number of connections\n"
@@ -503,7 +503,7 @@ UniValue echo(const JSONRPCRequest& request)
             "echo|echojson \"message\" ...\n"
             "\nSimply echo back the input arguments. This command is for testing.\n"
             "\nThe difference between echo and echojson is that echojson has argument conversion enabled in the client-side table in"
-            "dogecoin-cli and the GUI. There is no server-side difference."
+            "radiocoin-cli and the GUI. There is no server-side difference."
         );
 
     return request.params;

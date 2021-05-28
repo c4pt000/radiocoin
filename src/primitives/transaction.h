@@ -194,7 +194,7 @@ public:
         return 3 * minRelayTxFee.GetFee(nSize);
         */
 
-        // Radiocoin: Anything below 1 RADC is always dust
+        // RadioCoin: Anything below 1 RADC is always dust
         return COIN;
     }
 
@@ -308,7 +308,7 @@ class CTransaction
 {
 public:
     // Default transaction version.
-    // Radiocoin: Temporarily restricted to v1 for compatibility with 1.10
+    // RadioCoin: Temporarily restricted to v1 for compatibility with 1.10
     static const int32_t CURRENT_VERSION=1;
 
     // Changing the default transaction version requires a two step process: first

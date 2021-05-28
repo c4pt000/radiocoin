@@ -1,4 +1,4 @@
-libdogecoin_server_a-ui_interface.o: ui_interface.cpp \
+libradiocoin_server_a-ui_interface.o: ui_interface.cpp \
  /usr/include/stdc-predef.h ui_interface.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

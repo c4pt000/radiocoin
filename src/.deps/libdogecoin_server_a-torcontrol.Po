@@ -1,4 +1,4 @@
-libdogecoin_server_a-torcontrol.o: torcontrol.cpp \
+libradiocoin_server_a-torcontrol.o: torcontrol.cpp \
  /usr/include/stdc-predef.h torcontrol.h scheduler.h \
  /usr/include/boost/function.hpp /usr/include/c++/11/functional \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \

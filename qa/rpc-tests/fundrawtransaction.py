@@ -152,7 +152,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         utx = get_unspent(self.nodes[2].listunspent(), 50)
 
         inputs  = [ {'txid' : utx['txid'], 'vout' : utx['vout']}]
-        # Radiocoin: Fee is exact, do not use tolerance
+        # RadioCoin: Fee is exact, do not use tolerance
         outputs = { self.nodes[0].getnewaddress() : Decimal(50) - fee }
         rawtx   = self.nodes[2].createrawtransaction(inputs, outputs)
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
@@ -193,7 +193,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
         assert_equal(utx['txid'], dec_tx['vin'][0]['txid'])
 
-        assert_raises_jsonrpc(-5, "changeAddress must be a valid dogecoin address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
+        assert_raises_jsonrpc(-5, "changeAddress must be a valid radiocoin address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
 
         ############################################################
         # test a fundrawtransaction with a provided change address #
@@ -201,7 +201,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         utx = get_unspent(self.nodes[2].listunspent(), 50)
 
         inputs  = [ {'txid' : utx['txid'], 'vout' : utx['vout']} ]
-        # Radiocoin: Reduce this output so the fee doesn't leave us with no change
+        # RadioCoin: Reduce this output so the fee doesn't leave us with no change
         outputs = { self.nodes[0].getnewaddress() : Decimal(25) }
         rawtx   = self.nodes[2].createrawtransaction(inputs, outputs)
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
@@ -516,7 +516,7 @@ class RawTransactionsTest(BitcoinTestFramework):
 
         #fund a tx with ~20 small inputs
         inputs = []
-        # Radiocoin: TX size rounding gives us a fee of 4 RADC
+        # RadioCoin: TX size rounding gives us a fee of 4 RADC
         outputs = {self.nodes[0].getnewaddress():15,self.nodes[0].getnewaddress():4}
         rawTx = self.nodes[1].createrawtransaction(inputs, outputs)
         fundedTx = self.nodes[1].fundrawtransaction(rawTx)

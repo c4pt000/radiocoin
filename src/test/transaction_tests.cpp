@@ -689,7 +689,7 @@ BOOST_AUTO_TEST_CASE(test_IsStandard)
     std::string reason;
     BOOST_CHECK(IsStandardTx(t, reason));
 
-    // Radiocoin: Dust is totally different in Radiocoin, disable these tests
+    // RadioCoin: Dust is totally different in RadioCoin, disable these tests
     // Check dust with default relay fee:
     /* CAmount nDustThreshold = 182 * dustRelayFee.GetFeePerK()/1000 * 3;
     BOOST_CHECK_EQUAL(nDustThreshold, 546);

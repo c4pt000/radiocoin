@@ -1,4 +1,4 @@
-consensus/libdogecoin_consensus_a-merkle.o: consensus/merkle.cpp \
+consensus/libradiocoin_consensus_a-merkle.o: consensus/merkle.cpp \
  /usr/include/stdc-predef.h consensus/merkle.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

@@ -195,7 +195,7 @@ void Shutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("dogecoin-shutoff");
+    RenameThread("radiocoin-shutoff");
     mempool.AddTransactionsUpdated(1);
 
     StopHTTPRPC();
@@ -546,9 +546,9 @@ std::string LicenseInfo()
   
 	//  display_image();
 
-    const std::string URL_SOURCE_CODE = "<https://github.com/c4pt000/dogecoin>";
-    const std::string MYDEPOSIT_QT = "<https://raw.githubusercontent.com/c4pt000/dogecoin/master/my-doge-deposit.png>";
-    const std::string URL_WEBSITE = "<https://dogecoin.com>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/c4pt000/radiocoin>";
+    const std::string MYDEPOSIT_QT = "<https://raw.githubusercontent.com/c4pt000/radiocoin/master/my-doge-deposit.png>";
+    const std::string URL_WEBSITE = "<https://radiocoin.com>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2013, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -673,7 +673,7 @@ void CleanupBlockRevFiles()
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
     const CChainParams& chainparams = Params();
-    RenameThread("dogecoin-loadblk");
+    RenameThread("radiocoin-loadblk");
 
     {
     CImportingNow imp;

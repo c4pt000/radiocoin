@@ -47,7 +47,7 @@ versions of Berkeley DB, but the "log" files are not-- even minor
 version differences may have incompatible "log" files. The
 -detachdb option moves any pending changes from the "log" files
 to the "blkindex.dat" file for maximum compatibility, but makes
-shutdown much slower. Note that the "radiocoin-wallet.dat" file is always
+shutdown much slower. Note that the "wallet.dat" file is always
 detached, and versions prior to 0.6.0 detached all databases
 at shutdown.
 
@@ -57,10 +57,10 @@ New features
 * Added a boolean argument to the RPC 'stop' command, if true sets
   -detachdb to create standalone database .dat files before shutting down.
 
-* -salvagewallet command-line option, which moves any existing radiocoin-wallet.dat
+* -salvagewallet command-line option, which moves any existing wallet.dat
   to wallet.{timestamp}.dat and then attempts to salvage public/private
   keys and master encryption keys (if the wallet is encrypted) into
-  a new radiocoin-wallet.dat. This should only be used if your wallet becomes
+  a new wallet.dat. This should only be used if your wallet becomes
   corrupted, and is not intended to replace regular wallet backups.
 
 * Import $DataDir/bootstrap.dat automatically, if it exists.
@@ -79,7 +79,7 @@ Bug fixes
 
 * When running -testnet, use RPC port 18332 by default.
 
-* Better detection and handling of corrupt radiocoin-wallet.dat and blkindex.dat files.
+* Better detection and handling of corrupt wallet.dat and blkindex.dat files.
   Previous versions would crash with a DB_RUNRECOVERY exception, this
   version detects most problems and tells you how to recover if it
   cannot recover itself.

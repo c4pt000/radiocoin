@@ -38,7 +38,7 @@ Windows 8.
 LevelDB, a fast, open-source, non-relational database from Google, is
 now used to store transaction and block indices.  LevelDB works much better
 on machines with slow I/O and is faster in general. Berkeley DB is now only
-used for the radiocoin-wallet.dat file (public and private wallet keys and transactions
+used for the wallet.dat file (public and private wallet keys and transactions
 relevant to you).
 
 Pieter Wuille implemented many optimizations to the way transactions are

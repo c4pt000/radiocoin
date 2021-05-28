@@ -1,4 +1,4 @@
-libdogecoin_util_a-sync.o: sync.cpp /usr/include/stdc-predef.h sync.h \
+libradiocoin_util_a-sync.o: sync.cpp /usr/include/stdc-predef.h sync.h \
  threadsafety.h /usr/include/boost/thread/condition_variable.hpp \
  /usr/include/boost/thread/detail/platform.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \

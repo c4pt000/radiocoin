@@ -62,12 +62,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your Radiocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Radiocoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your RadioCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu RadioCoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your Radiocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu Radiocoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your RadioCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu RadioCoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADCCOINS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA RADCCOINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADIOCOINS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA RADIOCOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -220,7 +220,7 @@
     </message>
     </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
@@ -290,8 +290,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Saada münte Radiocoini aadressile</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Saada münte RadioCoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -314,8 +314,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -342,12 +342,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Radiocoini aadressiga</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma RadioCoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Radiocoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud RadioCoini aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -367,19 +367,19 @@
     </message>
     <message>
         <source>Request payments (generates QR codes and radiocoin: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja dogecoini: URId)</translation>
+        <translation>Loo maksepäring (genereerib QR koodid ja radiocoini: URId)</translation>
     </message>
     <message>
         <source>Open a radiocoin: URI or payment request</source>
-        <translation>Ava dogecoini: URI või maksepäring</translation>
+        <translation>Ava radiocoini: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Radiocoin network</source>
-        <translation><numerusform>%n aktiivne ühendus Radiocoini võrku</numerusform><numerusform>%n aktiivset ühendust Radiocoini võrku</numerusform></translation>
+        <source>%n active connection(s) to RadioCoin network</source>
+        <translation><numerusform>%n aktiivne ühendus RadioCoini võrku</numerusform><numerusform>%n aktiivset ühendust RadioCoini võrku</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -626,8 +626,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Radiocoin address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne Radiocoin aadress.</translation>
+        <source>The entered address "%1" is not a valid RadioCoin address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne RadioCoin aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -756,8 +756,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Radiocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Radiocoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the RadioCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>RadioCoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -855,7 +855,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Radiocoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RadioCoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -1337,8 +1337,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Radiocoin address</source>
-        <translation>Hoiatus: Ebakorrektne Radiocoin aadress</translation>
+        <source>Warning: Invalid RadioCoin address</source>
+        <translation>Hoiatus: Ebakorrektne RadioCoin aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1417,8 +1417,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Radiocoin address to sign the message with</source>
-        <translation>Radiocoin aadress millega sõnum allkirjastada</translation>
+        <source>The RadioCoin address to sign the message with</source>
+        <translation>RadioCoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1449,8 +1449,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Radiocoin address</source>
-        <translation>Allkirjasta sõnum Radiocoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this RadioCoin address</source>
+        <translation>Allkirjasta sõnum RadioCoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1469,12 +1469,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Radiocoin address the message was signed with</source>
-        <translation>Radiocoin aadress millega sõnum on allkirjastatud</translation>
+        <source>The RadioCoin address the message was signed with</source>
+        <translation>RadioCoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Radiocoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Radiocoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified RadioCoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud RadioCoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1732,7 +1732,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Valikud:</translation>
@@ -1758,8 +1758,8 @@
         <translation>Tööta taustal ning aktsepteeri käsklusi</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radiocoini tuumik</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoini tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1786,7 +1786,7 @@
         <translation>Tõrge bloki andmebaasi käivitamisel</translation>
     </message>
     <message>
-        <source>Error initializing radiocoin-wallet.database environment %s!</source>
+        <source>Error initializing wallet database environment %s!</source>
         <translation>Tõrge rahakoti keskkonna %s käivitamisel!</translation>
     </message>
     <message>

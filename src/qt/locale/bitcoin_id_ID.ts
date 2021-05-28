@@ -228,7 +228,7 @@
     </message>
 </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Pesan &amp;penanda...</translation>
@@ -334,8 +334,8 @@
         <translation>Mengindex ulang blok di dalam disk...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
-        <translation>Kirim koin ke alamat Radiocoin</translation>
+        <source>Send coins to a RadioCoin address</source>
+        <translation>Kirim koin ke alamat RadioCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Verifikasi pesan...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
-        <translation>Radiocoin</translation>
+        <source>RadioCoin</source>
+        <translation>RadioCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -386,12 +386,12 @@
         <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>Tanda tangani sebuah pesan menggunakan alamat Radiocoin Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat RadioCoin Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Radiocoin tertentu</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat RadioCoin tertentu</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -430,8 +430,8 @@
         <translation>&amp;pilihan Command-line</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Radiocoin network</source>
-        <translation><numerusform>%n koneksi aktif ke jaringan Radiocoin</numerusform></translation>
+        <source>%n active connection(s) to RadioCoin network</source>
+        <translation><numerusform>%n koneksi aktif ke jaringan RadioCoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -864,16 +864,16 @@
         <translation>&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
-        <source>Automatically open the Radiocoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Otomatis membuka port client Radiocoin di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+        <source>Automatically open the RadioCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client RadioCoin di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Radiocoin network through a SOCKS5 proxy.</source>
-        <translation>Hubungkan ke jaringan Radiocoin melalui SOCKS5 proxy.</translation>
+        <source>Connect to the RadioCoin network through a SOCKS5 proxy.</source>
+        <translation>Hubungkan ke jaringan RadioCoin melalui SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -979,8 +979,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Radiocoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Radiocoin ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the RadioCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan RadioCoin ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -1036,8 +1036,8 @@
         <translation>Nilai</translation>
     </message>
     <message>
-        <source>Enter a Radiocoin address (e.g. %1)</source>
-        <translation>Masukkan alamat Radiocoin (contoh %1)</translation>
+        <source>Enter a RadioCoin address (e.g. %1)</source>
+        <translation>Masukkan alamat RadioCoin (contoh %1)</translation>
     </message>
     <message>
         <source>%1 h</source>
@@ -1543,8 +1543,8 @@
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Radiocoin address</source>
-        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Radiocoin ini</translation>
+        <source>Sign the message to prove you own this RadioCoin address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat RadioCoin ini</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1650,7 +1650,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Pilihan:</translation>
@@ -1676,8 +1676,8 @@
         <translation>Berjalan dibelakang sebagai daemin dan menerima perintah</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
-        <translation>Radio Coin</translation>
+        <source>RadioCoin Core</source>
+        <translation>RadioCoin Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
@@ -1708,7 +1708,7 @@
         <translation>Kesalahan menginisialisasi database blok</translation>
     </message>
     <message>
-        <source>Error initializing radiocoin-wallet.database environment %s!</source>
+        <source>Error initializing wallet database environment %s!</source>
         <translation>Kesalahan menginisialisasi dompet pada database%s!</translation>
     </message>
     <message>

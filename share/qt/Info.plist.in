@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Radiocoin-Qt</string>
+  <string>RadioCoin-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Radiocoin-Qt</string>
+  <string>RadioCoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>com.dogecoin.Radiocoin-Qt</string>
+  <string>com.radiocoin.RadioCoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>com.dogecoin.RadiocoinPayment</string>
+      <string>com.radiocoin.RadioCoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>dogecoin</string>
+        <string>radiocoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>com.dogecoin.paymentrequest</string>
+      <string>com.radiocoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Radiocoin payment request</string>
+      <string>RadioCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/dogecoin-paymentrequest</string>
+        <string>application/radiocoin-paymentrequest</string>
         <key>public.filename-extension</key>
         <array>
-          <string>dogecoinpaymentrequest</string>
+          <string>radiocoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>com.dogecoin.paymentrequest</string>
+        <string>com.radiocoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

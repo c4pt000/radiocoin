@@ -1,0 +1,22 @@
+[Unit]
+Description=RadioCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=radiocoin
+Group=radiocoin
+
+Type=forking
+PIDFile=/var/lib/radiocoind/radiocoind.pid
+ExecStart=/usr/bin/radiocoind -daemon -pid=/var/lib/radiocoind/radiocoind.pid \
+-conf=/etc/radiocoin/radiocoin.conf -datadir=/var/lib/radiocoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

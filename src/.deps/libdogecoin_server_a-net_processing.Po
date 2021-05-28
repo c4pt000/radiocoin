@@ -1,4 +1,4 @@
-libdogecoin_server_a-net_processing.o: net_processing.cpp \
+libradiocoin_server_a-net_processing.o: net_processing.cpp \
  /usr/include/stdc-predef.h net_processing.h net.h addrdb.h serialize.h \
  compat/endian.h config/bitcoin-config.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \

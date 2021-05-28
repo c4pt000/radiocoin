@@ -1,4 +1,4 @@
-Name "Radio Coin (-bit)"
+Name "RadioCoin Core (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -6,23 +6,23 @@ SetCompressor /SOLID lzma
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
 !define VERSION 1.14.3
-!define COMPANY "Radio Coin project"
-!define URL https://radiocoin.io/
+!define COMPANY "RadioCoin Core project"
+!define URL https://radiocoin.com/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Radio Coin"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "RadioCoin Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\radiocoin-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,18 +48,18 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/radiocoin-${VERSION}-win-setup.exe
+OutFile /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/radiocoin-${VERSION}-win-setup.exe
 !if "" == "64"
-InstallDir $PROGRAMFILES64\Radiocoin
+InstallDir $PROGRAMFILES64\RadioCoin
 !else
-InstallDir $PROGRAMFILES\Radiocoin
+InstallDir $PROGRAMFILES\RadioCoin
 !endif
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
 VIProductVersion ${VERSION}.0
-VIAddVersionKey ProductName "Radio Coin"
+VIAddVersionKey ProductName "RadioCoin Core"
 VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/release/radiocoin-qt
-    File /oname=COPYING.txt /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/COPYING
-    File /oname=readme.txt /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc/README_windows.txt
+    File /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/release/radiocoin-qt
+    File /oname=COPYING.txt /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/COPYING
+    File /oname=readme.txt /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/release/radiocoind
-    File /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/release/radiocoin-cli
+    File /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/release/radiocoind
+    File /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/release/radiocoin-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc\*.*
+    File /r /home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -92,7 +92,7 @@ Section -post SEC0001
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\radiocoin-qt
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Radio Coin (testnet, -bit).lnk" "$INSTDIR\radiocoin-qt" "-testnet" "$INSTDIR\radiocoin-qt" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, -bit).lnk" "$INSTDIR\radiocoin-qt" "-testnet" "$INSTDIR\radiocoin-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -104,7 +104,7 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "radiocoin" "URL Protocol" ""
-    WriteRegStr HKCR "radiocoin" "" "URL:Radiocoin"
+    WriteRegStr HKCR "radiocoin" "" "URL:RadioCoin"
     WriteRegStr HKCR "radiocoin\DefaultIcon" "" $INSTDIR\radiocoin-qt
     WriteRegStr HKCR "radiocoin\shell\open\command" "" '"$INSTDIR\radiocoin-qt" "%1"'
 SectionEnd
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Radio Coin (testnet, -bit).lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, -bit).lnk"
     Delete /REBOOTOK "$SMSTARTUP\Bitcoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log

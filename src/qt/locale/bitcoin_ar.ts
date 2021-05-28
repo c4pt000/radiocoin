@@ -62,11 +62,11 @@
         <translation>استقبال العناوين</translation>
     </message>
     <message>
-        <source>These are your Radiocoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your RadioCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>هذه هي عناوين Dogecion التابعة لك من أجل إرسال الدفعات. تحقق دائما من المبلغ و عنوان المرسل المستقبل قبل إرسال العملات</translation>
     </message>
     <message>
-        <source>These are your Radiocoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your RadioCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>هذه هي عناوين Dogecion التابعة لك من أجل إستقبال الدفعات. ينصح استخدام عنوان جديد من أجل كل صفقة</translation>
     </message>
     <message>
@@ -168,8 +168,8 @@
         <translation>تأكيد تشفير المحفظة</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADCCOINS&lt;/b&gt;!</source>
-        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات RADCCOINS الخاصة بك.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR RADIOCOINS&lt;/b&gt;!</source>
+        <translation>تحذير: إذا قمت بتشفير محفظتك وفقدت كلمة المرور الخاص بك, ستفقد كل عملات RADIOCOINS الخاصة بك.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -228,7 +228,7 @@
     </message>
 </context>
 <context>
-    <name>RadiocoinGUI</name>
+    <name>RadioCoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>التوقيع و الرسائل</translation>
@@ -318,7 +318,7 @@
         <translation>إعادة الفهرسة الكتل على القرص ...</translation>
     </message>
     <message>
-        <source>Send coins to a Radiocoin address</source>
+        <source>Send coins to a RadioCoin address</source>
         <translation>ارسل عملات الى عنوان بيتكوين</translation>
     </message>
     <message>
@@ -342,7 +342,7 @@
         <translation>&amp;التحقق من الرسالة...</translation>
     </message>
     <message>
-        <source>Radiocoin</source>
+        <source>RadioCoin</source>
         <translation>بت كوين</translation>
     </message>
     <message>
@@ -370,12 +370,12 @@
         <translation>تشفير المفتاح الخاص بمحفظتك</translation>
     </message>
     <message>
-        <source>Sign messages with your Radiocoin addresses to prove you own them</source>
-        <translation>وقَع الرسائل بواسطة ال: Radiocoin الخاص بك لإثبات امتلاكك لهم</translation>
+        <source>Sign messages with your RadioCoin addresses to prove you own them</source>
+        <translation>وقَع الرسائل بواسطة ال: RadioCoin الخاص بك لإثبات امتلاكك لهم</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Radiocoin addresses</source>
-        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل Radiocoin محدَدة</translation>
+        <source>Verify messages to ensure they were signed with specified RadioCoin addresses</source>
+        <translation>تحقق من الرسائل للتأكد من أنَها وُقعت برسائل RadioCoin محدَدة</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -407,7 +407,7 @@
     </message>
     <message>
         <source>Open a radiocoin: URI or payment request</source>
-        <translation>فتح URI : Radiocoin أو طلب دفع</translation>
+        <translation>فتح URI : RadioCoin أو طلب دفع</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -450,7 +450,7 @@
         <translation>محدث</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Radiocoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible RadioCoin command-line options</source>
         <translation>بين اشارة المساعدة %1 للحصول على قائمة من خيارات اوامر البت كوين المحتملة </translation>
     </message>
     <message>
@@ -668,7 +668,7 @@
         <translation>تعديل عنوان الارسال</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Radiocoin address.</source>
+        <source>The entered address "%1" is not a valid RadioCoin address.</source>
         <translation>العنوان المدخل "%1" ليس عنوان بيت كوين صحيح.</translation>
     </message>
     <message>
@@ -1418,7 +1418,7 @@
         <translation>هذا دفع اعتيادي</translation>
     </message>
     <message>
-        <source>The Radiocoin address to send the payment to</source>
+        <source>The RadioCoin address to send the payment to</source>
         <translation>عنوان البت كوين المرسل اليه الدفع</translation>
     </message>
     <message>
@@ -1495,7 +1495,7 @@
         <translation>التوقيع</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Radiocoin address</source>
+        <source>Sign the message to prove you own this RadioCoin address</source>
         <translation>وقع الرسالة لتثبت انك تمتلك عنوان البت كوين هذا</translation>
     </message>
     <message>
@@ -1922,7 +1922,7 @@
     </message>
     </context>
 <context>
-    <name>dogecoin-core</name>
+    <name>radiocoin-core</name>
     <message>
         <source>Options:</source>
         <translation>خيارات: </translation>
@@ -1932,7 +1932,7 @@
         <translation>حدد مجلد المعلومات</translation>
     </message>
     <message>
-        <source>Radio Coin</source>
+        <source>RadioCoin Core</source>
         <translation>جوهر البيت كوين</translation>
     </message>
     <message>

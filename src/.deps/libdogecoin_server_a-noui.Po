@@ -1,4 +1,4 @@
-libdogecoin_server_a-noui.o: noui.cpp /usr/include/stdc-predef.h noui.h \
+libradiocoin_server_a-noui.o: noui.cpp /usr/include/stdc-predef.h noui.h \
  ui_interface.h /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \

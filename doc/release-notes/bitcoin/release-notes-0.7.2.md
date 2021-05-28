@@ -29,7 +29,7 @@ versions of Berkeley DB, but the "log" files are not-- even minor
 version differences may have incompatible "log" files. The
 -detachdb option moves any pending changes from the "log" files
 to the "blkindex.dat" file for maximum compatibility, but makes
-shutdown much slower. Note that the "radiocoin-wallet.dat" file is always
+shutdown much slower. Note that the "wallet.dat" file is always
 detached, and versions prior to 0.6.0 detached all databases
 at shutdown.
 

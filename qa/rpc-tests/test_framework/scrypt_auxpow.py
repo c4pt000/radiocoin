@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Copyright (c) 2014 Daniel Kraft
-# Copyright (c) 2015-2018 The Radio Coin developers
+# Copyright (c) 2015-2018 The RadioCoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

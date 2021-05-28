@@ -1,4 +1,4 @@
-libdogecoin_common_a-arith_uint256.o: arith_uint256.cpp \
+libradiocoin_common_a-arith_uint256.o: arith_uint256.cpp \
  /usr/include/stdc-predef.h arith_uint256.h /usr/include/assert.h \
  /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/wordsize.h /usr/include/bits/long-double.h \

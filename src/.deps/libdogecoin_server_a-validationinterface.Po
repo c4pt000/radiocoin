@@ -1,4 +1,4 @@
-libdogecoin_server_a-validationinterface.o: validationinterface.cpp \
+libradiocoin_server_a-validationinterface.o: validationinterface.cpp \
  /usr/include/stdc-predef.h validationinterface.h \
  /usr/include/boost/signals2/signal.hpp /usr/include/c++/11/algorithm \
  /usr/include/c++/11/utility \

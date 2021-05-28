@@ -9,7 +9,7 @@
 #define UNUSED
 #endif
 static const char UNUSED *bitcoin_strings[] = {
-QT_TRANSLATE_NOOP("bitcoin-core", "Radio Coin"),
+QT_TRANSLATE_NOOP("bitcoin-core", "RadioCoin Core"),
 QT_TRANSLATE_NOOP("bitcoin-core", "The %s developers"),
 QT_TRANSLATE_NOOP("bitcoin-core", ""
 "(1 = keep tx meta data e.g. account owner and payment request information, 2 "
@@ -270,7 +270,7 @@ QT_TRANSLATE_NOOP("bitcoin-core", "Enable publish raw block in <address>"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Enable publish raw transaction in <address>"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Enable transaction replacement in the memory pool (default: %u)"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error initializing block database"),
-QT_TRANSLATE_NOOP("bitcoin-core", "Error initializing radiocoin-wallet.database environment %s!"),
+QT_TRANSLATE_NOOP("bitcoin-core", "Error initializing wallet database environment %s!"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error loading %s"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error loading %s: Wallet corrupted"),
 QT_TRANSLATE_NOOP("bitcoin-core", "Error loading %s: Wallet requires newer version of %s"),

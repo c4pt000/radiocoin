@@ -1,4 +1,4 @@
-libdogecoin_server_a-validation.o: validation.cpp \
+libradiocoin_server_a-validation.o: validation.cpp \
  /usr/include/stdc-predef.h validation.h config/bitcoin-config.h amount.h \
  serialize.h compat/endian.h config/bitcoin-config.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
@@ -886,7 +886,7 @@ libdogecoin_server_a-validation.o: validation.cpp \
  /usr/include/boost/io/ios_state.hpp /usr/include/boost/io_fwd.hpp \
  alert.h chainparams.h chainparamsbase.h checkpoints.h checkqueue.h \
  consensus/consensus.h consensus/merkle.h primitives/block.h \
- consensus/validation.h dogecoin.h init.h policy/fees.h random.h \
+ consensus/validation.h radiocoin.h init.h policy/fees.h random.h \
  policy/policy.h consensus/consensus.h script/interpreter.h \
  script/script_error.h script/standard.h /usr/include/boost/variant.hpp \
  /usr/include/boost/variant/variant.hpp /usr/include/boost/type_index.hpp \
@@ -2739,7 +2739,7 @@ consensus/consensus.h:
 consensus/merkle.h:
 primitives/block.h:
 consensus/validation.h:
-dogecoin.h:
+radiocoin.h:
 init.h:
 policy/fees.h:
 random.h:

@@ -367,7 +367,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssKey >> vchPubKey;
             if (!vchPubKey.IsValid())
             {
-                strErr = "Error reading radiocoin-wallet.database: CPubKey corrupt";
+                strErr = "Error reading wallet database: CPubKey corrupt";
                 return false;
             }
             CKey key;
@@ -407,7 +407,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
 
                 if (Hash(vchKey.begin(), vchKey.end()) != hash)
                 {
-                    strErr = "Error reading radiocoin-wallet.database: CPubKey/CPrivKey corrupt";
+                    strErr = "Error reading wallet database: CPubKey/CPrivKey corrupt";
                     return false;
                 }
 
@@ -416,12 +416,12 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
 
             if (!key.Load(pkey, vchPubKey, fSkipCheck))
             {
-                strErr = "Error reading radiocoin-wallet.database: CPrivKey corrupt";
+                strErr = "Error reading wallet database: CPrivKey corrupt";
                 return false;
             }
             if (!pwallet->LoadKey(key, vchPubKey))
             {
-                strErr = "Error reading radiocoin-wallet.database: LoadKey failed";
+                strErr = "Error reading wallet database: LoadKey failed";
                 return false;
             }
         }
@@ -433,7 +433,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssValue >> kMasterKey;
             if(pwallet->mapMasterKeys.count(nID) != 0)
             {
-                strErr = strprintf("Error reading radiocoin-wallet.database: duplicate CMasterKey id %u", nID);
+                strErr = strprintf("Error reading wallet database: duplicate CMasterKey id %u", nID);
                 return false;
             }
             pwallet->mapMasterKeys[nID] = kMasterKey;
@@ -446,7 +446,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssKey >> vchPubKey;
             if (!vchPubKey.IsValid())
             {
-                strErr = "Error reading radiocoin-wallet.database: CPubKey corrupt";
+                strErr = "Error reading wallet database: CPubKey corrupt";
                 return false;
             }
             vector<unsigned char> vchPrivKey;
@@ -455,7 +455,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
 
             if (!pwallet->LoadCryptedKey(vchPubKey, vchPrivKey))
             {
-                strErr = "Error reading radiocoin-wallet.database: LoadCryptedKey failed";
+                strErr = "Error reading wallet database: LoadCryptedKey failed";
                 return false;
             }
             wss.fIsEncrypted = true;
@@ -509,7 +509,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssValue >> *(CScriptBase*)(&script);
             if (!pwallet->LoadCScript(script))
             {
-                strErr = "Error reading radiocoin-wallet.database: LoadCScript failed";
+                strErr = "Error reading wallet database: LoadCScript failed";
                 return false;
             }
         }
@@ -525,7 +525,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssValue >> strValue;
             if (!pwallet->LoadDestData(CBitcoinAddress(strAddress).Get(), strKey, strValue))
             {
-                strErr = "Error reading radiocoin-wallet.database: LoadDestData failed";
+                strErr = "Error reading wallet database: LoadDestData failed";
                 return false;
             }
         }
@@ -535,7 +535,7 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             ssValue >> chain;
             if (!pwallet->SetHDChain(chain, true))
             {
-                strErr = "Error reading radiocoin-wallet.database: SetHDChain failed";
+                strErr = "Error reading wallet database: SetHDChain failed";
                 return false;
             }
         }
@@ -573,7 +573,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
         Dbc* pcursor = GetCursor();
         if (!pcursor)
         {
-            LogPrintf("Error getting radiocoin-wallet.database cursor\n");
+            LogPrintf("Error getting wallet database cursor\n");
             return DB_CORRUPT;
         }
 
@@ -587,7 +587,7 @@ DBErrors CWalletDB::LoadWallet(CWallet* pwallet)
                 break;
             else if (ret != 0)
             {
-                LogPrintf("Error reading next record from radiocoin-wallet.database\n");
+                LogPrintf("Error reading next record from wallet database\n");
                 return DB_CORRUPT;
             }
 
@@ -679,7 +679,7 @@ DBErrors CWalletDB::FindWalletTx(CWallet* pwallet, vector<uint256>& vTxHash, vec
         Dbc* pcursor = GetCursor();
         if (!pcursor)
         {
-            LogPrintf("Error getting radiocoin-wallet.database cursor\n");
+            LogPrintf("Error getting wallet database cursor\n");
             return DB_CORRUPT;
         }
 
@@ -693,7 +693,7 @@ DBErrors CWalletDB::FindWalletTx(CWallet* pwallet, vector<uint256>& vTxHash, vec
                 break;
             else if (ret != 0)
             {
-                LogPrintf("Error reading next record from radiocoin-wallet.database\n");
+                LogPrintf("Error reading next record from wallet database\n");
                 return DB_CORRUPT;
             }
 
@@ -784,7 +784,7 @@ DBErrors CWalletDB::ZapWalletTx(CWallet* pwallet, vector<CWalletTx>& vWtx)
 void ThreadFlushWalletDB()
 {
     // Make this thread recognisable as the wallet flushing thread
-    RenameThread("dogecoin-wallet");
+    RenameThread("radiocoin-wallet");
 
     static bool fOneThread;
     if (fOneThread)

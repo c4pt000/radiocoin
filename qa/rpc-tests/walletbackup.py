@@ -26,7 +26,7 @@ Sanity check:
   Sum(1,2,3,4 balances) == 114*50
 
 1/2/3 are shutdown, and their wallets erased.
-Then restore using radiocoin-wallet.dat backup. And
+Then restore using wallet.dat backup. And
 confirm 1/2/3/4 balances are same as before.
 
 Shutdown again, restore using importwallet,
@@ -97,9 +97,9 @@ class WalletBackupTest(BitcoinTestFramework):
         stop_node(self.nodes[2], 2)
 
     def erase_three(self):
-        os.remove(self.options.tmpdir + "/node0/regtest/radiocoin-wallet.dat")
-        os.remove(self.options.tmpdir + "/node1/regtest/radiocoin-wallet.dat")
-        os.remove(self.options.tmpdir + "/node2/regtest/radiocoin-wallet.dat")
+        os.remove(self.options.tmpdir + "/node0/regtest/wallet.dat")
+        os.remove(self.options.tmpdir + "/node1/regtest/wallet.dat")
+        os.remove(self.options.tmpdir + "/node2/regtest/wallet.dat")
 
     def run_test(self):
         logging.info("Generating initial blockchain")
@@ -152,7 +152,7 @@ class WalletBackupTest(BitcoinTestFramework):
         ##
         # Test restoring spender wallets from backups
         ##
-        logging.info("Restoring using radiocoin-wallet.dat")
+        logging.info("Restoring using wallet.dat")
         self.stop_three()
         self.erase_three()
 
@@ -161,9 +161,9 @@ class WalletBackupTest(BitcoinTestFramework):
         shutil.rmtree(self.options.tmpdir + "/node2/regtest/chainstate")
 
         # Restore wallets from backup
-        shutil.copyfile(tmpdir + "/node0/wallet.bak", tmpdir + "/node0/regtest/radiocoin-wallet.dat")
-        shutil.copyfile(tmpdir + "/node1/wallet.bak", tmpdir + "/node1/regtest/radiocoin-wallet.dat")
-        shutil.copyfile(tmpdir + "/node2/wallet.bak", tmpdir + "/node2/regtest/radiocoin-wallet.dat")
+        shutil.copyfile(tmpdir + "/node0/wallet.bak", tmpdir + "/node0/regtest/wallet.dat")
+        shutil.copyfile(tmpdir + "/node1/wallet.bak", tmpdir + "/node1/regtest/wallet.dat")
+        shutil.copyfile(tmpdir + "/node2/wallet.bak", tmpdir + "/node2/regtest/wallet.dat")
 
         logging.info("Re-starting nodes")
         self.start_three()

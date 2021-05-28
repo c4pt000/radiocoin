@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet"
-BUILDDIR="/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet"
+SRCDIR="/home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin"
+BUILDDIR="/home/c4pt/Desktop/CURRENT-FORK/docker-BLOCKCHAIN-GENERATOR/BUILD/radiocoin"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.

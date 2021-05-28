@@ -1,4 +1,4 @@
-rpc/libdogecoin_server_a-rawtransaction.o: rpc/rawtransaction.cpp \
+rpc/libradiocoin_server_a-rawtransaction.o: rpc/rawtransaction.cpp \
  /usr/include/stdc-predef.h base58.h chainparams.h chainparamsbase.h \
  /usr/include/c++/11/string \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \

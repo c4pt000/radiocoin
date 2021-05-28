@@ -1,4 +1,4 @@
-primitives/libdogecoin_common_a-pureheader.o: primitives/pureheader.cpp \
+primitives/libradiocoin_common_a-pureheader.o: primitives/pureheader.cpp \
  /usr/include/stdc-predef.h primitives/pureheader.h serialize.h \
  compat/endian.h config/bitcoin-config.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \

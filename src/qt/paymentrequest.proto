@@ -1,16 +1,16 @@
 //
-// Simple Radiocoin Payment Protocol messages
+// Simple RadioCoin Payment Protocol messages
 // Derived from the Bitcoin Payment Protocol
 //
 // Use fields 100+ for extensions;
 // to avoid conflicts, register extensions via pull-req at:
-// https://github.com/dogecoin/dips
+// https://github.com/radiocoin/dips
 //
 
 syntax = "proto2";
 
 package payments;
-option java_package = "com.dogecoin.protocols.payments";
+option java_package = "com.radiocoin.protocols.payments";
 option java_outer_classname = "Protos";
 
 // Generalized form of "send payment to this/these radiocoin addresses"

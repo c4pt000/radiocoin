@@ -1,4 +1,4 @@
-dogecoind-bitcoind.o: bitcoind.cpp /usr/include/stdc-predef.h \
+radiocoind-bitcoind.o: bitcoind.cpp /usr/include/stdc-predef.h \
  config/bitcoin-config.h chainparams.h chainparamsbase.h \
  /usr/include/c++/11/string \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \

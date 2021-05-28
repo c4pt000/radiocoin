@@ -762,7 +762,7 @@ public:
     static CAmount GetRequiredFee(const CMutableTransaction& tx, unsigned int nTxBytes);
     /**
      * Return the minimum required fee taking into account the
-     * floating relay fee and user set minimum transaction fee, but not the Radiocoin dust fee.
+     * floating relay fee and user set minimum transaction fee, but not the RadioCoin dust fee.
      */
     static CAmount GetRequiredFee(unsigned int nTxBytes);
 
@@ -855,7 +855,7 @@ public:
     //! Flush wallet (bitdb flush)
     void Flush(bool shutdown=false);
 
-    //! Verify the radiocoin-wallet.database and perform salvage if required
+    //! Verify the wallet database and perform salvage if required
     static bool Verify();
     
     /** 

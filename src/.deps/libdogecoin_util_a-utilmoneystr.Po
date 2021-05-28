@@ -1,4 +1,4 @@
-libdogecoin_util_a-utilmoneystr.o: utilmoneystr.cpp \
+libradiocoin_util_a-utilmoneystr.o: utilmoneystr.cpp \
  /usr/include/stdc-predef.h utilmoneystr.h \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \

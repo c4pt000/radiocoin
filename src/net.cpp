@@ -1468,7 +1468,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "Radiocoin " + FormatFullVersion();
+        std::string strDesc = "RadioCoin " + FormatFullVersion();
 
         try {
             while (true) {
