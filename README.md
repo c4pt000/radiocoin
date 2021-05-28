@@ -29,6 +29,15 @@ Block 600,001+: 10,000 radiocoin(RADC)
 *NON-functional demo   semi functional stuck at block zer0   needs to mint block 0
 <br> 
 ```
+```
+must use these nodes in the conf network just starting deploying in the last 2 or 3 days
+addnode=162.216.17.71
+addnode=178.79.166.208
+addnode=172.104.72.150
+```
+https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
+```
+```
 fedora/rhel
 
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.1.1_exp-2.x86_64.rpm
