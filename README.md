@@ -245,6 +245,9 @@ https://radiocoin.org
 What is RadioCoin?
 ----------------
 
+radioCOIN (needs nodes testing at block 0 genesis block might be configured wrong)
+to help the music industry secure money from the loss of recordable music and mp3 leaks, and to control noisy car radios with fees for playing the volume too loud at odd hours
+
 RadioCoin is an experimental digital currency that enables instant payments to
 anyone, anywhere in the world. RadioCoin uses peer-to-peer technology to operate
 with no central authority: managing transactions and issuing money are carried
