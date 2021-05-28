@@ -7,6 +7,16 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 <br>
   yum install radiocoin-2.0.6_exp-2.x86_64.rpm  -y
   
+  
+  ```
+  sh autogen.sh 
+./configure --prefix=/usr --with-incompatible-bdb
+make -j24
+make -j24 install
+checkinstall --install=no --exclude=/sys/fs/selinux
+alien --scripts --to-rpm *.deb 
+```
+  
   # MAINnet
   ```
   radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon &
