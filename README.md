@@ -27,12 +27,13 @@ alien --scripts --to-rpm *.deb
   
   # MAINnet
   ```
-  radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon &
+  adiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon -rpcport=9334 -port=9335
+
   
-  alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -rpcport=9332"
-  node1 addnode "162.216.17.71:9332" "add"
-  node1 addnode "127.0.0.1:9332" "add"
-  node1 addnode "172.104.72.150:9332" "add"
+  alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -rpcport=9334"
+  node1 addnode "162.216.17.71:9334" "add"
+  node1 addnode "127.0.0.1:9334" "add"
+  node1 addnode "172.104.72.150:9334" "add"
   node1 getblockchaininfo
 node1 generate 1
 node1 getbalance
