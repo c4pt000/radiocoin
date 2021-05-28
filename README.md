@@ -150,24 +150,31 @@ sample conf
 /root/.radiocoin/radiocoinconf set accordingly
 ----------------------------
 ```
-rpcuser=radio
-rpcpassword=coin
-
+rpcuser=radiocoin
+rpcpassword=randompasshere
 rpcport=9332
-port=9335
+rpcallowport=9332
+port=9333
 rpcbind=127.0.0.1
-
 addnode=162.216.17.71
 addnode=172.104.72.150
-daemon=1
-
 #your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
-#rpcallowip=0.0.0.0/24
-rpcallowip=162.216.17.71/24
+rpcallowip=0.0.0.0/24
+rpcconnect=0.0.0.0
 
 bind=127.0.0.1
 
-rpcallowport=9332
+
+                                                                                                                                                                             
+blockmaxsize=1000000                                                                                                                                                                                        
+mintxfee=0.00001                                                                                                                                                                                            
+minrelaytxfee=0.00001                                                                                                                                                                                       
+maxconnections=10  
+
+
+daemon=1
+server=1
+
 
 
 
