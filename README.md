@@ -17,6 +17,8 @@ checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm *.deb 
 ```
   
+  ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
+  
   # MAINnet
   ```
   radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon &
