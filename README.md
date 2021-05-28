@@ -156,25 +156,28 @@ rpcpassword=randompasshere
 rpcport=9332
 rpcallowport=9332
 port=9333
-rpcbind=127.0.0.1
+rpcbind=0.0.0.0
 addnode=162.216.17.71
 addnode=172.104.72.150
 #your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
+rpcconnect=0.0.0.0/24
 rpcallowip=0.0.0.0/24
-rpcconnect=0.0.0.0
 
 bind=127.0.0.1
 
 
-                                                                                                                                                                             
-blockmaxsize=1000000                                                                                                                                                                                        
-mintxfee=0.00001                                                                                                                                                                                            
-minrelaytxfee=0.00001                                                                                                                                                                                       
-maxconnections=10  
+
+blockmaxsize=1000000
+mintxfee=0.00001
+minrelaytxfee=0.00001
+maxconnections=10
 
 
 daemon=1
 server=1
+
+deprecatedrpc=generate
+
 
 
 
