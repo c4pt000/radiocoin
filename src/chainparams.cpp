@@ -60,8 +60,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
 
- const char* pszTimestamp = "In Music We, Trust!";
-    const CScript genesisOutputScript = CScript() << ParseHex("04cca295baffd39ed6fa0337495092af074d4c4ec0fee31627436a11a8df9e37f7a0c582f589549443bf9402af19771474c340acc2a311bacf2598e4d78d8ced55") << OP_CHECKSIG;
+ const char* pszTimestamp = "RadioCoin music wallet";
+    const CScript genesisOutputScript = CScript() << ParseHex("04770ee175cb5530e95cd615c061738719116d871ad9fcc9292ea6b0d396f7d270c12f351ff674b030299b537e9fa062511ac67b8bfc4d68cfcc2fd86158e0e6b3") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 
 }
