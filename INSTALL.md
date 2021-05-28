@@ -1,5 +1,5 @@
-Building RadioCoin
+Building Radiocoin
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the RadioCoin Core reference implementation of RadioCoin.
+elements of the Radio Coin reference implementation of Radiocoin.

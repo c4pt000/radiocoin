@@ -87,16 +87,15 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
 host_triplet = x86_64-pc-linux-gnu
-am__append_1 = radiocoind.1
-am__append_2 = radiocoin-qt.1
-am__append_3 = radiocoin-cli.1
-am__append_4 = radiocoin-tx.1
-am__append_5 = radiocoin-wallet.1
+am__append_1 = dogecoind.1
+am__append_2 = dogecoin-qt.1
+am__append_3 = dogecoin-cli.1 dogecoin-tx.1
 subdir = doc/man
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/build-aux/m4/ax_boost_base.m4 \
 	$(top_srcdir)/build-aux/m4/ax_boost_chrono.m4 \
 	$(top_srcdir)/build-aux/m4/ax_boost_filesystem.m4 \
+	$(top_srcdir)/build-aux/m4/ax_boost_program_options.m4 \
 	$(top_srcdir)/build-aux/m4/ax_boost_system.m4 \
 	$(top_srcdir)/build-aux/m4/ax_boost_thread.m4 \
 	$(top_srcdir)/build-aux/m4/ax_boost_unit_test_framework.m4 \
@@ -106,9 +105,9 @@ am__aclocal_m4_deps = $(top_srcdir)/build-aux/m4/ax_boost_base.m4 \
 	$(top_srcdir)/build-aux/m4/ax_cxx_compile_stdcxx.m4 \
 	$(top_srcdir)/build-aux/m4/ax_gcc_func_attribute.m4 \
 	$(top_srcdir)/build-aux/m4/ax_pthread.m4 \
-	$(top_srcdir)/build-aux/m4/bitcoin_find_bdb48.m4 \
 	$(top_srcdir)/build-aux/m4/bitcoin_qt.m4 \
 	$(top_srcdir)/build-aux/m4/bitcoin_subdir_to_include.m4 \
+	$(top_srcdir)/build-aux/m4/dogecoin_find_bdb51.m4 \
 	$(top_srcdir)/build-aux/m4/l_atomic.m4 \
 	$(top_srcdir)/build-aux/m4/libtool.m4 \
 	$(top_srcdir)/build-aux/m4/ltoptions.m4 \
@@ -176,31 +175,28 @@ MANS = $(dist_man1_MANS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 am__DIST_COMMON = $(dist_man1_MANS) $(srcdir)/Makefile.in
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
 AR = /usr/bin/ar
-ARFLAGS = cr
-AUTOCONF = ${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing automake-1.16
-AVX2_CXXFLAGS = -mavx -mavx2
+AUTOCONF = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing automake-1.16
 AWK = gawk
-BDB_CFLAGS = 
 BDB_CPPFLAGS =  -I/usr/include/libdb/
 BDB_LIBS = -ldb_cxx
 BITCOIN_CLI_NAME = radiocoin-cli
 BITCOIN_DAEMON_NAME = radiocoind
 BITCOIN_GUI_NAME = radiocoin-qt
 BITCOIN_TX_NAME = radiocoin-tx
-BITCOIN_WALLET_TOOL_NAME = radiocoin-wallet
 BOOST_CHRONO_LIB = -lboost_chrono
-BOOST_CPPFLAGS = -DBOOST_SP_USE_STD_ATOMIC -DBOOST_AC_USE_STD_ATOMIC -pthread -I/usr/include
+BOOST_CPPFLAGS = -pthread -I/usr/include
 BOOST_FILESYSTEM_LIB = -lboost_filesystem
 BOOST_LDFLAGS = -L/usr/lib64
-BOOST_LIBS = -L/usr/lib64 -lboost_system -lboost_filesystem -lboost_thread -lpthread -lboost_chrono
+BOOST_LIBS = -L/usr/lib64 -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono
+BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
 BOOST_SYSTEM_LIB = -lboost_system
-BOOST_THREAD_LIB = -lboost_thread -lpthread
+BOOST_THREAD_LIB = -lboost_thread
 BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework
 BREW = 
 CC = /usr/bin/ccache gcc
@@ -209,30 +205,26 @@ CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CLIENT_VERSION_BUILD = 0
 CLIENT_VERSION_IS_RELEASE = true
-CLIENT_VERSION_MAJOR = 0
-CLIENT_VERSION_MINOR = 18
-CLIENT_VERSION_REVISION = 1
-COMPAT_LDFLAGS = 
+CLIENT_VERSION_MAJOR = 1
+CLIENT_VERSION_MINOR = 14
+CLIENT_VERSION_REVISION = 3
 COPYRIGHT_HOLDERS = The %s developers
-COPYRIGHT_HOLDERS_FINAL = The RadioCoin Core developers
-COPYRIGHT_HOLDERS_SUBSTITUTION = RadioCoin Core
-COPYRIGHT_YEAR = 2020
+COPYRIGHT_HOLDERS_FINAL = The Bitcoin Core and Radio Coin developers
+COPYRIGHT_HOLDERS_SUBSTITUTION = Bitcoin Core and Radio Coin
+COPYRIGHT_YEAR = 2021
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
-CPPFLAGS =  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -DUSE_SSE2=1
+CPPFLAGS =  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS
 CRYPTO_CFLAGS = 
 CRYPTO_LIBS = -lcrypto 
 CXX = /usr/bin/ccache g++ -std=c++11
 CXXCPP = g++ -std=c++11 -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -g -O2
+CXXFLAGS = -g -O2 -Wall -Wextra -Wformat -Wvla -Wformat-security -Wno-unused-parameter
 CYGPATH_W = echo
-DEBUG_CPPFLAGS = 
-DEBUG_CXXFLAGS = 
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
-DOXYGEN = 
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -245,17 +237,15 @@ EVENT_LIBS = -levent
 EVENT_PTHREADS_CFLAGS = -pthread 
 EVENT_PTHREADS_LIBS = -levent_pthreads -levent 
 EXEEXT = 
-EXTENDED_FUNCTIONAL_TESTS = 
+EXTENDED_RPC_TESTS = 
 FGREP = /usr/bin/grep -F
 GCOV = /usr/bin/gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
-GPROF_CXXFLAGS = 
-GPROF_LDFLAGS = 
 GREP = /usr/bin/grep
 HARDENED_CPPFLAGS =  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
-HARDENED_CXXFLAGS =  -fstack-reuse=none -Wstack-protector -fstack-protector-all
+HARDENED_CXXFLAGS =  -Wstack-protector -fstack-protector-all
 HARDENED_LDFLAGS =  -Wl,-z,relro -Wl,-z,now -pie
 HAVE_CXX11 = 1
 HEXDUMP = /usr/bin/hexdump
@@ -267,7 +257,6 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LCOV = 
-LCOV_OPTS = 
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LEVELDB_CPPFLAGS = 
@@ -285,7 +274,7 @@ LTLIBOBJS =
 LT_SYS_LIBRARY_PATH = 
 LUPDATE = /usr/lib64/qt5/bin/lupdate-qt5
 MAINT = 
-MAKEINFO = ${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/missing makeinfo
+MAKEINFO = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/missing makeinfo
 MAKENSIS = 
 MANIFEST_TOOL = :
 MINIUPNPC_CPPFLAGS = 
@@ -295,7 +284,6 @@ MOC = /usr/lib64/qt5/bin/moc-qt5
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
 NM = /usr/bin/nm -B
 NMEDIT = 
-NOWARN_CXXFLAGS =  -Wno-unused-parameter -Wno-implicit-fallthrough
 OBJCOPY = /usr/bin/objcopy
 OBJCXX = g++ -std=c++11
 OBJCXXDEPMODE = depmode=gcc3
@@ -305,18 +293,19 @@ OBJEXT = o
 OTOOL = 
 OTOOL64 = 
 PACKAGE = radiocoin
-PACKAGE_BUGREPORT = https://github.com/radiocoin-project/radiocoin/issues
-PACKAGE_NAME = RadioCoin Core
-PACKAGE_STRING = RadioCoin Core 0.18.1
+PACKAGE_BUGREPORT = https://github.com/c4pt000/radiocoin/issues
+PACKAGE_NAME = Radio Coin
+PACKAGE_STRING = Radio Coin 1.14.3
 PACKAGE_TARNAME = radiocoin
-PACKAGE_URL = https://radiocoin.org/
-PACKAGE_VERSION = 0.18.1
+PACKAGE_URL = https://radiocoin.io/
+PACKAGE_VERSION = 1.14.3
 PATH_SEPARATOR = :
 PIC_FLAGS = -fPIC
 PIE_FLAGS = -fPIE
 PKG_CONFIG = /usr/bin/pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
+PORT = 
 PROTOBUF_CFLAGS = 
 PROTOBUF_LIBS = -lprotobuf -lpthread 
 PROTOC = /usr/bin/protoc
@@ -327,36 +316,19 @@ PYTHON = /usr/bin/python3
 PYTHONPATH = 
 QR_CFLAGS = 
 QR_LIBS = -lqrencode 
-QT5_CFLAGS = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -DQT_WIDGETS_LIB -I/usr/include/qt5/QtWidgets -DQT_GUI_LIB -DQT_CORE_LIB 
-QT5_LIBS = -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Core 
-QTACCESSIBILITY_CFLAGS = 
-QTACCESSIBILITY_LIBS = 
-QTCGL_CFLAGS = 
-QTCGL_LIBS = 
-QTCLIPBOARD_CFLAGS = 
-QTCLIPBOARD_LIBS = 
-QTDEVICEDISCOVERY_CFLAGS = 
-QTDEVICEDISCOVERY_LIBS = 
-QTEVENTDISPATCHER_CFLAGS = 
-QTEVENTDISPATCHER_LIBS = 
-QTFB_CFLAGS = 
-QTFB_LIBS = 
-QTFONTDATABASE_CFLAGS = 
-QTFONTDATABASE_LIBS = 
-QTGRAPHICS_CFLAGS = 
-QTGRAPHICS_LIBS = 
 QTPLATFORM_CFLAGS = 
 QTPLATFORM_LIBS = 
-QTTHEME_CFLAGS = 
-QTTHEME_LIBS = 
+QTPRINT_CFLAGS = 
+QTPRINT_LIBS = 
 QTXCBQPA_CFLAGS = 
 QTXCBQPA_LIBS = 
+QT_CFLAGS = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets -DQT_PRINTSUPPORT_LIB -I/usr/include/qt5/QtPrintSupport -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB 
 QT_DBUS_CFLAGS = -DQT_DBUS_LIB -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
 QT_DBUS_INCLUDES = -DQT_DBUS_LIB -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
 QT_DBUS_LIBS = -lQt5DBus -lQt5Core 
-QT_INCLUDES = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -DQT_WIDGETS_LIB -I/usr/include/qt5/QtWidgets -DQT_GUI_LIB -DQT_CORE_LIB 
+QT_INCLUDES = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets -DQT_PRINTSUPPORT_LIB -I/usr/include/qt5/QtPrintSupport -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB 
 QT_LDFLAGS = 
-QT_LIBS = -lQt5Network -lQt5Widgets -lQt5Gui -lQt5Core 
+QT_LIBS = -lQt5Network -lQt5PrintSupport -lQt5Widgets -lQt5Gui -lQt5Core 
 QT_PIE_FLAGS = -fPIE
 QT_SELECT = qt5
 QT_TEST_CFLAGS = -DQT_TESTLIB_LIB -I/usr/include/qt5/QtTest -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
@@ -364,19 +336,13 @@ QT_TEST_INCLUDES = -DQT_TESTLIB_LIB -I/usr/include/qt5/QtTest -I/usr/include/qt5
 QT_TEST_LIBS = -lQt5Test -lQt5Core 
 QT_TRANSLATION_DIR = 
 RANLIB = /usr/bin/ranlib
-RAPIDCHECK_LIBS = 
 RCC = /usr/lib64/qt5/bin/rcc-qt5
 READELF = /usr/bin/readelf
 RELDFLAGS = 
 RSVG_CONVERT = 
-SANITIZER_CXXFLAGS = 
-SANITIZER_LDFLAGS = 
 SED = /usr/bin/sed
 SET_MAKE = 
-SHANI_CXXFLAGS = -msse4 -msha
 SHELL = /bin/sh
-SSE41_CXXFLAGS = -msse4.1
-SSE42_CXXFLAGS = -msse4.2
 SSL_CFLAGS = 
 SSL_LIBS = -lssl 
 STRIP = /usr/bin/strip
@@ -386,10 +352,8 @@ UIC = /usr/lib64/qt5/bin/uic-qt5
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
-USE_SSE2 = 
 USE_UPNP = 
-VERSION = 0.18.1
-WARN_CXXFLAGS =  -Wall -Wextra -Wformat -Wvla -Wredundant-decls
+VERSION = 1.14.3
 WINDOWS_BITS = 
 WINDRES = 
 X11XCB_CFLAGS = 
@@ -397,10 +361,10 @@ X11XCB_LIBS =
 XGETTEXT = /usr/bin/xgettext
 ZMQ_CFLAGS = 
 ZMQ_LIBS = -lzmq 
-abs_builddir = /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/doc/man
-abs_srcdir = /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/doc/man
-abs_top_builddir = /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin
-abs_top_srcdir = /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin
+abs_builddir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc/man
+abs_srcdir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc/man
+abs_top_builddir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet
+abs_top_srcdir = /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -432,7 +396,7 @@ host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/build-aux/install-sh
+install_sh = ${SHELL} /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/build-aux/install-sh
 libdir = ${exec_prefix}/lib64
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -454,8 +418,7 @@ target_alias =
 top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
-dist_man1_MANS = $(am__append_1) $(am__append_2) $(am__append_3) \
-	$(am__append_4) $(am__append_5)
+dist_man1_MANS = $(am__append_1) $(am__append_2) $(am__append_3)
 all: all-am
 
 .SUFFIXES:

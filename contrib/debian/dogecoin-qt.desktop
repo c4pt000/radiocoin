@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Radio Coin
+Comment=Connect to the Radiocoin P2P Network
+Comment[de]=Verbinde mit dem Radiocoin peer-to-peer Netzwerk
+Comment[fr]=Radiocoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Radiocoin, eşten eşe kriptografik sanal para birimi
+Exec=dogecoin-qt %u
+Terminal=false
+Type=Application
+Icon=dogecoin128
+MimeType=x-scheme-handler/dogecoin;
+Categories=Office;Finance;

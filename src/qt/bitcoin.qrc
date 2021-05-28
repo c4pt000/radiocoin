@@ -1,7 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
     <qresource prefix="/icons">
         <file alias="bitcoin">res/icons/bitcoin.png</file>
-        <file alias="radiocoin_splash">res/icons/radiocoin_splash.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
@@ -45,6 +44,7 @@
         <file alias="info">res/icons/info.png</file>
         <file alias="about">res/icons/about.png</file>
         <file alias="about_qt">res/icons/about_qt.png</file>
+        <file alias="my-doge-deposit">res/icons/my-doge-deposit.png</file>
         <file alias="verify">res/icons/verify.png</file>
         <file alias="warning">res/icons/warning.png</file>
         <file alias="fontbigger">res/icons/fontbigger.png</file>
@@ -54,7 +54,9 @@
         <file alias="hd_enabled">res/icons/hd_enabled.png</file>
         <file alias="hd_disabled">res/icons/hd_disabled.png</file>
         <file alias="network_disabled">res/icons/network_disabled.png</file>
-        <file alias="proxy">res/icons/proxy.png</file>
+        <file alias="wallet_bgcoin">res/icons/wallet_bgcoin.png</file>
+        <file alias="paper_wallet">res/icons/paper_wallet.png</file>
+        <file alias="print">res/icons/print.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="spinner-000">res/movies/spinner-000.png</file>
@@ -93,5 +95,13 @@
         <file alias="spinner-033">res/movies/spinner-033.png</file>
         <file alias="spinner-034">res/movies/spinner-034.png</file>
         <file alias="spinner-035">res/movies/spinner-035.png</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="ComicNeue-Bold">res/fonts/ComicNeue-Bold.ttf</file>
+        <file alias="ComicNeue-Bold-Oblique">res/fonts/ComicNeue-Bold-Oblique.ttf</file>
+        <file alias="ComicNeue-Light">res/fonts/ComicNeue-Light.ttf</file>
+        <file alias="ComicNeue-Light-Oblique">res/fonts/ComicNeue-Light-Oblique.ttf</file>
+        <file alias="ComicNeue-Regular">res/fonts/ComicNeue-Regular.ttf</file>
+        <file alias="ComicNeue-Regular-Oblique">res/fonts/ComicNeue-Regular-Oblique.ttf</file>
     </qresource>
 </RCC>

@@ -3,18 +3,17 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping wumpus on IRC) see [translation_process.md](https://github.com/dogecoin/dogecoin/blob/master/doc/translation_process.md#synchronising-translations).
 
-* Update manpages, see [gen-manpages.sh](https://github.com/radiocoin-project/radiocoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
-* Update release candidate version in `configure.ac` (`CLIENT_VERSION_RC`)
+* Update manpages, see [gen-manpages.sh](https://github.com/dogecoin/dogecoin/blob/master/contrib/devtools/README.md#gen-manpagessh).
 
 Before every minor and major release:
 
 * Update [bips.md](bips.md) to account for changes since the last release.
-* Update version in `configure.ac` (don't forget to set `CLIENT_VERSION_IS_RELEASE` to `true`) (don't forget to set `CLIENT_VERSION_RC` to `0`)
+* Update version in sources (see below)
 * Write release notes (see below)
 * Update `src/chainparams.cpp` nMinimumChainWork with information from the getblockchaininfo rpc.
-* Update `src/chainparams.cpp` defaultAssumeValid with information from the getblockhash rpc.
+* Update `src/chainparams.cpp` defaultAssumeValid  with information from the getblockhash rpc.
   - The selected value must not be orphaned so it may be useful to set the value two blocks back from the tip.
   - Testnet should be set some tens of thousands back from the tip due to reorgs there.
   - This update should be reviewed with a reindex-chainstate with assumevalid=0 to catch any defect
@@ -22,25 +21,38 @@ Before every minor and major release:
 
 Before every major release:
 
-* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/bitcoin/bitcoin/pull/7415) for an example.
-* Update [`src/chainparams.cpp`](/src/chainparams.cpp) m_assumed_blockchain_size and m_assumed_chain_state_size with the current size plus some overhead.
-* Update `src/chainparams.cpp` chainTxData with statistics about the transaction count and rate. Use the output of the RPC `getchaintxstats`, see
-  [this pull request](https://github.com/bitcoin/bitcoin/pull/12270) for an example. Reviewers can verify the results by running `getchaintxstats <window_block_count> <window_last_block_hash>` with the `window_block_count` and `window_last_block_hash` from your output.
-* Update version of `contrib/gitian-descriptors/*.yml`: usually one'd want to do this on master after branching off the release - but be sure to at least do it before a new major release
+* Update hardcoded [seeds](/contrib/seeds/README.md), see [this pull request](https://github.com/dogecoin/dogecoin/pull/7415) for an example.
+* Update [`BLOCK_CHAIN_SIZE`](/src/qt/intro.cpp) to the current size plus some overhead.
 
 ### First time / New builders
 
-If you're using the automated script (found in [contrib/gitian-build.py](/contrib/gitian-build.py)), then at this point you should run it with the "--setup" command. Otherwise ignore this.
+If you're using the automated script (found in [contrib/gitian-build.sh](/contrib/gitian-build.sh)), then at this point you should run it with the "--setup" command. Otherwise ignore this.
 
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/radiocoin-project/gitian.sigs.ltc.git
-    git clone https://github.com/radiocoin-project/radiocoin-detached-sigs.git
+    git clone https://github.com/dogecoin-core/gitian.sigs.git
+    git clone https://github.com/dogecoin-core/dogecoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/radiocoin-project/radiocoin.git
+    git clone https://github.com/dogecoin/dogecoin.git
 
-### RadioCoin maintainers/release engineers, suggestion for writing release notes
+### Radiocoin maintainers/release engineers, update version in sources
+
+Update the following:
+
+- `configure.ac`:
+    - `_CLIENT_VERSION_MAJOR`
+    - `_CLIENT_VERSION_MINOR`
+    - `_CLIENT_VERSION_REVISION`
+    - Don't forget to set `_CLIENT_VERSION_IS_RELEASE` to `true`
+- `src/clientversion.h`: (this mirrors `configure.ac` - see issue #3539)
+    - `CLIENT_VERSION_MAJOR`
+    - `CLIENT_VERSION_MINOR`
+    - `CLIENT_VERSION_REVISION`
+    - Don't forget to set `CLIENT_VERSION_IS_RELEASE` to `true`
+- `doc/README.md` and `doc/README_windows.txt`
+- `doc/Doxyfile`: `PROJECT_NUMBER` contains the full version
+- `contrib/gitian-descriptors/*.yml`: usually one'd want to do this on master after branching off the release - but be sure to at least do it before a new major release
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -51,7 +63,7 @@ and sort them into categories based on labels)
 
 Generate list of authors:
 
-    git log --format='- %aN' v(current version, e.g. 0.16.0)..v(new version, e.g. 0.16.1) | sort -fiu
+    git log --format='%aN' "$*" | sort -ui | sed -e 's/^/- /'
 
 Tag version (or release candidate) in git
 
@@ -59,20 +71,20 @@ Tag version (or release candidate) in git
 
 ### Setup and perform Gitian builds
 
-If you're using the automated script (found in [contrib/gitian-build.py](/contrib/gitian-build.py)), then at this point you should run it with the "--build" command. Otherwise ignore this.
+If you're using the automated script (found in [contrib/gitian-build.sh](/contrib/gitian-build.sh)), then at this point you should run it with the "--build" command. Otherwise ignore this.
 
 Setup Gitian descriptors:
 
-    pushd ./radiocoin
-    export SIGNER="(your Gitian key, ie bluematt, sipa, etc)"
+    pushd ./dogecoin
+    export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
     git checkout v${VERSION}
     popd
 
-Ensure your gitian.sigs.ltc are up-to-date if you wish to gverify your builds against other Gitian signatures.
+Ensure your gitian.sigs are up-to-date if you wish to gverify your builds against other Gitian signatures.
 
-    pushd ./gitian.sigs.ltc
+    pushd ./gitian.sigs
     git pull
     popd
 
@@ -87,21 +99,17 @@ Ensure gitian-builder is up-to-date:
     pushd ./gitian-builder
     mkdir -p inputs
     wget -P inputs https://bitcoincore.org/cfields/osslsigncode-Backports-to-1.7.1.patch
-    echo 'a8c4e9cafba922f89de0df1f2152e7be286aba73f78505169bc351a7938dd911 inputs/osslsigncode-Backports-to-1.7.1.patch' | sha256sum -c
-    wget -P inputs https://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
-    echo 'f9a8cdb38b9c309326764ebc937cba1523a3a751a7ab05df3ecc99d18ae466c9 inputs/osslsigncode-1.7.1.tar.gz' | sha256sum -c
+    wget -P inputs http://downloads.sourceforge.net/project/osslsigncode/osslsigncode/osslsigncode-1.7.1.tar.gz
     popd
 
-Create the macOS SDK tarball, see the [macOS build instructions](build-osx.md#deterministic-macos-dmg-notes) for details, and copy it into the inputs directory.
+Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, and copy it into the inputs directory.
 
 ### Optional: Seed the Gitian sources cache and offline git repositories
 
-NOTE: Gitian is sometimes unable to download files. If you have errors, try the step below.
-
-By default, Gitian will fetch source files as needed. To cache them ahead of time, make sure you have checked out the tag you want to build in radiocoin, then:
+By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../radiocoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../dogecoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -109,126 +117,95 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url radiocoin=/path/to/radiocoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url dogecoin=/path/to/dogecoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign RadioCoin Core for Linux, Windows, and macOS:
+### Build and sign Radio Coin for Linux, Windows, and OS X:
 
-    export GITIAN_THREADS=2
-    export GITIAN_MEMORY=3000
-    
     pushd ./gitian-builder
-    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit radiocoin=v${VERSION} ../radiocoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs.ltc/ ../radiocoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/radiocoin-*.tar.gz build/out/src/radiocoin-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit dogecoin=v${VERSION} ../dogecoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../dogecoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/dogecoin-*.tar.gz build/out/src/dogecoin-*.tar.gz ../
 
-    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit radiocoin=v${VERSION} ../radiocoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs.ltc/ ../radiocoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/radiocoin-*-win-unsigned.tar.gz inputs/radiocoin-win-unsigned.tar.gz
-    mv build/out/radiocoin-*.zip build/out/radiocoin-*.exe ../
+    ./bin/gbuild --memory 3000 --commit dogecoin=v${VERSION} ../dogecoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../dogecoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/dogecoin-*-win-unsigned.tar.gz inputs/dogecoin-win-unsigned.tar.gz
+    mv build/out/dogecoin-*.zip build/out/dogecoin-*.exe ../
 
-    ./bin/gbuild --num-make $GITIAN_THREADS --memory $GITIAN_MEMORY --commit radiocoin=v${VERSION} ../radiocoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs.ltc/ ../radiocoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/radiocoin-*-osx-unsigned.tar.gz inputs/radiocoin-osx-unsigned.tar.gz
-    mv build/out/radiocoin-*.tar.gz build/out/radiocoin-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit dogecoin=v${VERSION} ../dogecoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../dogecoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/dogecoin-*-osx-unsigned.tar.gz inputs/dogecoin-osx-unsigned.tar.gz
+    mv build/out/dogecoin-*.tar.gz build/out/dogecoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`radiocoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`radiocoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`radiocoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `radiocoin-${VERSION}-win[32|64].zip`)
-  4. macOS unsigned installer and dist tarball (`radiocoin-${VERSION}-osx-unsigned.dmg`, `radiocoin-${VERSION}-osx64.tar.gz`)
-  5. Gitian signatures (in `gitian.sigs.ltc/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
+  1. source tarball (`dogecoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`dogecoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`dogecoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `dogecoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`dogecoin-${VERSION}-osx-unsigned.dmg`, `dogecoin-${VERSION}-osx64.tar.gz`)
+  5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
-Add other gitian builders keys to your gpg keyring, and/or refresh keys: See `../radiocoin/contrib/gitian-keys/README.md`.
+Add other gitian builders keys to your gpg keyring, and/or refresh keys.
+
+    gpg --import dogecoin/contrib/gitian-keys/*.pgp
+    gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-linux ../radiocoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-unsigned ../radiocoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-unsigned ../radiocoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../dogecoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../dogecoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../dogecoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
 
-Commit your signature to gitian.sigs.ltc:
+Commit your signature to gitian.sigs:
 
-    pushd gitian.sigs.ltc
-    git add ${VERSION}-linux/"${SIGNER}"
-    git add ${VERSION}-win-unsigned/"${SIGNER}"
-    git add ${VERSION}-osx-unsigned/"${SIGNER}"
-    git commit -m "Add ${VERSION} unsigned sigs for ${SIGNER}"
+    pushd gitian.sigs
+    git add ${VERSION}-linux/${SIGNER}
+    git add ${VERSION}-win-unsigned/${SIGNER}
+    git add ${VERSION}-osx-unsigned/${SIGNER}
+    git commit -a
     git push  # Assuming you can push to the gitian.sigs tree
     popd
 
-Codesigner only: Create Windows/macOS detached signatures:
-- Only one person handles codesigning. Everyone else should skip to the next step.
-- Only once the Windows/macOS builds each have 3 matching signatures may they be signed with their respective release keys.
+Wait for Windows/OS X detached signatures:
 
-Codesigner only: Sign the macOS binary:
+- Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
+- Detached signatures will then be committed to the [dogecoin-detached-sigs](https://github.com/doge/dogecoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
-    transfer radiocoin-osx-unsigned.tar.gz to macOS for signing
-    tar xf radiocoin-osx-unsigned.tar.gz
-    ./detached-sig-create.sh -s "Key ID"
-    Enter the keychain password and authorize the signature
-    Move signature-osx.tar.gz back to the gitian host
-
-Codesigner only: Sign the windows binaries:
-
-    tar xf radiocoin-win-unsigned.tar.gz
-    ./detached-sig-create.sh -key /path/to/codesign.key
-    Enter the passphrase for the key when prompted
-    signature-win.tar.gz will be created
-
-Codesigner only: Commit the detached codesign payloads:
-
-    cd ~/radiocoin-detached-sigs
-    checkout the appropriate branch for this release series
-    rm -rf *
-    tar xf signature-osx.tar.gz
-    tar xf signature-win.tar.gz
-    git add -a
-    git commit -m "point to ${VERSION}"
-    git tag -s v${VERSION} HEAD
-    git push the current branch and new tag
-
-Non-codesigners: wait for Windows/macOS detached signatures:
-
-- Once the Windows/macOS builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [radiocoin-detached-sigs](https://github.com/radiocoin-project/radiocoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
-
-Create (and optionally verify) the signed macOS binary:
+Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../radiocoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs.ltc/ ../radiocoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-osx-signed ../radiocoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/radiocoin-osx-signed.dmg ../radiocoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../dogecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../dogecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../dogecoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/dogecoin-osx-signed.dmg ../dogecoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../radiocoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs.ltc/ ../radiocoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs.ltc/ -r ${VERSION}-win-signed ../radiocoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/radiocoin-*win64-setup.exe ../radiocoin-${VERSION}-win64-setup.exe
-    mv build/out/radiocoin-*win32-setup.exe ../radiocoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../dogecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../dogecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../dogecoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/dogecoin-*win64-setup.exe ../dogecoin-${VERSION}-win64-setup.exe
+    mv build/out/dogecoin-*win32-setup.exe ../dogecoin-${VERSION}-win32-setup.exe
     popd
 
-Commit your signature for the signed macOS/Windows binaries:
+Commit your signature for the signed OS X/Windows binaries:
 
-    pushd gitian.sigs.ltc
-    git add ${VERSION}-osx-signed/"${SIGNER}"
-    git add ${VERSION}-win-signed/"${SIGNER}"
+    pushd gitian.sigs
+    git add ${VERSION}-osx-signed/${SIGNER}
+    git add ${VERSION}-win-signed/${SIGNER}
     git commit -a
-    git push  # Assuming you can push to the gitian.sigs.ltc tree
+    git push  # Assuming you can push to the gitian.sigs tree
     popd
 
 ### After 3 or more people have gitian-built and their results match:
@@ -241,23 +218,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-radiocoin-${VERSION}-aarch64-linux-gnu.tar.gz
-radiocoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-radiocoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-radiocoin-${VERSION}-x86_64-linux-gnu.tar.gz
-radiocoin-${VERSION}-osx64.tar.gz
-radiocoin-${VERSION}-osx.dmg
-radiocoin-${VERSION}.tar.gz
-radiocoin-${VERSION}-win32-setup.exe
-radiocoin-${VERSION}-win32.zip
-radiocoin-${VERSION}-win64-setup.exe
-radiocoin-${VERSION}-win64.zip
+dogecoin-${VERSION}-aarch64-linux-gnu.tar.gz
+dogecoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+dogecoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+dogecoin-${VERSION}-x86_64-linux-gnu.tar.gz
+dogecoin-${VERSION}-osx64.tar.gz
+dogecoin-${VERSION}-osx.dmg
+dogecoin-${VERSION}.tar.gz
+dogecoin-${VERSION}-win32-setup.exe
+dogecoin-${VERSION}-win32.zip
+dogecoin-${VERSION}-win64-setup.exe
+dogecoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the radiocoin.org server, nor put them in the torrent*.
+space *do not upload these to the dogecoin.com server, nor put them in the torrent*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -267,25 +244,25 @@ rm SHA256SUMS
 (the digest algorithm is forced to sha256 to avoid confusion of the `Hash:` header that GPG adds with the SHA256 used for the files)
 Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spurious/nonsensical entry.
 
-- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the radiocoin.org server.
+- Upload zips and installers, as well as `SHA256SUMS.asc` from last step, to the dogecoin.com Github repo
 
-```
-- Update radiocoin.org version
+- Create a [new GitHub release](https://github.com/dogecoin/dogecoin/releases/new) with a link to the archived release notes.
 
-- Update other repositories and websites for new version
+- Update dogecoin.com version - Langerhans to do
 
 - Announce the release:
 
-  - radiocoin-dev mailing list
+  - Release sticky on Radiocoin Forums: http://forum.dogecoin.com/forum/news-community/community-announcements
 
-  - blog.radiocoin.org blog post
+  - Radiocoin-development mailing list
 
-  - Update title of #radiocoin and #radiocoin-dev on Freenode IRC
+  - Twitter, reddit /r/dogecoin
 
-  - Optionally twitter, reddit /r/RadioCoin, ... but this will usually sort out itself
+  - Update title of #dogecoin on Freenode IRC
 
-  - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
+  - Announce on reddit /r/dogecoin, /r/dogecoindev
 
-  - Create a [new GitHub release](https://github.com/radiocoin-project/radiocoin/releases/new) with a link to the archived release notes.
+- Add release notes for the new version to the directory `doc/release-notes` in git master
 
-  - Celebrate
+- To the moon!
+

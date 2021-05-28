@@ -64,7 +64,7 @@
     <name>BanTableModel</name>
     </context>
 <context>
-    <name>BitcoinGUI</name>
+    <name>RadiocoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -74,8 +74,12 @@
         <translation>Синхронизација со мрежата...</translation>
     </message>
     <message>
-        <source>&amp;Overview</source>
+        <source>&amp;Wow</source>
         <translation>&amp;Преглед</translation>
+    </message>
+    <message>
+        <source>Node</source>
+        <translation>Јазол</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -118,6 +122,14 @@
         <translation>&amp;Измени Тајна Фраза...</translation>
     </message>
     <message>
+        <source>&amp;Such sending addresses...</source>
+        <translation>&amp;Адреси за Испраќање...</translation>
+    </message>
+    <message>
+        <source>&amp;Much receiving addresses...</source>
+        <translation>&amp;Адреси за Примање...</translation>
+    </message>
+    <message>
         <source>Open &amp;URI...</source>
         <translation>Отвори &amp;URI...</translation>
     </message>
@@ -126,23 +138,27 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a RadioCoin address</source>
-        <translation>Испрати лайткоини на Биткоин адреса</translation>
+        <source>Send coins to a Radiocoin address</source>
+        <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>RadioCoin</source>
+        <source>Radiocoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
-        <source>&amp;Send</source>
+        <source>Wallet</source>
+        <translation>Паричник</translation>
+    </message>
+    <message>
+        <source>&amp;Such Send</source>
         <translation>&amp;Испрати</translation>
     </message>
     <message>
-        <source>&amp;Receive</source>
+        <source>&amp;Much Receive</source>
         <translation>&amp;Прими</translation>
     </message>
     <message>
@@ -180,10 +196,6 @@
     <message>
         <source>Up to date</source>
         <translation>Во тек</translation>
-    </message>
-    <message>
-        <source>&amp;Window</source>
-        <translation>&amp;Прозорец</translation>
     </message>
     <message>
         <source>Date: %1
@@ -287,10 +299,6 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>RadioCoin</source>
-        <translation>Биткоин</translation>
-    </message>
-    <message>
         <source>Error</source>
         <translation>Грешка</translation>
     </message>
@@ -316,6 +324,10 @@
         <translation>Опции</translation>
     </message>
     <message>
+        <source>MB</source>
+        <translation>МБ</translation>
+    </message>
+    <message>
         <source>&amp;Network</source>
         <translation>&amp;Мрежа</translation>
     </message>
@@ -339,10 +351,6 @@
         <source>none</source>
         <translation>нема</translation>
     </message>
-    <message>
-        <source>Error</source>
-        <translation>Грешка</translation>
-    </message>
     </context>
 <context>
     <name>OverviewPage</name>
@@ -356,10 +364,6 @@
     </context>
 <context>
     <name>PeerTableModel</name>
-    <message>
-        <source>Sent</source>
-        <translation>Испратени</translation>
-    </message>
     </context>
 <context>
     <name>QObject</name>
@@ -390,22 +394,6 @@
     <message>
         <source>%1 and %2</source>
         <translation>%1 и %2</translation>
-    </message>
-    <message>
-        <source>%1 B</source>
-        <translation>%1 Б</translation>
-    </message>
-    <message>
-        <source>%1 KB</source>
-        <translation>%1 КБ</translation>
-    </message>
-    <message>
-        <source>%1 MB</source>
-        <translation>%1 МБ</translation>
-    </message>
-    <message>
-        <source>%1 GB</source>
-        <translation>%1 ГБ</translation>
     </message>
     </context>
 <context>
@@ -444,6 +432,22 @@
         <source>&amp;Console</source>
         <translation>&amp;Конзола</translation>
     </message>
+    <message>
+        <source>%1 B</source>
+        <translation>%1 Б</translation>
+    </message>
+    <message>
+        <source>%1 KB</source>
+        <translation>%1 КБ</translation>
+    </message>
+    <message>
+        <source>%1 MB</source>
+        <translation>%1 МБ</translation>
+    </message>
+    <message>
+        <source>%1 GB</source>
+        <translation>%1 ГБ</translation>
+    </message>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -481,10 +485,6 @@
     <message>
         <source>&amp;Save Image...</source>
         <translation>&amp;Сними Слика...</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Паричник</translation>
     </message>
     </context>
 <context>
@@ -563,9 +563,6 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
-    <name>WalletController</name>
-    </context>
-<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -575,9 +572,13 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>dogecoin-core</name>
     <message>
-        <source>RadioCoin Core</source>
+        <source>Options:</source>
+        <translation>Опции:</translation>
+    </message>
+    <message>
+        <source>Radio Coin</source>
         <translation>Биткоин Core</translation>
     </message>
     <message>

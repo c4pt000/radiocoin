@@ -1,28 +1,28 @@
-Name "RadioCoin Core (-bit)"
+Name "Radio Coin (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
 
 # General Symbol Definitions
 !define REGKEY "SOFTWARE\$(^Name)"
-!define COMPANY "RadioCoin Core project"
-!define URL https://radiocoin.org/
+!define VERSION 1.14.3
+!define COMPANY "Radio Coin project"
+!define URL https://radiocoin.io/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "RadioCoin Core"
-!define MUI_FINISHPAGE_RUN "$WINDIR\explorer.exe"
-!define MUI_FINISHPAGE_RUN_PARAMETERS $INSTDIR\radiocoin-qt
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Radio Coin"
+!define MUI_FINISHPAGE_RUN $INSTDIR\radiocoin-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,22 +48,22 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/radiocoin-0.18.1-win-setup.exe
+OutFile /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/radiocoin-${VERSION}-win-setup.exe
 !if "" == "64"
-InstallDir $PROGRAMFILES64\RadioCoin
+InstallDir $PROGRAMFILES64\Radiocoin
 !else
-InstallDir $PROGRAMFILES\RadioCoin
+InstallDir $PROGRAMFILES\Radiocoin
 !endif
 CRCCheck on
 XPStyle on
 BrandingText " "
 ShowInstDetails show
-VIProductVersion 0.18.1.0
-VIAddVersionKey ProductName "RadioCoin Core"
-VIAddVersionKey ProductVersion "0.18.1"
+VIProductVersion ${VERSION}.0
+VIAddVersionKey ProductName "Radio Coin"
+VIAddVersionKey ProductVersion "${VERSION}"
 VIAddVersionKey CompanyName "${COMPANY}"
 VIAddVersionKey CompanyWebsite "${URL}"
-VIAddVersionKey FileVersion "0.18.1"
+VIAddVersionKey FileVersion "${VERSION}"
 VIAddVersionKey FileDescription ""
 VIAddVersionKey LegalCopyright ""
 InstallDirRegKey HKCU "${REGKEY}" Path
@@ -73,16 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/release/radiocoin-qt
-    File /oname=COPYING.txt /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/COPYING
-    File /oname=readme.txt /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/doc/README_windows.txt
+    File /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/release/radiocoin-qt
+    File /oname=COPYING.txt /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/COPYING
+    File /oname=readme.txt /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/release/radiocoind
-    File /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/release/radiocoin-cli
-    File /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/release/radiocoin-tx
-    File /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/release/radiocoin-wallet
+    File /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/release/radiocoind
+    File /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/release/radiocoin-cli
     SetOutPath $INSTDIR\doc
-    File /r /x Makefile* /home/c4pt/opt/CURRENTRADIO/radioCOIN/radiocoin/doc\*.*
+    File /r /home/c4pt/Desktop/CURRENT-FORK/radiocoin-wallet/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -94,11 +92,11 @@ Section -post SEC0001
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\radiocoin-qt
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, -bit).lnk" "$INSTDIR\radiocoin-qt" "-testnet" "$INSTDIR\radiocoin-qt" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Radio Coin (testnet, -bit).lnk" "$INSTDIR\radiocoin-qt" "-testnet" "$INSTDIR\radiocoin-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
-    WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "0.18.1"
+    WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayVersion "${VERSION}"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" Publisher "${COMPANY}"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" URLInfoAbout "${URL}"
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayIcon $INSTDIR\uninstall.exe
@@ -106,7 +104,7 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoModify 1
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "radiocoin" "URL Protocol" ""
-    WriteRegStr HKCR "radiocoin" "" "URL:RadioCoin"
+    WriteRegStr HKCR "radiocoin" "" "URL:Radiocoin"
     WriteRegStr HKCR "radiocoin\DefaultIcon" "" $INSTDIR\radiocoin-qt
     WriteRegStr HKCR "radiocoin\shell\open\command" "" '"$INSTDIR\radiocoin-qt" "%1"'
 SectionEnd
@@ -138,8 +136,8 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, -bit).lnk"
-    Delete /REBOOTOK "$SMSTARTUP\RadioCoin.lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Radio Coin (testnet, -bit).lnk"
+    Delete /REBOOTOK "$SMSTARTUP\Bitcoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
     Delete /REBOOTOK $INSTDIR\db.log
