@@ -1,6 +1,9 @@
 WIP** 
 https://www.youtube.com/watch?v=U-IIKVaEhrA
 
+# RADIOACTIVE!!
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/ACTIVE-radio.png)
+
 still a work in progress, trying to mint block 0 so the network can propegate,
 made changes for DOGE, instead of litecoin source, added paper-wallet back, fixed the "about"
 
