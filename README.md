@@ -1,7 +1,10 @@
 WIP** 
 https://www.youtube.com/watch?v=U-IIKVaEhrA
 
-# RADIOACTIVE!!   ** STILL A WIP might have to reseed the network in a few hours
+# RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
+
+macOS,fedora/rhel, debian/ubuntu 
+
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/ACTIVE-radio.png)
 
 still a work in progress, trying to mint block 0 so the network can propegate,
