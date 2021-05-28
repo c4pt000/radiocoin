@@ -18,6 +18,10 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 or for debian based systems
 
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.1-exp-1_amd64.deb
+
+macOS
+
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
 ```
 
 
