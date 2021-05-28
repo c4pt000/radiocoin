@@ -1,5 +1,11 @@
 WIP** 
 https://www.youtube.com/watch?v=U-IIKVaEhrA
+
+
+
+# RADIOCOIN POOL
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/RADIOCOIN-POOL.png)
+
 ```
 "chain": "main",
   "blocks": 0,
