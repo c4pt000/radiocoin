@@ -194,8 +194,8 @@ node1 getbalance
 
 
 
-sample conf
-/root/.radiocoin/radiocoinconf set accordingly
+sample conf for running a node (not for an RPC connection)
+/root/.radiocoin/radiocoin.conf 
 ----------------------------
 ```
 rpcuser=radiocoin
@@ -203,26 +203,49 @@ rpcpassword=randompasshere
 rpcport=9332
 rpcallowport=9332
 port=9333
+
 addnode=162.216.17.71
 addnode=178.79.166.208
 addnode=172.104.72.150
+
+connect=162.216.17.71
+connect=178.79.166.208
+connect=172.104.72.150
+
+whitelist=162.216.17.71/24
+whitelist=178.79.166.208/24
+whitelist=172.104.72.150/24
+whitelist=127.0.0.1/24
+
+
 rpcconnect=0.0.0.0
 rpcallowip=0.0.0.0/0
 rpcbind=0.0.0.0
 
-daemon=1
-server=1
+
+#disable outside connections
+#listen=0
+#disable uPnP
+#upnp=0
 
 deprecatedrpc=generate
+daemon=1
+
+
+
+
+
+
 
 
 #your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
-
 #bind=127.0.0.1
 #blockmaxsize=1000000
 #mintxfee=0.00001
 #minrelaytxfee=0.00001
 #maxconnections=10
+
+
 
 
 ```
