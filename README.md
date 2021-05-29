@@ -41,6 +41,7 @@ addnode=194.195.117.160
 addnode=172.105.77.251
 addnode=194.195.250.123
 addnode=172.104.167.106
+addnode=162.216.17.71
 ```
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 ```
@@ -237,6 +238,7 @@ addnode=194.195.117.160
 addnode=172.105.77.251
 addnode=194.195.250.123
 addnode=172.104.167.106
+addnode=162.216.17.71
 
 connect=45.56.81.243
 connect=104.237.145.126
@@ -246,7 +248,7 @@ connect=194.195.117.160
 connect=172.105.77.251
 connect=194.195.250.123
 connect=172.104.167.106
-
+connect=162.216.17.71
 
 whitelist=45.56.81.243/24
 whitelist=104.237.145.126/24
@@ -256,7 +258,7 @@ whitelist=194.195.117.160/24
 whitelist=172.105.77.251/24
 whitelist=194.195.250.123/24
 whitelist=172.104.167.106/24
-
+whitelist=162.216.17.71/24
 
 
 
