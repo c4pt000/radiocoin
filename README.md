@@ -1,6 +1,8 @@
 WIP** 
 https://www.youtube.com/watch?v=U-IIKVaEhrA
 
+* 05-29-2021 sync issues just built 8 nodes as a starting point check updated radiocoin.conf
+
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
 
 macOS,fedora/rhel, debian/ubuntu 
