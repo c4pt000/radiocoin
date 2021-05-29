@@ -11,6 +11,15 @@ restart radiocoind or radiocoin-qt to load boostrap.dat
 
 https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
 
+where root is the current user 
+```
+cd /root/.radiocoin
+wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
+killall radiocoind
+radiocoind -daemon      or radiocoin-qt
+radiocoin-cli getinfo
+```
+
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
 
 macOS,fedora/rhel, debian/ubuntu 
