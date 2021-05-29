@@ -7,6 +7,8 @@ place bootstrap -> /root/.radiocoin/
 where /home/user/.radiocoin
 is your directory
 early 140 block boostrap for nodes
+restart radiocoind or radiocoin-qt to load boostrap.dat
+
 https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
 
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
