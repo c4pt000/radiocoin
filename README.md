@@ -232,18 +232,10 @@ deprecatedrpc=generate
 daemon=1
 
 
-
-
-
-
-
-
 #your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
 #bind=127.0.0.1
-#blockmaxsize=1000000
-#mintxfee=0.00001
-#minrelaytxfee=0.00001
-#maxconnections=10
+
+maxconnections=10
 
 
 
