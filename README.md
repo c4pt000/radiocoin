@@ -31,9 +31,14 @@ Block 600,001+: 10,000 radiocoin(RADC)
 ```
 ```
 must use these nodes in the conf network just starting deploying in the last 2 or 3 days
-addnode=162.216.17.71
-addnode=178.79.166.208
-addnode=172.104.72.150
+addnode=45.56.81.243
+addnode=104.237.145.126
+addnode=109.237.25.123
+addnode=139.162.123.199
+addnode=194.195.117.160
+addnode=172.105.77.251
+addnode=194.195.250.123
+addnode=172.104.167.106
 ```
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 ```
@@ -50,7 +55,25 @@ macOS
 
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
 ```
-
+```
+{
+  "version": 1140300,
+  "protocolversion": 70015,
+  "walletversion": 130000,
+  "balance": 0.00000000,
+  "blocks": 0,
+  "timeoffset": 0,
+  "connections": 8,
+  "proxy": "",
+  "difficulty": 0.000244140625,
+  "testnet": false,
+  "keypoololdest": 1622318528,
+  "keypoolsize": 100,
+  "paytxfee": 0.00000000,
+  "relayfee": 1.00000000,
+  "errors": ""
+}
+```
 
   yum install radiocoin-2.1.1_exp-2.x86_64.rpm -y
   
@@ -204,18 +227,35 @@ rpcport=9332
 rpcallowport=9332
 port=9333
 
-addnode=162.216.17.71
-addnode=178.79.166.208
-addnode=172.104.72.150
+addnode=45.56.81.243
+addnode=104.237.145.126
+addnode=109.237.25.123
+addnode=139.162.123.199
+addnode=194.195.117.160
+addnode=172.105.77.251
+addnode=194.195.250.123
+addnode=172.104.167.106
 
-connect=162.216.17.71
-connect=178.79.166.208
-connect=172.104.72.150
+connect=45.56.81.243
+connect=104.237.145.126
+connect=109.237.25.123
+connect=139.162.123.199
+connect=194.195.117.160
+connect=172.105.77.251
+connect=194.195.250.123
+connect=172.104.167.106
 
-whitelist=162.216.17.71/24
-whitelist=178.79.166.208/24
-whitelist=172.104.72.150/24
-whitelist=127.0.0.1/24
+
+whitelist=45.56.81.243/24
+whitelist=104.237.145.126/24
+whitelist=109.237.25.123/24
+whitelist=139.162.123.199/24
+whitelist=194.195.117.160/24
+whitelist=172.105.77.251/24
+whitelist=194.195.250.123/24
+whitelist=172.104.167.106/24
+
+
 
 
 rpcconnect=0.0.0.0
@@ -228,15 +268,12 @@ rpcbind=0.0.0.0
 #disable uPnP
 #upnp=0
 
-deprecatedrpc=generate
 daemon=1
-
 
 #your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
 #bind=127.0.0.1
 
-maxconnections=10
-
+#maxconnections=10
 
 
 
