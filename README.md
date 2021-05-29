@@ -3,6 +3,12 @@ https://www.youtube.com/watch?v=U-IIKVaEhrA
 
 * 05-29-2021 sync issues just built 8 nodes as a starting point check updated radiocoin.conf
 
+place bootstrap -> /root/.radiocoin/
+where /home/user/.radiocoin
+is your directory
+early 140 block boostrap for nodes
+https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
+
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
 
 macOS,fedora/rhel, debian/ubuntu 
