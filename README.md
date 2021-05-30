@@ -1,7 +1,7 @@
 
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
 
-WIP** (aiming to get bugs out for this to be a June 1st~31st coin?)
+# WIP** (aiming to get bugs out for this to be a June 1st~31st coin?) <- sync issues between broadcast nodes 
 
 05-30-2021
 <p>
