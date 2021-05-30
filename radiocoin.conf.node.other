@@ -1,8 +1,10 @@
 #prune=2200
 
-dbcache=100
+dbcache=2048
 maxorphantx=10
 maxmempool=50
+mempoolexpiry=24
+
 maxconnections=40
 maxuploadtarget=5000
 
