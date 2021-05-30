@@ -60,20 +60,6 @@ Block 600,001+: 10,000 radiocoin(RADC)
 
 
 
-*NON-functional demo   semi functional stuck at block zer0   needs to mint block 0
-<br> 
-```
-```
-must use these nodes in the conf network just starting deploying in the last 2 or 3 days
-addnode=45.56.81.243
-addnode=104.237.145.126
-addnode=109.237.25.123
-addnode=139.162.123.199
-addnode=194.195.117.160
-addnode=172.105.77.251
-addnode=194.195.250.123
-addnode=172.104.167.106
-addnode=162.216.17.71
 ```
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 ```
@@ -90,13 +76,26 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 
 macOS
 
-install and to (reindex)
+install and to (reindex) -> wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
 
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
 
-cp -rf bootstrap.dat -> (where c4pt is your user account) 
 
-cp -rf bootstrap.dat /Users/c4pt/Library/Application\ Support/RadioCoin/bootstrap.dat
+
+
+
+
+--------------------------
+cp -rf bootstrap.dat && radiocoin.conf -> (where c4pt is *YOUR* user account) 
+
+cd /Users/c4pt/Library/Application\ Support/RadioCoin/
+
+wget https://github.com/c4pt000/radioCOIN/blob/main/bootstrap.dat
+wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
+
+ls -lah
+bootstrap.dat 
+radiocoin.conf
+
 
 cd /Applications/RadioCoin-Qt.app/Contents/MacOS
 
