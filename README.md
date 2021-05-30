@@ -90,6 +90,8 @@ cp -rf bootstrap.dat && radiocoin.conf -> (where c4pt is *YOUR* user account)
 cd /Users/c4pt/Library/Application\ Support/RadioCoin/
 
 wget https://github.com/c4pt000/radioCOIN/blob/main/bootstrap.dat
+
+edit radiocoin.conf (a unique rpcuser a unique rpcpassword)
 wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 
 ls -lah
