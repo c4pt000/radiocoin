@@ -2,7 +2,6 @@
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
 
 WIP** (aiming to get bugs out for this to be a June 1st~31st coin?)
-https://www.youtube.com/watch?v=U-IIKVaEhrA
 
 05-30-2021
 <p>
@@ -229,7 +228,8 @@ python2 reverse.endian.py 1e0ffff0
 f0ff0f1e
 
 ```
-
+fix 3 network assert for chainparams.cpp from first run generated (asserts) with code placed back into chainparams.cpp
+https://www.youtube.com/watch?v=U-IIKVaEhrA
 
   
   or from source
