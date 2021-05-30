@@ -65,11 +65,11 @@ https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 ```
 fedora/rhel
 
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.1.1_exp-2.x86_64.rpm
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.1.4_exp_assert_check-2.x86_64.rpm
 
 or for debian based systems
 
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.1-exp-1_amd64.deb
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.4-exp-assert-check-1_amd64.deb
 
 macOS
 
