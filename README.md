@@ -241,10 +241,18 @@ sample conf for running a node (not for an RPC connection)
 /root/.radiocoin/radiocoin.conf 
 ----------------------------
 ```
+#prune=2200
+
+dbcache=100
+maxorphantx=10
+maxmempool=50
+maxconnections=40
+maxuploadtarget=5000
+
+
 rpcuser=radiocoin
 rpcpassword=randompasshere
 rpcport=9332
-rpcallowport=9332
 port=9333
 
 addnode=45.56.81.243
@@ -255,7 +263,6 @@ addnode=194.195.117.160
 addnode=172.105.77.251
 addnode=194.195.250.123
 addnode=172.104.167.106
-addnode=162.216.17.71
 
 connect=45.56.81.243
 connect=104.237.145.126
@@ -265,7 +272,7 @@ connect=194.195.117.160
 connect=172.105.77.251
 connect=194.195.250.123
 connect=172.104.167.106
-connect=162.216.17.71
+
 
 whitelist=45.56.81.243/24
 whitelist=104.237.145.126/24
@@ -275,26 +282,35 @@ whitelist=194.195.117.160/24
 whitelist=172.105.77.251/24
 whitelist=194.195.250.123/24
 whitelist=172.104.167.106/24
-whitelist=162.216.17.71/24
 
-
+# important to rebroadcast between peers
+whitelistrelay=1
+whitelistforcerelay=1
+blocksonly=1
 
 rpcconnect=0.0.0.0
 rpcallowip=0.0.0.0/0
 rpcbind=0.0.0.0
+rpcallowport=9332
 
 
-#disable outside connections
-#listen=0
-#disable uPnP
-#upnp=0
+listen=1
+upnp=1
+dnsseed=1
+dns=1
 
 daemon=1
+server=1
 
+
+
+
+
+#bind=127.0.0.1
+#maxconnections=10
 #your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
 #bind=127.0.0.1
 
-#maxconnections=10
 
 
 
