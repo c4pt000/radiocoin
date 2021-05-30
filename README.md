@@ -71,9 +71,25 @@ or for debian based systems
 
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.5-semi-wip-1_amd64.deb
 
+
+
 macOS
 
+install
+
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
+
+cp -rf bootstrap.dat -> (where c4pt is your user account) 
+
+/Users/c4pt/Library/Application\ Support/RadioCoin/
+
+cd /Applications/RadioCoin-Qt.app/Contents/MacOS
+./RadioCoin-Qt -reindex &
+to check debug.log (where c4pt is your user account)
+cat /Users/c4pt/Library/Application\ Support/RadioCoin/debug.log
+
+
+
 ```
 ```
 {
