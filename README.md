@@ -242,6 +242,8 @@ checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm *.deb 
 ```
  # used the back of a real 2 dollar bill to design the paper wallet art
+ 
+ *  (a closer look reveals a 1980s boombox on the floor near the front desk)
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
   
