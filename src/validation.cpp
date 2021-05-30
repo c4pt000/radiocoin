@@ -1165,8 +1165,9 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
     }
 
     // Check the header  //mod
-//    if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
-//        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
+ //   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
+//   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
+  //      return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
     return true;
 }
