@@ -18,6 +18,11 @@ wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
 killall radiocoind
 radiocoind -daemon -reindex   or radiocoin-qt -reindex &
 radiocoin-cli getinfo
+radiocoin-cli generate 1                 # to generate 1 block
+
+
+to generate directly to a remote or local address (when confirmed by other blocks it is available after 30 mined blocks)
+radiocoin-cli generatetoaddress 1 "to an address"              
 ```
 
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
