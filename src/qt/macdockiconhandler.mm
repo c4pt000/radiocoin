@@ -30,27 +30,27 @@ bool dockClickHandler(id self,SEL _cmd,...) {
     return false;
 }
 
-void setupDockClickHandler() {
-    Class cls = objc_getClass("NSApplication");
-    id appInst = objc_msgSend((id)cls, sel_registerName("sharedApplication"));
-    
-    if (appInst != NULL) {
-        id delegate = objc_msgSend(appInst, sel_registerName("delegate"));
-        Class delClass = (Class)objc_msgSend(delegate,  sel_registerName("class"));
-        SEL shouldHandle = sel_registerName("applicationShouldHandleReopen:hasVisibleWindows:");
-        if (class_getInstanceMethod(delClass, shouldHandle))
-            class_replaceMethod(delClass, shouldHandle, (IMP)dockClickHandler, "B@:");
-        else
-            class_addMethod(delClass, shouldHandle, (IMP)dockClickHandler,"B@:");
-    }
-}
+//void setupDockClickHandler() {
+//    Class cls = objc_getClass("NSApplication");
+//    id appInst = objc_msgSend((id)cls, sel_registerName("sharedApplication"));
+//    
+//    if (appInst != NULL) {
+//        id delegate = objc_msgSend(appInst, sel_registerName("delegate"));
+//        Class delClass = (Class)objc_msgSend(delegate,  sel_registerName("class"));
+//        SEL shouldHandle = sel_registerName("applicationShouldHandleReopen:hasVisibleWindows:");
+//        if (class_getInstanceMethod(delClass, shouldHandle))
+//            class_replaceMethod(delClass, shouldHandle, (IMP)dockClickHandler, "B@:");
+//        else
+//            class_addMethod(delClass, shouldHandle, (IMP)dockClickHandler,"B@:");
+ //   }
+//}
 
 
 MacDockIconHandler::MacDockIconHandler() : QObject()
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-    setupDockClickHandler();
+//    setupDockClickHandler();
     this->m_dummyWidget = new QWidget();
     this->m_dockMenu = new QMenu(this->m_dummyWidget);
     this->setMainWindow(NULL);
