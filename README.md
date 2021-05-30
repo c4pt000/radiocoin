@@ -365,10 +365,20 @@ wget https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75
 
 
 ```
+
+# first crude design (of redesigning the "DOGECOIN" paper wallet then I decided it could be better since its a paper wallet for which is supposed to be used for -money- )
+
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/src/qt/res/icons/paper_wallet.png.front.png)
+
+
+# current paper wallet for "radioCOIN"
+
 # used the back of a real 2 dollar bill to design the paper wallet art
   *  (a closer look reveals a 1980s boombox on the floor near the front desk)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/src/qt/res/icons/paper_wallet.png.back.png)
-![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/src/qt/res/icons/paper_wallet.png.front.png)
+
+
+
 
 * fedora 34
 source build
