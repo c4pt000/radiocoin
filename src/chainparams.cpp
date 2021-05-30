@@ -236,8 +236,8 @@ Mainnet ---
         assert(genesis.hashMerkleRoot == uint256S("0xf5efeb1987356784c051c50cf4cfead7ff76c4a74189cda6c2fdbc6e8a1e2142"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("multidoge.org", "seed.multidoge.org", true));
-        vSeeds.push_back(CDNSSeedData("multidoge.org", "seed2.multidoge.org"));
+  //      vSeeds.push_back(CDNSSeedData("multidoge.org", "seed.multidoge.org", true));
+  //      vSeeds.push_back(CDNSSeedData("multidoge.org", "seed2.multidoge.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,22);
@@ -246,8 +246,9 @@ Mainnet ---
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x02)(0xfa)(0xc3)(0x98).convert_to_container<std::vector<unsigned char> >();
 
         //TODO: fix this for radiocoin -- plddr
-        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
-        vFixedSeeds.clear();
+        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        
+      //vFixedSeeds.clear();
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
@@ -571,8 +572,9 @@ Testnet ---
 
         vFixedSeeds.clear();
         vSeeds.clear();
+
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.push_back(CDNSSeedData("jrn.me.uk", "testseed.jrn.me.uk"));
+	// vSeeds.push_back(CDNSSeedData("jrn.me.uk", "testseed.jrn.me.uk"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113); // 0x71
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196); // 0xc4
@@ -582,6 +584,7 @@ Testnet ---
 
         //TODO: fix this for radiocoin -- plddr
         //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
+        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
         fMiningRequiresPeers = true;
         fDefaultConsistencyChecks = false;
