@@ -16,7 +16,7 @@ where root is the current user
 cd /root/.radiocoin
 wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
 killall radiocoind
-radiocoind -daemon      or radiocoin-qt
+radiocoind -daemon -reindex   or radiocoin-qt -reindex &
 radiocoin-cli getinfo
 ```
 
@@ -75,16 +75,18 @@ wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radioco
 
 macOS
 
-install
+install and to (reindex)
 
 wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
 
 cp -rf bootstrap.dat -> (where c4pt is your user account) 
 
-/Users/c4pt/Library/Application\ Support/RadioCoin/
+cp -rf bootstrap.dat /Users/c4pt/Library/Application\ Support/RadioCoin/bootstrap.dat
 
 cd /Applications/RadioCoin-Qt.app/Contents/MacOS
+
 ./RadioCoin-Qt -reindex &
+
 to check debug.log (where c4pt is your user account)
 cat /Users/c4pt/Library/Application\ Support/RadioCoin/debug.log
 
