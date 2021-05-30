@@ -241,7 +241,7 @@ make -j24 install
 checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm *.deb 
 ```
- # designed from the back of a real 2 dollar bill image from online
+ # used the back of a real 2 dollar bill to design the paper wallet art
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
   
