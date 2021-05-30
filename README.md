@@ -228,8 +228,7 @@ python2 reverse.endian.py 1e0ffff0
 f0ff0f1e
 
 ```
-fix 3 network assert for chainparams.cpp from first run generated (asserts) with code placed back into chainparams.cpp
-https://www.youtube.com/watch?v=U-IIKVaEhrA
+
 
   
   or from source
@@ -278,78 +277,7 @@ sample conf for running a node (not for an RPC connection)
 /root/.radiocoin/radiocoin.conf 
 ----------------------------
 ```
-#prune=2200
-
-dbcache=100
-maxorphantx=10
-maxmempool=50
-maxconnections=40
-maxuploadtarget=5000
-
-
-rpcuser=radiocoin
-rpcpassword=randompasshere
-rpcport=9332
-port=9333
-
-addnode=45.56.81.243
-addnode=104.237.145.126
-addnode=109.237.25.123
-addnode=139.162.123.199
-addnode=194.195.117.160
-addnode=172.105.77.251
-addnode=194.195.250.123
-addnode=172.104.167.106
-
-connect=45.56.81.243
-connect=104.237.145.126
-connect=109.237.25.123
-connect=139.162.123.199
-connect=194.195.117.160
-connect=172.105.77.251
-connect=194.195.250.123
-connect=172.104.167.106
-
-
-whitelist=45.56.81.243/24
-whitelist=104.237.145.126/24
-whitelist=109.237.25.123/24
-whitelist=139.162.123.199/24
-whitelist=194.195.117.160/24
-whitelist=172.105.77.251/24
-whitelist=194.195.250.123/24
-whitelist=172.104.167.106/24
-
-# important to rebroadcast between peers
-whitelistrelay=1
-whitelistforcerelay=1
-blocksonly=1
-
-rpcconnect=0.0.0.0
-rpcallowip=0.0.0.0/0
-rpcbind=0.0.0.0
-rpcallowport=9332
-
-
-listen=1
-upnp=1
-dnsseed=1
-dns=1
-
-daemon=1
-server=1
-
-
-
-
-
-#bind=127.0.0.1
-#maxconnections=10
-#your ip or 0.0.0.0/24 for complete WAN access remote (treat as dangerous for to allow remote rpc)
-#bind=127.0.0.1
-
-
-
+https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 
 ```
 
@@ -365,12 +293,10 @@ radiocoin-qt -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=
 
  
 
-todo:
+todo: -> done current block "158"
 https://stackoverflow.com/questions/47828172/encountering-readblockfromdisk-errors-in-block-header-at-cblockdiskposnfile-0/48606397#48606397
 
 https://bitcoin.stackexchange.com/questions/67060/error-readblockfromdisk-errors-in-block-header-at-cblockdiskposnfile-0-npos
-
-
 
 https://medium.com/@kay.odenthal_25114/create-a-private-bitcoin-network-with-simulated-mining-b35f5b03e534
 
@@ -378,7 +304,7 @@ https://medium.com/@kay.odenthal_25114/create-a-private-bitcoin-network-with-sim
 
 
 
-todo: mine block 0 
+todo: mine block 0 -> done
 https://github.com/c4pt000/cpp_miner
 ```
 $ cpp_miner mine <blockHeader 80B-hex> OR <version 4B-hex> <hashPrevBlock 32B-hex> <merkleRoot 32B-hex> <time 4B-hex> <nBits 4B-hex> <nonce 4B-hex>
@@ -407,73 +333,16 @@ merkle->	("0x7528171112285616586b9702910b8474013da81d2d37776ff56c881f45126b95")
 cpp_miner mine 	0x00000003  0x4f014ebd57f5d6342f8dfa723e08d3401f92a83464fc66a0ef732325659d756a 0x7528171112285616586b9702910b8474013da81d2d37776ff56c881f45126b95 1621321415 1000000000 545259519
 ```
 
-# radioCOIN (needs nodes testing at block 0 genesis block might be configured wrong)
+# radioCOIN (needs nodes testing at block 0 genesis block might be configured wrong) -> done now at block "158"
 
 # to help the music industry secure money from the loss of recordable music and mp3 leaks, and to control noisy car radios with fees for playing the volume too loud at odd hours
 
 requires requires boost-1.75
 
-cat /root/.radiocoin/debug.log
-```
-2021-05-21T05:57:47Z LoadBlockIndexDB: last block file = 0
-2021-05-21T05:57:47Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
-```
-```
-2021-05-21T05:57:47Z 
-2021-05-21T05:57:47Z RadioCoin Core version v0.18.1.0-e4beaa4-dirty (release build)
-2021-05-21T05:57:47Z Assuming ancestors of block b34a457c601ef8ce3294116e3296078797be7ded1b0d12515395db9ab5e93ab8 have valid signatures.
-2021-05-21T05:57:47Z Setting nMinimumChainWork=0000000000000000000000000000000000000000000002ee655bf00bf13b4cca
-2021-05-21T05:57:47Z Using the 'sse4(1way),sse41(4way),avx2(8way)' SHA256 implementation
-2021-05-21T05:57:47Z Using RdRand as an additional entropy source
-2021-05-21T05:57:47Z Default data directory /root/.radiocoin
-2021-05-21T05:57:47Z Using data directory /root/.radiocoin
-2021-05-21T05:57:47Z Config file: /root/.radiocoin/radiocoin.conf (not found, skipping)
-2021-05-21T05:57:47Z Using at most 125 automatic connections (1024 file descriptors available)
-2021-05-21T05:57:47Z Using 16 MiB out of 32/2 requested for signature cache, able to store 524288 elements
-2021-05-21T05:57:47Z Using 16 MiB out of 32/2 requested for script execution cache, able to store 524288 elements
-2021-05-21T05:57:47Z Using 16 threads for script verification
-2021-05-21T05:57:47Z scheduler thread start
-2021-05-21T05:57:47Z Using wallet directory /root/.radiocoin/wallets
-2021-05-21T05:57:47Z init message: Verifying wallet(s)...
-2021-05-21T05:57:47Z Using BerkeleyDB version Berkeley DB 5.3.28: (September  9, 2013)
-2021-05-21T05:57:47Z Using wallet /root/.radiocoin/wallets
-2021-05-21T05:57:47Z BerkeleyEnvironment::Open: LogDir=/root/.radiocoin/wallets/database ErrorFile=/root/.radiocoin/wallets/db.log
-2021-05-21T05:57:47Z init message: Loading banlist...
-2021-05-21T05:57:47Z ERROR: DeserializeFileDB: Failed to open file /root/.radiocoin/banlist.dat
-2021-05-21T05:57:47Z Invalid or missing banlist.dat; recreating
-2021-05-21T05:57:47Z Cache configuration:
-2021-05-21T05:57:47Z * Using 2.0 MiB for block index database
-2021-05-21T05:57:47Z * Using 8.0 MiB for chain state database
-2021-05-21T05:57:47Z * Using 440.0 MiB for in-memory UTXO set (plus up to 286.1 MiB of unused mempool space)
-2021-05-21T05:57:47Z init message: Loading block index...
-2021-05-21T05:57:47Z Opening LevelDB in /root/.radiocoin/blocks/index
-2021-05-21T05:57:47Z Opened LevelDB successfully
-2021-05-21T05:57:47Z Using obfuscation key for /root/.radiocoin/blocks/index: 0000000000000000
-2021-05-21T05:57:47Z LoadBlockIndexDB: last block file = 0
-2021-05-21T05:57:47Z LoadBlockIndexDB: last block file info: CBlockFileInfo(blocks=0, size=0, heights=0...0, time=1970-01-01...1970-01-01)
-2021-05-21T05:57:47Z Checking all blk files are present...
-2021-05-21T05:57:47Z Initializing databases...
-2021-05-21T05:57:47Z Pre-allocating up to position 0x1000000 in blk00000.dat
-2021-05-21T05:57:47Z Opening LevelDB in /root/.radiocoin/chainstate
-2021-05-21T05:57:47Z Opened LevelDB successfully
-2021-05-21T05:57:47Z Wrote new obfuscate key for /root/.radiocoin/chainstate: 59cf85edd5d4ab5d
-2021-05-21T05:57:47Z Using obfuscation key for /root/.radiocoin/chainstate: 59cf85edd5d4ab5d
-2021-05-21T05:57:47Z init message: Rewinding blocks...
-2021-05-21T05:57:47Z  block index             245ms
-2021-05-21T05:57:47Z init message: Loading wallet...
-2021-05-21T05:57:47Z BerkeleyEnvironment::Open: LogDir=/root/.radiocoin/wallets/database ErrorFile=/root/.radiocoin/wallets/db.log
-2021-05-21T05:57:48Z [default wallet] nFileVersion = 180100
-2021-05-21T05:57:48Z [default wallet] Keys: 0 plaintext, 0 encrypted, 0 w/ metadata, 0 total. Unknown wallet records: 0
-2021-05-21T05:57:48Z [default wallet] Performing wallet upgrade to 169900
-2021-05-21T05:57:49Z [default wallet] keypool added 2000 keys (1000 internal), size=2000 (1000 internal)
-2021-05-21T05:57:49Z [default wallet] Wallet completed loading in            1859ms
-2021-05-21T05:57:49Z [default wallet] setKeyPool.size() = 2000
-2021-05-21T05:57:49Z [default wallet] mapWallet.size() = 0
-2021-05-21T05:57:49Z [default wallet] mapAddressBook.size() = 0
-2021-05-21T05:57:49Z ERROR: ReadBlockFromDisk: Errors in block header at CDiskBlockPos(nFile=0, nPos=8)
-2021-05-21T05:57:49Z *** Failed to read block
-2021-05-21T05:57:49Z Error: Error: A fatal internal error occurred, see debug.log for details
-```
+
+fix 3 network assert for chainparams.cpp from first run generated (asserts) with code placed back into chainparams.cpp
+<br>
+https://www.youtube.com/watch?v=U-IIKVaEhrA
 
 ```
 optional ->  yum groupinstall "C Development Tools and Libraries" -y
