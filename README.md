@@ -90,6 +90,9 @@ cd /Applications/RadioCoin-Qt.app/Contents/MacOS
 to check debug.log (where c4pt is your user account)
 cat /Users/c4pt/Library/Application\ Support/RadioCoin/debug.log
 
+then quit RadioCoin-Qt and restart if stuck with indexing
+
+./RadioCoin-Qt &           or run the app directly from the Dock
 
 
 ```
