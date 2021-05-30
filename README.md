@@ -1,3 +1,6 @@
+
+# RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
+
 WIP** (aiming to get bugs out for this to be a June 1st~31st coin?)
 https://www.youtube.com/watch?v=U-IIKVaEhrA
 
@@ -9,7 +12,7 @@ difficulty is low as with any starting network/fork as more blocks are mined wit
 </p>
 
 * 05-29-2021 sync issues just built 8 nodes as a starting point check updated radiocoin.conf
-
+```
 place bootstrap -> /root/.radiocoin/
 where /home/user/.radiocoin
 is your directory
@@ -19,6 +22,7 @@ restart radiocoind or radiocoin-qt to load boostrap.dat
 https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
 
 where root is the current user 
+```
 ```
 cd /root/.radiocoin
 wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
