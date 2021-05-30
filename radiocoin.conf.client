@@ -10,6 +10,7 @@ port=9333
 mempoolexpiry=24
 dbcache=2048
 daemon=1
+server=1
 
 
 
