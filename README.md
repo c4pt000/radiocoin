@@ -1,6 +1,14 @@
 
 # RADIOACTIVE!!   reset block 0 for peer to peer communication,
 
+
+basic bootstrap to help push sync?
+```
+killall radiocoind
+place bootstrap.CURRENT.dat -> /root/.radiocoin/bootstrap.dat
+radiocoind -reindex
+radiocoin-cli getinfo
+```
 rejecting DOGE coin peers but using the dogecoin dns peers alongside of radiocoin peer transmissions
 ```
 2021-05-31 06:06:27 receive version message: /Shibetoshi:1.14.3/: version 70015, blocks=3751589, us=45.56.81.243:39818, peer=24
