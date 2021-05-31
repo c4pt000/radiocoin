@@ -165,12 +165,12 @@ public:
 	    
 	    
 //changes for peer to peer annouce to connect to sync based on bitcoin-core
-	    //pchMessageStart[4] = { 0xf9, 0xbe, 0xb4, 0xd9 };
+//	    pchMessageStart[4] = { 0xf9, 0xbe, 0xb4, 0xd9 }; originally 0xc0
 
-        pchMessageStart[0] = 0xc0;
-        pchMessageStart[1] = 0xc0;
-        pchMessageStart[2] = 0xc0;
-        pchMessageStart[3] = 0xc0;
+        pchMessageStart[0] = 0xf9;
+        pchMessageStart[1] = 0xbe;
+        pchMessageStart[2] = 0xb4;
+        pchMessageStart[3] = 0xd9;
         vAlertPubKey = ParseHex("04770ee175cb5530e95cd615c061738719116d871ad9fcc9292ea6b0d396f7d270c12f351ff674b030299b537e9fa062511ac67b8bfc4d68cfcc2fd86158e0e6b3");
 			       //04d4da7a5dae4db797d9b0644d57a5cd50e05a70f36091cd62e2fc41c98ded06340be5a43a35e185690cd9cde5d72da8f6d065b499b06f51dcfba14aad859f443a");
         nDefaultPort = 9332;
