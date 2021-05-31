@@ -1,7 +1,7 @@
 
 # RADIOACTIVE!!   reset block 0 for peer to peer communication,
 
-
+https://raw.githubusercontent.com/c4pt000/radioCOIN/main/block0-log-peer-to-peer.txt
 
 ** STILL A WIP (android app / ios soon)
 
