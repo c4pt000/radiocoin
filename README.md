@@ -21,6 +21,14 @@ rejecting DOGE coin peers but using the dogecoin dns peers alongside of radiocoi
 2021-05-31 06:06:28 ProcessMessages(headers, 162003 bytes) FAILED peer=24
 ```
 
+# changes to GUI with QT,
+
+the way the client displayed unconfirmed blocks before with a block not being "matured" to a full 30 or 31 network confirms
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/Immature-blocks-changed-unconfirmed.png)
+
+changes to the GUI to display unconfirmed blocks waiting for 31 confirms as "Unconfirmed"
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/Unconfirmed-new.png)
+
 05-31-2021 6am
 ```
 made a change in src/chainparams.cpp from non standard 22556 to 9333
