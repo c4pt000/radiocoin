@@ -1,6 +1,9 @@
 
 # RADIOACTIVE!!   reset block 0 for peer to peer communication,
 
+macOS
+https://imgur.com/gallery/OfCyvXm
+
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/block0-log-peer-to-peer.txt
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PEERinfo-getpeerinfo.txt      notice some peers allowing inbound peer to peer communication for sync
 
