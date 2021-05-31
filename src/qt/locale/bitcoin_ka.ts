@@ -621,7 +621,7 @@
         <translation>დასადასტურებელი ტრანსაქციების საერთო რაოდენობა, რომლებიც ჯერ არ არის ასახული ბალანსში</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>მოუმზადებელია:</translation>
     </message>
     <message>

@@ -799,7 +799,7 @@
         <translation>Totalul tranzacţiilor care nu sunt confirmate încă şi care nu sunt încă adunate la balanţa de cheltuieli</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nematurizat:</translation>
     </message>
     <message>

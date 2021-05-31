@@ -1215,7 +1215,7 @@
         <translation>Total de transações que ainda têm de ser confirmados, e ainda não contam para o equilíbrio spendable</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Imaturo:</translation>
     </message>
     <message>
@@ -2704,7 +2704,7 @@
         <translation>Conflitado</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Recém-criado (%1 confirmações, disponível somente após %2)</translation>
     </message>
     <message>

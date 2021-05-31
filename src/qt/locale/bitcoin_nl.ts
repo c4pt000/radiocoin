@@ -1219,7 +1219,7 @@
         <translation>De som van de transacties die nog bevestigd moeten worden, en nog niet meetellen in uw beschikbare saldo</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Immatuur:</translation>
     </message>
     <message>
@@ -2704,7 +2704,7 @@
         <translation>Conflicterend</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Niet beschikbaar (%1 bevestigingen, zal beschikbaar zijn na %2)</translation>
     </message>
     <message>

@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin"
-BUILDDIR="/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin"
+SRCDIR="/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN"
+BUILDDIR="/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.

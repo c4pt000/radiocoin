@@ -1219,8 +1219,8 @@
         <translation>Total des transactions qui doivent encore être confirmées et qui ne sont pas prises en compte dans le solde disponible</translation>
     </message>
     <message>
-        <source>Immature:</source>
-        <translation>Immature :</translation>
+        <source>Unconfirmed:</source>
+        <translation>Unconfirmed :</translation>
     </message>
     <message>
         <source>Mined balance that has not yet matured</source>
@@ -2708,8 +2708,8 @@
         <translation>En conflit</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
-        <translation>Immature (%1 confirmations, sera disponible après %2)</translation>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
+        <translation>Unconfirmed (%1 confirmations, sera disponible après %2)</translation>
     </message>
     <message>
         <source>This block was not received by any other nodes and will probably not be accepted!</source>

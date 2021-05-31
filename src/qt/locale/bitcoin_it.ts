@@ -1160,7 +1160,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Totale delle transazioni in corso di conferma e che non sono ancora conteggiate nel saldo spendibile</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Immaturo:</translation>
     </message>
     <message>

@@ -263,7 +263,7 @@
             <item row="3" column="0">
              <widget class="QLabel" name="labelImmatureText">
               <property name="text">
-               <string>Immature:</string>
+               <string>Unconfirmed:</string>
               </property>
              </widget>
             </item>

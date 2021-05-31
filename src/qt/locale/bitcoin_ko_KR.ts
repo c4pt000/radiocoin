@@ -1219,7 +1219,7 @@
         <translation>전체 거래들은 아직 확인되지 않았고, 그리고 현재 잔액에 아직 반영되지 않았습니다.</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>아직 사용 불가능:</translation>
     </message>
     <message>
@@ -2708,7 +2708,7 @@
         <translation>충돌</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>충분히 숙성되지 않은 상태 (%1 승인, %2 후에 사용 가능합니다)</translation>
     </message>
     <message>

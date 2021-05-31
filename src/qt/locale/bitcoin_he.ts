@@ -801,7 +801,7 @@
         <translation>הסכום הכולל של העברות שטרם אושרו ועדיין אינן נספרות בחישוב היתרה הזמינה</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>לא בשל:</translation>
     </message>
     <message>

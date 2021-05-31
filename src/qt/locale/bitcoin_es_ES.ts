@@ -1199,7 +1199,7 @@
         <translation>Total de transacciones pendientes de confirmar y que aún no contribuye al saldo disponible</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>No madurado:</translation>
     </message>
     <message>
@@ -2584,7 +2584,7 @@
         <translation>En conflicto</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>No disponible (%1 confirmaciones. Estarán disponibles al cabo de %2)</translation>
     </message>
     <message>

@@ -927,7 +927,7 @@
         <translation>Totalt antall ubekreftede transaksjoner som ikke teller med i saldo</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Umoden:</translation>
     </message>
     <message>

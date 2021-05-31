@@ -836,7 +836,7 @@
         <translation>Το άθροισμα των συναλλαγών που δεν έχουν ακόμα επιβεβαιωθεί και δεν προσμετρώνται στο τρέχον διαθέσιμο υπόλοιπό σας</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Ανώριμος</translation>
     </message>
     <message>

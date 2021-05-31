@@ -3073,9 +3073,9 @@ config.status:1728: cd src       && sed -e '/# am--include-marker/d' Makefile   
 make: Nothing to be done for 'am--depfiles'.
 config.status:1733: $? = 0
 config.status:1651: executing libtool commands
-configure:33115: === configuring in src/univalue (/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/src/univalue)
+configure:33115: === configuring in src/univalue (/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/src/univalue)
 configure:33178: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--with-incompatible-bdb' '--enable-sse2' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' --cache-file=/dev/null --srcdir=.
-configure:33115: === configuring in src/secp256k1 (/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/src/secp256k1)
+configure:33115: === configuring in src/secp256k1 (/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/src/secp256k1)
 configure:33178: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--with-incompatible-bdb' '--enable-sse2' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' --cache-file=/dev/null --srcdir=.
 configure:33197: result: Fixing libtool for -rpath problems.
 
@@ -3386,7 +3386,7 @@ pkg_cv_ZMQ_LIBS='-lzmq '
 ## Output variables. ##
 ## ----------------- ##
 
-ACLOCAL='${SHELL} /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/build-aux/missing aclocal-1.16'
+ACLOCAL='${SHELL} /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/build-aux/missing aclocal-1.16'
 AMDEPBACKSLASH='\'
 AMDEP_FALSE='#'
 AMDEP_TRUE=''
@@ -3396,9 +3396,9 @@ AM_DEFAULT_V='$(AM_DEFAULT_VERBOSITY)'
 AM_DEFAULT_VERBOSITY='0'
 AM_V='$(V)'
 AR='/usr/bin/ar'
-AUTOCONF='${SHELL} /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/build-aux/missing autoconf'
-AUTOHEADER='${SHELL} /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/build-aux/missing autoheader'
-AUTOMAKE='${SHELL} /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/build-aux/missing automake-1.16'
+AUTOCONF='${SHELL} /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/build-aux/missing autoconf'
+AUTOHEADER='${SHELL} /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/build-aux/missing autoheader'
+AUTOMAKE='${SHELL} /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/build-aux/missing automake-1.16'
 AWK='gawk'
 BDB_CPPFLAGS=' -I/usr/include/libdb/'
 BDB_LIBS='-ldb_cxx'
@@ -3522,7 +3522,7 @@ LUPDATE='/usr/lib64/qt5/bin/lupdate-qt5'
 MAINT=''
 MAINTAINER_MODE_FALSE='#'
 MAINTAINER_MODE_TRUE=''
-MAKEINFO='${SHELL} /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/build-aux/missing makeinfo'
+MAKEINFO='${SHELL} /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/build-aux/missing makeinfo'
 MAKENSIS=''
 MANIFEST_TOOL=':'
 MINIUPNPC_CPPFLAGS=''
@@ -3657,7 +3657,7 @@ host_vendor='pc'
 htmldir='${docdir}'
 includedir='${prefix}/include'
 infodir='${datarootdir}/info'
-install_sh='${SHELL} /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/build-aux/install-sh'
+install_sh='${SHELL} /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/build-aux/install-sh'
 libdir='${exec_prefix}/lib64'
 libexecdir='${exec_prefix}/libexec'
 localedir='${datarootdir}/locale'

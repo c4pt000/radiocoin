@@ -863,7 +863,7 @@
         <translation>Ootel:</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Ebaküps:</translation>
     </message>
     <message>

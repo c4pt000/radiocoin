@@ -10,11 +10,11 @@ SetCompressor /SOLID lzma
 !define URL https://radiocoin.com/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "RadioCoin Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\radiocoin-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/radiocoin-${VERSION}-win-setup.exe
+OutFile /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/radiocoin-${VERSION}-win-setup.exe
 !if "" == "64"
 InstallDir $PROGRAMFILES64\RadioCoin
 !else
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/release/radiocoin-qt
-    File /oname=COPYING.txt /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/COPYING
-    File /oname=readme.txt /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/doc/README_windows.txt
+    File /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/release/radiocoin-qt
+    File /oname=COPYING.txt /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/COPYING
+    File /oname=readme.txt /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/release/radiocoind
-    File /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/release/radiocoin-cli
+    File /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/release/radiocoind
+    File /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/release/radiocoin-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/c4pt/Desktop/FORK-05-29-2021/PEERANN-radiocoin/radiocoin/doc\*.*
+    File /r /home/c4pt/Desktop/UNCONFIRMEDBLOCK-radiocoin/radioCOIN/radioCOIN/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd

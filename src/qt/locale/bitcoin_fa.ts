@@ -971,7 +971,7 @@
         <translation>مجموع تراکنش‌هایی که هنوز تأیید نشده‌اند؛ و هنوز روی تراز علی‌الحساب اعمال نشده‌اند</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>نارسیده:</translation>
     </message>
     <message>

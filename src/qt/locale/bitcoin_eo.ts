@@ -735,7 +735,7 @@
         <translation>la sumo de transakcioj ankoraŭ ne konfirmitaj, kiuj ankoraŭ ne elspezeblas</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nematura:</translation>
     </message>
     <message>

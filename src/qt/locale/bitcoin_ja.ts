@@ -1219,7 +1219,7 @@
         <translation>未検証の取引で利用可能残高に反映されていない数</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>未完成:</translation>
     </message>
     <message>
@@ -2708,7 +2708,7 @@
         <translation>衝突</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>未成熟（%1検証。%2検証完了後に使用可能となります）</translation>
     </message>
     <message>

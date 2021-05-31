@@ -1219,7 +1219,7 @@
         <translation>Total saldo for transaktioner, som ikke er blevet bekræftet endnu, og som ikke endnu er en del af den tilgængelige saldo</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Umodne:</translation>
     </message>
     <message>
@@ -2708,7 +2708,7 @@
         <translation>Konflikt</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Umoden (%1 bekræftelser; vil være tilgængelig efter %2)</translation>
     </message>
     <message>

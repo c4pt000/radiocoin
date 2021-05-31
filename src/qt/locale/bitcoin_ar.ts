@@ -929,7 +929,7 @@
         <translation>معلق:</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>غير ناضجة</translation>
     </message>
     <message>

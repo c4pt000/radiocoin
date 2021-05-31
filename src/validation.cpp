@@ -1165,9 +1165,10 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
     }
 
     // Check the header  //mod
- //   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
 //   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
-  //      return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
+
+//   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
+//        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
     return true;
 }
@@ -2859,8 +2860,12 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
     // knowing the previous block), but that's okay, as the checks done are permissive
     // (i.e. doesn't check work limit or whether AuxPoW is enabled)
 
-//    if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))  //mod
+    if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))  //mod
 //        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+//        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+//        LogPrint("mempool", "Expired %i transactions from the memory pool\n", expired);
+       printf("high-hash....proof of work failed\n"); 
+
 
     return true;
 }

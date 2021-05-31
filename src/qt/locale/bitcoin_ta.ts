@@ -329,7 +329,7 @@
         <translation>நிலுவையில்:</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>முதிராத:</translation>
     </message>
     <message>

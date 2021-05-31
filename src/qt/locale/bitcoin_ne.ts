@@ -271,7 +271,7 @@
         <translation>अझै पुष्टि हुन बाँकी र खर्च गर्न मिल्ने ब्यालेन्समा गणना गर्न नमिल्ने जम्मा कारोबार</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>अपरिपक्व:</translation>
     </message>
     <message>

@@ -1582,8 +1582,8 @@
     </message>
     <message>
         <location line="+112"/>
-        <source>Immature:</source>
-        <translation>Immature:</translation>
+        <source>Unconfirmed:</source>
+        <translation>Unconfirmed:</translation>
     </message>
     <message>
         <location line="-29"/>
@@ -3770,7 +3770,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location line="+3"/>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -799,8 +799,8 @@
         <translation>En attente:</translation>
     </message>
     <message>
-        <source>Immature:</source>
-        <translation>Immature:</translation>
+        <source>Unconfirmed:</source>
+        <translation>Unconfirmed:</translation>
     </message>
     <message>
         <source>Balances</source>

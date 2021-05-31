@@ -1211,7 +1211,7 @@
         <translation>Suma transakcií ktoré ešte neboli potvrdené a ešte sa nepočítajú do disponibilného zostatku</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nezrelé:</translation>
     </message>
     <message>
@@ -2653,7 +2653,7 @@
         <translation>V rozpore</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Nezrelé (%1 potvrdení, bude dostupné po %2)</translation>
     </message>
     <message>

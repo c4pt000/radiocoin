@@ -409,8 +409,8 @@
         <translation>Ing kabuuan dareng transaksion a kasalungsungan ali pa me-kumpirma, at kasalungsungan ali pa mebilang kareng kekang balanseng malyari mung gastusan</translation>
     </message>
     <message>
-        <source>Immature:</source>
-        <translation>Immature:</translation>
+        <source>Unconfirmed:</source>
+        <translation>Unconfirmed:</translation>
     </message>
     <message>
         <source>Mined balance that has not yet matured</source>

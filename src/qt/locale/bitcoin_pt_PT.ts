@@ -1120,7 +1120,7 @@
         <translation>Total de transações por confirmar, que ainda não estão contabilizadas no seu saldo gastável</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Imaturo:</translation>
     </message>
     <message>

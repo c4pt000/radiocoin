@@ -1219,7 +1219,7 @@
         <translation>還沒被確認的交易的總金額，可用餘額不包含這些金額</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>未成熟金額:</translation>
     </message>
     <message>
@@ -2704,7 +2704,7 @@
         <translation>有衝突</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>未成熟(確認 %1 次，會在 %2 次後可用)</translation>
     </message>
     <message>

@@ -871,7 +871,7 @@
         <translation>Сума монет у непідтверджених транзакціях</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Незрілі:</translation>
     </message>
     <message>

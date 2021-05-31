@@ -943,8 +943,8 @@
         <translation>Total of transactions that have yet to be confirmed, and do not yet count toward the spendable balance</translation>
     </message>
     <message>
-        <source>Immature:</source>
-        <translation>Immature:</translation>
+        <source>Unconfirmed:</source>
+        <translation>Unconfirmed:</translation>
     </message>
     <message>
         <source>Mined balance that has not yet matured</source>

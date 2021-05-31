@@ -557,7 +557,7 @@
         <translation>Total de transaccións que aínda teñen que ser confirmadas, e non contan todavía dentro do balance gastable</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Inmaduro:</translation>
     </message>
     <message>

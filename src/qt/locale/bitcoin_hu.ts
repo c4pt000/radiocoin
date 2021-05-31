@@ -719,7 +719,7 @@
         <translation>Még megerősítésre váró, a jelenlegi egyenlegbe be nem számított tranzakciók</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Éretlen:</translation>
     </message>
     <message>

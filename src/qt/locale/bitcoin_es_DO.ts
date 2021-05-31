@@ -601,7 +601,7 @@
         <translation>Total de transacciones que deben ser confirmadas, y que no cuentan con el balance gastable necesario</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>No disponible:</translation>
     </message>
     <message>

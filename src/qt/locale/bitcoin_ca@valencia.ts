@@ -1019,7 +1019,7 @@
         <translation>Total de transaccions que encara han de confirmar-se i que encara no compten en el balanç que es pot gastar</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Immadur:</translation>
     </message>
     <message>
@@ -2256,7 +2256,7 @@
         <translation>En conflicte</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Immadur (%1 confirmacions, serà disponible després de %2)</translation>
     </message>
     <message>

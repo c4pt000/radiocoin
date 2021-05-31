@@ -641,7 +641,7 @@
         <translation>Hangend:</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Onvolwasse:</translation>
     </message>
     <message>

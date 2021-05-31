@@ -1219,7 +1219,7 @@
         <translation>Общая сумма всех транзакций, которые до сих пор не подтверждены, и до сих пор не учитываются в расходном балансе</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Незрелые:</translation>
     </message>
     <message>
@@ -2708,7 +2708,7 @@
         <translation>В противоречии</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Незрелый (%1 подтверждений, будет доступно после %2)</translation>
     </message>
     <message>

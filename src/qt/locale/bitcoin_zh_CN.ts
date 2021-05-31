@@ -1204,7 +1204,7 @@
         <translation>尚未确认的交易总额，未计入当前余额</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>未成熟的：</translation>
     </message>
     <message>
@@ -2670,7 +2670,7 @@
         <translation>冲突的</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>未成熟 (%1 个确认，将在 %2 个后可用)</translation>
     </message>
     <message>

@@ -795,7 +795,7 @@
         <translation>Skupni znesek sredstev s katerimi še ne razpolagate prosto, ker so del še nepotrjenih transakcij.</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nedozorelo:</translation>
     </message>
     <message>

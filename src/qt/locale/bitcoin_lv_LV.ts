@@ -613,7 +613,7 @@
         <translation>Kopējā apstiprināmo transakciju vērtība, vēl nav ieskaitīta tērējamajā bilancē</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nenobriedušu:</translation>
     </message>
     <message>

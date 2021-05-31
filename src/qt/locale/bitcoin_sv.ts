@@ -1112,7 +1112,7 @@ Var vänlig och försök igen.</translation>
         <translation>Totalt antal transaktioner som ännu inte bekräftats, och som ännu inte räknas med i aktuellt saldo</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Omogen:</translation>
     </message>
     <message>

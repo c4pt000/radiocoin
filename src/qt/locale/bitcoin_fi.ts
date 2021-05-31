@@ -871,7 +871,7 @@
         <translation>Varmistamattomien rahansiirtojen summa, jota ei lasketa käytettävissä olevaan taseeseen.</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Epäkypsää:</translation>
     </message>
     <message>

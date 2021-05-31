@@ -1219,7 +1219,7 @@
         <translation>Souhrn transakcí, které ještě nejsou potvrzené a které se ještě nezapočítávají do celkového disponibilního stavu účtu</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nedozráno:</translation>
     </message>
     <message>
@@ -2708,7 +2708,7 @@
         <translation>V kolizi</translation>
     </message>
     <message>
-        <source>Immature (%1 confirmations, will be available after %2)</source>
+        <source>Unconfirmed (%1 confirmations, will be available after %2)</source>
         <translation>Nedozráno (%1 potvrzení, dozraje při %2 potvrzeních)</translation>
     </message>
     <message>

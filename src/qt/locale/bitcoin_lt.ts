@@ -533,7 +533,7 @@
         <translation>Laukiantys:</translation>
     </message>
     <message>
-        <source>Immature:</source>
+        <source>Unconfirmed:</source>
         <translation>Nepribrendę:</translation>
     </message>
     <message>
