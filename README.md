@@ -75,12 +75,10 @@ https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 ```
 fedora/rhel
 
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.1.5_semi_wip-2.x86_64.rpm
-
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.2.5_current_dns_exp-2.x86_64.rpm
 or for debian based systems
 
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.1.5-semi-wip-1_amd64.deb
-
+wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.2.5-current-dns-exp-1_amd64.deb
 
 
 macOS
