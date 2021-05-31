@@ -25,4 +25,5 @@ export PAGER=less
 echo "checkinstall will build a debian set "version" to start with a number e.g. 0.0.1-version with option "3" Crtl-C to exit script will pause for 20 seconds"
 
 sleep 20s
-checkinstall -D -R --install=no --exclude=/sys/fs/selinux --pkgversion=0.0.1-changethis
+checkinstall -D --install=no --exclude=/sys/fs/selinux --pkgversion=0.0.1-changethis
+alien --scripts --to-rpm *.deb
