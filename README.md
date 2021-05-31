@@ -32,6 +32,21 @@ mkdir -p /opt/radiocoin
 docker-RADIOCOIN
 ```
 
+a proper "reindex" to sync
+
+run "with or without bootstrap.dat" in .radiocoin folder as bootstrap.dat
+
+```
+radiocoin-qt -reindex &
+```
+wait literally 2 or 3 minutes
+close radiocoin-qt from the menu or force quit
+then reopen 
+
+```
+radiocoin-qt &
+```
+
 
 ```
 same DOGE block reward design but for radiocoin (random between 0-1,000,000 RADC)
