@@ -5,7 +5,10 @@
 basic bootstrap to help push sync?
 ```
 killall radiocoind
+                                   where "root" is user
 place bootstrap.CURRENT.dat -> /root/.radiocoin/bootstrap.dat
+wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.CURRENT.dat
+
 radiocoind -reindex
 radiocoin-cli getinfo
 ```
