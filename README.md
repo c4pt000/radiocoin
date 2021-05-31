@@ -10,6 +10,8 @@ rejecting DOGE coin peers but using the dogecoin dns peers alongside of radiocoi
 2021-05-31 06:06:28 ProcessMessages(headers, 162003 bytes) FAILED peer=24
 ```
 
+05-31-2021 6am
+```
 made a change in src/chainparams.cpp from non standard 22556 to 9333
 
 using 9333 with 22556 in src/chainparams.cpp during compile created some kind of port problem even when forcing port=9333 (instead of using default 22556)
@@ -19,7 +21,7 @@ chainparams.cpp is now 9333 by default instead of dogecoin (22556)        (9333 
 
 
 packages in https://github.com/c4pt000/radioCOIN/releases/tag/experimental are still using default port 22556 for radiocoind mainnet
-
+```
 
 macOS
 https://imgur.com/gallery/OfCyvXm
