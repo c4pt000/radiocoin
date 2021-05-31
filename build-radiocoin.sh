@@ -27,3 +27,6 @@ echo "checkinstall will build a debian set "version" to start with a number e.g.
 sleep 20s
 checkinstall -D --install=no --exclude=/sys/fs/selinux --pkgversion=0.0.1-changethis
 alien --scripts --to-rpm *.deb
+
+echo "check script for a macOS build"
+# make -j24 deploy         to build for macOS         edit Makefile from python3 to python2 for macosdeployqt errors on final step of constructing DMG
