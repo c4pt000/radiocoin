@@ -1,5 +1,9 @@
 
-# RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
+# RADIOACTIVE!!   reset block 0 for peer to peer communication,
+
+
+
+** STILL A WIP (android app / ios soon)
 
 ** rewrapping and building dns seeds to allow peers intercommunication to transmit updates to sync headers
 
