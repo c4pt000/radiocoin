@@ -1,6 +1,8 @@
 
 # RADIOACTIVE!!   ** STILL A WIP (android app / ios soon)
 
+** rewrapping and building dns seeds to allow peers intercommunication to transmit updates to sync headers
+
 * https://github.com/c4pt000/radioCOIN/raw/main/bootstrap-216.dat
 ```
 rename to bootstrap.dat "current blockchain snapshot" early network at block 216
