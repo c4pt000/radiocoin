@@ -22,7 +22,7 @@ systemctl enable docker (for starting docker at system startup)
 .yum install vim-common xorg-* mesa-* caja -y
 wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/docker-RADIOCOIN
 chmod +x docker-RADIOCOIN
-mkdir /opt/radiocoin
+mkdir -p /opt/radiocoin
 docker-RADIOCOIN
 ```
 
