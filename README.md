@@ -36,6 +36,8 @@ a proper "reindex" to sync
 
 run "with or without bootstrap.dat" in .radiocoin folder as bootstrap.dat
 
+(and or check "debug.log" in .radiocoin ->          cat .radiocoin/debug.log   )
+
 ```
 radiocoin-qt -reindex &
 ```
