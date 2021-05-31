@@ -162,6 +162,11 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
+	    
+	    
+//changes for peer to peer annouce to connect to sync based on bitcoin-core
+	    //pchMessageStart[4] = { 0xf9, 0xbe, 0xb4, 0xd9 };
+
         pchMessageStart[0] = 0xc0;
         pchMessageStart[1] = 0xc0;
         pchMessageStart[2] = 0xc0;
