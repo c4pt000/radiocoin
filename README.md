@@ -1,6 +1,43 @@
 
 # RADIOACTIVE!!   reset block 0 for peer to peer communication,
 
+* for deploying docker ready image (requires docker)
+```
+yum install qemu-img caja xorg-* mesa-* -y
+
+sudo dnf -y install dnf-plugins-core
+ sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+
+
+ sudo dnf install docker-ce docker-ce-cli containerd.io
+
+systemctl start docker
+
+systemctl enable docker (for starting docker at system startup)
+```
+
+```
+.yum install vim-common xorg-* mesa-* caja -y
+wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/docker-RADIOCOIN
+chmod +x docker-RADIOCOIN
+mkdir /opt/radiocoin
+docker-RADIOCOIN
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 basic bootstrap to help push sync?
 ```
