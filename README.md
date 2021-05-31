@@ -22,11 +22,11 @@ rename to bootstrap.dat "current blockchain snapshot" early network at block 216
 
 
 05-30-2021
-<p>
+```
 STILL A WIP, having trouble syncing between remote nodes and two local test clients between linux and macos without bootstrap.dat
 
 difficulty is low as with any starting network/fork as more blocks are mined with an interest in mining blocks the network "difficulty" will go up in value making it more difficult to mine blocks, after 600,000 blocks are mined the block reward will reduce from a random amount between 1->1,000,000 down to 10,000 coins per block (after block number 600,000 is mined) this model of radiocoin is the same network design as DOGECOIN just redesigned in terms of a different theme and anthem with different purpose,
-</p>
+```
 
 * 05-29-2021 sync issues just built 8 nodes as a starting point check updated radiocoin.conf
 ```
