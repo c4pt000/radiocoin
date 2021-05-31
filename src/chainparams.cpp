@@ -241,9 +241,19 @@ Mainnet ---
         assert(consensus.hashGenesisBlock == uint256S("0x000006ac2bd84266d6064bc8c47a222b9c68eb25c70aa6f13320fc7ed7f9e996"));
         assert(genesis.hashMerkleRoot == uint256S("0xf5efeb1987356784c051c50cf4cfead7ff76c4a74189cda6c2fdbc6e8a1e2142"));
 
+        vSeeds.push_back(CDNSSeedData("seed.bitcoin.sipa.be"); // Pieter Wuille, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("dnsseed.bluematt.me"); // Matt Corallo, only supports x9
+        vSeeds.push_back(CDNSSeedData("dnsseed.bitcoin.dashjr.org"); // Luke Dashjr
+        vSeeds.push_back(CDNSSeedData("seed.bitcoinstats.com"); // Christian Decker, supports x1 - xf
+        vSeeds.push_back(CDNSSeedData("seed.bitcoin.jonasschnelli.ch"); // Jonas Schnelli, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("seed.btc.petertodd.org"); // Peter Todd, only supports x1, x5, x9, and xd
+        vSeeds.push_back(CDNSSeedData("seed.bitcoin.sprovoost.nl"); // Sjors Provoost
+        vSeeds.push_back(CDNSSeedData("dnsseed.emzy.de"); // Stephan Oeste
+        vSeeds.push_back(CDNSSeedData("seed.bitcoin.wiz.biz"); // Jason Maurice
+	    
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("multidoge.org", "seed.multidoge.org", true));
-        vSeeds.push_back(CDNSSeedData("multidoge.org", "seed2.multidoge.org"));
+      //  vSeeds.push_back(CDNSSeedData("multidoge.org", "seed.multidoge.org", true));
+       // vSeeds.push_back(CDNSSeedData("multidoge.org", "seed2.multidoge.org"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,22);
@@ -582,9 +592,15 @@ Testnet ---
 
         vFixedSeeds.clear();
         vSeeds.clear();
+	    
+         vSeeds.push_back(CDNSSeedData("testnet-seed.bitcoin.jonasschnelli.ch");
+        vSeeds.push_back(CDNSSeedData("seed.tbtc.petertodd.org");
+        vSeeds.push_back(CDNSSeedData("seed.testnet.bitcoin.sprovoost.nl");
+        vSeeds.push_back(CDNSSeedData("testnet-seed.bluematt.me"); // Just a static list of stable node(s), only supports x9
+
 
         // nodes with support for servicebits filtering should be at the top
-	 vSeeds.push_back(CDNSSeedData("jrn.me.uk", "testseed.jrn.me.uk"));
+//	 vSeeds.push_back(CDNSSeedData("jrn.me.uk", "testseed.jrn.me.uk"));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,113); // 0x71
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,196); // 0xc4
