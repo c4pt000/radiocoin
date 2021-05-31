@@ -42,7 +42,10 @@ Block 200,001 — 300,000: 0-250,000 radiocoin(RADC)
 Block 300,001 — 400,000: 0-125,000 radiocoin(RADC)
 Block 400,001 — 500,000: 0-62,500 radiocoin(RADC)
 Block 500,001 — 600,000: 0-31,250 radiocoin(RADC)
+
+after network reaches 600,000 blocks on the entire network 10,000 RADC coins per 1 block reward
 Block 600,001+: 10,000 radiocoin(RADC)
+
 ```
 
 
