@@ -6,7 +6,7 @@ https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PEERinfo-getpeerinfo.tx
 
 ** STILL A WIP (android app / ios soon)
 
-** rewrapping and building dns seeds to allow peers intercommunication to transmit updates to sync headers
+** rewrapping and building dns seeds to allow peers intercommunication to transmit updates to sync headers 11pm
 
 * https://github.com/c4pt000/radioCOIN/raw/main/bootstrap-216.dat
 ```
@@ -15,7 +15,11 @@ rename to bootstrap.dat "current blockchain snapshot" early network at block 216
 -> /home/user/.radiocoin/bootstrap.dat               -reindex then wait 10 seconds then shutdown and reopen without -reindex
 ```
 
-# WIP** (aiming to get bugs out for this to be a June 1st~31st coin?) <- sync issues between broadcast nodes 
+#  June 1st as promised ? network seems semi-functional?
+
+# WIP** (aiming to get bugs out for this to be a June 1st~31st coin?) <- sync issues between broadcast nodes
+
+
 
 05-30-2021
 <p>
