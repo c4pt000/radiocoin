@@ -34,7 +34,15 @@ docker-RADIOCOIN
 
 
 
+same DOGE block reward design but for radiocoin (random between 0-1,000,000 RADC
 
+Block 1 — 100,000: 0-1,000,000 radiocoin(RADC)
+Block 100,001 — 200,000: 0-500,000 radiocoin(RADC)
+Block 200,001 — 300,000: 0-250,000 radiocoin(RADC)
+Block 300,001 — 400,000: 0-125,000 radiocoin(RADC)
+Block 400,001 — 500,000: 0-62,500 radiocoin(RADC)
+Block 500,001 — 600,000: 0-31,250 radiocoin(RADC)
+Block 600,001+: 10,000 radiocoin(RADC)
 
 
 
