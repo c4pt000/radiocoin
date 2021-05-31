@@ -1,6 +1,8 @@
 
-# RADIOACTIVE!!   reset block 0 for peer to peer communication,
+# RADIOACTIVE!! had to reset block 0 for peer to peer communication, 05-30-2021
 
+
+* 05-31-2021 3pm
 * for deploying docker ready image (requires docker)
 ```
 yum install qemu-img caja xorg-* mesa-* -y
