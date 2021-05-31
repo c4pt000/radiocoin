@@ -1,6 +1,16 @@
 
 # RADIOACTIVE!!   reset block 0 for peer to peer communication,
 
+rejecting DOGE coin peers but using the dogecoin dns peers alongside of radiocoin peer transmissions
+```
+2021-05-31 06:06:27 receive version message: /Shibetoshi:1.14.3/: version 70015, blocks=3751589, us=45.56.81.243:39818, peer=24
+2021-05-31 06:06:28 ERROR: AcceptBlockHeader: prev block not found
+2021-05-31 06:06:28 Misbehaving: 64.98.101.27:22556 peer=24 (0 -> 10)
+2021-05-31 06:06:28 ERROR: invalid header received
+2021-05-31 06:06:28 ProcessMessages(headers, 162003 bytes) FAILED peer=24
+```
+
+
 macOS
 https://imgur.com/gallery/OfCyvXm
 
