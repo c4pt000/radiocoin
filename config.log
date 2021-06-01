@@ -267,99 +267,12 @@ compilation terminated.
 configure:4941: $? = 1
 configure:4945: checking whether we are using the GNU Objective C++ compiler
 configure:4964: x86_64-w64-mingw32-g++ -std=c++11 -c  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  conftest.mm >&5
-x86_64-w64-mingw32-g++: fatal error: cannot execute 'cc1objplus': execvp: No such file or directory
-compilation terminated.
-configure:4964: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "RadioCoin Core"
-| #define PACKAGE_TARNAME "radiocoin"
-| #define PACKAGE_VERSION "1.14.3"
-| #define PACKAGE_STRING "RadioCoin Core 1.14.3"
-| #define PACKAGE_BUGREPORT "https://github.com/radiocoin/radiocoin/issues"
-| #define PACKAGE_URL "https://radiocoin.com/"
-| #define HAVE_CXX11 1
-| /* end confdefs.h.  */
-| 
-| int
-| main ()
-| {
-| #ifndef __GNUC__
-|        choke me
-| #endif
-| 
-|   ;
-|   return 0;
-| }
-configure:4973: result: no
+configure:4964: $? = 0
+configure:4973: result: yes
 configure:4982: checking whether x86_64-w64-mingw32-g++ -std=c++11 accepts -g
 configure:5002: x86_64-w64-mingw32-g++ -std=c++11 -c -g -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  conftest.mm >&5
-x86_64-w64-mingw32-g++: fatal error: cannot execute 'cc1objplus': execvp: No such file or directory
-compilation terminated.
-configure:5002: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "RadioCoin Core"
-| #define PACKAGE_TARNAME "radiocoin"
-| #define PACKAGE_VERSION "1.14.3"
-| #define PACKAGE_STRING "RadioCoin Core 1.14.3"
-| #define PACKAGE_BUGREPORT "https://github.com/radiocoin/radiocoin/issues"
-| #define PACKAGE_URL "https://radiocoin.com/"
-| #define HAVE_CXX11 1
-| /* end confdefs.h.  */
-| 
-| int
-| main ()
-| {
-| 
-|   ;
-|   return 0;
-| }
-configure:5017: x86_64-w64-mingw32-g++ -std=c++11 -c  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  conftest.mm >&5
-x86_64-w64-mingw32-g++: fatal error: cannot execute 'cc1objplus': execvp: No such file or directory
-compilation terminated.
-configure:5017: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "RadioCoin Core"
-| #define PACKAGE_TARNAME "radiocoin"
-| #define PACKAGE_VERSION "1.14.3"
-| #define PACKAGE_STRING "RadioCoin Core 1.14.3"
-| #define PACKAGE_BUGREPORT "https://github.com/radiocoin/radiocoin/issues"
-| #define PACKAGE_URL "https://radiocoin.com/"
-| #define HAVE_CXX11 1
-| /* end confdefs.h.  */
-| 
-| int
-| main ()
-| {
-| 
-|   ;
-|   return 0;
-| }
-configure:5033: x86_64-w64-mingw32-g++ -std=c++11 -c -g -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  conftest.mm >&5
-x86_64-w64-mingw32-g++: fatal error: cannot execute 'cc1objplus': execvp: No such file or directory
-compilation terminated.
-configure:5033: $? = 1
-configure: failed program was:
-| /* confdefs.h */
-| #define PACKAGE_NAME "RadioCoin Core"
-| #define PACKAGE_TARNAME "radiocoin"
-| #define PACKAGE_VERSION "1.14.3"
-| #define PACKAGE_STRING "RadioCoin Core 1.14.3"
-| #define PACKAGE_BUGREPORT "https://github.com/radiocoin/radiocoin/issues"
-| #define PACKAGE_URL "https://radiocoin.com/"
-| #define HAVE_CXX11 1
-| /* end confdefs.h.  */
-| 
-| int
-| main ()
-| {
-| 
-|   ;
-|   return 0;
-| }
-configure:5043: result: no
+configure:5002: $? = 0
+configure:5043: result: yes
 configure:5068: checking dependency style of x86_64-w64-mingw32-g++ -std=c++11
 configure:5177: result: gcc3
 configure:5240: checking how to print strings
@@ -1220,7 +1133,7 @@ configure: failed program was:
 configure:17342: result: no
 configure:17355: checking for strerror_r
 configure:17355: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe -pipe -O2  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/cchvDWNy.o:conftest.cpp:(.text.startup+0xa): undefined reference to `strerror_r'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cckdmgzI.o:conftest.cpp:(.text.startup+0xa): undefined reference to `strerror_r'
 collect2: error: ld returned 1 exit status
 configure:17355: $? = 1
 configure: failed program was:
@@ -5191,7 +5104,7 @@ configure:19747: $? = 0
 configure:19757: result: yes
 configure:19779: checking for library containing png_error 
 configure:19810: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtCore -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtGui -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtTest -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lz  -limm32  -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccBH8RRP.o:conftest.cpp:(.text.startup+0xa): undefined reference to `png_error'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccXZhxKU.o:conftest.cpp:(.text.startup+0xa): undefined reference to `png_error'
 collect2: error: ld returned 1 exit status
 configure:19810: $? = 1
 configure: failed program was:
@@ -5292,7 +5205,7 @@ configure:19810: $? = 0
 configure:19827: result: -lqtpng
 configure:19846: checking for library containing jpeg_create_decompress 
 configure:19877: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtCore -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtGui -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtTest -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lqtpng -lz  -limm32  -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/cckQEySC.o:conftest.cpp:(.text.startup+0xa): undefined reference to `jpeg_create_decompress'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cc6KMkoI.o:conftest.cpp:(.text.startup+0xa): undefined reference to `jpeg_create_decompress'
 collect2: error: ld returned 1 exit status
 configure:19877: $? = 1
 configure: failed program was:
@@ -5586,7 +5499,7 @@ configure:19894: result: no
 configure:19901: WARNING: libjpeg not found. Assuming qt has it built-in
 configure:19913: checking for library containing pcre16_exec
 configure:19944: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtCore -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtGui -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtTest -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lqtpng -lz  -limm32  -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccE8kfUH.o:conftest.cpp:(.text.startup+0xa): undefined reference to `pcre16_exec'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccIofnBQ.o:conftest.cpp:(.text.startup+0xa): undefined reference to `pcre16_exec'
 collect2: error: ld returned 1 exit status
 configure:19944: $? = 1
 configure: failed program was:
@@ -5687,7 +5600,7 @@ configure:19944: $? = 0
 configure:19961: result: -lqtpcre
 configure:19980: checking for library containing hb_ot_tags_from_script 
 configure:20011: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtCore -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtGui -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtTest -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lqtpcre -lqtpng -lz  -limm32  -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccAGEagA.o:conftest.cpp:(.text.startup+0xa): undefined reference to `hb_ot_tags_from_script'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccJkUEuG.o:conftest.cpp:(.text.startup+0xa): undefined reference to `hb_ot_tags_from_script'
 collect2: error: ld returned 1 exit status
 configure:20011: $? = 1
 configure: failed program was:
@@ -6093,8 +6006,8 @@ configure:23964: $? = 0
 configure:23978: result: yes
 configure:24090: checking for dynamic linked boost test
 configure:24105: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe -pipe -O2  -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -mthreads -I/opt/winradio/depends/x86_64-w64-mingw32/share/../include -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lQt5PlatformSupport -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  -L/opt/winradio/depends/x86_64-w64-mingw32/share/../lib -lboost_unit_test_framework-mt-s-x64 >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccaxoamu.o:conftest.cpp:(.text.startup+0x29): undefined reference to `__imp__ZN5boost9unit_test14unit_test_mainEPFbvEiPPc'
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccaxoamu.o:conftest.cpp:(.text.startup+0x36): undefined reference to `__imp__ZN5boost9unit_test15unit_test_log_t8instanceEv'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cc3mnOSB.o:conftest.cpp:(.text.startup+0x29): undefined reference to `__imp__ZN5boost9unit_test14unit_test_mainEPFbvEiPPc'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cc3mnOSB.o:conftest.cpp:(.text.startup+0x36): undefined reference to `__imp__ZN5boost9unit_test15unit_test_log_t8instanceEv'
 collect2: error: ld returned 1 exit status
 configure:24105: $? = 1
 configure: failed program was:
@@ -6942,7 +6855,7 @@ ac_cv_lib_winspool_main=yes
 ac_cv_lib_ws2_32_main=yes
 ac_cv_lib_z____main=yes
 ac_cv_lib_zmq_zmq_ctx_shutdown=yes
-ac_cv_objcxx_compiler_gnu=no
+ac_cv_objcxx_compiler_gnu=yes
 ac_cv_objext=o
 ac_cv_path_AR=/usr/bin/x86_64-w64-mingw32-ar
 ac_cv_path_CCACHE=/opt/winradio/depends/x86_64-w64-mingw32/share/../native/bin/ccache
@@ -6985,7 +6898,7 @@ ac_cv_prog_cc_c89=
 ac_cv_prog_cc_g=yes
 ac_cv_prog_cxx_g=yes
 ac_cv_prog_make_make_set=yes
-ac_cv_prog_objcxx_g=no
+ac_cv_prog_objcxx_g=yes
 ac_cv_search_clock_gettime='none required'
 ac_cv_search_hb_ot_tags_from_script_=-lqtharfbuzzng
 ac_cv_search_jpeg_create_decompress_=no
@@ -7215,7 +7128,7 @@ NMEDIT=''
 OBJCOPY='/usr/bin/x86_64-w64-mingw32-objcopy'
 OBJCXX='x86_64-w64-mingw32-g++ -std=c++11'
 OBJCXXDEPMODE='depmode=gcc3'
-OBJCXXFLAGS=''
+OBJCXXFLAGS='-g -O2'
 OBJDUMP='x86_64-w64-mingw32-objdump'
 OBJEXT='o'
 OTOOL64=''

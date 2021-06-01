@@ -287,7 +287,7 @@ NMEDIT =
 OBJCOPY = /usr/bin/x86_64-w64-mingw32-objcopy
 OBJCXX = x86_64-w64-mingw32-g++ -std=c++11
 OBJCXXDEPMODE = depmode=gcc3
-OBJCXXFLAGS = 
+OBJCXXFLAGS = -g -O2
 OBJDUMP = x86_64-w64-mingw32-objdump
 OBJEXT = o
 OTOOL = 
