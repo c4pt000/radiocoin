@@ -1,59 +1,58 @@
 WINDOWS BUILD NOTES
 ====================
 
-Below are some notes on how to build Bitcoin Core for Windows.
+mkdir /opt/winradio
 
-Most developers use cross-compilation from Ubuntu to build executables for
-Windows. This is also used to build the release binaries.
+or from docker run -it -d -v /opt/winradio:/opt/winradio ubuntu:20.10
 
-While there are potentially a number of ways to build on Windows (for example using msys / mingw-w64),
-using the Windows Subsystem For Linux is the most straightforward. If you are building with
-another method, please contribute the instructions here for others who are running versions
-of Windows that are not compatible with the Windows Subsystem for Linux.
+docker exec -it <docker_random_hash_> bash
 
-Compiling with Windows Subsystem For Linux
--------------------------------------------
+as root
 
-With Windows 10, Microsoft has released a new feature named the [Windows
-Subsystem for Linux](https://msdn.microsoft.com/commandline/wsl/about). This
-feature allows you to run a bash shell directly on Windows in an Ubuntu-based
-environment. Within this environment you can cross compile for Windows without
-the need for a separate Linux VM or server.
+apt-get update && apt-get install git-core build-essential nano sudo -y
 
-This feature is not supported in versions of Windows prior to Windows 10 or on
-Windows Server SKUs. In addition, it is available [only for 64-bit versions of
-Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide).
+cd /opt/winradio
 
-To get the bash shell, you must first activate the feature in Windows.
+git clone https://github.com/c4pt000/radioCOIN
 
-1. Turn on Developer Mode
-  * Open Settings -> Update and Security -> For developers
-  * Select the Developer Mode radio button
-  * Restart if necessary
-2. Enable the Windows Subsystem for Linux feature
-  * From Start, search for "Turn Windows features on or off" (type 'turn')
-  * Select Windows Subsystem for Linux (beta)
-  * Click OK
-  * Restart if necessary
-3. Complete Installation
-  * Open a cmd prompt and type "bash"
-  * Accept the license
-  * Create a new UNIX user account (this is a separate account from your Windows account)
+cd radioCOIN
 
-After the bash shell is active, you can follow the instructions below, starting
-with the "Cross-compilation" section. Compiling the 64-bit version is
-recommended but it is possible to compile the 32-bit version.
+then as always install more of the general dependencies:
 
-Cross-compilation
--------------------
+as root:
 
-These steps can be performed on, for example, an Ubuntu VM. The depends system
-will also work on other Linux distributions, however the commands for
-installing the toolchain will be different.
+ apt-get update && apt-get upgrade && apt-get install apt aptitude apt-file wget nano build-essential git-core build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git sudo nsis g++-mingw-w64-x86-64 protobuf* -y
+ apt-get install *mingw* g++-mingw-w64-x86-64 mingw-w64-x86-64-dev -y
 
-First, install the general dependencies:
+Then build using: (windows x86_64 64bit .exe binaries)
 
-    sudo apt-get install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl
+    cd depends
+    make HOST=x86_64-w64-mingw32
+    cd ..
+    ./autogen.sh # not required when building from tarball
+    CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/usr
+    make -j200    (where 200 is cpu core count)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+original bitcoin-core build-windows.md notes
 
 A host toolchain (`build-essential`) is necessary because some dependency
 packages (such as `protobuf`) need to build host utilities that are used in the
