@@ -219,6 +219,15 @@ macOS
 install and to (reindex) -> wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
 
 
+windows 10
+
+Options:Show hidden files and folders,
+
+
+place radiocoin.conf ->
+/Users/YOURUSERNAME/AppData/Roaming/RadioCoin
+
+
 
 
 
