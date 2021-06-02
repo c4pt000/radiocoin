@@ -3,9 +3,9 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/opt/winradio"
-BUILDDIR="/opt/winradio"
-EXEEXT=".exe"
+SRCDIR="/Users/c4pt/Desktop/radioCOIN"
+BUILDDIR="/Users/c4pt/Desktop/radioCOIN"
+EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.
 ENABLE_WALLET=1

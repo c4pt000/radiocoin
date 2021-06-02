@@ -91,10 +91,10 @@ public:
         consensus.nMajorityRejectBlockOutdated = 1900;
         consensus.nMajorityWindow = 2000;
         // BIP34 is never enforced in Dogecoin v2 blocks, so we enforce from v3
-        consensus.BIP34Height = 1;
-        consensus.BIP34Hash = uint256S("0xe6906d8891d54ff856937090a55b7c8a18b51a18d2b5f41cc1f281ec3c9663cb");
-        consensus.BIP65Height = 1; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
-        consensus.BIP66Height = 1; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
+        consensus.BIP34Height = 0;
+        consensus.BIP34Hash = uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204");
+        consensus.BIP65Height = 0; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
+        consensus.BIP66Height = 0; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
         consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
         consensus.nPowTargetTimespan = 4 * 60 * 60; // pre-digishield: 4 hours
         consensus.nPowTargetSpacing = 60; // 1 minute
@@ -125,7 +125,7 @@ public:
 
         // By default assume that the signatures in ancestors of this block are valid.
 //        consensus.defaultAssumeValid = uint256S("0x77e3f4a4bcb4a2c15e8015525e3d15b466f6c022f6ca82698f329edef7d9777e"); // 2,510,150
-        consensus.defaultAssumeValid = uint256S("0xe6906d8891d54ff856937090a55b7c8a18b51a18d2b5f41cc1f281ec3c9663cb");
+        consensus.defaultAssumeValid = uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204");
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x0062; // 98 - Josh Wise!
@@ -235,44 +235,8 @@ genesis = CreateGenesisBlock(1622171724, 84337, 0x1e0ffff0, 1, 88 * COIN);
 
 
  checkpointData = (CCheckpointData) {
-//            boost::assign::map_list_of
-
-/*
-	 (	0, uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204"))
-	 (	1, uint256S("0xe6906d8891d54ff856937090a55b7c8a18b51a18d2b5f41cc1f281ec3c9663cb"))
-	 (	2, uint256S("0xb08893ba69843c3424f928d2b50212f6872d10f610af9a3b8e2e0e2e87afba0c"))
-	 (	3, uint256S("0x116f306b8dbbe6a0cb0b13333a1f64943d3e035864c1b1cbfeff211db8df0b70"))
-	 (	4, uint256S("0x30b802974077db766d45fbb17e847b22aa8ece0ddda7e70b255d331fc6b832ed"))
-	 (	5, uint256S("0x1fb281d19ebc88da50871ba1a839a7988aa6a76b493ae3eae595db405d4c70bb"))
-	 (	6, uint256S("0x56971426c2e8608d0af3a9c478b254fd56051d57f76c801bb95e46e01bbc069c"))
-	 (	7, uint256S("0x08a954a70382f8665dc0dde8c687ae6095bc5df89308d555820078cec5ceccc5"))
-	 (	8, uint256S("0xfe24ae89daa7b72ee4cc830ce54ff3e3aeaa6492465702b3cdb36529d884fc7e"))
-	 (	9, uint256S("0x710f6149dcf16b80dbe3d3d3e1b8c489e71135b550ee41f83533f515ec3127ff"))
- 	 (	10, uint256S("0x59aab7790c779bec2f0aa106184bcfb5ce92ee3f9c9782e718494a426d565dd7"))
-	 (	11, uint256S("0x638e6794bb8ef09cc9b7403f02fc60a8c09237ae10a7afe49428bd3b86a858a5"))
-	 (	12, uint256S("0x0397fe4b96052d023a8d23dc9a1cd134ceda95292bacc1abf5b8f8e7bc33c432"))
-	 (	13, uint256S("0x249fc8a8712f86e849cee14dd407056d20a0126202d31cc4ee82454ce0bd2658"))
-	 (	14, uint256S("0x2f512a77a949557ce15e35f31421d619a3317b4622d286f02dbf239e3e7cdcd4"))
-	 (	15, uint256S("0x2f2826a0ad3431db98d846f05c1ef106ed81aac6415d7041ba4b4116cbde6a4e"))
-	 (	16, uint256S("0x0f3b51970fcaa7fc1a40bc8692ac845ab73ca8275d14e28b0d3e532ef0fc75e9"))
-	 (	17, uint256S("0xbeab2af7ba5079308a9af05d796d5fbd66b2e3bb86f28d1af08adf7d4119bb17"))
-	 (	18, uint256S("0x9ac69c43bd90f9753ba60e1d80745013d323200bb58f40ef95fb5fc68b7ccbea"))
-	 (	19, uint256S("0xc73a5e71f6a9831b7cd89834fc37fdda0ea8e2d8d2ad25da6cb49b7a77e30838"))
-	 (	20, uint256S("0x249291be987ae49595beefbbbf6e89044586d70f3cb9b139b145dbc53eb58e64"))
-	 (	21, uint256S("0xae20b7ae5afee8302ddaa07e7f475f340ae54ab073309a068ce6d5d39b8ad6d8"))
-	 (	22, uint256S("0xf7eb091b7dfbf5a31c9e39c1b6448963c0d3ede3a7e21c25605bba706727c8b4"))
-	 (	23, uint256S("0x1a40d8a722a11d3d17a0814f8865104773838bc53b8347be38d0e02507d660c0"))
-	 (	24, uint256S("0x3c9e768a7c4e21de9fbb8e2ecd1e1a990d1e60bcda5139b4651c0e27181267d8"))
-	 (	25, uint256S("0x05a41fe6ec27fe30709f44d26458f4296bd1b2725e6d77e3db8c05938a0c2062"))
-	 (	26, uint256S("0x29f3f1b68aa95e5f1b43a9266541a137f1badbedd25dca0a2c11b26edc1ded0f"))
-	 (	27, uint256S("0x0b69ab5da28b77e660bda602fadb8b78658f6f0920fd24820ff928b19fd77523"))
-	 (	28, uint256S("0x77d234866ad02d63c34c171131197203899b48552878f206b1d33cb53040c998"))
-	 (	29, uint256S("0x14c08ce7694dfa773bdce94f0c246020443a952cf091a97c65b7954a7a39d6d6"))
-	 (	30, uint256S("0x736198c0db7db2d5f88b3621441355705ccf4cb4ae59d45da5259b93a1e80a39"))
-	 (	31, uint256S("0x8217b5db9aefa730dd3516b3deaabff2320779cf054d976cedf3e161f6f39574"))
-	 (	32, uint256S("0x78ffe7575a60bd5a3a097d12710f243d9356d661c62a65e20a812b278aabe4bb"))
-	 (	33, uint256S("0xa7f7e15d231fc778035dcce07c540ead17fe39227c859eeb7cf93f990d53f4c6"))
-*/
+            boost::assign::map_list_of
+	 (	333, uint256S("0x598ddb0dcf03816f5da41c4cb44c74b7da8c91fababa92eb3902856bc37637db"))
         };
 
         chainTxData = ChainTxData{
