@@ -1,6 +1,9 @@
 
 # RADIOACTIVE!! had to reset block 0 for peer to peer communication, 05-30-2021
 
+might  not be able to send at the same time while running "radiocoin-cli generate 1" or "radiocoin-cli generatetoaddress"
+
+daemon or qt-client probably cant mint and send at the same time
 
 * 05-31-2021 3pm
 * for deploying docker ready image (requires docker)
