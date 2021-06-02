@@ -91,8 +91,8 @@ public:
         consensus.nMajorityRejectBlockOutdated = 1900;
         consensus.nMajorityWindow = 2000;
         // BIP34 is never enforced in Dogecoin v2 blocks, so we enforce from v3
-        consensus.BIP34Height = 333;
-        consensus.BIP34Hash = uint256S("0x7b40fb5a65c8588072cd5bfb7b96d7aebfd417b98fb2c28cee850bbae32eb80f");
+        consensus.BIP34Height = 65;
+        consensus.BIP34Hash = uint256S("0xd09baddd7809c7193e28ab1b1f3949a05d1b77348d7d276d4c3e0c0f70426a4c");
         consensus.BIP65Height = 1; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
         consensus.BIP66Height = 1; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
         consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
@@ -125,7 +125,7 @@ public:
 
         // By default assume that the signatures in ancestors of this block are valid.
 //        consensus.defaultAssumeValid = uint256S("0x77e3f4a4bcb4a2c15e8015525e3d15b466f6c022f6ca82698f329edef7d9777e"); // 2,510,150
-        consensus.defaultAssumeValid = uint256S("0x7b40fb5a65c8588072cd5bfb7b96d7aebfd417b98fb2c28cee850bbae32eb80f"); // block 333 radiocoin-cli getblockhash 333
+        consensus.defaultAssumeValid = uint256S("0xd09baddd7809c7193e28ab1b1f3949a05d1b77348d7d276d4c3e0c0f70426a4c"); // block 65 radiocoin-cli getblockhash 333
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x0062; // 98 - Josh Wise!
@@ -238,7 +238,7 @@ genesis = CreateGenesisBlock(1622171724, 84337, 0x1e0ffff0, 1, 88 * COIN);
 
  checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-	 (	333, uint256S("0x7b40fb5a65c8588072cd5bfb7b96d7aebfd417b98fb2c28cee850bbae32eb80f"))
+	 (	65, uint256S("0xd09baddd7809c7193e28ab1b1f3949a05d1b77348d7d276d4c3e0c0f70426a4c"))
         };
 
         chainTxData = ChainTxData{

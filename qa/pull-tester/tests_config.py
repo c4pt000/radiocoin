@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/opt/RADIOCOIN-DIFF-gfx/radioCOIN"
-BUILDDIR="/opt/RADIOCOIN-DIFF-gfx/radioCOIN"
+SRCDIR="/opt/RADIOCOIN-DIFF-gfx/MINGW32-2.8.2-RADIOCOIN-validation/radioCOIN"
+BUILDDIR="/opt/RADIOCOIN-DIFF-gfx/MINGW32-2.8.2-RADIOCOIN-validation/radioCOIN"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.
