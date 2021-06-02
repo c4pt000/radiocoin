@@ -500,10 +500,9 @@ yum install git-core libdb-cxx-devel libdb-cxx openssl-devel libevent-devel java
 
 wget https://github.com/c4pt000/radioCOIN/releases/download/1.1.0-fedora34-build-environment/radiocoin-1.1.0_fedora34-2.x86_64.rpm
  
-for selinux 4kb error
+for selinux 4kb error with checkinstall 
 --------------------
-cp -rf radiocoin-1.1.0_fedora34-2.x86_64.rpm /
-rpm2cpio radiocoin-1.1.0_fedora34-2.x86_64.rpm | cpio -idmv
+checkinstall --install=no --exclude=/sys/fs/selinux
 ```
 ubuntu 20.10 requires boost-1.75
 ```
