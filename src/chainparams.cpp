@@ -234,9 +234,10 @@ genesis = CreateGenesisBlock(1622171724, 84337, 0x1e0ffff0, 1, 88 * COIN);
         fMineBlocksOnDemand = false;
 
 
+	    // dont enable this code breaks as a checkpoint 0 block doesnt pass PowLimimt causing a seg fault	 (	0, uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204"))
+
  checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-	 (	0, uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204"))
 	 (	333, uint256S("0x7b40fb5a65c8588072cd5bfb7b96d7aebfd417b98fb2c28cee850bbae32eb80f"))
         };
 
