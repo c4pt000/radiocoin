@@ -66,7 +66,7 @@
 #define HAVE_BOOST_UNIT_TEST_FRAMEWORK /**/
 
 /* Define to 1 if you have the <byteswap.h> header file. */
-/* #undef HAVE_BYTESWAP_H */
+#define HAVE_BYTESWAP_H 1
 
 /* Define this symbol if the consensus lib has been built */
 #define HAVE_CONSENSUS_LIB 1
@@ -76,27 +76,27 @@
 
 /* Define to 1 if you have the declaration of `be16toh', and to 0 if you
    don't. */
-#define HAVE_DECL_BE16TOH 0
+#define HAVE_DECL_BE16TOH 1
 
 /* Define to 1 if you have the declaration of `be32toh', and to 0 if you
    don't. */
-#define HAVE_DECL_BE32TOH 0
+#define HAVE_DECL_BE32TOH 1
 
 /* Define to 1 if you have the declaration of `be64toh', and to 0 if you
    don't. */
-#define HAVE_DECL_BE64TOH 0
+#define HAVE_DECL_BE64TOH 1
 
 /* Define to 1 if you have the declaration of `bswap_16', and to 0 if you
    don't. */
-#define HAVE_DECL_BSWAP_16 0
+#define HAVE_DECL_BSWAP_16 1
 
 /* Define to 1 if you have the declaration of `bswap_32', and to 0 if you
    don't. */
-#define HAVE_DECL_BSWAP_32 0
+#define HAVE_DECL_BSWAP_32 1
 
 /* Define to 1 if you have the declaration of `bswap_64', and to 0 if you
    don't. */
-#define HAVE_DECL_BSWAP_64 0
+#define HAVE_DECL_BSWAP_64 1
 
 /* Define to 1 if you have the declaration of `daemon', and to 0 if you don't.
    */
@@ -108,39 +108,39 @@
 
 /* Define to 1 if you have the declaration of `htobe16', and to 0 if you
    don't. */
-#define HAVE_DECL_HTOBE16 0
+#define HAVE_DECL_HTOBE16 1
 
 /* Define to 1 if you have the declaration of `htobe32', and to 0 if you
    don't. */
-#define HAVE_DECL_HTOBE32 0
+#define HAVE_DECL_HTOBE32 1
 
 /* Define to 1 if you have the declaration of `htobe64', and to 0 if you
    don't. */
-#define HAVE_DECL_HTOBE64 0
+#define HAVE_DECL_HTOBE64 1
 
 /* Define to 1 if you have the declaration of `htole16', and to 0 if you
    don't. */
-#define HAVE_DECL_HTOLE16 0
+#define HAVE_DECL_HTOLE16 1
 
 /* Define to 1 if you have the declaration of `htole32', and to 0 if you
    don't. */
-#define HAVE_DECL_HTOLE32 0
+#define HAVE_DECL_HTOLE32 1
 
 /* Define to 1 if you have the declaration of `htole64', and to 0 if you
    don't. */
-#define HAVE_DECL_HTOLE64 0
+#define HAVE_DECL_HTOLE64 1
 
 /* Define to 1 if you have the declaration of `le16toh', and to 0 if you
    don't. */
-#define HAVE_DECL_LE16TOH 0
+#define HAVE_DECL_LE16TOH 1
 
 /* Define to 1 if you have the declaration of `le32toh', and to 0 if you
    don't. */
-#define HAVE_DECL_LE32TOH 0
+#define HAVE_DECL_LE32TOH 1
 
 /* Define to 1 if you have the declaration of `le64toh', and to 0 if you
    don't. */
-#define HAVE_DECL_LE64TOH 0
+#define HAVE_DECL_LE64TOH 1
 
 /* Define to 1 if you have the declaration of `strerror_r', and to 0 if you
    don't. */
@@ -154,7 +154,7 @@
 #define HAVE_DLFCN_H 1
 
 /* Define to 1 if you have the <endian.h> header file. */
-/* #undef HAVE_ENDIAN_H */
+#define HAVE_ENDIAN_H 1
 
 /* Define to 1 if the system has the `dllexport' function attribute */
 /* #undef HAVE_FUNC_ATTRIBUTE_DLLEXPORT */
@@ -163,7 +163,7 @@
 /* #undef HAVE_FUNC_ATTRIBUTE_DLLIMPORT */
 
 /* Define to 1 if the system has the `visibility' function attribute */
-/* #undef HAVE_FUNC_ATTRIBUTE_VISIBILITY */
+#define HAVE_FUNC_ATTRIBUTE_VISIBILITY 1
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -238,7 +238,10 @@
 /* #undef HAVE_LIBZ_ */
 
 /* Define this symbol if you have mallopt with M_ARENA_MAX */
-/* #undef HAVE_MALLOPT_ARENA_MAX */
+#define HAVE_MALLOPT_ARENA_MAX 1
+
+/* Define to 1 if you have the <memory.h> header file. */
+#define HAVE_MEMORY_H 1
 
 /* Define to 1 if you have the <miniupnpc/miniupnpc.h> header file. */
 #define HAVE_MINIUPNPC_MINIUPNPC_H 1
@@ -270,7 +273,7 @@
 /* Define to 1 if you have the <stdlib.h> header file. */
 #define HAVE_STDLIB_H 1
 
-/* Define if you have `strerror_r'. */
+/* Define to 1 if you have the `strerror_r' function. */
 #define HAVE_STRERROR_R 1
 
 /* Define to 1 if you have the <strings.h> header file. */
@@ -283,7 +286,7 @@
 /* #undef HAVE_SYS_ENDIAN_H */
 
 /* Define to 1 if you have the <sys/prctl.h> header file. */
-/* #undef HAVE_SYS_PRCTL_H */
+#define HAVE_SYS_PRCTL_H 1
 
 /* Define to 1 if you have the <sys/select.h> header file. */
 #define HAVE_SYS_SELECT_H 1
@@ -343,13 +346,11 @@
 /* Define this symbol if qt plugins are static */
 /* #undef QT_STATICPLUGIN */
 
-/* Define to 1 if all of the C90 standard headers exist (not just the ones
-   required in a freestanding environment). This macro is provided for
-   backward compatibility; new code need not use it. */
+/* Define to 1 if you have the ANSI C header files. */
 #define STDC_HEADERS 1
 
 /* Define to 1 if strerror_r returns char *. */
-/* #undef STRERROR_R_CHAR_P */
+#define STRERROR_R_CHAR_P 1
 
 /* Define if dbus support should be compiled in */
 #define USE_DBUS 1
@@ -371,6 +372,11 @@
 # ifndef WORDS_BIGENDIAN
 /* #  undef WORDS_BIGENDIAN */
 # endif
+#endif
+
+/* Enable large inode numbers on Mac OS X 10.5.  */
+#ifndef _DARWIN_USE_64_BIT_INODE
+# define _DARWIN_USE_64_BIT_INODE 1
 #endif
 
 /* Number of bits in a file offset, on hosts where this is settable. */

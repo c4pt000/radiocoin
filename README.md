@@ -1,4 +1,15 @@
- 
+
+```
+changes to validation.cpp to put back first block 0 check , CheckReadFromDisk,
+changes to chainparams.cpp for BIP34 Height 333 block, and BIP34 hash of block 333 and checkpoints added for 0 block and 333 block
+radiocoin-cli getblockhash 333
+
+src/validation.cpp
+
+line: 1167
+
+line: 2864
+ ```
 
 # RADIOACTIVE!! had to reset block 0 for peer to peer communication, 05-30-2021
 

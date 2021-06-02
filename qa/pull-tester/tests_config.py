@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/Users/c4pt/Desktop/radioCOIN"
-BUILDDIR="/Users/c4pt/Desktop/radioCOIN"
+SRCDIR="/opt/RADIOCOIN-DIFF-gfx/radioCOIN"
+BUILDDIR="/opt/RADIOCOIN-DIFF-gfx/radioCOIN"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.

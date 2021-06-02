@@ -1164,11 +1164,11 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
         return error("%s: Deserialize or I/O error - %s at %s", __func__, e.what(), pos.ToString());
     }
 
-    // Check the header  //mod
-//   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
+    // Check the header  //mod comment the  next two lines to bypass validation for a brand new 0 block coin
+   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
+        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 
-//   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
-//        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
+
 
     return true;
 }
@@ -1931,7 +1931,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                              REJECT_INVALID, "bad-blk-sigops");
 
         txdata.emplace_back(tx);
-        if (!tx.IsCoinBase())  //mod
+        if (!tx.IsCoinBase())  
         {
             nFees += view.GetValueIn(tx)-tx.GetValueOut();
 
@@ -2860,11 +2860,14 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
     // knowing the previous block), but that's okay, as the checks done are permissive
     // (i.e. doesn't check work limit or whether AuxPoW is enabled)
 
-    if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))  //mod
-//        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
-//        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
-//        LogPrint("mempool", "Expired %i transactions from the memory pool\n", expired);
-       printf("high-hash....proof of work failed\n"); 
+
+//mod comment the next two lines and uncomment the printf line for a 0 block coin to bypass starting point to generate some blocks
+//with yourcoin-cli generate 1 (a couple hundred blocks to replace BIP34 Height with block number e.g. 333 and BIP34 hash with yourcoin-cli getblockhash 333 
+
+    if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))  
+        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+
+//       printf("high-hash....proof of work failed\n"); 
 
 
     return true;
@@ -3158,7 +3161,7 @@ static bool AcceptBlockHeader(const CBlockHeader& block, CValidationState& state
             return true;
         }
 
-        if (!CheckBlockHeader(block, state))    //mod
+        if (!CheckBlockHeader(block, state))    
             return error("%s: Consensus::CheckBlockHeader: %s, %s", __func__, hash.ToString(), FormatStateMessage(state));
 
         // Get prev block index
