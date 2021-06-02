@@ -102,7 +102,10 @@ basic bootstrap to help push sync?
 killall radiocoind
                                    where "root" is user
 place bootstrap.CURRENT.dat -> /root/.radiocoin/bootstrap.dat
-wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.CURRENT.dat
+
+https://github.com/c4pt000/radioCOIN/releases/download/experimental/bootstrap.dat.06022021-current.tar.gz
+
+
 
 radiocoind -reindex
 radiocoin-cli getinfo
