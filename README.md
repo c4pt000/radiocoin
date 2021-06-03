@@ -1,3 +1,10 @@
+# RADIOACTIVE !!
+
+* Update 06-03-2021 loads current block 250 with a complete fresh start
+
+# SYNCS with a complete fresh start
+# just requires radiocoin.conf in the datadir
+# and version 3.0.0-exp
 
 ```
 changes to validation.cpp to put back first block 0 check , CheckReadFromDisk,

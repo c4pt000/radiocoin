@@ -1165,6 +1165,7 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
     }
 
     // Check the header  //mod comment the  next two lines to bypass validation for a brand new 0 block coin
+
 //   if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
 //        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
 

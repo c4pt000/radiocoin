@@ -91,11 +91,12 @@ public:
         consensus.nMajorityRejectBlockOutdated = 1900;
         consensus.nMajorityWindow = 2000;
         // BIP34 is never enforced in Dogecoin v2 blocks, so we enforce from v3
-        consensus.BIP34Height = 65;
-        consensus.BIP34Hash = uint256S("0xd09baddd7809c7193e28ab1b1f3949a05d1b77348d7d276d4c3e0c0f70426a4c");
-        consensus.BIP65Height = 1; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
-        consensus.BIP66Height = 1; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
-        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
+        consensus.BIP34Height = 0;
+        consensus.BIP34Hash = uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204");
+        consensus.BIP65Height = 0; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
+        consensus.BIP66Height = 0; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
+        consensus.powLimit = uint256S("0x00000ffff0000000000000000000000000000000000000000000000000000000");
+//					 00ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
         consensus.nPowTargetTimespan = 4 * 60 * 60; // pre-digishield: 4 hours
         consensus.nPowTargetSpacing = 60; // 1 minute
         consensus.fDigishieldDifficultyCalculation = false;
@@ -121,11 +122,13 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
+//        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
+        consensus.nMinimumChainWork = uint256S("");
 
         // By default assume that the signatures in ancestors of this block are valid.
 //        consensus.defaultAssumeValid = uint256S("0x77e3f4a4bcb4a2c15e8015525e3d15b466f6c022f6ca82698f329edef7d9777e"); // 2,510,150
-        consensus.defaultAssumeValid = uint256S("0xd09baddd7809c7193e28ab1b1f3949a05d1b77348d7d276d4c3e0c0f70426a4c"); // block 65 radiocoin-cli getblockhash 333
+//        consensus.defaultAssumeValid = uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204");  // block 65 radiocoin-cli getblockhash 333 // 679
+
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x0062; // 98 - Josh Wise!
@@ -236,18 +239,20 @@ genesis = CreateGenesisBlock(1622171724, 84337, 0x1e0ffff0, 1, 88 * COIN);
 
 	    // dont enable this code breaks as a checkpoint 0 block doesnt pass PowLimimt causing a seg fault	 (	0, uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204"))
 
+
+
  checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
-	 (	65, uint256S("0xd09baddd7809c7193e28ab1b1f3949a05d1b77348d7d276d4c3e0c0f70426a4c"))
+	 (	0, uint256S("0x000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204"))
         };
 
         chainTxData = ChainTxData{
             // Data as of block 954c7c66dee51f0a3fb1edb26200b735f5275fe54d9505c76ebd2bcabac36f1e (height 3606083).
             // Tx estimate based on average of year 2021 (~40k transactions per day)
-            1613217680, // * UNIX timestamp of last checkpoint block
-            71035468,   // * total number of transactions between genesis and last checkpoint
+ //           1613217680, // * UNIX timestamp of last checkpoint block
+   //         71035468,   // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            0.46        // * estimated number of transactions per second after checkpoint
+     //       0.46        // * estimated number of transactions per second after checkpoint
         };
     }
 };
@@ -281,7 +286,8 @@ public:
         consensus.BIP34Hash = uint256S("0x000003cc12eab2850a7617e26bc1c145f647624c9e60cdbdb9e779a883b0e5b1");
         consensus.BIP65Height = 0; // 955bd496d23790aba1ecfacb722b089a6ae7ddabaedf7d8fb0878f48308a71f9
         consensus.BIP66Height = 0; // 21b8b97dcdb94caa67c7f8f6dbf22e61e0cfe0e46e1fff3528b22864659e9b38 - this is the last block that could be v2, 1900 blocks past the last v2 block
-        consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
+        consensus.powLimit = uint256S("0x00000ffff0000000000000000000000000000000000000000000000000000000");
+				  //    0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~uint256(0) >> 20;
         consensus.nPowTargetTimespan = 4 * 60 * 60; // pre-digishield: 4 hours
         consensus.nPowTargetSpacing = 60; // 1 minute
         consensus.fPowNoRetargeting = false;
