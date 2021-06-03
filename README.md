@@ -6,6 +6,11 @@
 # just requires radiocoin.conf in the datadir
 # and version 3.0.0-exp
 
+linux binaries 
+and docker-RADIOCOIN works syncs from fresh start
+
+** rebuilding macOS binaries and windows binaries
+
 ```
 changes to validation.cpp to put back first block 0 check , CheckReadFromDisk,
 changes to chainparams.cpp for BIP34 Height 333 block, and BIP34 hash of block 333 and checkpoints added for 0 block and 333 block
