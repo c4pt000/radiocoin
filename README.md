@@ -4,6 +4,11 @@
 # radioblockchain.info
 
 
+
+
+based off of this modifed code
+https://github.com/c4pt000/radiocoin-blockchain-explorer
+
 # network is active
 06-04-2021
 difficulty for mining a block : 0.001177925043022528,
