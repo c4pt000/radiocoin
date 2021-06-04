@@ -3,6 +3,8 @@
 
 # radioblockchain.info
 
+portable pool soon
+
 
 
 
