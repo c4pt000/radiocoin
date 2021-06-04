@@ -21,4 +21,7 @@ run-radiocoin-qt ..... to start radiocoin-qt and to mint blocks         early ne
 
 docker exec -it <docker-random-hash> bash
 "
+echo "mkdir /opt/radiocoin to share files from the guest to the host"
+echo "once running, cd /opt/WINRADIO"
+echo "git clone https://github.com/c4pt000/radioCOIN"
 docker run -it -d -v /opt/radiocoin:/opt/radiocoin -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/radiocoinwinbuild2010
