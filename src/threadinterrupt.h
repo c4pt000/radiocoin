@@ -10,6 +10,7 @@
 #include <condition_variable>
 #include <mutex>
 
+
 /*
     A helper class for interruptible sleeps. Calling operator() will interrupt
     any current sleep, and after that point operator bool() will return true

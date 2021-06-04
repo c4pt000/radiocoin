@@ -4,6 +4,8 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "threadinterrupt.h"
+#include <mutex>
+#include <condition_variable>
 
 CThreadInterrupt::operator bool() const
 {
