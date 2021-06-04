@@ -1,5 +1,28 @@
 # RADIOACTIVE !!
-
+# network is active
+06-04-2021
+difficulty for mining a block : 0.001177925043022528,
+```
+┌─[root@fedora]─[~]
+└──╼ #radiocoin-cli getinfo
+{
+  "version": 1140300,
+  "protocolversion": 70015,
+  "walletversion": 130000,
+  "balance": 64760891.00000000,
+  "blocks": 1022,
+  "timeoffset": -1,
+  "connections": 6,
+  "proxy": "",
+  "difficulty": 0.001177925043022528,
+  "testnet": false,
+  "keypoololdest": 1622755952,
+  "keypoolsize": 100,
+  "paytxfee": 0.00000000,
+  "relayfee": 1.00000000,
+  "errors": ""
+}
+```
 * Update 06-03-2021 loads current block 250 with a complete fresh start
 
 # SYNCS with a complete fresh start
