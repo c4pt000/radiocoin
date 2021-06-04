@@ -1,6 +1,6 @@
 #!/bin/bash
+#mkdir -p /opt/radiocoin
 echo "be sure to make this directory
-mkdir -p /opt/radiocoin
 
 requires xhost on the actual host docker is running on for GUI or run radiocoind        and radiocoin-cli generate 1
  
@@ -21,4 +21,4 @@ run-radiocoin-qt ..... to start radiocoin-qt and to mint blocks         early ne
 
 docker exec -it <docker-random-hash> bash
 "
-docker run -it -d -v /opt/radiocoin:/opt/radiocoin -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/radiocoinqt
+docker run -it -d -v /opt/radiocoin:/opt/radiocoin -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/radiocoinwinbuild2010
