@@ -1,7 +1,7 @@
 # RADIOACTIVE !!
 * block explorer for radioCOIN
 
-# radioblockchain.info
+# http://radioblockchain.info
 
 portable pool soon
 
