@@ -18,6 +18,11 @@ Detected Reward Type:	POW
 						Pool Fee Percent:	1.6%
 						Block polling every:	1000 ms
 ```
+* pool is active
+
+password is whatever you want,
+
+bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
 
 based off of this modifed code
 https://github.com/c4pt000/radiocoin-blockchain-explorer
