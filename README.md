@@ -7,7 +7,17 @@ portable pool soon
 
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/block-explorer.png)
 
-
+```
+Detected Reward Type:	POW
+						Current Block Height:	2854
+						Current Connect Peers:	13
+						Current Block Diff:	1946.2848512
+						Network Difficulty:	1946.2848266067529
+						Network Hash Rate:	945.82 KH
+						Stratum Port(s):	3008, 3032, 3256
+						Pool Fee Percent:	1.6%
+						Block polling every:	1000 ms
+```
 
 based off of this modifed code
 https://github.com/c4pt000/radiocoin-blockchain-explorer
