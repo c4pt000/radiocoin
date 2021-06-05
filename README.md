@@ -20,6 +20,7 @@ Detected Reward Type:	POW
 						Block polling every:	1000 ms
 ```
 * pool is active
+http://radiopool.me      (must connect with ip using mining program)
 
 password is whatever you want,
 
