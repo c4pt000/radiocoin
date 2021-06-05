@@ -24,6 +24,8 @@ Detected Reward Type:	POW
 
 password is whatever you want,
 
+https://www.geeks3d.com/20091221/how-to-enable-opencl-support-on-nvidia-and-amd-platforms/
+
 # bfgminer binaries https://github.com/c4pt000/bfgminer/releases/tag/linux-binaries
 
 bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
