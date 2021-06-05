@@ -35,6 +35,8 @@ https://github.com/ghostlander/AMD-APP-SDK/releases/tag/v2.9.1
 CUDA only?
 # ccminer WINDOWS GPU binaries https://github.com/tpruvot/ccminer/releases
 # ccminer LINUX GPU binaries https://github.com/c4pt000/ccminer/releases/tag/linux
+CUDA miner for best mine
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/CUDA-ccminer.png)
 
 bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
 
