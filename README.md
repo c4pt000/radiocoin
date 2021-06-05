@@ -19,8 +19,8 @@ Detected Reward Type:	POW
 						Pool Fee Percent:	1.6%
 						Block polling every:	1000 ms
 ```
-* pool is active
-http://radiopool.me      (must connect with ip using mining program)
+* pool is active  (must connect with ip using mining program)
+# http://radiopool.me     
 
 password is whatever you want,
 
