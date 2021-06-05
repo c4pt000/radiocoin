@@ -3,7 +3,8 @@
 
 # http://radioblockchain.info
 
-portable pool soon
+based off of this modifed code
+https://github.com/c4pt000/radiocoin-blockchain-explorer
 
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/block-explorer.png)
 
@@ -32,8 +33,10 @@ bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETAD
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
 
-based off of this modifed code
-https://github.com/c4pt000/radiocoin-blockchain-explorer
+for a VPS GPU cluster guide
+https://github.com/c4pt000/linode-GPU-bitcoin-dogecoin-RECOVER-wallet.dat-passphrase_or_private_key_decrypt-hashcat
+
+
 
 # network is active
 06-04-2021
