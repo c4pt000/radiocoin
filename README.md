@@ -22,7 +22,14 @@ Detected Reward Type:	POW
 
 password is whatever you want,
 
-bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
+# bfgminer binaries https://github.com/c4pt000/bfgminer/releases/tag/linux-binaries
+
+# bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
+
+
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiopool.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
 
 based off of this modifed code
 https://github.com/c4pt000/radiocoin-blockchain-explorer
