@@ -28,6 +28,7 @@ bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETAD
 
 
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiopool.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-cli.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
 
