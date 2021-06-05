@@ -24,7 +24,7 @@ password is whatever you want,
 
 # bfgminer binaries https://github.com/c4pt000/bfgminer/releases/tag/linux-binaries
 
-# bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
+bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
 
 
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiopool.png)
