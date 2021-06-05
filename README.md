@@ -369,11 +369,9 @@ then quit RadioCoin-Qt and restart if stuck with indexing
 }
 ```
 
-  yum install radiocoin-2.1.1_exp-2.x86_64.rpm -y
   
 
-# RADIOCOIN POOL
-![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/RADIOCOIN-POOL.png)
+
 
 ```
 "chain": "main",
