@@ -28,7 +28,9 @@ https://www.geeks3d.com/20091221/how-to-enable-opencl-support-on-nvidia-and-amd-
 
 https://github.com/ghostlander/AMD-APP-SDK/releases/tag/v2.9.1
 
-# bfgminer binaries https://github.com/c4pt000/bfgminer/releases/tag/linux-binaries
+# bfgminer binaries linux https://github.com/c4pt000/bfgminer/releases/tag/linux-binaries
+
+# cpuminer binaries linux https://github.com/c4pt000/cpuminer-multi/releases/tag/linux
 
 bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
 
