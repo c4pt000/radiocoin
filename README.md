@@ -1,6 +1,10 @@
 # RADIOACTIVE !!
 * block explorer for radioCOIN
 
+
+* some stuff here requires docker
+https://raw.githubusercontent.com/c4pt000/radioCOIN/main/docker-install.sh
+
 # http://radioblockchain.info
 
 based off of this modifed code
