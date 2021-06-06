@@ -408,7 +408,7 @@ wget https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75
 
 # used the back of a real 2 dollar bill to design the paper wallet art
   # (a closer look reveals a 1980s boombox on the floor near the front desk)
-![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/src/qt/res/icons/paper_wallet.png.back.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
 
 
 
