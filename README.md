@@ -1,4 +1,8 @@
 # RADIOACTIVE !!
+  ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
+  ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
+  
+
 * block explorer for radioCOIN
 
 
@@ -310,9 +314,7 @@ checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm *.deb 
 ```
  
-  ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
-  ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
-  
+
  ```
 ```
   
