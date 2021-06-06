@@ -22,7 +22,7 @@ Detected Reward Type:	POW
 * pool is active  (must connect with ip using mining program)
 # http://104.237.145.126:9555    or run your own (https://github.com/c4pt000/docker-p2pool-radiocoin)
 
-docker run -p 9555:9555 -p 9332:9332 -p 9333:9333 -p 80:80 -it c4pt/radiopool-current /usr/bin/run-p2pool
+docker run --net host -it c4pt/radiopool-current /usr/bin/run-p2pool
 
 
 
