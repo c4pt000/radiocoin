@@ -195,7 +195,9 @@ Block 600,001+: 10,000 radiocoin(RADC)
 
 ```
 rejecting DOGE coin peers but using the dogecoin dns peers alongside of radiocoin peer transmissions
-```
+
+radioCOIN runs side by side with dogecoin with dns peers when peers do the pchMessage announce packet and header to intercommunicate, why setup more dns nodes as servers to supply seeds with transmission for packets (using existing dogecoin dns seeds)
+
 2021-05-31 06:06:27 receive version message: /Shibetoshi:1.14.3/: version 70015, blocks=3751589, us=45.56.81.243:39818, peer=24
 2021-05-31 06:06:28 ERROR: AcceptBlockHeader: prev block not found
 2021-05-31 06:06:28 Misbehaving: 64.98.101.27:22556 peer=24 (0 -> 10)
