@@ -9,6 +9,8 @@
 * some stuff here requires docker
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/docker-install.sh
 
+* 06-05-2021 cpu mining seems over for me, only one workstation no beowulf cluster for CPU mining as a node, working out bugs for GPU mining
+
 # http://radioblockchain.info
 
 based off of this modifed code
