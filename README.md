@@ -290,121 +290,6 @@ Block 600,001+: 10,000 radiocoin(RADC)
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 ```
 ```
-fedora/rhel
-
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin-2.2.5_current_dns_exp-2.x86_64.rpm
-or for debian based systems
-
-wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/radiocoin_2.2.5-current-dns-exp-1_amd64.deb
-
-
-macOS
-
-install and to (reindex) -> wget https://github.com/c4pt000/radioCOIN/releases/download/experimental/RadioCoin-Qt.dmg
-
-
-windows 10
-
-Options:Show hidden files and folders,
-
-
-place radiocoin.conf ->
-/Users/YOURUSERNAME/AppData/Roaming/RadioCoin
-
-
-
-
-
-
-
---------------------------
-
-edit radiocoin.conf (a unique rpcuser a unique rpcpassword)
-wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
-
-ls -lah
-radiocoin.conf
-
-
-cd /Applications/RadioCoin-Qt.app/Contents/MacOS
-
-./RadioCoin-Qt -reindex &
-
-to check debug.log (where c4pt is your user account)
-cat /Users/c4pt/Library/Application\ Support/RadioCoin/debug.log
-
-then quit RadioCoin-Qt and restart if stuck with indexing
-
-./RadioCoin-Qt &           or run the app directly from the Dock
-
-
-```
-```
-{
-  "version": 1140300,
-  "protocolversion": 70015,
-  "walletversion": 130000,
-  "balance": 0.00000000,
-  "blocks": 0,
-  "timeoffset": 0,
-  "connections": 8,
-  "proxy": "",
-  "difficulty": 0.000244140625,
-  "testnet": false,
-  "keypoololdest": 1622318528,
-  "keypoolsize": 100,
-  "paytxfee": 0.00000000,
-  "relayfee": 1.00000000,
-  "errors": ""
-}
-```
-
-  
-
-
-
-```
-"chain": "main",
-  "blocks": 0,
-  "headers": 0,
-  "bestblockhash": "000002e2e76fef07722c875e9a68b1ce32bd2964e2df8ce70d9d31ab263f5fd2",
-  "difficulty": 0.000244140625,
-  "mediantime": 1622171724,
-  "verificationprogress": 1.330529405468109e-08,
-  "initialblockdownload": true,
-  "chainwork": "0000000000000000000000000000000000000000000000000000000000100010",
-  "size_on_disk": 486,
-  "pruned": false,
-```
-
-```
-mkdir anodes
-
-radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./anodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin -rpcport=9334 -port=9335 --daemon --server
- 
-alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -rpcport=9334"
-
- node1 getblockhash 0 
- node1 getblock 000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204 false
- 
- 010000000000000000000000000000000000000000000000000000000000000000000000f5247939a78482b7824f5f359ce35e78773216d4355b098b69fdfaed0b0df9d24c60b060f0ff0f1e714901000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1e04f0ff0f1e010416526164696f436f696e206d757369632077616c6c6574ffffffff010058850c02000000434104770ee175cb5530e95cd615c061738719116d871ad9fcc9292ea6b0d396f7d270c12f351ff674b030299b537e9fa062511ac67b8bfc4d68cfcc2fd86158e0e6b3ac00000000
-
-
-which becomes as an 80-byte header
-010000000000000000000000000000000000000000000000000000000000000000000000f5247939a78482b7824f5f359ce35e78773216d4355b098b69fdfaed0b0df9d24c60b060f0ff0f1e71490100
-
-mine block 0
-cpp_miner mine 010000000000000000000000000000000000000000000000000000000000000000000000f5247939a78482b7824f5f359ce35e78773216d4355b098b69fdfaed0b0df9d24c60b060f0ff0f1e71490100 -v
-Verbosity enabled.  Level is 1
-target: 00000ffff0000000000000000000000000000000000000000000000000000000
-block header: 010000000000000000000000000000000000000000000000000000000000000000000000f5247939a78482b7824f5f359ce35e78773216d4355b098b69fdfaed0b0df9d24c60b060f0ff0f1e71490100
-nonce: 0x00014971
-block hash: 000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204
-
-
-
-
-
 
 
 
@@ -412,49 +297,7 @@ block hash: 000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204
 
 https://jbaczuk.github.io/blockchain_fundamentals/2-Fundamentals/2.5-Mining.html
 
-for lower powLimit 
-----------------------
-./sha256.py  010000000000000000000000000000000000000000000000000000000000000000000000f5247939a78482b7824f5f359ce35e78773216d4355b098b69fdfaed0b0df9d24c60b060f0ff0f1e714901000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1e04f0ff0f1e010416526164696f436f696e206d757369632077616c6c6574ffffffff010058850c02000000434104770ee175cb5530e95cd615c061738719116d871ad9fcc9292ea6b0d396f7d270c12f351ff674b030299b537e9fa062511ac67b8bfc4d68cfcc2fd86158e0e6b3ac00000000
-
-
-01cab59e0cea7ad08927afccb8a4bdf5a5e3946b135bc4e9024b3239e99e7f36
-
-python2 reverse.endian.py 01cab59e0cea7ad08927afccb8a4bdf5a5e3946b135bc4e9024b3239e99e7f36
-
-367f9ee939324b02e9c45b136b94e3a5f5bda4b8ccaf2789d07aea0c9eb5ca01
-
-find bits of block 0 header
----------------------------
-node1 getblock 000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204
-{
-  "hash": "000008f3108b9b62492a71ff55f58f90678baf0ddeb75d11480f9355df6d1204",
-  "confirmations": 1,
-  "strippedsize": 238,
-  "size": 238,
-  "weight": 952,
-  "height": 0,
-  "version": 1,
-  "versionHex": "00000001",
-  "merkleroot": "d2f90d0bedfafd698b095b35d4163277785ee39c355f4f82b78284a7397924f5",
-  "tx": [
-    "d2f90d0bedfafd698b095b35d4163277785ee39c355f4f82b78284a7397924f5"
-  ],
-  "time": 1622171724,
-  "mediantime": 1622171724,
-  "nonce": 84337,
-  "bits": "1e0ffff0",
-  "difficulty": 0.000244140625,
-  "chainwork": "0000000000000000000000000000000000000000000000000000000000100010"
-}
-
-
-  "bits": "1e0ffff0",
-
-python2 reverse.endian.py 1e0ffff0
-f0ff0f1e
-
 ```
-
 
   
   or from source
@@ -470,23 +313,7 @@ alien --scripts --to-rpm *.deb
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
   
-  # MAINnet
-  ```
-  
-  radiocoin-qt -listen -upnp=1 -bind=127.0.0.1 -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin --daemon 
-  
- radiocoind -listen -upnp=1 -bind=127.0.0.1 -datadir=./nodes -addnode=172.104.72.150 -addnode=162.216.17.71 -addnode=127.0.0.1 -deprecatedrpc=generate -rpcpassword=radio -rpcuser=coin -rpcport=9334 -port=9335 --daemon --server
-
-
-  
-  alias node1="radiocoin-cli -rpcpassword=radio -rpcuser=coin -rpcport=9334"
-  node1 addnode "162.216.17.71:9334" "add"
-  node1 addnode "127.0.0.1:9334" "add"
-  node1 addnode "172.104.72.150:9334" "add"
-  node1 getblockchaininfo
-node1 generate 1
-node1 getbalance
-
+ ```
 ```
   
   
@@ -499,25 +326,7 @@ node1 getbalance
 
 
 
-sample conf for running a node (not for an RPC connection)
-/root/.radiocoin/radiocoin.conf 
-----------------------------
-```
-https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 
-```
-
-
-
-# testing frontend through REGtest
-![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/mined-minted.png)
-```
-radiocoind -regtest -port=1111 -datadir=./ -rpcport=1234 -deprecatedrpc=generate --daemon
-radiocoin-qt -regtest -port=2222 -datadir=./newreg -rpcport=5467 -deprecatedrpc=generate --daemon
-```
-
-
- 
 
 todo: -> done current block "158"
 https://stackoverflow.com/questions/47828172/encountering-readblockfromdisk-errors-in-block-header-at-cblockdiskposnfile-0/48606397#48606397
@@ -598,7 +407,7 @@ wget https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75
 # current paper wallet for "radioCOIN"
 
 # used the back of a real 2 dollar bill to design the paper wallet art
-  *  (a closer look reveals a 1980s boombox on the floor near the front desk)
+  # (a closer look reveals a 1980s boombox on the floor near the front desk)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/src/qt/res/icons/paper_wallet.png.back.png)
 
 
@@ -631,17 +440,11 @@ source build
   or radiocoind      (radiocoin-cli getinfo)
 ```
 
-RadioCoin Core integration/staging tree
-=====================================
 
-[![Build Status](https://travis-ci.org/radiocoin-project/radiocoin.svg?branch=master)](https://travis-ci.org/radiocoin-project/radiocoin)
-
-https://radiocoin.org
 
 What is RadioCoin?
 ----------------
 
-radioCOIN (needs nodes testing at block 0 genesis block might be configured wrong)
 to help the music industry secure money from the loss of recordable music and mp3 leaks, and to control noisy car radios with fees for playing the volume too loud at odd hours
 
 RadioCoin is an experimental digital currency that enables instant payments to
@@ -650,67 +453,4 @@ with no central authority: managing transactions and issuing money are carried
 out collectively by the network. RadioCoin Core is the name of open source
 software which enables the use of this currency.
 
-For more information, as well as an immediately useable, binary version of
-the RadioCoin Core software, see [https://radiocoin.org](https://radiocoin.org).
 
-License
--------
-
-RadioCoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/licenses/MIT.
-
-Development Process
--------------------
-
-The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/radiocoin-project/radiocoin/tags) are created
-regularly to indicate new official, stable release versions of RadioCoin Core.
-
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
-and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
-
-The developer [mailing list](https://groups.google.com/forum/#!forum/radiocoin-dev)
-should be used to discuss complicated or controversial changes before working
-on a patch set.
-
-Developer IRC can be found on Freenode at #radiocoin-dev.
-
-Testing
--------
-
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
-
-### Automated Testing
-
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled in configure) with: `make check`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
-
-There are also [regression and integration tests](/test), written
-in Python, that are run automatically on the build server.
-These tests can be run (if the [test dependencies](/test) are installed) with: `test/functional/test_runner.py`
-
-The Travis CI system makes sure that every pull request is built for Windows, Linux, and macOS, and that unit/sanity tests are run automatically.
-
-### Manual Quality Assurance (QA) Testing
-
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
-
-Translations
-------------
-
-We only accept translation fixes that are submitted through [Bitcoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
-Translations are converted to RadioCoin periodically.
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
