@@ -41,13 +41,12 @@ CUDA only?
 # ccminer LINUX GPU binaries https://github.com/c4pt000/ccminer/releases/tag/linux
 CUDA miner for best mine
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/CUDA-ccminer.png)
-
+```
 my attempt in 8 hours to forge radiocoin into p2pool
 still working out bugs,
  replace -O with your receiving address,
 bfgminer -a scrypt -O RSmiB9SyKyUBL7hsZWu85mD2BdmVLEQj4T:x -o  http://104.237.145.126:9555 --submit-stale
-
-![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiopool.png)
+```
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-cli.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
