@@ -47,7 +47,7 @@ still working out bugs,
  replace -O with your receiving address,
 bfgminer -a scrypt -O RSmiB9SyKyUBL7hsZWu85mD2BdmVLEQj4T:x -o  http://104.237.145.126:9555 --submit-stale
 ```
-![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-cli.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/bfgminer-connect.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
 
