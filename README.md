@@ -140,7 +140,6 @@ docker-RADIOCOIN
 
 a proper "reindex" to sync
 
-run "with or without bootstrap.dat" in .radiocoin folder as bootstrap.dat
 
 (and or check "debug.log" in .radiocoin ->          cat .radiocoin/debug.log   )
 
@@ -188,18 +187,6 @@ Block 600,001+: 10,000 radiocoin(RADC)
 
 
 
-basic bootstrap to help push sync?
-```
-killall radiocoind
-                                   where "root" is user
-place bootstrap.CURRENT.dat -> /root/.radiocoin/bootstrap.dat
-
-https://github.com/c4pt000/radioCOIN/releases/download/experimental/bootstrap.dat.06022021-current.tar.gz
-
-
-
-radiocoind -reindex
-radiocoin-cli getinfo
 ```
 rejecting DOGE coin peers but using the dogecoin dns peers alongside of radiocoin peer transmissions
 ```
@@ -241,12 +228,7 @@ https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PEERinfo-getpeerinfo.tx
 
 ** rewrapping and building dns seeds to allow peers intercommunication to transmit updates to sync headers 11pm
 
-* https://github.com/c4pt000/radioCOIN/raw/main/bootstrap-216.dat
-```
-rename to bootstrap.dat "current blockchain snapshot" early network at block 216
 
--> /home/user/.radiocoin/bootstrap.dat               -reindex then wait 10 seconds then shutdown and reopen without -reindex
-```
 
 #  June 1st as promised ? network seems semi-functional?
 
@@ -263,23 +245,8 @@ difficulty is low as with any starting network/fork as more blocks are mined wit
 
 * 05-29-2021 sync issues just built 8 nodes as a starting point check updated radiocoin.conf
 ```
-place bootstrap -> /root/.radiocoin/
-where /home/user/.radiocoin
-is your directory
-early 140 block boostrap for nodes
-restart radiocoind or radiocoin-qt to load boostrap.dat
 
-https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
 
-where root is the current user 
-```
-```
-cd /root/.radiocoin
-wget https://github.com/c4pt000/radioCOIN/raw/main/bootstrap.dat
-killall radiocoind
-radiocoind -daemon -reindex   or radiocoin-qt -reindex &
-radiocoin-cli getinfo
-radiocoin-cli generate 1                 # to generate 1 block
 
 
 to generate directly to a remote or local address (when confirmed by other blocks it is available after 31 mined blocks)
@@ -343,17 +310,11 @@ place radiocoin.conf ->
 
 
 --------------------------
-cp -rf bootstrap.dat && radiocoin.conf -> (where c4pt is *YOUR* user account) 
-
-cd /Users/c4pt/Library/Application\ Support/RadioCoin/
-
-wget https://github.com/c4pt000/radioCOIN/blob/main/bootstrap.dat
 
 edit radiocoin.conf (a unique rpcuser a unique rpcpassword)
 wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin.conf
 
 ls -lah
-bootstrap.dat 
 radiocoin.conf
 
 
