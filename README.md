@@ -40,6 +40,7 @@ CUDA only?
 # ccminer WINDOWS GPU binaries https://github.com/tpruvot/ccminer/releases
 # ccminer LINUX GPU binaries https://github.com/c4pt000/ccminer/releases/tag/linux
 CUDA miner for best mine
+![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/p2pool-RADC.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/CUDA-ccminer.png)
 ```
 my attempt in 8 hours to forge radiocoin into p2pool
