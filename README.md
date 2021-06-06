@@ -20,7 +20,11 @@ Detected Reward Type:	POW
 						Block polling every:	1000 ms
 ```
 * pool is active  (must connect with ip using mining program)
-# http://radiopool.me     
+# http://radiopool.me     or run your own (https://github.com/c4pt000/docker-p2pool-radiocoin)
+
+docker run -p 9332:9332 -p 9333:9333 -p 80:80 -it c4pt/radiopool-current /usr/bin/run-p2pool
+
+
 
 password is whatever you want,
 
@@ -38,7 +42,7 @@ CUDA only?
 CUDA miner for best mine
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/CUDA-ccminer.png)
 
-bfgminer --scrypt -o stratum+tcp://104.237.145.126:3008 -O YOURRECEIVINGWALLETADDRESS:anything
+bfgminer --scrypt -o stratum+tcp://104.237.145.126:80 -O YOURRECEIVINGWALLETADDRESS:anything
 
 
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiopool.png)
