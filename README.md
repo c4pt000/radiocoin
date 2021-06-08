@@ -461,4 +461,4 @@ with no central authority: managing transactions and issuing money are carried
 out collectively by the network. RadioCoin Core is the name of open source
 software which enables the use of this currency.
 
-
+https://github.com/c4pt000/class-action-sue-black-artists
