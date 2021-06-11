@@ -57,10 +57,11 @@ CUDA miner for best mine
 ```
 my attempt in 8 hours to forge radiocoin into p2pool
 still working out bugs,
- replace -u with your receiving address,
- **** bfgminer 4.7.0 might have a seg fault issue,
- ccminer -a scrypt -i 18 -o stratum+tcp://104.237.145.126:9555 -u RSmiB9SyKyUBL7hsZWu85mD2BdmVLEQj4T -p x 
-bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 -u RSmiB9SyKyUBL7hsZWu85mD2BdmVLEQj4T -p x  --submit-stale
+ replace --userpass with your receiving address,
+ 
+
+cpuminer -a scrypt --url 104.237.145.126:9555 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x
+
 ```
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/bfgminer-connect.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
