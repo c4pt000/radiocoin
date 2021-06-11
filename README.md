@@ -58,10 +58,10 @@ CUDA miner for best mine
 my attempt in 8 hours to forge radiocoin into p2pool
 still working out bugs,
  replace --userpass with your receiving address,
- 
-
-cpuminer -a scrypt --url 104.237.145.126:9555 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x
-
+ ```
+# set RSYOURRECEVINGADDRESSVLEQj4T to your wallet receiving address
+# docker run -it c4pt/cpuminer-opt cpuminer -a scrypt --url 104.237.145.126:9555 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x -t 24
+```
 ```
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/bfgminer-connect.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
