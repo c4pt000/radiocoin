@@ -36,6 +36,57 @@ Detected Reward Type:	POW
 docker run --net host -it c4pt/radiopool-current /usr/bin/run-p2pool
 ```
 
+cudaminer requires -> "nvidia enabled" docker
+for DOGE 
+```
+docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O DM-REPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
+```
+for RADC 
+```
+docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O RADCREPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
+```
+
+
+```
+
+on the host before running this docker image enable docker-nvidia
+
+wget -O /etc/yum.repos.d/inttf.repo https://rpms.if-not-true-then-false.com/inttf.repo
+dnf install nvidia-docker2
+
+
+
+replace /etc/nvidia-container-runtime/config.toml
+
+
+echo " 
+disable-require = false
+#swarm-resource = DOCKER_RESOURCE_GPU
+#accept-nvidia-visible-devices-envvar-when-unprivileged = true
+#accept-nvidia-visible-devices-as-volume-mounts = false
+[nvidia-container-cli]
+#root = /run/nvidia/driver
+#path = /usr/bin/nvidia-container-cli
+environment = []
+#debug = /var/log/nvidia-container-toolkit.log
+#ldcache = /etc/ld.so.cache
+load-kmods = true
+no-cgroups = true
+#user = root:video
+ldconfig = @/sbin/ldconfig
+[nvidia-container-runtime]
+debug = /var/log/nvidia-container-runtime.log 
+" >  /etc/nvidia-container-runtime/config.toml 
+
+
+
+systemctl restart docker
+
+
+
+
+https://github.com/c4pt000/docker-CudaMiner-docker-nvidia-enable/releases/tag/deb%2Brpm
+```
 
 password is whatever you want,
 
