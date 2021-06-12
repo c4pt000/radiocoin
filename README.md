@@ -36,6 +36,11 @@ Detected Reward Type:	POW
 docker run --net host -it c4pt/radiopool-current /usr/bin/run-p2pool
 ```
 
+
+for a VPS GPU cluster guide
+https://github.com/c4pt000/linode-GPU-bitcoin-dogecoin-RECOVER-wallet.dat-passphrase_or_private_key_decrypt-hashcat
+
+
 cudaminer requires -> "nvidia enabled" docker
 for DOGE 
 ```
@@ -139,9 +144,6 @@ bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RADCYOURrecei
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/bfgminer-connect.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
-
-for a VPS GPU cluster guide
-https://github.com/c4pt000/linode-GPU-bitcoin-dogecoin-RECOVER-wallet.dat-passphrase_or_private_key_decrypt-hashcat
 
 
 
