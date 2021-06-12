@@ -5,6 +5,8 @@ echo "no DKMS, ignore CC check, yes to 32 libs, yes to X reconfig, OK"
 systemctl enable docker
 systemctl start docker
 nvidia-smi
-echo "docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all \
+echo "docker run -it -v /opt/cudaminer-current-pkg:/opt/cuda --privileged  \
 c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
 -O RADC---REPLACE-WITH-YOUR-WALLET-RECEVINGADDR--6voVXiBMJY9B:x "
+
+
