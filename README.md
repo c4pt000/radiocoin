@@ -41,18 +41,9 @@ for a VPS GPU cluster guide
 https://github.com/c4pt000/linode-GPU-bitcoin-dogecoin-RECOVER-wallet.dat-passphrase_or_private_key_decrypt-hashcat
 
 
-cudaminer requires -> "nvidia enabled" docker
-for DOGE 
-```
-docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all \
-c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
--O DM-REPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
-```
-for RADC 
-```
-docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all \
-c4pt/cudainer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
--O RADCREPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
+
+
+
 ```
 # LINODE GPU CLUSTER script Fedora 34
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/LINODE-GPU-CLUSTER-script-FEDORA-34
@@ -63,7 +54,7 @@ https://github.com/c4pt000/linode-GPU-bitcoin-dogecoin-RECOVER-wallet.dat-passph
 ```
 
 on the host before running this docker image enable docker-nvidia
-
+```
 wget -O /etc/yum.repos.d/inttf.repo https://rpms.if-not-true-then-false.com/inttf.repo
 dnf install nvidia-docker2
 
@@ -94,11 +85,21 @@ debug = /var/log/nvidia-container-runtime.log
 
 
 systemctl restart docker
+```
+
+update changes to docker image
+```
+docker pull c4pt/cudaminer-nvidia-docker
+
+as a daemon process to resume
+docker run -d -it --runtime=nvidia -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker
+
+directly 
+docker run -it --runtime=nvidia -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 18 -o stratum+tcp://104.237.145.126:9555 --userpass RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x 
 
 
+```
 
-
-https://github.com/c4pt000/docker-CudaMiner-docker-nvidia-enable/releases/tag/deb%2Brpm
 ```
 
 password is whatever you want,
