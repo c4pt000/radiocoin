@@ -54,7 +54,8 @@ docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all 
 c4pt/cudainer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
 -O RADCREPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
 ```
-
+# LINODE GPU CLUSTER script Fedora 34
+https://raw.githubusercontent.com/c4pt000/radioCOIN/main/LINODE-GPU-CLUSTER-script-FEDORA-34
 
 ```
 
