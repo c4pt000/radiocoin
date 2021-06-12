@@ -1,5 +1,6 @@
 rpm -e --nodeps nvidia-driver
 cd /
+echo "no DKMS, ignore CC check, yes to 32 libs, yes to X reconfig, OK"
 ./NVIDIA-Linux-x86_64-465.19.01.run --no-nouveau-check -j200
 systemctl enable docker
 systemctl start docker
