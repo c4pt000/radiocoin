@@ -39,11 +39,15 @@ docker run --net host -it c4pt/radiopool-current /usr/bin/run-p2pool
 cudaminer requires -> "nvidia enabled" docker
 for DOGE 
 ```
-docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O DM-REPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
+docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all \
+c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
+-O DM-REPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
 ```
 for RADC 
 ```
-docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O RADCREPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
+docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all \
+c4pt/cudainer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
+-O RADCREPLACE-WITH-YOUR-RECEVINGADDR6voVXiBMJY9B:x 
 ```
 
 
