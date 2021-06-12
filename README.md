@@ -95,7 +95,7 @@ as a daemon process to resume
 docker run -d -it --runtime=nvidia -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker
 
 directly 
-docker run -it --runtime=nvidia -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 18 -o stratum+tcp://104.237.145.126:9555 --userpass RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x 
+docker run -it --runtime=nvidia -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 10 -o stratum+tcp://104.237.145.126:9555 --userpass RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x 
 
 
 ```
