@@ -3,6 +3,7 @@ cd /
 ./NVIDIA-Linux-x86_64-465.19.01.run --no-nouveau-check -j200
 systemctl enable docker
 systemctl start docker
+nvidia-smi
 echo "docker run -it  -v /opt/cudaminer-current-pkg:/opt/cuda --privileged --gpus all \
 c4pt/cudainer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 \
 -O RADC---REPLACE-WITH-YOUR-WALLET-RECEVINGADDR--6voVXiBMJY9B:x "
