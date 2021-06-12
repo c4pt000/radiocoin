@@ -57,6 +57,9 @@ c4pt/cudainer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.2
 # LINODE GPU CLUSTER script Fedora 34
 https://raw.githubusercontent.com/c4pt000/radioCOIN/main/LINODE-GPU-CLUSTER-script-FEDORA-34
 
+
+https://github.com/c4pt000/linode-GPU-bitcoin-dogecoin-RECOVER-wallet.dat-passphrase_or_private_key_decrypt-hashcat
+
 ```
 
 on the host before running this docker image enable docker-nvidia
