@@ -80,4 +80,5 @@ chmod +x LINODE-GPU-CLUSTER-script-FEDORA-34.pt2
 echo "script part 2 after reboot"
 echo "./LINODE-GPU-CLUSTER-script-FEDORA-34.pt2"
 echo "rebooting now"
+echo "newer kernel takes 90 seconds to boot to load kobjects and events"
 reboot
