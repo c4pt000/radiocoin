@@ -2,7 +2,7 @@
 #linode GPU cluster script NVIDIA (Fedora 34)
 echo "fedora 34 linode GPU cluster script"
 echo "script part 1, script has to reboot after install cuda and nvidia deps"
-
+echo "networking might require https://raw.githubusercontent.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio-nvidia-amd/master/patch-libvirt-IPTABLES-NFTABLES-UFW.sh"
 
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
