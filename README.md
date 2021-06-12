@@ -68,8 +68,16 @@ still working out bugs,
 for DOGEcoin replace with your receving address
 ccminer -a scrypt -o stratum+tcp://104.237.145.126:9555 --userpass DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B:x  --no-longpoll
 
+
 for RADIOcoin replace with your receving address
+
 ccminer -a scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RADCYOURreceivingcpMmi6voVXiBMJY9B:x  --no-longpoll
+
+bfgminer for RADIOcoin replace with your receving address (was segfaulting not from program error but from getting shares via remote network)
+bfgminer-5.5.0
+---------------------------------------------------------
+
+bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x  --no-longpoll 
 
 
 ```
