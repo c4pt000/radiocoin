@@ -77,7 +77,7 @@ bfgminer for RADIOcoin replace with your receving address (was segfaulting not f
 bfgminer-5.5.0
 ---------------------------------------------------------
 
-bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x  --no-longpoll 
+bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RADCYOURreceivingcpMmi6voVXiBMJY9B:x  --no-longpoll 
 
 
 ```
