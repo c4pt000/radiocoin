@@ -1,4 +1,7 @@
 # RADIOACTIVE !!
+* 06-13-2021
+# UPDATE to 3.2.2 for changes in pchMessage announce (had to rewind the network back to block 0 same genesis hash)
+changed pcHmessage annouce and set different DNS seeds to try to not run along side of dogecoin network
 
 changes for dns seeds removed radiocoin off of dogecoin's dns seed network (even though direct ip is possible)
 
