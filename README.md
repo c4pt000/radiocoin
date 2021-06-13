@@ -1,4 +1,15 @@
 # RADIOACTIVE !!
+
+changes for dns seeds removed radiocoin off of dogecoin's dns seed network (even though direct ip is possible)
+
+radiocoin-3.1.1_dnsseed
+
+```
+vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns1.radioblockchain.info", true));
+vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns2.radioblockchain.info" ));
+vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns3.radioblockchain.info" ));
+```
+
 * scrypt based off of dogecoin internal design,
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/PAPER-WALLET.png)
   ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/radiocoin-current.png)
