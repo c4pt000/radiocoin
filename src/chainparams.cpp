@@ -218,8 +218,9 @@ genesis = CreateGenesisBlock(1622171724, 84337, 0x1e0ffff0, 1, 88 * COIN);
         assert(genesis.hashMerkleRoot == uint256S("0x0d2f90d0bedfafd698b095b35d4163277785ee39c355f4f82b78284a7397924f5"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns1.radioblockchain.info", "seed-ns2.radioblockchain.info", "seed-ns3.radioblockchain.info" true));
-vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns1.radioblockchain.info", "seed-ns2.radioblockchain.info", "seed-ns3.radioblockchain.info" ));
+vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns1.radioblockchain.info", true));
+vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns2.radioblockchain.info" ));
+vSeeds.push_back(CDNSSeedData("radioblockchain.info", "seed-ns3.radioblockchain.info" ));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,60);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,22);
