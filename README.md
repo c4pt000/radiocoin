@@ -160,16 +160,17 @@ bfgminer-5.5.0
 bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RADCYOURreceivingcpMmi6voVXiBMJY9B:x  --no-longpoll 
 ```
 
-```
+
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/bfgminer-connect.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connect-.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/connection-allow-3008-firewall.png)
 
 
 
-# network is active
+ network is active
 06-04-2021
 difficulty for mining a block : 0.001177925043022528,
+
 ```
 ┌─[root@fedora]─[~]
 └──╼ #radiocoin-cli getinfo
@@ -196,7 +197,7 @@ difficulty for mining a block : 0.001177925043022528,
 # SYNCS with a complete fresh start
 # just requires radiocoin.conf in the datadir
 # and version 3.0.0-exp
-
+```
 linux binaries 
 and docker-RADIOCOIN works syncs from fresh start
 
@@ -212,16 +213,18 @@ src/validation.cpp
 line: 1167
 
 line: 2864
- ```
-
+```
+```
 # RADIOACTIVE!! had to reset block 0 for peer to peer communication, 05-30-2021
-
+```
 might  not be able to send at the same time while running "radiocoin-cli generate 1" or "radiocoin-cli generatetoaddress"
 
 daemon or qt-client probably cant mint and send at the same time
-
+```
 * 05-31-2021 3pm
 * for deploying docker ready image (requires docker)
+
+
 ```
 yum install qemu-img caja xorg-* mesa-* -y
 
@@ -236,9 +239,7 @@ sudo dnf -y install dnf-plugins-core
 systemctl start docker
 
 systemctl enable docker (for starting docker at system startup)
-```
 
-```
 yum install vim-common xorg-* mesa-* caja -y
 
 wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/docker-RADIOCOIN
