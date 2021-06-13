@@ -157,7 +157,7 @@ bfgminer-5.5.0
 ---------------------------------------------------------
 
 bfgminer --scrypt -o stratum+tcp://104.237.145.126:9555 --userpass RADCYOURreceivingcpMmi6voVXiBMJY9B:x  --no-longpoll 
-
+```
 
 ```
 ![s1](https://raw.githubusercontent.com/c4pt000/radioCOIN/main/bfgminer-connect.png)
