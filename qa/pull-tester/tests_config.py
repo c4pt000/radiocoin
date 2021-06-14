@@ -3,9 +3,9 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/opt/WINRADIO"
-BUILDDIR="/opt/WINRADIO"
-EXEEXT=".exe"
+SRCDIR="/opt/CURRENTRADIO"
+BUILDDIR="/opt/CURRENTRADIO"
+EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.
 ENABLE_WALLET=1
