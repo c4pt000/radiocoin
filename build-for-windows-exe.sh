@@ -46,7 +46,6 @@ Press <enter> to keep the current choice[*], or type selection number:
 
 
 "
-<std::mutex>
 
 make -j200    				#(where 200 is cpu core count)
 sleep 2s
