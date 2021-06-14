@@ -7,7 +7,7 @@ sleep 10s
 
 
 apt-get update -y 
-apt-get install build-essential *mingw* aclocal automake libtool curl libdb* \
+apt-get install build-essential *mingw* aclocal automake libtool curl libdb* protobuf* \
 libboost* libssl-dev qt5-* -y
 
 
