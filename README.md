@@ -1,4 +1,11 @@
 # RADIOACTIVE !!
+
+# 3 blocks to confirm a block spendable instead of 30 blocks when minting/mining a block
+* 06-15-2021 had to reset....further testing/experimentation
+
+* changes for 30 confirms for a block to 3 confirms total to spend a block
+* kept 0xd1d1d1d1 pchMessageAnnounce for peers went back to previous psz phrase and genesis hash
+
 * 06-13-2021
 # UPDATE to 3.2.2 for changes in pchMessage announce (had to rewind the network back to block 0 same genesis hash)
 # changed pcHmessage annouce and set different DNS seeds to try to not run along side of dogecoin network
