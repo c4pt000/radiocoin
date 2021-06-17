@@ -161,7 +161,7 @@ old_postuninstall_cmds=""
 lock_old_archive_extraction=no
 
 # A C compiler.
-LTCC="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc"
+LTCC="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc"
 
 # LTCC compiler flags.
 LTCFLAGS="-pipe -O2 "

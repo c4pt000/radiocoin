@@ -10,11 +10,11 @@ SetCompressor /SOLID lzma
 !define URL https://radiocoin.com/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/opt/RADIO-06142021/radiocoin/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/opt/RADIO-06142021/radiocoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/opt/RADIO-06142021/radiocoin/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
@@ -22,7 +22,7 @@ SetCompressor /SOLID lzma
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "RadioCoin Core"
 !define MUI_FINISHPAGE_RUN $INSTDIR\radiocoin-qt.exe
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/opt/RADIO-06142021/radiocoin/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
@@ -48,7 +48,7 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /opt/RADIO-06142021/radiocoin/radiocoin-${VERSION}-win64-setup.exe
+OutFile /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/radiocoin-${VERSION}-win64-setup.exe
 !if "64" == "64"
 InstallDir $PROGRAMFILES64\RadioCoin
 !else
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /opt/RADIO-06142021/radiocoin/release/radiocoin-qt.exe
-    File /oname=COPYING.txt /opt/RADIO-06142021/radiocoin/COPYING
-    File /oname=readme.txt /opt/RADIO-06142021/radiocoin/doc/README_windows.txt
+    File /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/release/radiocoin-qt.exe
+    File /oname=COPYING.txt /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/COPYING
+    File /oname=readme.txt /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /opt/RADIO-06142021/radiocoin/release/radiocoind.exe
-    File /opt/RADIO-06142021/radiocoin/release/radiocoin-cli.exe
+    File /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/release/radiocoind.exe
+    File /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/release/radiocoin-cli.exe
     SetOutPath $INSTDIR\doc
-    File /r /opt/RADIO-06142021/radiocoin/doc\*.*
+    File /r /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd

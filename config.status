@@ -442,7 +442,7 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/opt/RADIO-06142021/radiocoin'
+ac_pwd='/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
 MKDIR_P='/usr/bin/mkdir -p'
@@ -604,7 +604,7 @@ old_postinstall_cmds='chmod 644 $oldlib~$RANLIB $tool_oldlib'
 old_postuninstall_cmds=''
 old_archive_cmds='$AR $AR_FLAGS $oldlib$oldobjs~$RANLIB $tool_oldlib'
 lock_old_archive_extraction='no'
-CC='/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc'
+CC='/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc'
 CFLAGS='-pipe -O2 '
 compiler='x86_64-w64-mingw32-g++ -std=c++11'
 GCC='yes'
@@ -914,8 +914,8 @@ S["MINIUPNPC_LIBS"]="-lminiupnpc"
 S["MINIUPNPC_CPPFLAGS"]="-DSTATICLIB -DMINIUPNP_STATICLIB"
 S["LEVELDB_TARGET_FLAGS"]="-DOS_WINDOWS"
 S["TESTDEFS"]=""
-S["BOOST_LIBS"]="-L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s-x64 -lboost_filesystem-mt-s-x64 -lboost_program_options-"\
-"mt-s-x64 -lboost_thread-mt-s-x64 -lboost_chrono-mt-s-x64"
+S["BOOST_LIBS"]="-L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s-x64 -lboost_filesystem-mt-s-x64 -lboo"\
+"st_program_options-mt-s-x64 -lboost_thread-mt-s-x64 -lboost_chrono-mt-s-x64"
 S["USE_QRCODE"]=""
 S["USE_UPNP"]=""
 S["LIBTOOL_APP_LDFLAGS"]=" -all-static"
@@ -971,7 +971,7 @@ S["BUILD_BITCOIN_UTILS_FALSE"]="#"
 S["BUILD_BITCOIN_UTILS_TRUE"]=""
 S["BUILD_BITCOIND_FALSE"]="#"
 S["BUILD_BITCOIND_TRUE"]=""
-S["PROTOC"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/protoc"
+S["PROTOC"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/protoc"
 S["EMBEDDED_UNIVALUE_FALSE"]="#"
 S["EMBEDDED_UNIVALUE_TRUE"]=""
 S["UNIVALUE_LIBS"]="univalue/libunivalue.la"
@@ -996,24 +996,25 @@ S["BOOST_THREAD_LIB"]="-lboost_thread-mt-s-x64"
 S["BOOST_PROGRAM_OPTIONS_LIB"]="-lboost_program_options-mt-s-x64"
 S["BOOST_FILESYSTEM_LIB"]="-lboost_filesystem-mt-s-x64"
 S["BOOST_SYSTEM_LIB"]="-lboost_system-mt-s-x64"
-S["BOOST_LDFLAGS"]="-L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib"
-S["BOOST_CPPFLAGS"]="-mthreads -I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include"
+S["BOOST_LDFLAGS"]="-L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib"
+S["BOOST_CPPFLAGS"]="-mthreads -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include"
 S["MOC_DEFS"]="-DHAVE_CONFIG_H -I$(srcdir)"
 S["QT_SELECT"]="qt5"
 S["QT_TEST_INCLUDES"]=""
 S["QT_DBUS_INCLUDES"]=""
 S["QT_LDFLAGS"]=" -mwindows"
-S["QT_INCLUDES"]="-I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include -I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../incl"\
-"ude/QtCore -I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include/QtGui -I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-ming"\
-"w32/share/../include/QtWidgets -I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/opt/RADIO-06142021/radiocoin"\
-"/depends/x86_64-w64-mingw32/share/../include/QtTest -I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/opt/RADIO-"\
-"06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport"
+S["QT_INCLUDES"]="-I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/de"\
+"pends/x86_64-w64-mingw32/share/../include/QtCore -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtGu"\
+"i -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/"\
+"radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/"\
+"../include/QtTest -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/c4pt/Desktop/0617-20"\
+"21-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport"
 S["QT_PIE_FLAGS"]=""
 S["LUPDATE"]=""
-S["LRELEASE"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/lrelease"
-S["RCC"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/rcc"
-S["UIC"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/uic"
-S["MOC"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/moc"
+S["LRELEASE"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/lrelease"
+S["RCC"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/rcc"
+S["UIC"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/uic"
+S["MOC"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/moc"
 S["QTPRINT_LIBS"]=""
 S["QTPRINT_CFLAGS"]=""
 S["QTXCBQPA_LIBS"]=""
@@ -1022,15 +1023,16 @@ S["X11XCB_LIBS"]=""
 S["X11XCB_CFLAGS"]=""
 S["QTPLATFORM_LIBS"]=""
 S["QTPLATFORM_CFLAGS"]=""
-S["QT_DBUS_LIBS"]="-lQt5DBus -L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib"
+S["QT_DBUS_LIBS"]="-lQt5DBus -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib"
 S["QT_DBUS_CFLAGS"]=""
-S["QT_TEST_LIBS"]="-lQt5Test -L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib"
+S["QT_TEST_LIBS"]="-lQt5Test -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib"
 S["QT_TEST_CFLAGS"]=""
 S["QT_LIBS"]="-lwindowsprintersupport -lqminimal -lqwindows -lQt5PrintSupport -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng "\
-"-lz  -limm32  -L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib -L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/sha"\
-"re/../plugins/platforms -L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../plugins/printsupport"
+"-lz  -limm32  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/ra"\
+"dioCOIN/depends/x86_64-w64-mingw32/share/../plugins/platforms -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/.."\
+"/plugins/printsupport"
 S["QT_CFLAGS"]=""
-S["QT_TRANSLATION_DIR"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../translations"
+S["QT_TRANSLATION_DIR"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../translations"
 S["BDB_LIBS"]="-ldb_cxx-5.1"
 S["BDB_CPPFLAGS"]=""
 S["LIBMEMENV"]=""
@@ -1043,8 +1045,8 @@ S["PTHREAD_LIBS"]=""
 S["PTHREAD_CC"]="x86_64-w64-mingw32-gcc"
 S["ax_pthread_config"]=""
 S["EXTENDED_RPC_TESTS"]=""
-S["PKG_CONFIG_LIBDIR"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib/pkgconfig"
-S["PKG_CONFIG_PATH"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../share/pkgconfig"
+S["PKG_CONFIG_LIBDIR"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib/pkgconfig"
+S["PKG_CONFIG_PATH"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../share/pkgconfig"
 S["PKG_CONFIG"]="/usr/bin/pkg-config --static"
 S["TIFFCP"]=""
 S["IMAGEMAGICK_CONVERT"]=""
@@ -1058,13 +1060,13 @@ S["WINDRES"]="/usr/bin/x86_64-w64-mingw32-windres"
 S["MAKENSIS"]="none"
 S["ENABLE_MAN_FALSE"]="#"
 S["ENABLE_MAN_TRUE"]=""
-S["PYTHONPATH"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:"
+S["PYTHONPATH"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:"
 S["OBJCOPY"]="/usr/bin/x86_64-w64-mingw32-objcopy"
 S["CPPFILT"]="/usr/bin/x86_64-w64-mingw32-c++filt"
 S["READELF"]="/usr/bin/x86_64-w64-mingw32-readelf"
 S["HEXDUMP"]="/usr/bin/hexdump"
 S["XGETTEXT"]="/usr/bin/xgettext"
-S["CCACHE"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache"
+S["CCACHE"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache"
 S["GIT"]="/usr/bin/git"
 S["GENHTML"]=""
 S["PYTHON"]="/usr/bin/python3"
@@ -1098,7 +1100,7 @@ S["am__fastdepCC_TRUE"]=""
 S["CCDEPMODE"]="depmode=gcc3"
 S["ac_ct_CC"]=""
 S["CFLAGS"]="-pipe -O2 "
-S["CC"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc"
+S["CC"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc"
 S["LIBTOOL"]="$(SHELL) $(top_builddir)/libtool"
 S["am__fastdepOBJCXX_FALSE"]="#"
 S["am__fastdepOBJCXX_TRUE"]=""
@@ -1119,11 +1121,11 @@ S["DEPDIR"]=".deps"
 S["OBJEXT"]="o"
 S["EXEEXT"]=".exe"
 S["ac_ct_CXX"]=""
-S["CPPFLAGS"]="-I/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBO"\
-"OST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64"
-S["LDFLAGS"]="-L/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../lib "
+S["CPPFLAGS"]="-I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWI"\
+"N32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64"
+S["LDFLAGS"]="-L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib "
 S["CXXFLAGS"]="-pipe -O2 "
-S["CXX"]="/opt/RADIO-06142021/radiocoin/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++ -std=c++11"
+S["CXX"]="/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++ -std=c++11"
 S["MAINT"]=""
 S["MAINTAINER_MODE_FALSE"]="#"
 S["MAINTAINER_MODE_TRUE"]=""
@@ -1141,12 +1143,12 @@ S["mkdir_p"]="$(MKDIR_P)"
 S["MKDIR_P"]="/usr/bin/mkdir -p"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="/usr/bin/x86_64-w64-mingw32-strip"
-S["install_sh"]="${SHELL} /opt/RADIO-06142021/radiocoin/build-aux/install-sh"
-S["MAKEINFO"]="${SHELL} /opt/RADIO-06142021/radiocoin/build-aux/missing makeinfo"
-S["AUTOHEADER"]="${SHELL} /opt/RADIO-06142021/radiocoin/build-aux/missing autoheader"
-S["AUTOMAKE"]="${SHELL} /opt/RADIO-06142021/radiocoin/build-aux/missing automake-1.16"
-S["AUTOCONF"]="${SHELL} /opt/RADIO-06142021/radiocoin/build-aux/missing autoconf"
-S["ACLOCAL"]="${SHELL} /opt/RADIO-06142021/radiocoin/build-aux/missing aclocal-1.16"
+S["install_sh"]="${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/install-sh"
+S["MAKEINFO"]="${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing automake-1.16"
+S["AUTOCONF"]="${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing autoconf"
+S["ACLOCAL"]="${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing aclocal-1.16"
 S["VERSION"]="1.14.3"
 S["PACKAGE"]="radiocoin"
 S["CYGPATH_W"]="echo"
