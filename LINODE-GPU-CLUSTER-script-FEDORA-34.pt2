@@ -14,6 +14,6 @@ echo ""
 echo " or cudaminer "
 echo ""
 echo ""
-echo "docker run -it -v /opt/cudaminer-current-pkg:/opt/cuda --privileged c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O RJbSrHZNLf7FSYVqx17Kh61BJs5DHVhGRQ:x "
+echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O RJbSrHZNLf7FSYVqx17Kh61BJs5DHVhGRQ:x "
 
 
