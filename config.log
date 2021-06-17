@@ -1129,7 +1129,7 @@ configure: failed program was:
 configure:17342: result: no
 configure:17355: checking for strerror_r
 configure:17355: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe -pipe -O2  -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/cciwM24C.o:conftest.cpp:(.text.startup+0xa): undefined reference to `strerror_r'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccoOCBXX.o:conftest.cpp:(.text.startup+0xa): undefined reference to `strerror_r'
 collect2: error: ld returned 1 exit status
 configure:17355: $? = 1
 configure: failed program was:
@@ -5100,7 +5100,7 @@ configure:19747: $? = 0
 configure:19757: result: yes
 configure:19779: checking for library containing png_error 
 configure:19810: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lz  -limm32  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccmzKydS.o:conftest.cpp:(.text.startup+0xa): undefined reference to `png_error'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccfHUnNc.o:conftest.cpp:(.text.startup+0xa): undefined reference to `png_error'
 collect2: error: ld returned 1 exit status
 configure:19810: $? = 1
 configure: failed program was:
@@ -5201,7 +5201,7 @@ configure:19810: $? = 0
 configure:19827: result: -lqtpng
 configure:19846: checking for library containing jpeg_create_decompress 
 configure:19877: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lqtpng -lz  -limm32  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/cca6VghI.o:conftest.cpp:(.text.startup+0xa): undefined reference to `jpeg_create_decompress'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccSA4hp3.o:conftest.cpp:(.text.startup+0xa): undefined reference to `jpeg_create_decompress'
 collect2: error: ld returned 1 exit status
 configure:19877: $? = 1
 configure: failed program was:
@@ -5495,7 +5495,7 @@ configure:19894: result: no
 configure:19901: WARNING: libjpeg not found. Assuming qt has it built-in
 configure:19913: checking for library containing pcre16_exec
 configure:19944: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lqtpng -lz  -limm32  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccfwkBBO.o:conftest.cpp:(.text.startup+0xa): undefined reference to `pcre16_exec'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cc7aWCS7.o:conftest.cpp:(.text.startup+0xa): undefined reference to `pcre16_exec'
 collect2: error: ld returned 1 exit status
 configure:19944: $? = 1
 configure: failed program was:
@@ -5596,7 +5596,7 @@ configure:19944: $? = 0
 configure:19961: result: -lqtpcre
 configure:19980: checking for library containing hb_ot_tags_from_script 
 configure:20011: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe  -pipe -O2  -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lqtpcre -lqtpng -lz  -limm32  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccoX1pOC.o:conftest.cpp:(.text.startup+0xa): undefined reference to `hb_ot_tags_from_script'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccvwz54U.o:conftest.cpp:(.text.startup+0xa): undefined reference to `hb_ot_tags_from_script'
 collect2: error: ld returned 1 exit status
 configure:20011: $? = 1
 configure: failed program was:
@@ -6002,8 +6002,8 @@ configure:23964: $? = 0
 configure:23978: result: yes
 configure:24090: checking for dynamic linked boost test
 configure:24105: x86_64-w64-mingw32-g++ -std=c++11 -o conftest.exe -pipe -O2  -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64 -mthreads -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib  conftest.cpp -lQt5PlatformSupport -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib -lboost_unit_test_framework-mt-s-x64 >&5
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccUn1MTv.o:conftest.cpp:(.text.startup+0x29): undefined reference to `__imp__ZN5boost9unit_test14unit_test_mainEPFbvEiPPc'
-/usr/bin/x86_64-w64-mingw32-ld: /tmp/ccUn1MTv.o:conftest.cpp:(.text.startup+0x36): undefined reference to `__imp__ZN5boost9unit_test15unit_test_log_t8instanceEv'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cc0P6FqP.o:conftest.cpp:(.text.startup+0x29): undefined reference to `__imp__ZN5boost9unit_test14unit_test_mainEPFbvEiPPc'
+/usr/bin/x86_64-w64-mingw32-ld: /tmp/cc0P6FqP.o:conftest.cpp:(.text.startup+0x36): undefined reference to `__imp__ZN5boost9unit_test15unit_test_log_t8instanceEv'
 collect2: error: ld returned 1 exit status
 configure:24105: $? = 1
 configure: failed program was:
