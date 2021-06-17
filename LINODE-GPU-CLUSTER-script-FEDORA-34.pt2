@@ -7,13 +7,14 @@ systemctl start docker
 nvidia-smi
 echo "replace -O with your wallet receving address for p2pool mining or username password for other remote mining RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x "
 echo ""
+echo "LINODE remote not local"
 echo ""
-echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 9 -o stratum+tcp://104.237.145.126:9555 --userpass RJbSrHZNLf7FSYVqx17Kh61BJs5DHVhGRQ:x "
+echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 20 -o stratum+tcp://104.237.145.126:9555 --userpass RJbSrHZNLf7FSYVqx17Kh61BJs5DHVhGRQ:x "
 echo ""
 echo ""
 echo " or cudaminer "
 echo ""
 echo ""
-echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 10 -o stratum+tcp://104.237.145.126:9555 -O RJbSrHZNLf7FSYVqx17Kh61BJs5DHVhGRQ:x "
+echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 20 -o stratum+tcp://104.237.145.126:9555 -O RJbSrHZNLf7FSYVqx17Kh61BJs5DHVhGRQ:x "
 
 
