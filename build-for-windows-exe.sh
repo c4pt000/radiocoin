@@ -12,6 +12,28 @@ libboost* libssl-dev qt5-* -y
 
 
 cd depends
+echo "
+must be in win32 mode for depends build change to posix for actual build
+update-alternatives --config x86_64-w64-mingw32-gcc
+There are 2 choices for the alternative x86_64-w64-mingw32-gcc (providing /usr/bin/x86_64-w64-mingw32-gcc).
+
+  Selection    Path                                   Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/x86_64-w64-mingw32-gcc-win32   60        auto mode
+  1            /usr/bin/x86_64-w64-mingw32-gcc-posix   30        manual mode
+  2            /usr/bin/x86_64-w64-mingw32-gcc-win32   60        manual mode
+
+update-alternatives --config x86_64-w64-mingw32-g++
+There are 2 choices for the alternative x86_64-w64-mingw32-gcc (providing /usr/bin/x86_64-w64-mingw32-g++).
+
+  Selection    Path                                   Priority   Status
+------------------------------------------------------------
+* 0            /usr/bin/x86_64-w64-mingw32-gcc-win32   60        auto mode
+  1            /usr/bin/x86_64-w64-mingw32-gcc-posix   30        manual mode
+  2            /usr/bin/x86_64-w64-mingw32-gcc-win32   60        manual mode
+"
+
+
 make -j200 HOST=x86_64-w64-mingw32
 cd ..
 ./autogen.sh 				# not required when building from tarball
