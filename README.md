@@ -1,5 +1,28 @@
 # RADIOACTIVE !!
 
+* 06-19-2021 reset to enable AuxPow sooner, than marked block 300,000
+* confirms are still 3 confirms on a block
+
+changed begin of digishield and AuxPow enabled blocks to block height 2050 (instead of block heigh 145,000 and 371337) to experiment with p2pool mining and matching chainID to low difficulty work/shares per cpu/gpu miner
+```
+        // Blocks 145000 - 371336 are Digishield without AuxPoW 
+	//enabled at block 2050 for early p2pool chain id mining
+        digishieldConsensus = consensus;
+//        digishieldConsensus.nHeightEffective = 145000;
+        digishieldConsensus.nHeightEffective = 2050;
+        digishieldConsensus.fSimplifiedRewards = true;
+        digishieldConsensus.fDigishieldDifficultyCalculation = true;
+        digishieldConsensus.nPowTargetTimespan = 60; // post-digishield: 1 minute
+        digishieldConsensus.nCoinbaseMaturity = 240;
+
+        // Blocks 371337+ are AuxPoW
+	//enabled at block 2050 for early p2pool chain id mining
+        auxpowConsensus = digishieldConsensus;
+//        auxpowConsensus.nHeightEffective = 371337;
+        auxpowConsensus.nHeightEffective = 2050;
+        auxpowConsensus.fAllowLegacyBlocks = false;
+```
+
 # 3 blocks to confirm a block spendable instead of 30 blocks when minting/mining a block
 * 06-15-2021 had to reset....further testing/experimentation
 
