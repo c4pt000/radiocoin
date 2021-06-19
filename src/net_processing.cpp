@@ -2712,7 +2712,7 @@ bool ProcessMessages(CNode* pfrom, CConnman& connman, const std::atomic<bool>& i
         msg.SetVersion(pfrom->GetRecvVersion());
         // Scan for message start
         if (memcmp(msg.hdr.pchMessageStart, chainparams.MessageStart(), CMessageHeader::MESSAGE_START_SIZE) != 0) {
-            LogPrintf("PROCESSMESSAGE: INSTALL AT LEAST radioCOIN 5.0.0 INVALID MESSAGESTART %s peer=%d\n", SanitizeString(msg.hdr.GetCommand()), pfrom->id);
+            LogPrintf("PROCESSMESSAGE: INSTALL AT LEAST radioCOIN 5.0.2 AuxPow enabled blocks height 2050 INVALID MESSAGESTART %s peer=%d\n", SanitizeString(msg.hdr.GetCommand()), pfrom->id);
             pfrom->fDisconnect = true;
             return false;
         }
@@ -2721,7 +2721,7 @@ bool ProcessMessages(CNode* pfrom, CConnman& connman, const std::atomic<bool>& i
         CMessageHeader& hdr = msg.hdr;
         if (!hdr.IsValid(chainparams.MessageStart()))
         {
-            LogPrintf("PROCESSMESSAGE: ERRORS IN HEADER %s peer=%d\n", SanitizeString(hdr.GetCommand()), pfrom->id);
+            LogPrintf("PROCESSMESSAGE: INSTALL AT LEAST radioCOIN 5.0.2 AuxPow enabled blocks height 2050 ERRORS IN HEADER %s peer=%d\n", SanitizeString(hdr.GetCommand()), pfrom->id);
             return fMoreWork;
         }
         std::string strCommand = hdr.GetCommand();

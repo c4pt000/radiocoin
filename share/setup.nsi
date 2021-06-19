@@ -1,4 +1,4 @@
-Name "RadioCoin Core (64-bit)"
+Name "RadioCoin Core (-bit)"
 
 RequestExecutionLevel highest
 SetCompressor /SOLID lzma
@@ -10,25 +10,25 @@ SetCompressor /SOLID lzma
 !define URL https://radiocoin.com/
 
 # MUI Symbol Definitions
-!define MUI_ICON "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/bitcoin.ico"
-!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/nsis-wizard.bmp"
+!define MUI_ICON "/home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/share/pixmaps/bitcoin.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "/home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/share/pixmaps/nsis-wizard.bmp"
 !define MUI_HEADERIMAGE
 !define MUI_HEADERIMAGE_RIGHT
-!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/nsis-header.bmp"
+!define MUI_HEADERIMAGE_BITMAP "/home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/share/pixmaps/nsis-header.bmp"
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT HKLM
 !define MUI_STARTMENUPAGE_REGISTRY_KEY ${REGKEY}
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME StartMenuGroup
 !define MUI_STARTMENUPAGE_DEFAULTFOLDER "RadioCoin Core"
-!define MUI_FINISHPAGE_RUN $INSTDIR\radiocoin-qt.exe
+!define MUI_FINISHPAGE_RUN $INSTDIR\radiocoin-qt
 !define MUI_UNICON "${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"
-!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/share/pixmaps/nsis-wizard.bmp"
+!define MUI_UNWELCOMEFINISHPAGE_BITMAP "/home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/share/pixmaps/nsis-wizard.bmp"
 !define MUI_UNFINISHPAGE_NOAUTOCLOSE
 
 # Included files
 !include Sections.nsh
 !include MUI2.nsh
-!if "64" == "64"
+!if "" == "64"
 !include x64.nsh
 !endif
 
@@ -48,8 +48,8 @@ Var StartMenuGroup
 !insertmacro MUI_LANGUAGE English
 
 # Installer attributes
-OutFile /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/radiocoin-${VERSION}-win64-setup.exe
-!if "64" == "64"
+OutFile /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/radiocoin-${VERSION}-win-setup.exe
+!if "" == "64"
 InstallDir $PROGRAMFILES64\RadioCoin
 !else
 InstallDir $PROGRAMFILES\RadioCoin
@@ -73,14 +73,14 @@ ShowUninstDetails show
 Section -Main SEC0000
     SetOutPath $INSTDIR
     SetOverwrite on
-    File /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/release/radiocoin-qt.exe
-    File /oname=COPYING.txt /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/COPYING
-    File /oname=readme.txt /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/doc/README_windows.txt
+    File /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/release/radiocoin-qt
+    File /oname=COPYING.txt /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/COPYING
+    File /oname=readme.txt /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/doc/README_windows.txt
     SetOutPath $INSTDIR\daemon
-    File /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/release/radiocoind.exe
-    File /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/release/radiocoin-cli.exe
+    File /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/release/radiocoind
+    File /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/release/radiocoin-cli
     SetOutPath $INSTDIR\doc
-    File /r /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/doc\*.*
+    File /r /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/doc\*.*
     SetOutPath $INSTDIR
     WriteRegStr HKCU "${REGKEY}\Components" Main 1
 SectionEnd
@@ -91,8 +91,8 @@ Section -post SEC0001
     WriteUninstaller $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
     CreateDirectory $SMPROGRAMS\$StartMenuGroup
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\radiocoin-qt.exe
-    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, 64-bit).lnk" "$INSTDIR\radiocoin-qt.exe" "-testnet" "$INSTDIR\radiocoin-qt.exe" 1
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk" $INSTDIR\radiocoin-qt
+    CreateShortcut "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, -bit).lnk" "$INSTDIR\radiocoin-qt" "-testnet" "$INSTDIR\radiocoin-qt" 1
     CreateShortcut "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk" $INSTDIR\uninstall.exe
     !insertmacro MUI_STARTMENU_WRITE_END
     WriteRegStr HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" DisplayName "$(^Name)"
@@ -105,8 +105,8 @@ Section -post SEC0001
     WriteRegDWORD HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)" NoRepair 1
     WriteRegStr HKCR "radiocoin" "URL Protocol" ""
     WriteRegStr HKCR "radiocoin" "" "URL:RadioCoin"
-    WriteRegStr HKCR "radiocoin\DefaultIcon" "" $INSTDIR\radiocoin-qt.exe
-    WriteRegStr HKCR "radiocoin\shell\open\command" "" '"$INSTDIR\radiocoin-qt.exe" "%1"'
+    WriteRegStr HKCR "radiocoin\DefaultIcon" "" $INSTDIR\radiocoin-qt
+    WriteRegStr HKCR "radiocoin\shell\open\command" "" '"$INSTDIR\radiocoin-qt" "%1"'
 SectionEnd
 
 # Macro for selecting uninstaller sections
@@ -124,7 +124,7 @@ done${UNSECTION_ID}:
 
 # Uninstaller sections
 Section /o -un.Main UNSEC0000
-    Delete /REBOOTOK $INSTDIR\radiocoin-qt.exe
+    Delete /REBOOTOK $INSTDIR\radiocoin-qt
     Delete /REBOOTOK $INSTDIR\COPYING.txt
     Delete /REBOOTOK $INSTDIR\readme.txt
     RMDir /r /REBOOTOK $INSTDIR\daemon
@@ -136,7 +136,7 @@ Section -un.post UNSEC0001
     DeleteRegKey HKCU "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$(^Name)"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\Uninstall $(^Name).lnk"
     Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\$(^Name).lnk"
-    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, 64-bit).lnk"
+    Delete /REBOOTOK "$SMPROGRAMS\$StartMenuGroup\RadioCoin Core (testnet, -bit).lnk"
     Delete /REBOOTOK "$SMSTARTUP\Bitcoin.lnk"
     Delete /REBOOTOK $INSTDIR\uninstall.exe
     Delete /REBOOTOK $INSTDIR\debug.log
@@ -158,7 +158,7 @@ SectionEnd
 # Installer functions
 Function .onInit
     InitPluginsDir
-!if "64" == "64"
+!if "" == "64"
     ${If} ${RunningX64}
       ; disable registry redirection (enable access to 64-bit portion of registry)
       SetRegView 64

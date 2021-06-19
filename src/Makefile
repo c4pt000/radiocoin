@@ -113,7 +113,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-w64-mingw32
+host_triplet = x86_64-pc-linux-gnu
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5) $(am__EXEEXT_6)
 noinst_PROGRAMS = $(am__EXEEXT_7)
@@ -121,9 +121,9 @@ TESTS = $(am__EXEEXT_3) $(am__EXEEXT_6)
 am__append_1 = radiocoind
 am__append_2 = radiocoin-cli radiocoin-tx
 #am__append_3 = compat/glibc_compat.cpp
-am__append_4 = bitcoind-res.rc
-am__append_5 = bitcoin-cli-res.rc
-am__append_6 = bitcoin-tx-res.rc
+#am__append_4 = bitcoind-res.rc
+#am__append_5 = bitcoin-cli-res.rc
+#am__append_6 = bitcoin-tx-res.rc
 #am__append_7 = compat/glibc_compat.cpp
 am__append_8 = $(LIBLEVELDB_INT) \
 	$(LIBMEMENV_INT)
@@ -131,11 +131,11 @@ am__append_9 = $(LIBLEVELDB_INT)
 am__append_10 = $(LIBMEMENV_INT)
 am__append_11 = -I$(srcdir)/leveldb/include \
 	-I$(srcdir)/leveldb/helpers/memenv
-am__append_12 = -DLEVELDB_PLATFORM_WINDOWS -DWINVER=0x0500 -D__USE_MINGW_ANSI_STDIO=1
-#am__append_13 = -DLEVELDB_PLATFORM_POSIX
-am__append_14 = leveldb/util/env_win.cc \
-	leveldb/port/port_win.cc
-#am__append_15 = leveldb/port/port_posix.cc
+#am__append_12 = -DLEVELDB_PLATFORM_WINDOWS -DWINVER=0x0500 -D__USE_MINGW_ANSI_STDIO=1
+am__append_13 = -DLEVELDB_PLATFORM_POSIX
+#am__append_14 = leveldb/util/env_win.cc \
+#	leveldb/port/port_win.cc
+am__append_15 = leveldb/port/port_posix.cc
 am__append_16 = test/test_radiocoin
 am__append_17 = test/test_radiocoin
 am__append_18 = test/test_radiocoin_fuzzy
@@ -200,24 +200,24 @@ am__append_20 = \
   wallet/test/crypto_tests.cpp
 
 am__append_21 = $(LIBRADIOCOIN_WALLET)
-am__append_22 = $(ZMQ_LIBS)
+#am__append_22 = $(ZMQ_LIBS)
 am__append_23 = $(CLEAN_BITCOIN_TEST)
 
 # This file is problematic for out-of-tree builds if it exists.
 am__append_24 = test/buildenv.pyc
 am__append_25 = bench/bench_radiocoin
-am__append_26 = $(LIBRADIOCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_26 = $(LIBRADIOCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_27 = bench/coin_selection.cpp
 am__append_28 = $(LIBRADIOCOIN_WALLET) $(LIBRADIOCOIN_CRYPTO)
 am__append_29 = $(CLEAN_BITCOIN_BENCH)
 am__append_30 = qt/radiocoin-qt
 am__append_31 = qt/libradiocoinqt.a
-am__append_32 = $(BITCOIN_QT_WINDOWS_CPP)
+#am__append_32 = $(BITCOIN_QT_WINDOWS_CPP)
 am__append_33 = $(BITCOIN_QT_WALLET_CPP)
 #am__append_34 = $(BITCOIN_MM)
-am__append_35 = $(BITCOIN_RC)
+#am__append_35 = $(BITCOIN_RC)
 am__append_36 = $(LIBRADIOCOIN_WALLET)
-am__append_37 = $(LIBRADIOCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_37 = $(LIBRADIOCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_38 = $(CLEAN_QT)
 am__append_39 = qt/test/test_radiocoin-qt
 am__append_40 = qt/test/test_radiocoin-qt
@@ -226,7 +226,7 @@ am__append_42 = \
   qt/test/paymentservertests.cpp
 
 am__append_43 = $(LIBRADIOCOIN_WALLET)
-am__append_44 = $(LIBRADIOCOIN_ZMQ) $(ZMQ_LIBS)
+#am__append_44 = $(LIBRADIOCOIN_ZMQ) $(ZMQ_LIBS)
 am__append_45 = $(CLEAN_BITCOIN_QT_TEST)
 subdir = src
 SUBDIRS =
@@ -375,9 +375,9 @@ am__leveldb_libleveldb_a_SOURCES_DIST = leveldb/port/atomic_pointer.h \
 	leveldb/util/logging.cc leveldb/util/options.cc \
 	leveldb/util/status.cc leveldb/util/env_win.cc \
 	leveldb/port/port_win.cc leveldb/port/port_posix.cc
-am__objects_1 = leveldb/util/libleveldb_a-env_win.$(OBJEXT) \
-	leveldb/port/libleveldb_a-port_win.$(OBJEXT)
-#am__objects_2 = leveldb/port/libleveldb_a-port_posix.$(OBJEXT)
+#am__objects_1 = leveldb/util/libleveldb_a-env_win.$(OBJEXT) \
+#	leveldb/port/libleveldb_a-port_win.$(OBJEXT)
+am__objects_2 = leveldb/port/libleveldb_a-port_posix.$(OBJEXT)
 am_leveldb_libleveldb_a_OBJECTS = leveldb/db/libleveldb_a-builder.$(OBJEXT) \
 	leveldb/db/libleveldb_a-c.$(OBJEXT) \
 	leveldb/db/libleveldb_a-dbformat.$(OBJEXT) \
@@ -587,9 +587,9 @@ libradiocoin_zmq_a_AR = $(AR) $(ARFLAGS)
 libradiocoin_zmq_a_LIBADD =
 am__libradiocoin_zmq_a_SOURCES_DIST = zmq/zmqabstractnotifier.cpp \
 	zmq/zmqnotificationinterface.cpp zmq/zmqpublishnotifier.cpp
-am_libradiocoin_zmq_a_OBJECTS = zmq/libradiocoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
-	zmq/libradiocoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
-	zmq/libradiocoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
+#am_libradiocoin_zmq_a_OBJECTS = zmq/libradiocoin_zmq_a-zmqabstractnotifier.$(OBJEXT) \
+#	zmq/libradiocoin_zmq_a-zmqnotificationinterface.$(OBJEXT) \
+#	zmq/libradiocoin_zmq_a-zmqpublishnotifier.$(OBJEXT)
 libradiocoin_zmq_a_OBJECTS = $(am_libradiocoin_zmq_a_OBJECTS)
 qt_libradiocoinqt_a_AR = $(AR) $(ARFLAGS)
 qt_libradiocoinqt_a_LIBADD =
@@ -755,8 +755,8 @@ am__objects_9 =  \
 	qt/libradiocoinqt_a-utilitydialog.$(OBJEXT) \
 	qt/libradiocoinqt_a-verticallabel.$(OBJEXT)
 am__objects_10 = qt/libradiocoinqt_a-winshutdownmonitor.$(OBJEXT)
-am__objects_11 =  \
-	$(am__objects_10)
+#am__objects_11 =  \
+#	$(am__objects_10)
 am__objects_12 =  \
 	qt/libradiocoinqt_a-addressbookpage.$(OBJEXT) \
 	qt/libradiocoinqt_a-addresstablemodel.$(OBJEXT) \
@@ -943,9 +943,9 @@ am__DEPENDENCIES_2 = $(am__append_10)
 am__DEPENDENCIES_3 =
 #am__DEPENDENCIES_4 = $(am__DEPENDENCIES_3)
 am__DEPENDENCIES_4 = univalue/libunivalue.la
-am__DEPENDENCIES_5 =  \
-	$(LIBRADIOCOIN_ZMQ) \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_5 =  \
+#	$(LIBRADIOCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_3)
 bench_bench_radiocoin_DEPENDENCIES =  \
 	$(LIBRADIOCOIN_SERVER) \
 	$(LIBRADIOCOIN_COMMON) $(LIBRADIOCOIN_UTIL) \
@@ -971,15 +971,15 @@ am__objects_25 =  \
 #am__objects_26 =  \
 #	$(am__objects_25)
 am__objects_27 = qt/res/bitcoin-qt-res.$(OBJEXT)
-am__objects_28 =  \
-	$(am__objects_27)
+#am__objects_28 =  \
+#	$(am__objects_27)
 am_qt_radiocoin_qt_OBJECTS =  \
 	qt/radiocoin_qt-bitcoin.$(OBJEXT) \
 	$(am__objects_26) $(am__objects_28)
 qt_radiocoin_qt_OBJECTS = $(am_qt_radiocoin_qt_OBJECTS)
-am__DEPENDENCIES_6 =  \
-	$(LIBRADIOCOIN_ZMQ) \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_6 =  \
+#	$(LIBRADIOCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_3)
 qt_radiocoin_qt_DEPENDENCIES = qt/libradiocoinqt.a \
 	$(LIBRADIOCOIN_SERVER) $(am__append_36) \
 	$(am__DEPENDENCIES_6) $(LIBRADIOCOIN_CLI) \
@@ -1019,9 +1019,9 @@ nodist_qt_test_test_radiocoin_qt_OBJECTS =  \
 qt_test_test_radiocoin_qt_OBJECTS =  \
 	$(am_qt_test_test_radiocoin_qt_OBJECTS) \
 	$(nodist_qt_test_test_radiocoin_qt_OBJECTS)
-am__DEPENDENCIES_7 =  \
-	$(LIBRADIOCOIN_ZMQ) \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_7 =  \
+#	$(LIBRADIOCOIN_ZMQ) \
+#	$(am__DEPENDENCIES_3)
 qt_test_test_radiocoin_qt_DEPENDENCIES =  \
 	$(LIBRADIOCOINQT) $(LIBRADIOCOIN_SERVER) \
 	$(am__append_43) $(am__DEPENDENCIES_7) \
@@ -1050,7 +1050,7 @@ qt_test_test_radiocoin_qt_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(qt_test_test_radiocoin_qt_CXXFLAGS) $(CXXFLAGS) \
 	$(qt_test_test_radiocoin_qt_LDFLAGS) $(LDFLAGS) -o $@
 am__radiocoin_cli_SOURCES_DIST = bitcoin-cli.cpp bitcoin-cli-res.rc
-am__objects_32 = bitcoin-cli-res.$(OBJEXT)
+#am__objects_32 = bitcoin-cli-res.$(OBJEXT)
 am_radiocoin_cli_OBJECTS = radiocoin_cli-bitcoin-cli.$(OBJEXT) \
 	$(am__objects_32)
 radiocoin_cli_OBJECTS = $(am_radiocoin_cli_OBJECTS)
@@ -1063,7 +1063,7 @@ radiocoin_cli_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(radiocoin_cli_CXXFLAGS) $(CXXFLAGS) $(radiocoin_cli_LDFLAGS) \
 	$(LDFLAGS) -o $@
 am__radiocoin_tx_SOURCES_DIST = bitcoin-tx.cpp bitcoin-tx-res.rc
-am__objects_33 = bitcoin-tx-res.$(OBJEXT)
+#am__objects_33 = bitcoin-tx-res.$(OBJEXT)
 am_radiocoin_tx_OBJECTS = radiocoin_tx-bitcoin-tx.$(OBJEXT) \
 	$(am__objects_33)
 radiocoin_tx_OBJECTS = $(am_radiocoin_tx_OBJECTS)
@@ -1075,7 +1075,7 @@ radiocoin_tx_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(radiocoin_tx_CXXFLAGS) \
 	$(CXXFLAGS) $(radiocoin_tx_LDFLAGS) $(LDFLAGS) -o $@
 am__radiocoind_SOURCES_DIST = bitcoind.cpp bitcoind-res.rc
-am__objects_34 = bitcoind-res.$(OBJEXT)
+#am__objects_34 = bitcoind-res.$(OBJEXT)
 am_radiocoind_OBJECTS = radiocoind-bitcoind.$(OBJEXT) \
 	$(am__objects_34)
 radiocoind_OBJECTS = $(am_radiocoind_OBJECTS)
@@ -1202,8 +1202,8 @@ nodist_test_test_radiocoin_OBJECTS =  \
 	$(am__objects_24)
 test_test_radiocoin_OBJECTS = $(am_test_test_radiocoin_OBJECTS) \
 	$(nodist_test_test_radiocoin_OBJECTS)
-am__DEPENDENCIES_8 =  \
-	$(am__DEPENDENCIES_3)
+#am__DEPENDENCIES_8 =  \
+#	$(am__DEPENDENCIES_3)
 test_test_radiocoin_DEPENDENCIES =  \
 	$(LIBRADIOCOIN_SERVER) $(LIBRADIOCOIN_CLI) \
 	$(LIBRADIOCOIN_COMMON) $(LIBRADIOCOIN_UTIL) \
@@ -1912,7 +1912,7 @@ am__set_TESTS_bases = \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
 TEST_SUITE_LOG = test-suite.log
-TEST_EXTENSIONS = .exe .test
+TEST_EXTENSIONS =  .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 LOG_COMPILE = $(LOG_COMPILER) $(AM_LOG_FLAGS) $(LOG_FLAGS)
 am__set_b = \
@@ -1926,7 +1926,7 @@ am__set_b = \
       b='$*';; \
   esac
 am__test_logs1 = $(TESTS:=.log)
-am__test_logs2 = $(am__test_logs1:.exe.log=.log)
+am__test_logs2 = $(am__test_logs1:.log=.log)
 TEST_LOGS = $(am__test_logs2:.test.log=.log)
 TEST_LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 TEST_LOG_COMPILE = $(TEST_LOG_COMPILER) $(AM_TEST_LOG_FLAGS) \
@@ -1964,34 +1964,34 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/build-aux/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/x86_64-w64-mingw32-ar
-AUTOCONF = ${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing autoconf
-AUTOHEADER = ${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing autoheader
-AUTOMAKE = ${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing automake-1.16
-AWK = mawk
-BDB_CPPFLAGS = 
-BDB_LIBS = -ldb_cxx-5.1
+AR = /usr/bin/ar
+AUTOCONF = ${SHELL} /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/build-aux/missing autoconf
+AUTOHEADER = ${SHELL} /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/build-aux/missing autoheader
+AUTOMAKE = ${SHELL} /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/build-aux/missing automake-1.16
+AWK = gawk
+BDB_CPPFLAGS =  -I/usr/include/libdb/
+BDB_LIBS = -ldb_cxx
 BITCOIN_CLI_NAME = radiocoin-cli
 BITCOIN_DAEMON_NAME = radiocoind
 BITCOIN_GUI_NAME = radiocoin-qt
 BITCOIN_TX_NAME = radiocoin-tx
-BOOST_CHRONO_LIB = -lboost_chrono-mt-s-x64
-BOOST_CPPFLAGS = -mthreads -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include
-BOOST_FILESYSTEM_LIB = -lboost_filesystem-mt-s-x64
-BOOST_LDFLAGS = -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib
-BOOST_LIBS = -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib -lboost_system-mt-s-x64 -lboost_filesystem-mt-s-x64 -lboost_program_options-mt-s-x64 -lboost_thread-mt-s-x64 -lboost_chrono-mt-s-x64
-BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options-mt-s-x64
-BOOST_SYSTEM_LIB = -lboost_system-mt-s-x64
-BOOST_THREAD_LIB = -lboost_thread-mt-s-x64
-BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework-mt-s-x64
+BOOST_CHRONO_LIB = -lboost_chrono
+BOOST_CPPFLAGS = -pthread -I/usr/include
+BOOST_FILESYSTEM_LIB = -lboost_filesystem
+BOOST_LDFLAGS = -L/usr/lib64
+BOOST_LIBS = -L/usr/lib64 -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lboost_chrono
+BOOST_PROGRAM_OPTIONS_LIB = -lboost_program_options
+BOOST_SYSTEM_LIB = -lboost_system
+BOOST_THREAD_LIB = -lboost_thread
+BOOST_UNIT_TEST_FRAMEWORK_LIB = -lboost_unit_test_framework
 BREW = 
-CC = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-gcc
-CCACHE = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache
+CC = /usr/bin/ccache gcc
+CCACHE = /usr/bin/ccache
 CCDEPMODE = depmode=gcc3
-CFLAGS = -pipe -O2 
+CFLAGS = -g -O2
 CLIENT_VERSION_BUILD = 0
 CLIENT_VERSION_IS_RELEASE = true
 CLIENT_VERSION_MAJOR = 1
@@ -2001,19 +2001,19 @@ COPYRIGHT_HOLDERS = The %s developers
 COPYRIGHT_HOLDERS_FINAL = The Bitcoin Core and RadioCoin Core developers
 COPYRIGHT_HOLDERS_SUBSTITUTION = Bitcoin Core and RadioCoin Core
 COPYRIGHT_YEAR = 2021
-CPP = x86_64-w64-mingw32-gcc -E
-CPPFILT = /usr/bin/x86_64-w64-mingw32-c++filt
-CPPFLAGS = -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -D_MT -DWIN32 -D_WINDOWS -DBOOST_THREAD_USE_LIB -D_FILE_OFFSET_BITS=64
+CPP = gcc -E
+CPPFILT = /usr/bin/c++filt
+CPPFLAGS =  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS
 CRYPTO_CFLAGS = 
-CRYPTO_LIBS = -lcrypto
-CXX = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/ccache x86_64-w64-mingw32-g++ -std=c++11
-CXXCPP = x86_64-w64-mingw32-g++ -std=c++11 -E
+CRYPTO_LIBS = -lcrypto 
+CXX = /usr/bin/ccache g++ -std=c++11
+CXXCPP = g++ -std=c++11 -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -pipe -O2 
+CXXFLAGS = -g -O2 -Wall -Wextra -Wformat -Wvla -Wformat-security -Wno-unused-parameter
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = x86_64-w64-mingw32-dlltool
+DLLTOOL = false
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -2022,20 +2022,20 @@ ECHO_T =
 EGREP = /usr/bin/grep -E
 ERROR_CXXFLAGS = 
 EVENT_CFLAGS = 
-EVENT_LIBS = -levent
-EVENT_PTHREADS_CFLAGS = 
-EVENT_PTHREADS_LIBS = 
-EXEEXT = .exe
+EVENT_LIBS = -levent 
+EVENT_PTHREADS_CFLAGS = -pthread 
+EVENT_PTHREADS_LIBS = -levent_pthreads -levent 
+EXEEXT = 
 EXTENDED_RPC_TESTS = 
 FGREP = /usr/bin/grep -F
-GCOV = /usr/bin/x86_64-w64-mingw32-gcov
+GCOV = /usr/bin/gcov
 GENHTML = 
 GENISOIMAGE = 
 GIT = /usr/bin/git
 GREP = /usr/bin/grep
 HARDENED_CPPFLAGS =  -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
 HARDENED_CXXFLAGS =  -Wstack-protector -fstack-protector-all
-HARDENED_LDFLAGS =  -Wl,--dynamicbase -Wl,--nxcompat -Wl,--high-entropy-va
+HARDENED_LDFLAGS =  -Wl,-z,relro -Wl,-z,now -pie
 HAVE_CXX11 = 1
 HEXDUMP = /usr/bin/hexdump
 IMAGEMAGICK_CONVERT = 
@@ -2046,38 +2046,38 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LCOV = 
-LD = /usr/bin/x86_64-w64-mingw32-ld
-LDFLAGS = -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib 
+LD = /usr/bin/ld -m elf_x86_64
+LDFLAGS = 
 LEVELDB_CPPFLAGS =  $(am__append_11)
-LEVELDB_TARGET_FLAGS = -DOS_WINDOWS
+LEVELDB_TARGET_FLAGS = -DOS_LINUX
 LIBLEVELDB =  $(am__append_9)
 LIBMEMENV =  $(am__append_10)
 LIBOBJS = 
-LIBS = -lQt5PlatformSupport -lssp -lcrypt32 -liphlpapi -lshlwapi -lmswsock -lws2_32 -ladvapi32 -lrpcrt4 -luuid -loleaut32 -lole32 -lcomctl32 -lshell32 -lwinmm -lwinspool -lcomdlg32 -lgdi32 -luser32 -lkernel32 -lmingwthrd 
+LIBS = 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBTOOL_APP_LDFLAGS =  -all-static
+LIBTOOL_APP_LDFLAGS = 
 LIPO = 
 LN_S = ln -s
-LRELEASE = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/lrelease
+LRELEASE = /usr/lib64/qt5/bin/lrelease-qt5
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-LUPDATE = 
+LUPDATE = /usr/lib64/qt5/bin/lupdate-qt5
 MAINT = 
-MAKEINFO = ${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/missing makeinfo
-MAKENSIS = none
+MAKEINFO = ${SHELL} /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/build-aux/missing makeinfo
+MAKENSIS = 
 MANIFEST_TOOL = :
-MINIUPNPC_CPPFLAGS = -DSTATICLIB -DMINIUPNP_STATICLIB
+MINIUPNPC_CPPFLAGS = 
 MINIUPNPC_LIBS = -lminiupnpc
 MKDIR_P = /usr/bin/mkdir -p
-MOC = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/moc
+MOC = /usr/lib64/qt5/bin/moc-qt5
 MOC_DEFS = -DHAVE_CONFIG_H -I$(srcdir)
-NM = x86_64-w64-mingw32-nm
+NM = /usr/bin/nm -B
 NMEDIT = 
-OBJCOPY = /usr/bin/x86_64-w64-mingw32-objcopy
-OBJCXX = x86_64-w64-mingw32-g++ -std=c++11
+OBJCOPY = /usr/bin/objcopy
+OBJCXX = g++ -std=c++11
 OBJCXXDEPMODE = depmode=gcc3
-OBJCXXFLAGS = -g -O2
-OBJDUMP = x86_64-w64-mingw32-objdump
+OBJCXXFLAGS = 
+OBJDUMP = objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -2089,74 +2089,74 @@ PACKAGE_TARNAME = radiocoin
 PACKAGE_URL = https://radiocoin.com/
 PACKAGE_VERSION = 1.14.3
 PATH_SEPARATOR = :
-PIC_FLAGS = 
-PIE_FLAGS = 
-PKG_CONFIG = /usr/bin/pkg-config --static
-PKG_CONFIG_LIBDIR = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib/pkgconfig
-PKG_CONFIG_PATH = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../share/pkgconfig
+PIC_FLAGS = -fPIC
+PIE_FLAGS = -fPIE
+PKG_CONFIG = /usr/bin/pkg-config
+PKG_CONFIG_LIBDIR = 
+PKG_CONFIG_PATH = 
 PORT = 
 PROTOBUF_CFLAGS = 
-PROTOBUF_LIBS = -lprotobuf
-PROTOC = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/protoc
-PTHREAD_CC = x86_64-w64-mingw32-gcc
+PROTOBUF_LIBS = -lprotobuf -lpthread 
+PROTOC = /usr/bin/protoc
+PTHREAD_CC = gcc
 PTHREAD_CFLAGS = -pthread
 PTHREAD_LIBS = 
-PYTHON = /usr/bin/python3
-PYTHONPATH = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/lib/python/dist-packages:
+PYTHON = /usr/bin/python3.6
+PYTHONPATH = 
 QR_CFLAGS = 
-QR_LIBS = -lqrencode
+QR_LIBS = -lqrencode 
 QTPLATFORM_CFLAGS = 
 QTPLATFORM_LIBS = 
 QTPRINT_CFLAGS = 
 QTPRINT_LIBS = 
 QTXCBQPA_CFLAGS = 
 QTXCBQPA_LIBS = 
-QT_CFLAGS = 
-QT_DBUS_CFLAGS = 
-QT_DBUS_INCLUDES = 
-QT_DBUS_LIBS = -lQt5DBus -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib
-QT_INCLUDES = -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtCore -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtGui -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtWidgets -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtNetwork -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtTest -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtDBus -I/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../include/QtPrintSupport
-QT_LDFLAGS =  -mwindows
-QT_LIBS = -lwindowsprintersupport -lqminimal -lqwindows -lQt5PrintSupport -lQt5Widgets -lQt5Network -lQt5Gui     -lQt5Core    -lqtharfbuzzng -lqtpcre -lqtpng -lz  -limm32  -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../plugins/platforms -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../plugins/printsupport
-QT_PIE_FLAGS = 
+QT_CFLAGS = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets -DQT_PRINTSUPPORT_LIB -I/usr/include/qt5/QtPrintSupport -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB 
+QT_DBUS_CFLAGS = -DQT_DBUS_LIB -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
+QT_DBUS_INCLUDES = -DQT_DBUS_LIB -I/usr/include/qt5/QtDBus -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
+QT_DBUS_LIBS = -lQt5DBus -lQt5Core 
+QT_INCLUDES = -I/usr/include/qt5/QtCore -I/usr/include/qt5 -I/usr/include/qt5/QtGui -DQT_NETWORK_LIB -I/usr/include/qt5/QtNetwork -I/usr/include/qt5/QtWidgets -DQT_PRINTSUPPORT_LIB -I/usr/include/qt5/QtPrintSupport -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB 
+QT_LDFLAGS = 
+QT_LIBS = -lQt5Network -lQt5PrintSupport -lQt5Widgets -lQt5Gui -lQt5Core 
+QT_PIE_FLAGS = -fPIE
 QT_SELECT = qt5
-QT_TEST_CFLAGS = 
-QT_TEST_INCLUDES = 
-QT_TEST_LIBS = -lQt5Test -L/home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../lib
-QT_TRANSLATION_DIR = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../translations
-RANLIB = /usr/bin/x86_64-w64-mingw32-ranlib
-RCC = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/rcc
-READELF = /usr/bin/x86_64-w64-mingw32-readelf
+QT_TEST_CFLAGS = -DQT_TESTLIB_LIB -I/usr/include/qt5/QtTest -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
+QT_TEST_INCLUDES = -DQT_TESTLIB_LIB -I/usr/include/qt5/QtTest -I/usr/include/qt5 -DQT_CORE_LIB -I/usr/include/qt5/QtCore 
+QT_TEST_LIBS = -lQt5Test -lQt5Core 
+QT_TRANSLATION_DIR = 
+RANLIB = /usr/bin/ranlib
+RCC = /usr/lib64/qt5/bin/rcc-qt5
+READELF = /usr/bin/readelf
 RELDFLAGS = 
 RSVG_CONVERT = 
 SED = /usr/bin/sed
 SET_MAKE = 
-SHELL = /bin/bash
+SHELL = /bin/sh
 SSL_CFLAGS = 
-SSL_LIBS = -lssl
-STRIP = /usr/bin/x86_64-w64-mingw32-strip
-TESTDEFS = 
+SSL_LIBS = -lssl 
+STRIP = /usr/bin/strip
+TESTDEFS =  -DBOOST_TEST_DYN_LINK
 TIFFCP = 
-UIC = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/depends/x86_64-w64-mingw32/share/../native/bin/uic
+UIC = /usr/lib64/qt5/bin/uic-qt5
 UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
 VERSION = 1.14.3
-WINDOWS_BITS = 64
-WINDRES = /usr/bin/x86_64-w64-mingw32-windres
+WINDOWS_BITS = 
+WINDRES = 
 X11XCB_CFLAGS = 
 X11XCB_LIBS = 
 XGETTEXT = /usr/bin/xgettext
-ZMQ_CFLAGS =  -DZMQ_STATIC
-ZMQ_LIBS = -lzmq
-abs_builddir = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/src
-abs_srcdir = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/src
-abs_top_builddir = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN
-abs_top_srcdir = /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN
-ac_ct_AR = 
-ac_ct_CC = 
-ac_ct_CXX = 
+ZMQ_CFLAGS = 
+ZMQ_LIBS = 
+abs_builddir = /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/src
+abs_srcdir = /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/src
+abs_top_builddir = /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN
+abs_top_srcdir = /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN
+ac_ct_AR = ar
+ac_ct_CC = gcc
+ac_ct_CXX = g++
 ac_ct_DUMPBIN = 
 ac_ct_OBJCXX = 
 am__include = include
@@ -2177,19 +2177,19 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-w64-mingw32
-host_alias = x86_64-w64-mingw32
+host = x86_64-pc-linux-gnu
+host_alias = 
 host_cpu = x86_64
-host_os = mingw32
-host_vendor = w64
+host_os = linux-gnu
+host_vendor = pc
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/c4pt/Desktop/0617-2021-RADIOCOIN/radioCOIN/build-aux/install-sh
-libdir = ${exec_prefix}/lib
+install_sh = ${SHELL} /home/c4pt/opt/fixAuxPowMerge-radioCOIN-5.0.2/radioCOIN/build-aux/install-sh
+libdir = ${exec_prefix}/lib64
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
-localstatedir = ${prefix}/var
+localstatedir = /var
 mandir = ${datarootdir}/man
 mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
@@ -2199,10 +2199,10 @@ program_transform_name = s,x,x,
 psdir = ${docdir}
 runstatedir = ${localstatedir}/run
 sbindir = ${exec_prefix}/sbin
-sharedstatedir = ${prefix}/com
+sharedstatedir = /var
 srcdir = .
 subdirs =  src/univalue src/secp256k1
-sysconfdir = ${prefix}/etc
+sysconfdir = /etc
 target_alias = 
 top_build_prefix = ../
 top_builddir = ..
@@ -2233,7 +2233,7 @@ LIBRADIOCOIN_UTIL = libradiocoin_util.a
 LIBRADIOCOIN_CRYPTO = crypto/libradiocoin_crypto.a
 LIBRADIOCOINQT = qt/libradiocoinqt.a
 LIBSECP256K1 = secp256k1/libsecp256k1.la
-LIBRADIOCOIN_ZMQ = libradiocoin_zmq.a
+#LIBRADIOCOIN_ZMQ = libradiocoin_zmq.a
 LIBRADIOCOINCONSENSUS = libradiocoinconsensus.la
 LIBRADIOCOIN_WALLET = libradiocoin_wallet.a
 lib_LTLIBRARIES = $(LIBRADIOCOINCONSENSUS)
@@ -2377,12 +2377,12 @@ libradiocoin_server_a_SOURCES = \
   versionbits.cpp \
   $(BITCOIN_CORE_H)
 
-libradiocoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
-libradiocoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libradiocoin_zmq_a_SOURCES = \
-  zmq/zmqabstractnotifier.cpp \
-  zmq/zmqnotificationinterface.cpp \
-  zmq/zmqpublishnotifier.cpp
+#libradiocoin_zmq_a_CPPFLAGS = $(BITCOIN_INCLUDES) $(ZMQ_CFLAGS)
+#libradiocoin_zmq_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+#libradiocoin_zmq_a_SOURCES = \
+#  zmq/zmqabstractnotifier.cpp \
+#  zmq/zmqnotificationinterface.cpp \
+#  zmq/zmqpublishnotifier.cpp
 
 
 # wallet: shared between bitcoind and bitcoin-qt, but only linked
@@ -9985,13 +9985,13 @@ qt/test/test_radiocoin-qt.log: qt/test/test_radiocoin-qt$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-.test$(EXEEXT).log:
-	@p='$<'; \
-	$(am__set_b); \
-	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
-	--log-file $$b.log --trs-file $$b.trs \
-	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
-	"$$tst" $(AM_TESTS_FD_REDIRECT)
+#.test$(EXEEXT).log:
+#	@p='$<'; \
+#	$(am__set_b); \
+#	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
+#	--log-file $$b.log --trs-file $$b.trs \
+#	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
+#	"$$tst" $(AM_TESTS_FD_REDIRECT)
 
 distdir: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) distdir-am

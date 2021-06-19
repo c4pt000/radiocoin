@@ -7188,7 +7188,7 @@ linux* | k*bsd*-gnu | kopensolaris*-gnu | gnu*)
   lt_cv_deplibs_check_method=pass_all
   ;;
 
-netbsd* | netbsdelf*-gnu)
+netbsd*)
   if echo __ELF__ | $CC -E - | $GREP __ELF__ > /dev/null; then
     lt_cv_deplibs_check_method='match_pattern /lib[^/]+(\.so\.[0-9]+\.[0-9]+|_pic\.a)$'
   else
@@ -7551,7 +7551,7 @@ esac
 fi
 
 : ${AR=ar}
-: ${AR_FLAGS=cr}
+: ${AR_FLAGS=cru}
 
 
 
@@ -8052,8 +8052,11 @@ _LT_EOF
   test $ac_status = 0; }; then
     # Now try to grab the symbols.
     nlist=conftest.nm
-    $ECHO "$as_me:$LINENO: $NM conftest.$ac_objext | $lt_cv_sys_global_symbol_pipe > $nlist" >&5
-    if eval "$NM" conftest.$ac_objext \| "$lt_cv_sys_global_symbol_pipe" \> $nlist 2>&5 && test -s "$nlist"; then
+    if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$NM conftest.$ac_objext \| "$lt_cv_sys_global_symbol_pipe" \> $nlist\""; } >&5
+  (eval $NM conftest.$ac_objext \| "$lt_cv_sys_global_symbol_pipe" \> $nlist) 2>&5
+  ac_status=$?
+  $as_echo "$as_me:${as_lineno-$LINENO}: \$? = $ac_status" >&5
+  test $ac_status = 0; } && test -s "$nlist"; then
       # Try sorting and uniquifying the output.
       if sort "$nlist" | uniq > "$nlist"T; then
 	mv -f "$nlist"T "$nlist"
@@ -9272,8 +9275,8 @@ int forced_loaded() { return 2;}
 _LT_EOF
       echo "$LTCC $LTCFLAGS -c -o conftest.o conftest.c" >&5
       $LTCC $LTCFLAGS -c -o conftest.o conftest.c 2>&5
-      echo "$AR cr libconftest.a conftest.o" >&5
-      $AR cr libconftest.a conftest.o 2>&5
+      echo "$AR cru libconftest.a conftest.o" >&5
+      $AR cru libconftest.a conftest.o 2>&5
       echo "$RANLIB libconftest.a" >&5
       $RANLIB libconftest.a 2>&5
       cat > conftest.c << _LT_EOF
@@ -10411,12 +10414,6 @@ lt_prog_compiler_static=
 	lt_prog_compiler_pic='-KPIC'
 	lt_prog_compiler_static='-static'
         ;;
-      # flang / f18. f95 an alias for gfortran or flang on Debian
-      flang* | f18* | f95*)
-	lt_prog_compiler_wl='-Wl,'
-	lt_prog_compiler_pic='-fPIC'
-	lt_prog_compiler_static='-static'
-        ;;
       # icc used to be incompatible with GCC.
       # ICC 10 doesn't accept -KPIC any more.
       icc* | ifort*)
@@ -10893,9 +10890,6 @@ $as_echo_n "checking whether the $compiler linker ($LD) supports shared librarie
   openbsd* | bitrig*)
     with_gnu_ld=no
     ;;
-  linux* | k*bsd*-gnu | gnu*)
-    link_all_deplibs=no
-    ;;
   esac
 
   ld_shlibs=yes
@@ -11150,7 +11144,7 @@ _LT_EOF
       fi
       ;;
 
-    netbsd* | netbsdelf*-gnu)
+    netbsd*)
       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 	archive_cmds='$LD -Bshareable $libobjs $deplibs $linker_flags -o $lib'
 	wlarc=
@@ -11820,7 +11814,6 @@ $as_echo "$lt_cv_irix_exported_symbol" >&6; }
 	if test yes = "$lt_cv_irix_exported_symbol"; then
           archive_expsym_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname `test -n "$verstring" && func_echo_all "$wl-set_version $wl$verstring"` $wl-update_registry $wl$output_objdir/so_locations $wl-exports_file $wl$export_symbols -o $lib'
 	fi
-	link_all_deplibs=no
       else
 	archive_cmds='$CC -shared $libobjs $deplibs $compiler_flags -soname $soname `test -n "$verstring" && func_echo_all "-set_version $verstring"` -update_registry $output_objdir/so_locations -o $lib'
 	archive_expsym_cmds='$CC -shared $libobjs $deplibs $compiler_flags -soname $soname `test -n "$verstring" && func_echo_all "-set_version $verstring"` -update_registry $output_objdir/so_locations -exports_file $export_symbols -o $lib'
@@ -11842,7 +11835,7 @@ $as_echo "$lt_cv_irix_exported_symbol" >&6; }
       esac
       ;;
 
-    netbsd* | netbsdelf*-gnu)
+    netbsd*)
       if echo __ELF__ | $CC -E - | $GREP __ELF__ >/dev/null; then
 	archive_cmds='$LD -Bshareable -o $lib $libobjs $deplibs $linker_flags'  # a.out
       else
@@ -12937,6 +12930,9 @@ fi
   # before this can be enabled.
   hardcode_into_libs=yes
 
+  # Add ABI-specific directories to the system library path.
+  sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib"
+
   # Ideally, we could use ldconfig to report *all* directores which are
   # searched for libraries, however this is still not possible.  Aside from not
   # being certain /sbin/ldconfig is available, command
@@ -12945,7 +12941,7 @@ fi
   # appending ld.so.conf contents (and includes) to the search path.
   if test -f /etc/ld.so.conf; then
     lt_ld_extra=`awk '/^include / { system(sprintf("cd /etc; cat %s 2>/dev/null", \$2)); skip = 1; } { if (!skip) print \$0; skip = 0; }' < /etc/ld.so.conf | $SED -e 's/#.*//;/^[	 ]*hwcap[	 ]/d;s/[:,	]/ /g;s/=[^=]*$//;s/=[^= ]* / /g;s/"//g;/^$/d' | tr '\n' ' '`
-    sys_lib_dlsearch_path_spec="/lib /usr/lib $lt_ld_extra"
+    sys_lib_dlsearch_path_spec="$sys_lib_dlsearch_path_spec $lt_ld_extra"
   fi
 
   # We used to test for /lib/ld.so.1 and disable shared libraries on
@@ -12955,18 +12951,6 @@ fi
   # people can always --disable-shared, the test was removed, and we
   # assume the GNU/Linux dynamic linker is in use.
   dynamic_linker='GNU/Linux ld.so'
-  ;;
-
-netbsdelf*-gnu)
-  version_type=linux
-  need_lib_prefix=no
-  need_version=no
-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-  soname_spec='${libname}${release}${shared_ext}$major'
-  shlibpath_var=LD_LIBRARY_PATH
-  shlibpath_overrides_runpath=no
-  hardcode_into_libs=yes
-  dynamic_linker='NetBSD ld.elf_so'
   ;;
 
 netbsd*)
@@ -14359,7 +14343,7 @@ with_gnu_ld=$lt_cv_prog_gnu_ld
       # Commands to make compiler produce verbose output that lists
       # what "hidden" libraries, object files and flags are used when
       # linking a shared library.
-      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP " \-L"'
+      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
 
     else
       GXX=no
@@ -14851,7 +14835,7 @@ fi
             # explicitly linking system object files so we need to strip them
             # from the output so that they don't get included in the library
             # dependencies.
-            output_verbose_link_cmd='templist=`($CC -b $CFLAGS -v conftest.$objext 2>&1) | $EGREP " \-L"`; list= ; for z in $templist; do case $z in conftest.$objext) list="$list $z";; *.$objext);; *) list="$list $z";;esac; done; func_echo_all "$list"'
+            output_verbose_link_cmd='templist=`($CC -b $CFLAGS -v conftest.$objext 2>&1) | $EGREP "\-L"`; list= ; for z in $templist; do case $z in conftest.$objext) list="$list $z";; *.$objext);; *) list="$list $z";;esac; done; func_echo_all "$list"'
             ;;
           *)
             if test yes = "$GXX"; then
@@ -14916,7 +14900,7 @@ fi
 	    # explicitly linking system object files so we need to strip them
 	    # from the output so that they don't get included in the library
 	    # dependencies.
-	    output_verbose_link_cmd='templist=`($CC -b $CFLAGS -v conftest.$objext 2>&1) | $GREP " \-L"`; list= ; for z in $templist; do case $z in conftest.$objext) list="$list $z";; *.$objext);; *) list="$list $z";;esac; done; func_echo_all "$list"'
+	    output_verbose_link_cmd='templist=`($CC -b $CFLAGS -v conftest.$objext 2>&1) | $GREP "\-L"`; list= ; for z in $templist; do case $z in conftest.$objext) list="$list $z";; *.$objext);; *) list="$list $z";;esac; done; func_echo_all "$list"'
 	    ;;
           *)
 	    if test yes = "$GXX"; then
@@ -15255,7 +15239,7 @@ fi
 	      # Commands to make compiler produce verbose output that lists
 	      # what "hidden" libraries, object files and flags are used when
 	      # linking a shared library.
-	      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP " \-L"'
+	      output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
 
 	    else
 	      # FIXME: insert proper C++ library support
@@ -15339,7 +15323,7 @@ fi
 	        # Commands to make compiler produce verbose output that lists
 	        # what "hidden" libraries, object files and flags are used when
 	        # linking a shared library.
-	        output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP " \-L"'
+	        output_verbose_link_cmd='$CC -shared $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
 	      else
 	        # g++ 2.7 appears to require '-G' NOT '-shared' on this
 	        # platform.
@@ -15350,7 +15334,7 @@ fi
 	        # Commands to make compiler produce verbose output that lists
 	        # what "hidden" libraries, object files and flags are used when
 	        # linking a shared library.
-	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP " \-L"'
+	        output_verbose_link_cmd='$CC -G $CFLAGS -v conftest.$objext 2>&1 | $GREP -v "^Configured with:" | $GREP "\-L"'
 	      fi
 
 	      hardcode_libdir_flag_spec_CXX='$wl-R $wl$libdir'
@@ -15863,7 +15847,7 @@ lt_prog_compiler_static_CXX=
 	    ;;
 	esac
 	;;
-      netbsd* | netbsdelf*-gnu)
+      netbsd*)
 	;;
       *qnx* | *nto*)
         # QNX uses GNU C++, but need to define -shared option too, otherwise
@@ -16237,9 +16221,6 @@ $as_echo_n "checking whether the $compiler linker ($LD) supports shared librarie
       exclude_expsyms_CXX='[_]+GLOBAL_OFFSET_TABLE_|[_]+GLOBAL__[FID]_.*|[_]+head_[A-Za-z0-9_]+_dll|[A-Za-z0-9_]+_dll_iname'
       ;;
     esac
-    ;;
-  linux* | k*bsd*-gnu | gnu*)
-    link_all_deplibs_CXX=no
     ;;
   *)
     export_symbols_cmds_CXX='$NM $libobjs $convenience | $global_symbol_pipe | $SED '\''s/.* //'\'' | sort | uniq > $export_symbols'
@@ -16914,6 +16895,9 @@ fi
   # before this can be enabled.
   hardcode_into_libs=yes
 
+  # Add ABI-specific directories to the system library path.
+  sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib"
+
   # Ideally, we could use ldconfig to report *all* directores which are
   # searched for libraries, however this is still not possible.  Aside from not
   # being certain /sbin/ldconfig is available, command
@@ -16922,7 +16906,7 @@ fi
   # appending ld.so.conf contents (and includes) to the search path.
   if test -f /etc/ld.so.conf; then
     lt_ld_extra=`awk '/^include / { system(sprintf("cd /etc; cat %s 2>/dev/null", \$2)); skip = 1; } { if (!skip) print \$0; skip = 0; }' < /etc/ld.so.conf | $SED -e 's/#.*//;/^[	 ]*hwcap[	 ]/d;s/[:,	]/ /g;s/=[^=]*$//;s/=[^= ]* / /g;s/"//g;/^$/d' | tr '\n' ' '`
-    sys_lib_dlsearch_path_spec="/lib /usr/lib $lt_ld_extra"
+    sys_lib_dlsearch_path_spec="$sys_lib_dlsearch_path_spec $lt_ld_extra"
   fi
 
   # We used to test for /lib/ld.so.1 and disable shared libraries on
@@ -16932,18 +16916,6 @@ fi
   # people can always --disable-shared, the test was removed, and we
   # assume the GNU/Linux dynamic linker is in use.
   dynamic_linker='GNU/Linux ld.so'
-  ;;
-
-netbsdelf*-gnu)
-  version_type=linux
-  need_lib_prefix=no
-  need_version=no
-  library_names_spec='${libname}${release}${shared_ext}$versuffix ${libname}${release}${shared_ext}$major ${libname}${shared_ext}'
-  soname_spec='${libname}${release}${shared_ext}$major'
-  shlibpath_var=LD_LIBRARY_PATH
-  shlibpath_overrides_runpath=no
-  hardcode_into_libs=yes
-  dynamic_linker='NetBSD ld.elf_so'
   ;;
 
 netbsd*)
@@ -21608,7 +21580,7 @@ else
     We can't simply define LARGE_OFF_T to be 9223372036854775807,
     since some C++ compilers masquerading as C compilers
     incorrectly reject 9223372036854775807.  */
-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
+#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
@@ -21654,7 +21626,7 @@ else
     We can't simply define LARGE_OFF_T to be 9223372036854775807,
     since some C++ compilers masquerading as C compilers
     incorrectly reject 9223372036854775807.  */
-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
+#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
@@ -21678,7 +21650,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
     We can't simply define LARGE_OFF_T to be 9223372036854775807,
     since some C++ compilers masquerading as C compilers
     incorrectly reject 9223372036854775807.  */
-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
+#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
@@ -21723,7 +21695,7 @@ else
     We can't simply define LARGE_OFF_T to be 9223372036854775807,
     since some C++ compilers masquerading as C compilers
     incorrectly reject 9223372036854775807.  */
-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
+#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
@@ -21747,7 +21719,7 @@ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
     We can't simply define LARGE_OFF_T to be 9223372036854775807,
     since some C++ compilers masquerading as C compilers
     incorrectly reject 9223372036854775807.  */
-#define LARGE_OFF_T ((((off_t) 1 << 31) << 31) - 1 + (((off_t) 1 << 31) << 31))
+#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721
 		       && LARGE_OFF_T % 2147483647 == 1)
 		      ? 1 : -1];
@@ -23464,8 +23436,8 @@ fi
       if test x$bitcoin_qt_want_version = xqt5 || ( test x$bitcoin_qt_want_version = xauto && test x$auto_priority_version = xqt5 ); then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $qt5_modules" >&5
-$as_echo_n "checking for $qt5_modules... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT" >&5
+$as_echo_n "checking for QT... " >&6; }
 
 if test -n "$QT_CFLAGS"; then
     pkg_cv_QT_CFLAGS="$QT_CFLAGS"
@@ -23505,7 +23477,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -23523,7 +23495,7 @@ fi
 
 	have_qt=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qt=no
 else
@@ -23536,8 +23508,8 @@ fi
       elif test x$bitcoin_qt_want_version = xqt4 || ( test x$bitcoin_qt_want_version = xauto && test x$auto_priority_version = xqt4 ); then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $qt4_modules" >&5
-$as_echo_n "checking for $qt4_modules... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT" >&5
+$as_echo_n "checking for QT... " >&6; }
 
 if test -n "$QT_CFLAGS"; then
     pkg_cv_QT_CFLAGS="$QT_CFLAGS"
@@ -23577,7 +23549,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -23595,7 +23567,7 @@ fi
 
 	have_qt=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qt=no
 else
@@ -23611,8 +23583,8 @@ fi
         if test x$auto_priority_version = xqt5; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $qt4_modules" >&5
-$as_echo_n "checking for $qt4_modules... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT" >&5
+$as_echo_n "checking for QT... " >&6; }
 
 if test -n "$QT_CFLAGS"; then
     pkg_cv_QT_CFLAGS="$QT_CFLAGS"
@@ -23652,7 +23624,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -23670,7 +23642,7 @@ fi
 
 	have_qt=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qt=no
 else
@@ -23683,8 +23655,8 @@ fi
         else
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $qt5_modules" >&5
-$as_echo_n "checking for $qt5_modules... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT" >&5
+$as_echo_n "checking for QT... " >&6; }
 
 if test -n "$QT_CFLAGS"; then
     pkg_cv_QT_CFLAGS="$QT_CFLAGS"
@@ -23724,7 +23696,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -23742,7 +23714,7 @@ fi
 
 	have_qt=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qt=no
 else
@@ -23781,8 +23753,8 @@ $as_echo "$as_me: WARNING: Qt dependencies not found; radiocoin-qt frontend will
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for ${QT_LIB_PREFIX}Test" >&5
-$as_echo_n "checking for ${QT_LIB_PREFIX}Test... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT_TEST" >&5
+$as_echo_n "checking for QT_TEST... " >&6; }
 
 if test -n "$QT_TEST_CFLAGS"; then
     pkg_cv_QT_TEST_CFLAGS="$QT_TEST_CFLAGS"
@@ -23822,7 +23794,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -23840,7 +23812,7 @@ fi
 
 	have_qt_test=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qt_test=no
 else
@@ -23853,8 +23825,8 @@ fi
       if test x$use_dbus != xno; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for ${QT_LIB_PREFIX}DBus" >&5
-$as_echo_n "checking for ${QT_LIB_PREFIX}DBus... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QT_DBUS" >&5
+$as_echo_n "checking for QT_DBUS... " >&6; }
 
 if test -n "$QT_DBUS_CFLAGS"; then
     pkg_cv_QT_DBUS_CFLAGS="$QT_DBUS_CFLAGS"
@@ -23894,7 +23866,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -23912,7 +23884,7 @@ fi
 
 	have_qt_dbus=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qt_dbus=no
 else
@@ -24999,8 +24971,8 @@ $as_echo "#define QT_STATICPLUGIN 1" >>confdefs.h
      :
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Qt5PlatformSupport" >&5
-$as_echo_n "checking for Qt5PlatformSupport... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QTPLATFORM" >&5
+$as_echo_n "checking for QTPLATFORM... " >&6; }
 
 if test -n "$QTPLATFORM_CFLAGS"; then
     pkg_cv_QTPLATFORM_CFLAGS="$QTPLATFORM_CFLAGS"
@@ -25040,7 +25012,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -25067,7 +25039,7 @@ Alternatively, you may set the environment variables QTPLATFORM_CFLAGS
 and QTPLATFORM_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
@@ -25091,8 +25063,8 @@ fi
        if test x$TARGET_OS = xlinux; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for x11-xcb" >&5
-$as_echo_n "checking for x11-xcb... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for X11XCB" >&5
+$as_echo_n "checking for X11XCB... " >&6; }
 
 if test -n "$X11XCB_CFLAGS"; then
     pkg_cv_X11XCB_CFLAGS="$X11XCB_CFLAGS"
@@ -25132,7 +25104,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -25159,7 +25131,7 @@ Alternatively, you may set the environment variables X11XCB_CFLAGS
 and X11XCB_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
@@ -25183,8 +25155,8 @@ fi
          if ${PKG_CONFIG} --exists "Qt5Core >= 5.5" 2>/dev/null; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Qt5XcbQpa" >&5
-$as_echo_n "checking for Qt5XcbQpa... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QTXCBQPA" >&5
+$as_echo_n "checking for QTXCBQPA... " >&6; }
 
 if test -n "$QTXCBQPA_CFLAGS"; then
     pkg_cv_QTXCBQPA_CFLAGS="$QTXCBQPA_CFLAGS"
@@ -25224,7 +25196,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -25251,7 +25223,7 @@ Alternatively, you may set the environment variables QTXCBQPA_CFLAGS
 and QTXCBQPA_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
@@ -25276,8 +25248,8 @@ fi
        elif test x$TARGET_OS = xdarwin; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for Qt5PrintSupport" >&5
-$as_echo_n "checking for Qt5PrintSupport... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QTPRINT" >&5
+$as_echo_n "checking for QTPRINT... " >&6; }
 
 if test -n "$QTPRINT_CFLAGS"; then
     pkg_cv_QTPRINT_CFLAGS="$QTPRINT_CFLAGS"
@@ -25317,7 +25289,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -25344,7 +25316,7 @@ Alternatively, you may set the environment variables QTPRINT_CFLAGS
 and QTPRINT_LIBS to avoid the need to call pkg-config.
 See the pkg-config man page for more details." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	{ { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
 $as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
@@ -28700,8 +28672,8 @@ if test x$use_pkgconfig = xyes; then
   :
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libssl" >&5
-$as_echo_n "checking for libssl... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for SSL" >&5
+$as_echo_n "checking for SSL... " >&6; }
 
 if test -n "$SSL_CFLAGS"; then
     pkg_cv_SSL_CFLAGS="$SSL_CFLAGS"
@@ -28741,7 +28713,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -28759,7 +28731,7 @@ fi
 
 	as_fn_error $? "openssl  not found." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "openssl  not found." "$LINENO" 5
 else
@@ -28771,8 +28743,8 @@ $as_echo "yes" >&6; }
 fi
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libcrypto" >&5
-$as_echo_n "checking for libcrypto... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for CRYPTO" >&5
+$as_echo_n "checking for CRYPTO... " >&6; }
 
 if test -n "$CRYPTO_CFLAGS"; then
     pkg_cv_CRYPTO_CFLAGS="$CRYPTO_CFLAGS"
@@ -28812,7 +28784,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -28830,7 +28802,7 @@ fi
 
 	as_fn_error $? "libcrypto  not found." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "libcrypto  not found." "$LINENO" 5
 else
@@ -28845,8 +28817,8 @@ fi
     true
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for protobuf" >&5
-$as_echo_n "checking for protobuf... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for PROTOBUF" >&5
+$as_echo_n "checking for PROTOBUF... " >&6; }
 
 if test -n "$PROTOBUF_CFLAGS"; then
     pkg_cv_PROTOBUF_CFLAGS="$PROTOBUF_CFLAGS"
@@ -28886,7 +28858,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -28915,7 +28887,7 @@ $as_echo "$as_me: WARNING: libprotobuf not found; radiocoin-qt frontend will not
   fi
 
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
   if test "x$bitcoin_qt_want_version" = "xauto" && test x$bitcoin_qt_force != xyes; then
@@ -28947,8 +28919,8 @@ fi
     true
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libqrencode" >&5
-$as_echo_n "checking for libqrencode... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for QR" >&5
+$as_echo_n "checking for QR... " >&6; }
 
 if test -n "$QR_CFLAGS"; then
     pkg_cv_QR_CFLAGS="$QR_CFLAGS"
@@ -28988,7 +28960,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -29006,7 +28978,7 @@ fi
 
 	have_qrencode=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	have_qrencode=no
 else
@@ -29025,8 +28997,8 @@ fi
       if test x$build_bitcoin_utils$build_bitcoind$bitcoin_enable_qt$use_tests != xnononono; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libevent" >&5
-$as_echo_n "checking for libevent... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVENT" >&5
+$as_echo_n "checking for EVENT... " >&6; }
 
 if test -n "$EVENT_CFLAGS"; then
     pkg_cv_EVENT_CFLAGS="$EVENT_CFLAGS"
@@ -29066,7 +29038,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -29084,7 +29056,7 @@ fi
 
 	as_fn_error $? "libevent not found." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "libevent not found." "$LINENO" 5
 else
@@ -29097,8 +29069,8 @@ fi
         if test x$TARGET_OS != xwindows; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libevent_pthreads" >&5
-$as_echo_n "checking for libevent_pthreads... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for EVENT_PTHREADS" >&5
+$as_echo_n "checking for EVENT_PTHREADS... " >&6; }
 
 if test -n "$EVENT_PTHREADS_CFLAGS"; then
     pkg_cv_EVENT_PTHREADS_CFLAGS="$EVENT_PTHREADS_CFLAGS"
@@ -29138,7 +29110,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -29156,7 +29128,7 @@ fi
 
 	as_fn_error $? "libevent_pthreads not found." "$LINENO" 5
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	as_fn_error $? "libevent_pthreads not found." "$LINENO" 5
 else
@@ -29172,8 +29144,8 @@ fi
       if test "x$use_zmq" = "xyes"; then
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libzmq >= 4" >&5
-$as_echo_n "checking for libzmq >= 4... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for ZMQ" >&5
+$as_echo_n "checking for ZMQ... " >&6; }
 
 if test -n "$ZMQ_CFLAGS"; then
     pkg_cv_ZMQ_CFLAGS="$ZMQ_CFLAGS"
@@ -29213,7 +29185,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -29236,7 +29208,7 @@ $as_echo "#define ENABLE_ZMQ 0" >>confdefs.h
 $as_echo "$as_me: WARNING: libzmq version 4.x or greater not found, disabling" >&2;}
            use_zmq=no
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 $as_echo "#define ENABLE_ZMQ 0" >>confdefs.h
@@ -29670,8 +29642,8 @@ if test x$system_univalue != xno ; then
 
 
 pkg_failed=no
-{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for libunivalue" >&5
-$as_echo_n "checking for libunivalue... " >&6; }
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for UNIVALUE" >&5
+$as_echo_n "checking for UNIVALUE... " >&6; }
 
 if test -n "$UNIVALUE_CFLAGS"; then
     pkg_cv_UNIVALUE_CFLAGS="$UNIVALUE_CFLAGS"
@@ -29711,7 +29683,7 @@ fi
 
 
 if test $pkg_failed = yes; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+   	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 
 if $PKG_CONFIG --atleast-pkgconfig-version 0.20; then
@@ -29729,7 +29701,7 @@ fi
 
 	true
 elif test $pkg_failed = untried; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+     	{ $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
 $as_echo "no" >&6; }
 	true
 else
@@ -32347,6 +32319,7 @@ See \`config.log' for more details" "$LINENO" 5; }
     cat <<_LT_EOF >> "$cfgfile"
 #! $SHELL
 # Generated automatically by $as_me ($PACKAGE) $VERSION
+# Libtool was configured on host `(hostname || uname -n) 2>/dev/null | sed 1q`:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
