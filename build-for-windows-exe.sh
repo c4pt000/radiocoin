@@ -13,8 +13,9 @@ win32 build-env for mingw32
 
 docker run -it -d -v /opt/radiocoin:/opt/radiocoin c4pt/radiocoinwinbuild2010
 docker exec -it <docker_vm> bash
-sleep 2s
 "
+sleep 2s
+
 
 
 echo "
