@@ -14,7 +14,7 @@ echo "replace -O with your wallet receving address for p2pool mining or username
 echo ""
 echo "LINODE remote not local"
 echo ""
-echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 20 -o stratum+tcp://104.237.145.126:9555 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x "
+echo " docker run -it --privileged c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 20 -o stratum+tcp://104.237.145.126:3008 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x --worksize 256 -g 1 --lookup-gap 2 --thread-concurrency 7200 --fix-protocol"
 echo ""
 echo ""
 echo " or cudaminer "
