@@ -8,6 +8,8 @@ http://radiopool.me:9555/static/
 
 
 https://github.com/c4pt000/radiocoin/releases
+
+http://radioblockchain.info/
 ```
 * 06-19-2021 reset to enable AuxPow sooner, than marked block 300,000
 * confirms are still 3 confirms on a block
