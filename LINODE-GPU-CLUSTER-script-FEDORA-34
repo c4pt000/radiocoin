@@ -73,15 +73,33 @@ rm -rf /boot/initramfs-5.11.*300*
 rm -rf /boot/vmlinu*300*
 
 grub2-mkconfig -o /boot/grub2/grub.cfg && grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg 
-echo "script needs to reboot for changes to kernel and kernel-devel script will pause for 10 seconds"
-sleep 10s
-wget https://raw.githubusercontent.com/c4pt000/radioCOIN/main/LINODE-GPU-CLUSTER-script-FEDORA-34.pt2
-chmod +x LINODE-GPU-CLUSTER-script-FEDORA-34.pt2
-echo "script part 2 after reboot"
-echo "./LINODE-GPU-CLUSTER-script-FEDORA-34.pt2"
-echo "rebooting now"
-echo "newer kernel takes 90 seconds to boot to load kobjects and events"
+
 systemctl enable docker
 systemctl start docker
 nvidia-smi
-reboot
+
+
+
+echo "replace -O with your wallet receving address for p2pool mining or username password for other remote mining RSYOURRECEVINGADDRESSVLEQj4T:x "
+echo ""
+echo "LINODE remote not local"
+echo ""
+echo " docker run -it --privileged c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 20 -o stratum+tcp://104.237.145.126:3008 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x --worksize 256 -g 1 --lookup-gap 2 --thread-concurrency 7200 --fix-protocol"
+echo ""
+echo ""
+echo " or cudaminer "
+echo ""
+echo ""
+echo "docker run -it --privileged c4pt/cudaminer-nvidia-docker cudaminer --algo=scrypt -s 20 -o stratum+tcp://104.237.145.126:9555 -O RSYOURRECEVINGADDRESSVLEQj4T:x "
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+echo "system should reboot for changes to kernel and kernel-devel...... script will pause for 10 seconds"
+sleep 10s
+
+echo "you should reboot now"
+echo "newer kernel takes 90 seconds to boot to load kobjects and events"
+
+
