@@ -1,5 +1,14 @@
 # RADIOACTIVE !!
+* update 06-20-2021 resets are done for now
+```
+gpu mining and asic mining is possible
 
+
+http://radiopool.me:9555/static/
+
+
+https://github.com/c4pt000/radiocoin/releases
+```
 * 06-19-2021 reset to enable AuxPow sooner, than marked block 300,000
 * confirms are still 3 confirms on a block
 
