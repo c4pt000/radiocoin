@@ -6,6 +6,9 @@ gpu mining and asic mining is possible
 
 http://radiopool.me:9555/static/
 
+http://pool.solopools.net:3345 
+
+-a scrypt -o stratum+tcp://pool.solopools.net:3345 -u WALLETADDRESS -p c=RADC
 
 https://github.com/c4pt000/radiocoin/releases
 
