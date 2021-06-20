@@ -10,7 +10,7 @@ echo "using standard nvidia-driver from cuda repo RPMS"
 systemctl enable docker
 systemctl start docker
 nvidia-smi
-echo "replace -O with your wallet receving address for p2pool mining or username password for other remote mining RNshKJXooH2veVijkXGKzLQfBWgpPE7TQN:x "
+echo "replace -O with your wallet receving address for p2pool mining or username password for other remote mining RSYOURRECEVINGADDRESSVLEQj4T:x "
 echo ""
 echo "LINODE remote not local"
 echo ""
