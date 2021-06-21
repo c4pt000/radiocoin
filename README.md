@@ -1,4 +1,7 @@
 # RADIOACTIVE !!
+
+* have to reset (again) possible network fork,
+
 * update 06-20-2021 resets are done for now
 
 # macos / linux / windows wallets must reset the datadir if wallet version is before 5.0.2-segwit-auxpow-csv
