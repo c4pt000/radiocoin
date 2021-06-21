@@ -63,11 +63,13 @@ wget https://raw.githubusercontent.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgr
 
 
 
-
+echo "for expSEHDsec kernel
 wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio-nvidia-amd/releases/download/haxm-experimental/kernel-5.11.6_HAXM_expSEHDsec_c4pt000_amdNV-1.x86_64.rpm 
 wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio-nvidia-amd/releases/download/haxm-experimental/kernel-headers-5.11.6_HAXM_expSEHDsec_c4pt000_amdNV-1.x86_64.rpm 
 wget https://github.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio-nvidia-amd/releases/download/haxm-experimental/kernel-devel-5.11.6_HAXM_expSEHDsec_c4pt000_amdNV-1.x86_64.rpm 
 yum install kernel*.rpm -y
+"
+yum install kernel-devel kernel kernel-headers kernel-core kernel-modules -y
 yum install mesa* vulkan* libglv* -y
 rm -rf /boot/initramfs-5.11.*300*
 rm -rf /boot/vmlinu*300*
