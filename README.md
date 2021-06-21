@@ -5,7 +5,7 @@
 * cpu mining is almost over just gpu / asic mining
 ```
 whether its a custom datadir or .radiocoin keep radiocoin.conf delete contents of directory replace radiocoin.conf re-launch radiocoin-qt or radiocoind
-(previous wallet.dats before 5.0.2-auxpow-segwit-csv will not work from having to reset the network from testing mining functionality)
+(previous wallet.dats before 5.0.2-auxpow-segwit-csv will not work from having to reset the network due to debugging functionality of mining on the network)
 ```
 
 ```
