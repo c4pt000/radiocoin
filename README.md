@@ -1,5 +1,13 @@
 # RADIOACTIVE !!
 * update 06-20-2021 resets are done for now
+
+# macos / linux / windows wallets must reset the datadir if wallet version if before 5.0.2-segwit-auxpow-csv
+* cpu mining is almost over just gpu / asic mining
+```
+where its a custom datadir or .radiocoin keep radiocoin.conf delete directory replace radiocoin.conf re-launch radiocoin-qt or radiocoind
+(previous wallet.dats before 5.0.2-auxpow-segwit-csv will not work from network reset)
+```
+
 ```
 gpu mining and asic mining is possible
 
