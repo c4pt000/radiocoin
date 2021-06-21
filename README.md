@@ -22,10 +22,10 @@ https://github.com/c4pt000/radiocoin/releases
 
 http://radioblockchain.info/
 ```
-* 06-19-2021 had to reset to enable attempt to enable AuxPow sooner, than the marked block 300,000 in the original codebase of chainparams.cpp
+* 06-19-2021 had to reset to enable an attempt to enable AuxPow sooner, than the previous block 300,000 in the original codebase of chainparams.cpp
 * confirms are still 3 confirms on a block
 
-changed begin of digishield and AuxPow enabled blocks to block height 2050 (instead of block heigh 145,000 and 371337) to experiment with p2pool mining and matching chainID to low difficulty work/shares per cpu/gpu miner
+changed begin of digishield and AuxPow enabled blocks to block height 2050 (instead of block height 145,000 and 371337) to experiment with p2pool mining and matching chainID to low difficulty work/shares per cpu/gpu miner
 ```
         // Blocks 145000 - 371336 are Digishield without AuxPoW 
 	//enabled at block 2050 for early p2pool chain id mining
