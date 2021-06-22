@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/opt/radio"
-BUILDDIR="/opt/radio"
+SRCDIR="/Users/c4pt/Desktop/NEWCOIN-06-22-2021-radioCOIN/radioCOIN"
+BUILDDIR="/Users/c4pt/Desktop/NEWCOIN-06-22-2021-radioCOIN/radioCOIN"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.
