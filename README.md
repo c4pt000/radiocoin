@@ -1,4 +1,8 @@
 # RADIOACTIVE !!
+* 06-29-2021 
+ 
+ added a full node script + dnsseed -> to run a full node
+ https://raw.githubusercontent.com/c4pt000/radiocoin/master/docker-radiocoin%2Bdnsseed-FULLNODE
 
 * update 06-20-2021 resets are done for now
 
