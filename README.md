@@ -610,7 +610,24 @@ source build
   radiocoin-qt
   or radiocoind      (radiocoin-cli getinfo)
 ```
+```
+find ./ -type f -readable  -writable -exec sed -i 's/bitcoin/yourcoin/g' {} \;
+then:
 
+find ./ -type f -readable  -writable -exec sed -i 's/Bitcoin/Yourcoin/g' {} \;
+then :
+
+find ./ -type f -readable  -writable -exec sed -i 's/BitCoin/YourCoin/g' {} \;
+then :
+
+find ./ -type f -readable  -writable -exec sed -i 's/BitCoin/YourCoin/g' {} \;
+then :
+
+find ./ -type f -readable  -writable -exec sed -i 's/BTC/YOUR/g' {} \;
+then :
+
+find ./ -type f -readable  -writable -exec sed -i 's/bitcoind/yourcoind/g' {} \;
+```
 
 
 What is RadioCoin?
