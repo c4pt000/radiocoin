@@ -1,9 +1,14 @@
 # RADIOACTIVE !!
 
-PAPER wallet import works with radiocoin-electrum-4.1.4
+* 07-06-2021
+# PAPER wallet import works with radiocoin-electrum-4.1.4
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/just-the-right-QR-code-ignore-the-left.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/electrum-import-paper-QR-radiodollar.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/radio-electrum-4.1.4.paper-sweep.png)
 
 
-* 07-04-2021 (see releases for electrum-4.1.4 for radiocoin)
+
+* 07-04-2021<-between yesterday and today? (see releases for electrum-4.1.4 for radiocoin)
 
 https://github.com/c4pt000/electrum-radiocoin-4.1.4-current
 
