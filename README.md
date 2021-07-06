@@ -1,9 +1,12 @@
 # RADIOACTIVE !!
 
-* 07-04-2021
-# ** WIP do not use electrum-radc
-https://github.com/c4pt000/electrum-wallet-radc
-https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin
+* 07-04-2021 (see releases for electrum-4.1.4 for radiocoin)
+
+https://github.com/c4pt000/electrum-radiocoin-4.1.4-current
+
+# run your own radiocoin-electrumX server to host 4.1.4 wallets (or Dogecoin)
+
+https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4
 
 * 06-29-2021 
  
