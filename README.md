@@ -2,6 +2,7 @@
 
 * 07-04-2021
 # ** WIP do not use electrum-radc
+https://github.com/c4pt000/electrum-wallet-radc
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin
 
 * 06-29-2021 
