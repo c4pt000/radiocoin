@@ -1,5 +1,8 @@
 # RADIOACTIVE !!
 
+need dogecoin "dogecents" to finish testing other functionality for doge-electrum-wallet doge-electrum-server
+DMxKwRzE6q5r1rq3Tib4CPFaHkUaJtiShG
+
 * 07-06-2021
 # PAPER wallet import works with radiocoin-electrum-4.1.4
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/just-the-right-QR-code-ignore-the-left.png)
