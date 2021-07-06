@@ -4,6 +4,14 @@
 
 https://github.com/c4pt000/electrum-radiocoin-4.1.4-current
 
+
+![s1](https://github.com/c4pt000/radiocoin/releases/download/electrum-wallet/electrum--radiocoin-sign-broadcast.png)
+![s1](https://github.com/c4pt000/radiocoin/releases/download/electrum-wallet/electrum-4.1.4-radiocoin-send-amount.png)
+![s1](https://github.com/c4pt000/radiocoin/releases/download/electrum-wallet/electrum-finalize-transaction.png)
+![s1](https://github.com/c4pt000/radiocoin/releases/download/electrum-wallet/radiocoin-electrum-main-.png)
+
+
+```
 # run your own radiocoin-electrumX server to host 4.1.4 wallets (or Dogecoin)
 
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4
