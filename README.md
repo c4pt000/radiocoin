@@ -3,6 +3,7 @@
 * 07-06-2021
 # PAPER wallet import works with radiocoin-electrum-4.1.4
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/just-the-right-QR-code-ignore-the-left.png)
+# leave random deposit address and just import the QR on the right side of the crypto-currency bill
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/electrum-import-paper-QR-radiodollar.png)
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/radio-electrum-4.1.4.paper-sweep.png)
 
