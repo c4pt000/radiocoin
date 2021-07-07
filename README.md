@@ -9,12 +9,6 @@ docker run -it --net host -d -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tm
 ```
 
 
-need dogecoin "dogecents" to finish testing other functionality for doge-electrum-wallet doge-electrum-server
-<br>
-<br>
-<br>
-deposit  
-DMxKwRzE6q5r1rq3Tib4CPFaHkUaJtiShG            <- 30.00 DOGE for testing (anyone?)
 
 * 07-06-2021
 # PAPER wallet import works with radiocoin-electrum-4.1.4
