@@ -1,8 +1,11 @@
 # RADIOACTIVE !!
 
-10:25 AM UTC
+* 07-07-2021 10:25 AM UTC
+<br>
 i fixed the endless loop in electrum-radiocoin
+<br>
 if you run it as docker do a "docker pull"
+<br>
 if python reget the github repo and rebuild
 ```
 docker run -it --net host -d -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/radiocoin-4.1.4-electrum
