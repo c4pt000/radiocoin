@@ -1,5 +1,9 @@
 # RADIOACTIVE !!
 
+# for RADIOCOIN https://github.com/c4pt000/electrum-radiocoin
+# for DOGECOIN https://github.com/c4pt000/electrum-dogecoin
+
+
 fedora 34
 <br>
 will not send a TX while running from docker use the installer natively instead 
