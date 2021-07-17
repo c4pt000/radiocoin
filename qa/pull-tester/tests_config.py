@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/home/c4pt/Desktop/RADIOCOIN-QR-IMPORT_FIX/radiocoin"
-BUILDDIR="/home/c4pt/Desktop/RADIOCOIN-QR-IMPORT_FIX/radiocoin"
+SRCDIR="/home/c4pt/Desktop/radiocoin"
+BUILDDIR="/home/c4pt/Desktop/radiocoin"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.

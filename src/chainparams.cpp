@@ -185,7 +185,7 @@ public:
         pchMessageStart[2] = 0xd1;
         pchMessageStart[3] = 0xd1;
         vAlertPubKey = ParseHex("046b8e36534122449a1d0c0c2b380647b23b562fb0be95b698596a2507eb6aa5c5dba4294bc39f31b3b2351994673ce150449ad83bce4b7624b7c488f6ca23aa71");
-        nDefaultPort = 9332;
+        nDefaultPort = 8333;
         nPruneAfterHeight = 100000;
 
         genesis = CreateGenesisBlock(1622171724, 491158, 0x1e0ffff0, 1, 88 * COIN);
