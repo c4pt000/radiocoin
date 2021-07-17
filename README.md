@@ -22,7 +22,7 @@ cd /opt
 * 07-06-2021
 # PAPER wallet import works with radiocoin-electrum-4.1.4
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/just-the-right-QR-code-ignore-the-left.png)
-# leave random deposit address and just import the QR on the right side of the crypto-currency bill (with the camera logo icon) 
+# supports sweep from paper wallet (leave random deposit address and just import the QR on the right side of the crypto-currency bill (with the camera logo icon) 
 * requires "pip3 install python-zbar" ? and uvcvideo and web cam support
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/QR-import-settings.png)
 * set default camera in "General" Preferences
