@@ -11,26 +11,17 @@ systemctl start docker
 systemctl enable docker
 
 wget -O /etc/yum.repos.d/inttf.repo https://rpms.if-not-true-then-false.com/inttf.repo
+dnf update
 dnf install nvidia-docker2 -y
 
-echo " 
-disable-require = false
-#swarm-resource = DOCKER_RESOURCE_GPU
-#accept-nvidia-visible-devices-envvar-when-unprivileged = true
-#accept-nvidia-visible-devices-as-volume-mounts = false
+echo ' 
 [nvidia-container-cli]
-#root = /run/nvidia/driver
-#path = /usr/bin/nvidia-container-cli
-environment = []
-#debug = /var/log/nvidia-container-toolkit.log
-#ldcache = /etc/ld.so.cache
-load-kmods = true
 no-cgroups = true
-#user = root:video
-ldconfig = @/sbin/ldconfig
+
 [nvidia-container-runtime]
-debug = /var/log/nvidia-container-runtime.log 
-" >  /etc/nvidia-container-runtime/config.toml 
+debug = "/var/log/nvidia-container-runtime.log"
+
+' >  /etc/nvidia-container-runtime/config.toml 
 
 systemctl restart docker
 
@@ -94,7 +85,7 @@ echo "docker run -it c4pt/cpuminer-opt cpuminer -a scrypt --url stratum+tcp://ra
 echo ""
 echo ""
 echo ""
-echo " docker run -it --privileged c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 20 -o stratum+tcp://radiopool.me:9555 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x --worksize 256 -g 1 --lookup-gap 2 --thread-concurrency 7200 --fix-protocol"
+echo " docker run -it --net host --privileged --gpus all c4pt/cudaminer-nvidia-docker cgminer --scrypt -I 20 -o stratum+tcp://radiopool.me:9555 --userpass RSYOURRECEVINGADDRESSVLEQj4T:x --worksize 256 -g 1 --lookup-gap 2 --thread-concurrency 7200 --fix-protocol"
 echo ""
 echo ""
 echo " or cudaminer "
@@ -108,6 +99,7 @@ echo ""
 echo ""
 echo "system should reboot for changes to kernel and kernel-devel...... script will pause for 10 seconds"
 sleep 10s
+echo "setenforce 0 might help problematic issues with loading docker with a gpu"
 
 echo "you should reboot now"
 echo "newer kernel takes 90 seconds to boot to load kobjects and events"
