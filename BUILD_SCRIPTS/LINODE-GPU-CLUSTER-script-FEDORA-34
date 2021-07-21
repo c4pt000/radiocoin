@@ -11,7 +11,7 @@ systemctl start docker
 systemctl enable docker
 
 wget -O /etc/yum.repos.d/inttf.repo https://rpms.if-not-true-then-false.com/inttf.repo
-dnf update
+dnf update -y
 dnf install nvidia-docker2 -y
 
 echo ' 
