@@ -29,10 +29,10 @@ systemctl restart docker
 
 wget https://developer.download.nvidia.com/compute/cuda/repos/fedora33/x86_64/cuda-fedora33.repo
 mv cuda-fedora33.repo /etc/yum.repos.d/
-yum install cuda nvidia-driver lightdm -y
+yum install cuda nvidia-driver gdm -y
 #enable X11 to run in background so cgminer or other scripts dont kernel panic on quit
-systemctl enable lightdm
-systemctl start lightdm
+systemctl enable gdm
+systemctl start gdm
 
 echo "
 export CUDA_HOME=/usr/local/cuda
