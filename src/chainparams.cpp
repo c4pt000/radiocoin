@@ -145,7 +145,7 @@ public:
         consensus.nAuxpowChainId = 0x0062; // 98 - Josh Wise!
         consensus.fStrictChainId = true;
         consensus.fAllowLegacyBlocks = true;
-        consensus.nHeightEffective = 1;
+        consensus.nHeightEffective = 0;
 
         // Blocks 145000 - 371336 are Digishield without AuxPoW 
 	//enabled at block 2050 for early p2pool chain id mining
@@ -366,13 +366,13 @@ public:
         // Blocks 157500 - 158099 are Digishield with minimum difficulty on all blocks
         minDifficultyConsensus = digishieldConsensus;
 //        minDifficultyConsensus.nHeightEffective = 157500;
-        minDifficultyConsensus.nHeightEffective = 1;
+        minDifficultyConsensus.nHeightEffective = 0;
         minDifficultyConsensus.fPowAllowDigishieldMinDifficultyBlocks = true;
         minDifficultyConsensus.fPowAllowMinDifficultyBlocks = true;
 
         // Enable AuxPoW at 158100
         auxpowConsensus = minDifficultyConsensus;
-        auxpowConsensus.nHeightEffective = 1;
+        auxpowConsensus.nHeightEffective = 0;
 //        auxpowConsensus.nHeightEffective = 158100;
         auxpowConsensus.fPowAllowDigishieldMinDifficultyBlocks = true;
         auxpowConsensus.fAllowLegacyBlocks = true;

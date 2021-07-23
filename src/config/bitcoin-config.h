@@ -39,7 +39,7 @@
 #define ENABLE_WALLET 1
 
 /* Define to 1 to enable ZMQ functions */
-#define ENABLE_ZMQ 0
+#define ENABLE_ZMQ 1
 
 /* parameter and return value type for __fdelt_chk */
 /* #undef FDELT_TYPE */
@@ -353,10 +353,10 @@
 #define STRERROR_R_CHAR_P 1
 
 /* Define if dbus support should be compiled in */
-#define USE_DBUS 1
+/* #undef USE_DBUS */
 
 /* Define if QR support should be compiled in */
-#define USE_QRCODE 1
+/* #undef USE_QRCODE */
 
 /* UPnP support not compiled if undefined, otherwise value (0 or 1) determines
    default state */
