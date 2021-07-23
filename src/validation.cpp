@@ -1167,9 +1167,8 @@ static bool ReadBlockOrHeader(T& block, const CDiskBlockPos& pos, const Consensu
     // Check the header  //mod comment the  next two lines to bypass validation for a brand new 0 block coin
 
    if (fCheckPOW && !CheckAuxPowProofOfWork(block, consensusParams))
-        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
-
-////printf("high-hash error in block header");
+//        return error("ReadBlockFromDisk: Errors in block header at %s", pos.ToString());
+	printf("high-hash error in block header");
 
 
     return true;
@@ -2867,8 +2866,8 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
 //with yourcoin-cli generate 1 (a couple hundred blocks to replace BIP34 Height with block number e.g. 333 and BIP34 hash with yourcoin-cli getblockhash 333 
 
     if (fCheckPOW && !CheckAuxPowProofOfWork(block, Params().GetConsensus(0)))  
-        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
-//        printf("high-hash....proof of work failed\n"); 
+//        return state.DoS(50, false, REJECT_INVALID, "high-hash", false, "proof of work failed");
+        printf("high-hash....proof of work failed\n"); 
 
 
     return true;
