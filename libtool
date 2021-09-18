@@ -1,6 +1,6 @@
 #! /bin/sh
 # Generated automatically by config.status (radiocoin) 1.14.3
-# Libtool was configured on host fedora:
+# Libtool was configured on host radioPOOL:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.
@@ -285,7 +285,7 @@ hardcode_into_libs=yes
 sys_lib_search_path_spec="/usr/lib/gcc/x86_64-redhat-linux/11 /usr/lib64 /lib64 /usr/lib /lib "
 
 # Detected run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib64/iscsi /usr/lib64/llvm11/lib /usr/lib64/pipewire-0.3/jack/ /usr/lib64/qt5-qtwebengine-freeworld /usr/lib64/tcl8.6 "
+sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib64/iscsi /usr/lib64/tcl8.6 "
 
 # Explicit LT_SYS_LIBRARY_PATH set during ./configure time.
 configure_time_lt_sys_library_path=""

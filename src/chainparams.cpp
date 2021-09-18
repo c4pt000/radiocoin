@@ -93,11 +93,11 @@ public:
         // BIP34 is never enforced in RadioCoin v2 blocks, so we enforce from v3
 
 //start at 0 not 1
-        consensus.BIP34Height = 0;
+        consensus.BIP34Height = 1;
 				        
-        consensus.BIP34Hash = uint256S("0x000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd");
-       consensus.BIP65Height = 0; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
-        consensus.BIP66Height = 0; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
+        consensus.BIP34Hash = uint256S("0xcc1b2ff941e09db5b90a3c317036d4509c84e135e15d47c55aaf0c002a977266");
+       consensus.BIP65Height = 1; // 34cd2cbba4ba366f47e5aa0db5f02c19eba2adf679ceb6653ac003bdc9a0ef1f - first v4 block after the last v3 block
+        consensus.BIP66Height = 1; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
         consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan =  4 * 60 * 60; // 4 hours
 //4 * 60 * 60; // pre-digishield: 4 hours
@@ -119,18 +119,18 @@ public:
         // Deployment of BIP68, BIP112, and BIP113.
         // XXX: BIP heights and hashes all need to be updated to Dogecoin values
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1627355526; // May 1st, 2016
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 1627355526; // May 1st, 2016
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // May 1st, 2016
+//        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1462060800; // May 1st, 2016
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1627355526; // November 15th, 2016.
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0; // November 15th, 2016.
 //        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1479168000; // November 15th, 2016.
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
 
         // The best chain should have at least this much work.
-//        consensus.nMinimumChainWork = uint256S("");
-       consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
+        consensus.nMinimumChainWork = uint256S("");
+//        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
 
 
 
@@ -138,8 +138,8 @@ public:
 
         // By default assume that the signatures in ancestors of this block are valid. height 1
 //        consensus.defaultAssumeValid = uint256S("");
-        consensus.defaultAssumeValid = uint256S("0x7f1c7002a46ea30cc22d314a3ef3cf23dd7a9476e4e60089215f0a429feb032c");
-//        consensus.defaultAssumeValid = uint256S("0xcc1b2ff941e09db5b90a3c317036d4509c84e135e15d47c55aaf0c002a977266");
+//        consensus.defaultAssumeValid = uint256S("0x7f1c7002a46ea30cc22d314a3ef3cf23dd7a9476e4e60089215f0a429feb032c");
+        consensus.defaultAssumeValid = uint256S("0xcc1b2ff941e09db5b90a3c317036d4509c84e135e15d47c55aaf0c002a977266");
 
         // AuxPoW parameters
         consensus.nAuxpowChainId = 0x0062; // 98 - Josh Wise!
@@ -259,7 +259,7 @@ public:
 
         checkpointData = (CCheckpointData) {
           boost::assign::map_list_of
-        (       60000, uint256S("0xcf23fe03d921012cfdfc2847bd6ef4a647bbb559d6eb57d6432d7bcb930d720f"))
+        (       1, uint256S("0xcc1b2ff941e09db5b90a3c317036d4509c84e135e15d47c55aaf0c002a977266"))
 //	(     100, uint256S("0x584bf2cb14709a7095e080f37b96b6292052be0556646d75a1883adadc671cda"))
 //	(     1000, uint256S("0xd8df3b7e5b2d38062dec4343ecaaf76c90dc63e89339701fa8a4d5d100d03311"))
 //	(     2000, uint256S("0x359f4ebec2d24a82dcb9b0038123b00686fc3c83ec08c6003292cf6a1b255cc9"))
@@ -372,7 +372,7 @@ public:
 
         // Enable AuxPoW at 158100
         auxpowConsensus = minDifficultyConsensus;
-        auxpowConsensus.nHeightEffective = 0;
+        auxpowConsensus.nHeightEffective = 1;
 //        auxpowConsensus.nHeightEffective = 158100;
         auxpowConsensus.fPowAllowDigishieldMinDifficultyBlocks = true;
         auxpowConsensus.fAllowLegacyBlocks = true;

@@ -3,8 +3,8 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-SRCDIR="/home/c4pt/Desktop/libdohj-CURRENT-heavy-modification-07-22-2021/libdohj-new/tools/radiocoin"
-BUILDDIR="/home/c4pt/Desktop/libdohj-CURRENT-heavy-modification-07-22-2021/libdohj-new/tools/radiocoin"
+SRCDIR="/opt/radiocoin"
+BUILDDIR="/opt/radiocoin"
 EXEEXT=""
 
 # These will turn into comments if they were disabled when configuring.
