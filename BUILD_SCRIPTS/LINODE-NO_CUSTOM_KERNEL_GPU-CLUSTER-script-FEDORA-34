@@ -153,6 +153,8 @@ for CGMINER 3.7.2
 wget https://github.com/c4pt000/cgminer/releases/download/rpm%2Bdeb/cgminer-3.7.2_scrypt-2.x86_64.rpm
 '
 wget https://github.com/c4pt000/cgminer/releases/download/rpm%2Bdeb/cgminer-3.7.2_scrypt-2.x86_64.rpm
+rpm -Uvh --force --nodeps cgminer*rpm
+
 echo "you should reboot now"
 echo "newer kernel takes 90 seconds to boot to load kobjects and events"
 
