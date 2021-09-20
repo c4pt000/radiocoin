@@ -144,6 +144,10 @@ echo "system should reboot for changes to kernel and kernel-devel...... script w
 sleep 10s
 echo "setenforce 0 might help problematic issues with loading docker with a gpu"
 
+ wget https://us.download.nvidia.com/XFree86/Linux-x86_64/470.74/NVIDIA-Linux-x86_64-470.74.run
+   chmod +x NVIDIA-Linux-x86_64-470.74.run 
+   echo "after rebooting run this script to install NVIDIA drivers for nvidia-smi functionality ./NVIDIA-Linux-x86_64-470.74.run" 
+
 echo "you should reboot now"
 echo "newer kernel takes 90 seconds to boot to load kobjects and events"
 
