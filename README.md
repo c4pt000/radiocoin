@@ -1,7 +1,7 @@
 # RADIOACTIVE !!
 
-# for RADIOCOIN-electrum https://github.com/c4pt000/electrum-radiocoin
-# for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
+for RADIOCOIN-electrum https://github.com/c4pt000/electrum-radiocoin
+for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
 
 # fedora 34
 ```
