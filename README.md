@@ -23,5 +23,4 @@ diffutils qt-devel qt4-devel wget qt5-lin* -y
 
 
 https://play.google.com/store/apps/details?id=org.apache.cordova.radiocoin.wallet
-
-
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20210926-082345-228.png)
