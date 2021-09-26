@@ -20,7 +20,7 @@ libevent-devel cppzmq-devel qrencode-devel qt5-qtbase-devel.x86_64
 protobuf-devel boost-* boost-devel miniupnpc-devel.x86_64 
 diffutils qt-devel qt4-devel wget qt5-lin* -y
 ```
-
+# Android
 
 https://play.google.com/store/apps/details?id=org.apache.cordova.radiocoin.wallet
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20210926-082345-228.png)
