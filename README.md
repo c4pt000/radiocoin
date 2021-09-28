@@ -15,6 +15,10 @@ for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
 ```
 yum groupinstall "C Development Tools and Libraries" -y
 
+wget https://raw.githubusercontent.com/rpmsphere/x86_64/master/c/checkinstall-1.6.2-1.x86_64.rpm
+yum install checkinstall-1.6.2-1.x86_64.rpm -y
+
+
 yum install git-core libdb-cxx-devel libdb-cxx openssl-devel 
 libevent-devel cppzmq-devel qrencode-devel qt5-qtbase-devel.x86_64 
 protobuf-devel boost-* boost-devel miniupnpc-devel.x86_64 
