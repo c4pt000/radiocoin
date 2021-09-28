@@ -22,8 +22,10 @@ diffutils qt-devel qt4-devel wget qt5-lin* -y
 ```
 # Android
 
+# free version
 send to send fixed with android desktop wallet QR still works as before
 https://github.com/c4pt000/radiocoin/releases/download/android-send-to-send-qr-fixed/RadioCoin-Android-signed.apk
 
+# paid version $1.00 (support my work to help with server costs, beer and cigarettes, living needs, more crypto development)
 https://play.google.com/store/apps/details?id=org.apache.cordova.radiocoin.wallet
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20210926-082345-228.png)
