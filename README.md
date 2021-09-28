@@ -28,7 +28,7 @@ sh autogen.sh
  ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
 make -j24 (or number of cores for -j)
 
-then either checkinstall here for rpms
+then either checkinstall here for deb package (then alien script for rpms)
 
 checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm (the-debian-package.here.deb)
