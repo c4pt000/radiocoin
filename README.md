@@ -25,7 +25,9 @@ diffutils qt-devel qt4-devel wget qt5-lin* -y
 # free version
 send to send fixed with android
 <br>
-desktop wallet QR still works as before
+desktop wallet QR still works as before with this app 
+<br>
+(paper wallet sweep is still not working **WIP)
 <br>
 https://github.com/c4pt000/radiocoin/releases/download/android-send-to-send-qr-fixed/RadioCoin-Android-signed.apk
 
