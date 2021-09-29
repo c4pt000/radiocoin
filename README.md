@@ -1,6 +1,17 @@
 # RADIOACTIVE !!
 
+* 09-29-2021 update about previous android version (back in releases to restore first time wallets)
 
+# see releases
+```
+desktop wallets still work with QR to android as before
+
+RadioCoin-Android-signed.apk.current-09-28-2021.apk (is the same as the store version might not restore previous android wallets)
+
+RadioCoin-Android-signed-fixfee.apk.09-23-2021.apk (is the previous first release here to restore android wallets made with this first release from before it does not send from android to android but will send from android to desktop)
+
+old version is included below for changes to restore "wallet backups" made with the previous first release version here
+```
 
 <br>
 for RADIOCOIN-electrum https://github.com/c4pt000/electrum-radiocoin
