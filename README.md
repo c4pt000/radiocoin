@@ -4,13 +4,11 @@
 
 # see releases
 ```
-desktop wallets still work with QR to android as before
+Android send to send fixed with QR (store version works with android to android and desktop with camera QR codes)
 
-RadioCoin-Android-signed.apk.current-09-28-2021.apk (is the same as the store version might not restore previous android wallets)
+fix-free version from releases only works with desktop QR codes but does not send from android to android (see store version)
 
-RadioCoin-Android-signed-fixfee.apk.09-23-2021.apk (is the previous first release here to restore android wallets made with this first release from before it does not send from android to android but will send from android to desktop)
-
-old version is included below for changes to restore "wallet backups" made with the previous first release version here
+store version does not restore wallets made with fix-free version
 ```
 
 <br>
@@ -55,7 +53,6 @@ desktop wallet QR still works as before with this app
 <br>
 (paper wallet sweep is still not working **WIP)
 <br>
-https://github.com/c4pt000/radiocoin/releases/download/android-send-to-send-qr-fixed/RadioCoin-Android-signed.apk
 
 # paid version $1.00 (support my work to help with server costs, beer and cigarettes, living needs, more crypto development)
 
