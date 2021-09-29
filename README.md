@@ -46,14 +46,6 @@ then make -j24 install for local install to /usr
 ```
 # Android
 
-# free version
-send to send fixed with android
-<br>
-desktop wallet QR still works as before with this app 
-<br>
-(paper wallet sweep is still not working **WIP)
-<br>
-
 # paid version $1.00 (support my work to help with server costs, beer and cigarettes, living needs, more crypto development)
 
 https://play.google.com/store/apps/details?id=org.apache.cordova.radiocoin.wallet
