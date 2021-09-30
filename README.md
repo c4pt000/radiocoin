@@ -1,5 +1,13 @@
 # RADIOACTIVE !!
 
+http://radioblockchain.info/ext/getmoneysupply
+
+```
+100 Billion starting total supply (dogecoin started with 5 billion total network supply)
+100,000,000,000 starting supply of radiocoin blockchain network
+68,000,000,000 (68 Billion left) 09-30-2021
+```
+
 # **ignore previous suggestions to use -j24 (even if a person doesnt have 24 cores in their system DO NOT USE THIS it can fill up the available amount of free memory with garbage and break the current compile, even though this does not make sense while using the make command and specifying 24 cores with -j24 you would think the compiler would only select all 8 cores and ignore everything after that since the system only has 4 cores or 8 cores when -j24 is specified.
 
 # I notice that it creates an unseen memory problem when building code on systems with less than 8gb of RAM since it will use up all available memory on a system for unknown reasons
