@@ -23,7 +23,7 @@ for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
 
 * requires 4GB of memory to build
 
-# fedora 34
+# fedora 34  (requires port 8333 outbound in the firewall, ufw allow out 8333)
 
 ```
 yum groupinstall "C Development Tools and Libraries" -y
@@ -60,9 +60,15 @@ then make -j4 install for local install to /usr
 radiocoind -reindex
 or 
 radiocoin-qt -reindex
+
+followed by radiocoin-cli stop
+radiocoind
+
+or radiocoin-cli stop
+radiocoin-qt
 ```
 
-# debian 10
+# debian 10 (requires port 8333 outbound in the firewall, ufw allow out 8333)
 ```
  cd /root/
  wget https://github.com/c4pt000/radiocoin/releases/download/bootstrap-DATADIR-block-117682/radiocoin-snapshot-CURRENT.tar.gz
@@ -88,6 +94,12 @@ radiocoin-qt -reindex
      radiocoind -reindex
      or 
      radiocoin-qt -reindex
+     
+     followed by radiocoin-cli stop
+     radiocoind
+
+     or radiocoin-cli stop
+     radiocoin-qt
 ```
 
 # Android
