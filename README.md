@@ -17,7 +17,7 @@ for RADIOCOIN-electrum https://github.com/c4pt000/electrum-radiocoin
 for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
 <br>
 
-
+* requires 8GB of memory to build
 
 # fedora 34
 
