@@ -1,6 +1,6 @@
 # RADIOACTIVE !!
 
-# **ignore previous suggestions to use -j24 (even if a person doesnt have 24 cores in their system DO NOT USE THIS it can fill up the available amount of free memory with garbage and break the current compile, even though this does not make sense to make logically the system would use 4 cores (if only 4 cores were available physically and ignore anything beyond that , same as if a system only had 8 cores and specifying 24 cores with -j24 you would think the compiler would only select all 8 cores and ignore everything after that since the system only has 4 cores or 8 cores when -j24 is specified.
+# **ignore previous suggestions to use -j24 (even if a person doesnt have 24 cores in their system DO NOT USE THIS it can fill up the available amount of free memory with garbage and break the current compile, even though this does not make sense while using the make command and specifying 24 cores with -j24 you would think the compiler would only select all 8 cores and ignore everything after that since the system only has 4 cores or 8 cores when -j24 is specified.
 
 # I notice that it creates an unseen memory problem when building code on systems with less than 8gb of RAM since it will use up all available memory on a system for unknown reasons
 
