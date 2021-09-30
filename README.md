@@ -56,6 +56,10 @@ checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm (the-debian-package.here.deb)
 
 then make -j4 install for local install to /usr
+
+radiocoind -reindex
+or 
+radiocoin-qt -reindex
 ```
 
 # debian 10
@@ -80,6 +84,10 @@ then make -j4 install for local install to /usr
  alien --scripts --to-rpm (the-debian-package.here.deb)
 
      then make -j4 install for local install to /usr
+     
+     radiocoind -reindex
+     or 
+     radiocoin-qt -reindex
 ```
 
 # Android
