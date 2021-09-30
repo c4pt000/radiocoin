@@ -44,6 +44,31 @@ alien --scripts --to-rpm (the-debian-package.here.deb)
 
 then make -j24 install for local install to /usr
 ```
+
+# debian 10
+```
+ cd /root/
+ wget https://github.com/c4pt000/radiocoin/releases/download/bootstrap-DATADIR-block-117682/radiocoin-snapshot-CURRENT.tar.gz
+ tar -xvf radiocoin-snapshot-CURRENT.tar.gz 
+ apt install aptitude
+ cd /opt
+ git clone https://github.com/c4pt000/radiocoin
+ cd radiocoin/
+ sh build-debian-deps.sh 
+ cp -rf radiocoin.conf /root/.radiocoin/radiocoin.conf 
+ sh autogen.sh 
+ ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
+ 
+ make -j24 (or number of cores for -j)
+
+     then either checkinstall here for deb package (then alien script for rpms)
+ 
+ checkinstall --install=no --exclude=/sys/fs/selinux
+ alien --scripts --to-rpm (the-debian-package.here.deb)
+
+     then make -j24 install for local install to /usr
+```
+
 # Android
 
 # paid version $1.00 (support my work to help with server costs, beer and cigarettes, living needs, more crypto development)
