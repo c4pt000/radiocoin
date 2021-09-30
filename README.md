@@ -1,6 +1,7 @@
 # RADIOACTIVE !!
 
 http://radioblockchain.info/ext/getmoneysupply
+http://radioblockchain.info/ext/getdistribution
 
 ```
 100 Billion starting total supply (dogecoin started with 5 billion total network supply)
