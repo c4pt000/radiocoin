@@ -6,4 +6,4 @@ apt-get install build-essential libtool autotools-dev automake pkg-config libssl
      apt-get install libzmq3-dev -y
      apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler -y
      apt-get install libqt4-dev libprotobuf-dev protobuf-compiler -y
-     apt-get install libqrencode-dev -y
+     apt-get install libqrencode-dev alien rpm -y
