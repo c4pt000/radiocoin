@@ -21,7 +21,7 @@ for RADIOCOIN-electrum https://github.com/c4pt000/electrum-radiocoin
 for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
 <br>
 
-* requires 8GB of memory to build
+* requires 4GB of memory to build
 
 # fedora 34
 
@@ -48,14 +48,14 @@ cd /root
  sh autogen.sh
  ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
 
-make -j24 (or number of cores for -j)
+make -j4 (or number of cores for -j)
 
 then either checkinstall here for deb package (then alien script for rpms)
 
 checkinstall --install=no --exclude=/sys/fs/selinux
 alien --scripts --to-rpm (the-debian-package.here.deb)
 
-then make -j24 install for local install to /usr
+then make -j4 install for local install to /usr
 ```
 
 # debian 10
@@ -72,14 +72,14 @@ then make -j24 install for local install to /usr
  sh autogen.sh 
  ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
  
- make -j24 (or number of cores for -j)
+ make -j4 (or number of cores for -j)
 
      then either checkinstall here for deb package (then alien script for rpms)
  
  checkinstall --install=no --exclude=/sys/fs/selinux
  alien --scripts --to-rpm (the-debian-package.here.deb)
 
-     then make -j24 install for local install to /usr
+     then make -j4 install for local install to /usr
 ```
 
 # Android
