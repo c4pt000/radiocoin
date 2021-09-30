@@ -33,8 +33,17 @@ libevent-devel cppzmq-devel qrencode-devel qt5-qtbase-devel.x86_64
 protobuf-devel boost-* boost-devel miniupnpc-devel.x86_64 
 diffutils qt-devel qt4-devel wget qt5-lin* alien dpkg -y
 
-sh autogen.sh
+cd /root
+
+ wget https://github.com/c4pt000/radiocoin/releases/download/bootstrap-DATADIR-block-117682/radiocoin-snapshot-CURRENT.tar.gz
+ tar -xvf radiocoin-snapshot-CURRENT.tar.gz 
+ cd /opt
+ git clone https://github.com/c4pt000/radiocoin
+ cd radiocoin/
+ cp -rf radiocoin.conf /root/.radiocoin/radiocoin.conf
+ sh autogen.sh
  ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
+
 make -j24 (or number of cores for -j)
 
 then either checkinstall here for deb package (then alien script for rpms)
