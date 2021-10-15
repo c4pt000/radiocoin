@@ -21,4 +21,4 @@ run-radiocoin-qt ..... to start radiocoin-qt and to mint blocks         early ne
 
 docker exec -it <docker-random-hash> bash
 "
-docker run -it -d -v /opt/radiocoin:/opt/radiocoin -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/radiocoinqt
+docker run --net host -it -d -v /opt/radiocoin:/opt/radiocoin -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/radiocoinqt
