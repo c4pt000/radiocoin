@@ -24,7 +24,7 @@ echo "no" | avdmanager --verbose create avd --force --name Nexus --abi google_ap
 echo '
 #!/bin/bash
 cd /root/Android/Sdk/emulator
-QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 768x1280 & 
+QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 800x1440 & 
 ' > /usr/bin/EMULATOR
 chmod +x EMULATOR
 
