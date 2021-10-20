@@ -1,7 +1,20 @@
-#!/bin/sh
+#!/bin/bash
+
+echo "******CAUTION*******"
+echo "******CAUTION*******"
+echo "******CAUTION*******"
+echo "THIS SCRIPT WILL UPDATE GRUB2 bootloader automatically to enable iommu for KVM for hardware x86 functions of the android emulator crtl-C to cancel this script to review the script, script will pause for 10 seconds while you decide"
+echo "******CAUTION*******"
+echo "******CAUTION*******"
+echo "******CAUTION*******"
+sleep 10s
+
 echo "where /root/Android/Sdk is the android-studio install dir"
 
-
+cd /opt
+wget https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2020.3.1.25/android-studio-2020.3.1.25-linux.tar.gz
+tar -xvf android-studio-2020.3.1.25-linux.tar.gz
+sh android-studio/bin/studio.sh
 
 
 echo '
@@ -28,4 +41,18 @@ QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no
 ' > /usr/bin/EMULATOR
 chmod +x EMULATOR
 
+sed -s s'/rhgb/intel_iommu=on iommu=pt rhgb/g' /etc/default/grub > grub.txt
+cat grub.txt 
+cp -rf grub.txt /etc/default/grub 
+echo "y" |cp -rf grub.txt /etc/default/grub
+sed -s s'/GRUB_ENABLE_BLSCFG=true/GRUB_ENABLE_BLSCFG=false/g' /etc/default/grub > grub.txt
+rm -rf grub.txt
+grub2-mkconfig -o /boot/grub2/grub.cfg 
+grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
+
+
+echo "it is mandatory to reboot now"
+echo "if kvm is loaded run the EMULATOR script"
+echo "on reboot"
+echo "lsmod | grep kvm"
 echo "/usr/bin/EMULATOR should spawn a Nexus style android emulator run adb install apkfilename.apk or "adb shell" then "logcat" to inspect running emulator, apk"
