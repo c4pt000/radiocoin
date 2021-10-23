@@ -1,3 +1,5 @@
+#!/bin/sh
+
 yum update -y
 yum groupinstall "C Development Tools and Libraries" -y
 
