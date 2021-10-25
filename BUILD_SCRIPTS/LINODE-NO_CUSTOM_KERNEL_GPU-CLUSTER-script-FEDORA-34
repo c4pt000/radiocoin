@@ -1,7 +1,7 @@
 #!/bin/bash
 #linode GPU cluster script NVIDIA (Fedora 34)
 echo "fedora 34 linode GPU cluster script"
-echo "please not that the NVIDIA.run driver changes with this script from time to time due to this script getting the latest version of the linux kernel which requires sometimes a slightly newer version of NVIDIA.run driver to match the changes in the way the linux kernel subsystem accesses low-level memory functions for the driver"
+echo "please note that the NVIDIA.run driver changes with this script from time to time due to this script getting the latest version of the linux kernel which requires sometimes a slightly newer version of NVIDIA.run driver to match the changes in the way the linux kernel subsystem accesses low-level memory functions for the driver"
 echo "script part 1, script has to reboot after install cuda and nvidia deps"
 echo "networking might require https://raw.githubusercontent.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio-nvidia-amd/master/patch-libvirt-IPTABLES-NFTABLES-UFW.sh"
 echo "the script will pause for 5 seconds" 
