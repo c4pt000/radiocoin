@@ -1,9 +1,11 @@
 #!/bin/bash
 #linode GPU cluster script NVIDIA (Fedora 34)
 echo "fedora 34 linode GPU cluster script"
+echo "please not that the NVIDIA.run driver changes with this script from time to time due to this script getting the latest version of the linux kernel which requires sometimes a slightly newer version of NVIDIA.run driver to match the changes in the way the linux kernel subsystem accesses low-level memory functions for the driver"
 echo "script part 1, script has to reboot after install cuda and nvidia deps"
 echo "networking might require https://raw.githubusercontent.com/c4pt000/kernel-5.11.6-expSEHDsec-HAXM-cgroup-virtio-nvidia-amd/master/patch-libvirt-IPTABLES-NFTABLES-UFW.sh"
-
+echo "the script will pause for 5 seconds" 
+sleep 5s
 sudo dnf -y install dnf-plugins-core
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install docker-ce docker-ce-cli containerd.io -y
@@ -144,8 +146,9 @@ echo "system should reboot for changes to kernel and kernel-devel...... script w
 sleep 10s
 echo "setenforce 0 might help problematic issues with loading docker with a gpu"
 
- wget https://us.download.nvidia.com/XFree86/Linux-x86_64/465.31/NVIDIA-Linux-x86_64-465.31.run
-   chmod +x NVIDIA-Linux-x86_64-465.31.run
+wget https://us.download.nvidia.com/XFree86/Linux-x86_64/470.74/NVIDIA-Linux-x86_64-470.74.run
+chmod +x NVIDIA-Linux-x86_64-470.74.run
+
    echo "after rebooting run this script to install NVIDIA drivers for nvidia-smi functionality ./NVIDIA-Linux-x86_64-465.31.run" 
 echo '
 for CGMINER 3.7.2
@@ -157,5 +160,6 @@ rpm -Uvh --force --nodeps cgminer*rpm
 
 echo "you should reboot now"
 echo "newer kernel takes 90 seconds to boot to load kobjects and events"
-
+echo "dont forget to run on reboot"
+echo "./NVIDIA-Linux-x86_64-470.74.run"
 
