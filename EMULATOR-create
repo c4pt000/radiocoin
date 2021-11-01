@@ -1,0 +1,12 @@
+sdkmanager --install "platforms;android-29"
+sdkmanager --install "build-tools;29.0.2"
+sdkmanager --install "system-images;android-29;google_apis_playstore;x86"
+echo "no" | avdmanager --verbose create avd --force --name Nexus --abi google_apis_playstore/x86 --package "system-images;android-29;google_apis_playstore;x86"
+
+
+echo '
+#!/bin/bash
+cd /root/Android/Sdk/emulator
+QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 800x1440 & 
+' > /usr/bin/EMULATOR
+chmod +x EMULATOR
