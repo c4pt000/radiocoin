@@ -10,3 +10,5 @@ cd /root/Android/Sdk/emulator
 QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 800x1440 & 
 ' > /usr/bin/EMULATOR
 chmod +x EMULATOR
+
+echo "/usr/bin/EMULATOR should spawn a Nexus style android emulator run adb install apkfilename.apk or "adb shell" then "logcat" to inspect running emulator, apk"
