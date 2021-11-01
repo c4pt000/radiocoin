@@ -1,3 +1,4 @@
+echo "requires around 10gb of free space"
 sdkmanager --install "platforms;android-29"
 sdkmanager --install "build-tools;29.0.2"
 sdkmanager --install "system-images;android-29;google_apis_playstore;x86"
@@ -14,6 +15,6 @@ echo '
 cd /root/Android/Sdk/emulator
 QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 800x1440 & 
 ' > /usr/bin/EMULATOR
-chmod +x EMULATOR
+chmod +x /usr/bin/EMULATOR
 
 echo "/usr/bin/EMULATOR should spawn a Nexus style android emulator run adb install apkfilename.apk or "adb shell" then "logcat" to inspect running emulator, apk"
