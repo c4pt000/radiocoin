@@ -1,5 +1,6 @@
 #!/bin/bash
-
+echo "requires around 20gb of free space"
+sleep 2s
 echo "******CAUTION*******"
 echo "******CAUTION*******"
 echo "******CAUTION*******"
@@ -39,7 +40,7 @@ echo '
 cd /root/Android/Sdk/emulator
 QTWEBENGINE_DISABLE_SANDBOX=1 ./emulator @Nexus -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 800x1440 & 
 ' > /usr/bin/EMULATOR
-chmod +x EMULATOR
+chmod +x /usr/bin/EMULATOR
 
 sed -s s'/rhgb/intel_iommu=on iommu=pt rhgb/g' /etc/default/grub > grub.txt
 cat grub.txt 
