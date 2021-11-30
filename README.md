@@ -9,8 +9,7 @@
 # electrum wallets and block explorer is down
 <br>
 
-# https://github.com/c4pt000/radiocoin/releases/tag/android-electrum-radiocoin
-
+# https://github.com/c4pt000/radiocoin/releases/tag/android-standard-radiocoin
 <br>
 <br>
 <br>
