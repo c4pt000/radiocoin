@@ -1,5 +1,29 @@
 # RADIOACTIVE !!
 
+# 12-01-2021 update to 6.5.0
+# disabled GUI alert with desktop wallet
+
+# rebuilt android for peer connectivity
+<br>
+
+# electrum wallets and block explorer is down
+<br>
+
+# https://github.com/c4pt000/radiocoin/releases/tag/android-electrum-radiocoin
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 http://radioblockchain.info/ext/getmoneysupply
 <br>
 http://radioblockchain.info/ext/getdistribution
