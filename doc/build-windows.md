@@ -25,27 +25,17 @@ as root:
  apt-get install *mingw* g++-mingw-w64-x86-64 mingw-w64-x86-64-dev -y
 
 Then build using: (windows x86_64 64bit .exe binaries)
+replace -j8 with your cpu core count (core i7 = 8 cores)
 
     cd depends
-    make HOST=x86_64-w64-mingw32
+    make -j8 HOST=x86_64-w64-mingw32
     cd ..
     ./autogen.sh # not required when building from tarball
     CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site ./configure --prefix=/usr
-    make -j200    (where 200 is cpu core count)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    #select 1 for posix both updates (dont forget to put back for standard linux or macOS builds)
+    update-alternatives --config x86_64-w64-mingw32-g++
+    update-alternatives --config x86_64-w64-mingw32-gcc
+    make -j8    (where 200 is cpu core count)
 
 
 
