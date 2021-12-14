@@ -172,7 +172,7 @@ void ReceiveRequestDialog::update()
             for (int y = 0; y < code->width; y++)
             {
                 for (int x = 0; x < code->width; x++)
-                {
+                {	//x+4,y+4
                     qrImage.setPixel(x + 4, y + 4, ((*p & 1) ? 0x0 : 0xffffff));
                     p++;
                 }

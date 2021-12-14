@@ -1655,7 +1655,7 @@
     </message>
     <message>
         <location line="+33"/>
-        <source>Many Wallets?</source>
+        <source>How many bills to print (4 bills per page)?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

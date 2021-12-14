@@ -252,16 +252,26 @@ void PaperWalletDialog::on_getNewAddress_clicked()
     std::string myAddress = pubkeyhash.ToString();
 
 
+//note to myself something can be done here if i am not aggravated out of mind to create an IF loop to display the actual QR code 
+// image displayed for 1 second, manipulate the pin dot output of the QR code by 1 or 2 random x or y pixel blocks for 1 second, 
+// then display the actual working code again for 1 second.,
+// repeat loop but with a random pick of changing a random x or y qr pin dot code randomly
+
 #ifdef USE_QRCODE
     // Generate the address QR code
-    QRcode *code = QRcode_encodeString(myAddress.c_str(), 0, QR_ECLEVEL_M, QR_MODE_8, 1);
+    QRcode *code = QRcode_encodeString(myAddress.c_str(), 0, QR_ECLEVEL_H, QR_MODE_8, 1);
     if (!code) {
         ui->addressQRCode->setText(tr("Error encoding Address into QR Code."));
         return;
     }
+//QRcode *motion = 
+
     QImage myImage = QImage(code->width, code->width, QImage::Format_ARGB32);
     myImage.fill(QColor(0, 0, 0, 0));
     unsigned char* p = code->data;
+
+
+
     for (int y = 0; y < code->width; y++) {
         for (int x = 0; x < code->width; x++) {
             myImage.setPixel(x, y, ((*p & 1) ? 0xff000000 : 0x0));
@@ -271,8 +281,9 @@ void PaperWalletDialog::on_getNewAddress_clicked()
     QRcode_free(code);
 
 
+
     // Generate the private key QR code
-    code = QRcode_encodeString(myPrivKey.c_str(), 0, QR_ECLEVEL_M, QR_MODE_8, 1);
+    code = QRcode_encodeString(myPrivKey.c_str(), 0, QR_ECLEVEL_H, QR_MODE_8, 1);
     if (!code) {
         ui->privateKeyQRCode->setText(tr("Error encoding private key into QR Code."));
         return;
@@ -299,6 +310,8 @@ void PaperWalletDialog::on_getNewAddress_clicked()
 
     ui->publicKey->setHtml(myPubKey.c_str());
 
+
+//paper output height * width of bill paper
     // Update the fonts to fit the height of the wallet.
     // This should only really trigger the first time since the font size persists.
     double paperHeight = (double)ui->paperTemplate->height();
@@ -372,7 +385,7 @@ void PaperWalletDialog::on_printButton_clicked()
     int walletHeight = ui->paperTemplate->height();
     double computedWalletHeight = 0.9 * pageHeight / walletsPerPage;
     double scale = computedWalletHeight / walletHeight;
-    double walletPadding = pageHeight * 0.05 / (walletsPerPage - 1) / scale;
+    double walletPadding = pageHeight * 0.01 / (walletsPerPage - 1) / scale;
 
     QRegion walletRegion = QRegion(ui->paperTemplate->x(), ui->paperTemplate->y(), ui->paperTemplate->width(), ui->paperTemplate->height());
     painter.scale(scale, scale);

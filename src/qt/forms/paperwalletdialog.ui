@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>716</width>
+    <width>1000</width>
     <height>450</height>
    </rect>
   </property>
@@ -16,7 +16,7 @@
   <widget class="QLabel" name="privateKeyQRCode">
    <property name="geometry">
     <rect>
-     <x>524</x>
+     <x>780</x>
      <y>159</y>
      <width>149</width>
      <height>149</height>
@@ -32,8 +32,8 @@
   <widget class="QLabel" name="addressQRCode">
    <property name="geometry">
     <rect>
-     <x>47</x>
-     <y>86</y>
+     <x>57</x>
+     <y>106</y>
      <width>120</width>
      <height>120</height>
     </rect>
@@ -49,9 +49,9 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>415</y>
-     <width>151</width>
-     <height>26</height>
+     <y>410</y>
+     <width>50</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -67,8 +67,8 @@
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>675</width>
-     <height>362</height>
+     <width>980</width>
+     <height>368</height>
     </rect>
    </property>
    <property name="text">
@@ -82,18 +82,18 @@
    <property name="geometry">
     <rect>
      <x>212</x>
-     <y>20</y>
+     <y>0</y>
      <width>31</width>
-     <height>341</height>
+     <height>361</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Monospace</family>
-     <pointsize>12</pointsize>
-     <weight>75</weight>
+     <pointsize>8</pointsize>
+     <weight>50</weight>
      <italic>false</italic>
-     <bold>true</bold>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -180,7 +180,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Many Wallets?</string>
+    <string>How many bills to print (4 bills per page)?</string>
    </property>
   </widget>
   <widget class="QComboBox" name="walletCount">
