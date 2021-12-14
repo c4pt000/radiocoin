@@ -1,5 +1,9 @@
 # RADIOACTIVE !!
 
+# 12-14-2021
+# new paper_wallet bill (compat with electrum-radiocoin sweep wallet import)
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-paper-bills.png)
+
 # 12-01-2021 update to 6.5.0
 # disabled GUI alert with desktop wallet
 
