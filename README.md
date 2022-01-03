@@ -2,7 +2,8 @@
 
 # released as free in case the electrumX server I am running goes down
 # https://tinyurl.com/radiocoin-android
-# ![](https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android-400.png =150x80)
+# <img src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android-400.png" data-canonical-src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android-400.png" width="100" height="100" />
+
 
 # RADIOACTIVE !!
 
