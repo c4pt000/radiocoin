@@ -3,7 +3,9 @@
 # released as free in case the electrumX server I am running goes down
 # https://tinyurl.com/radiocoin-android
 
-(if github had a readme.markup document html style tag like ![QR](https://linktoqrcode.com) then maybe i could have pasted this QR code without physically uploading a png image of the serialized QR code?
+(if github had a readme.markup document html style tag like 
+```![QR](https://linktoqrcode.com)```
+then maybe i could have pasted this QR code without physically uploading a png image of the serialized QR code?
 
 # <img src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android-400.png" data-canonical-src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android-400.png" width="200" height="200" />
 
