@@ -7,7 +7,7 @@
 ```![QR](https://linktoqrcode.com)```
 then maybe i could have pasted this QR code without physically uploading a png image of the serialized QR code?
 
-# <img src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android-400.png" data-canonical-src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android.png" width="200" height="200" />
+# <img src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android.png" data-canonical-src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/radiocoin-android.png" width="200" height="200" />
 
 
 # RADIOACTIVE !!
