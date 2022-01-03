@@ -1,3 +1,9 @@
+# 01-03-2022
+
+# released as free in case the electrumX server I am running goes down
+# https://tinyurl.com/radiocoin-android
+
+
 # RADIOACTIVE !!
 
 # 12-14-2021
