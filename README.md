@@ -2,6 +2,8 @@
 # generate a block
 # radiocoin-cli generate 1
 * as a script for crontab -e or not
+* /usr/bin/radiocoin-gen
+* chmod +x /usr/bin/radiocoin-gen
 ```
 #!/bin/sh
 
