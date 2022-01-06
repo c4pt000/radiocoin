@@ -1,6 +1,6 @@
 # 01-06-2022
 # generate a block
-# radiocoin-cli generate 1
+# radiocoin-cli generate 10
 * as a script for crontab -e or not
 * /usr/bin/radiocoin-gen
 * chmod +x /usr/bin/radiocoin-gen
@@ -10,7 +10,7 @@
 
 while :
 do
-radiocoin-cli generate 1
+radiocoin-cli generate 10
 done
 ```
 
