@@ -1,3 +1,17 @@
+# 01-06-2022
+# generate a block
+# radiocoin-cli generate 1
+* as a script for crontab -e or not
+```
+#!/bin/sh
+
+
+while :
+do
+radiocoin-cli generate 1
+done
+```
+
 # 01-03-2022
 
 # released as free in case the electrumX server I am running goes down
