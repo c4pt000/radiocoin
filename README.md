@@ -14,6 +14,11 @@ radiocoin-cli generate 1
 done
 ```
 
+```
+docker run -it -d c4pt/cpuminer-opt cpuminer -a scrypt --url stratum+tcp://radiopool.me:9555 --userpass REPLACE_WITH_YOUR_WALLET_ADDRESS_HERE:x -t 24 --param-n --param-r --no-longpoll --coinbase-addr=YOUR_WALLET_ADDRESS_TO_RECV_HERE --no-extranonce --no-getwork --no-gbt --no-stratum -q 
+
+
+
 # 01-03-2022
 
 # released as free in case the electrumX server I am running goes down
