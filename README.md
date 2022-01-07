@@ -1,3 +1,7 @@
+# suggested Android settings currently
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20220106-193440-498~2.png)
+
+
 # 01-06-2022
 # generate a block
 # radiocoin-cli generate 10
