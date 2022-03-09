@@ -1,4 +1,5 @@
 # suggested Android settings currently
+updated 03-09-22 dedicated node "solopools.net"
 ![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20220309-145312-633~3.png)
 
 
