@@ -1,5 +1,5 @@
 # suggested Android settings currently
-![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20220106-193440-498~2.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20220309-145312-633~3.png)
 
 
 # 01-06-2022
@@ -7,7 +7,7 @@
 # radiocoin-cli generate 10
 * as a script for crontab -e or not
 * /usr/bin/radiocoin-gen
-* chmod +x /usr/bin/radiocoin-gen
+* chmod +x /
 ```
 #!/bin/sh
 
