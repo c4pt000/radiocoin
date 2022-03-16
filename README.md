@@ -1,6 +1,6 @@
 # suggested Android settings currently
 # updated 03-09-22 dedicated node "solopools.net 66.228.34.29:9335 radioblockchain.info 46.101.169.238
-
+# https://drive.google.com/file/d/1ZPhDYO7O-BTd-XaEanOnxGBcNw1q-vzP/view?usp=sharing
 
 # 01-06-2022
 # generate a block
