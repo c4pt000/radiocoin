@@ -1,6 +1,5 @@
 # suggested Android settings currently
-# updated 03-09-22 dedicated node "solopools.net 66.228.34.29:9335
-![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20220309-145312-633~3.png)
+# updated 03-09-22 dedicated node "solopools.net 66.228.34.29:9335 radioblockchain.info 46.101.169.238
 
 
 # 01-06-2022
