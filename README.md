@@ -1,4 +1,4 @@
-# CRYPTO currency requires precise computer systems clock
+# all CRYPTO currencies require precise computer systems clock for 100% functionality
 # ntpd mandatory must have complete 100% synced time
 ```                                        
     04-01-2022                                                     
