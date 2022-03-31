@@ -1,3 +1,15 @@
+# CRYPTO currency requires precise computer systems clock
+# ntpd mandatory must have complete 100% synced time
+```                                        
+    04-01-2022                                                     
+
+yum install ntpsec -y                                                                                          
+systemctl enable ntpd
+systemctl start ntpd
+ntpdate
+
+must have NTP (network time protocol outbound port 123 open)
+```
 # suggested Android settings currently
 # updated 03-09-22 dedicated node "solopools.net 66.228.34.29:9335 radioblockchain.info 46.101.169.238
 # https://drive.google.com/file/d/1ZPhDYO7O-BTd-XaEanOnxGBcNw1q-vzP/view?usp=sharing
