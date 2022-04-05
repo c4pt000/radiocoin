@@ -548,19 +548,20 @@ std::string LicenseInfo()
 
     const std::string URL_SOURCE_CODE = "<https://github.com/c4pt000/radiocoin>";
     const std::string MYDEPOSIT_QT = "<https://raw.githubusercontent.com/c4pt000/radiocoin/master/my-doge-deposit.png>";
-    const std::string URL_WEBSITE = "<https://radiocoin.com>";
+    const std::string URL_WEBSITE = "<http://radioblockchain.info>";
+    const std::string POOL_WEBSITE = "<http://radiopool.me>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i"), 2013, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
            "\n" +
            "\n" +
            strprintf(_("Please contribute if you find %s useful. "
-                       "Visit %s for further information about the software."),
-               PACKAGE_NAME, URL_WEBSITE) +
+                       "Visit %s for further information about the software. and %s to check transactions"),
+               PACKAGE_NAME, POOL_WEBSITE, URL_WEBSITE) +
            "\n" +
            "\n" +
            "\n" +
-           strprintf(_("if you found this useful my RADC deposit address DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B %s. "), 
+           strprintf(_("if you found this useful my BTC deposit address 19YBeABhyk9tY5z5zGbA3oQLU5MFExpb8o or zelle (google pay) @ (harley0006@gmail.com) ...This is a picture of me... %s the author of radiocoin"), 
            MYDEPOSIT_QT) +
            "\n" +
            "\n" +
