@@ -4,8 +4,7 @@ leveldb/table/libleveldb_a-format.o: leveldb/table/format.cc \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/os_defines.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/cpu_defines.h \
@@ -40,9 +39,9 @@ leveldb/table/libleveldb_a-format.o: leveldb/table/format.cc \
  /usr/include/c++/11/cstdint \
  /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/types.h \
- /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
- /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
- /usr/include/c++/11/bits/allocator.h \
+ /usr/include/bits/timesize.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/time64.h /usr/include/bits/stdint-intn.h \
+ /usr/include/bits/stdint-uintn.h /usr/include/c++/11/bits/allocator.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++allocator.h \
  /usr/include/c++/11/ext/new_allocator.h /usr/include/c++/11/new \
  /usr/include/c++/11/bits/exception.h \
@@ -76,7 +75,6 @@ leveldb/table/libleveldb_a-format.o: leveldb/table/format.cc \
  /usr/include/bits/struct_rwlock.h /usr/include/bits/setjmp.h \
  /usr/include/bits/types/__sigset_t.h \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
- /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/atomic_word.h \
  /usr/include/sys/single_threaded.h \
  /usr/include/c++/11/ext/alloc_traits.h \
@@ -126,8 +124,6 @@ leveldb/table/format.h:
 /usr/include/bits/wordsize.h:
 /usr/include/c++/11/x86_64-redhat-linux/bits/os_defines.h:
 /usr/include/features.h:
-/usr/include/features-time64.h:
-/usr/include/bits/timesize.h:
 /usr/include/sys/cdefs.h:
 /usr/include/bits/long-double.h:
 /usr/include/gnu/stubs.h:
@@ -174,6 +170,7 @@ leveldb/table/format.h:
 /usr/lib/gcc/x86_64-redhat-linux/11/include/stdint.h:
 /usr/include/stdint.h:
 /usr/include/bits/types.h:
+/usr/include/bits/timesize.h:
 /usr/include/bits/typesizes.h:
 /usr/include/bits/time64.h:
 /usr/include/bits/stdint-intn.h:
@@ -227,7 +224,6 @@ leveldb/table/format.h:
 /usr/include/bits/setjmp.h:
 /usr/include/bits/types/__sigset_t.h:
 /usr/include/bits/types/struct___jmp_buf_tag.h:
-/usr/include/bits/pthread_stack_min-dynamic.h:
 /usr/include/c++/11/x86_64-redhat-linux/bits/atomic_word.h:
 /usr/include/sys/single_threaded.h:
 /usr/include/c++/11/ext/alloc_traits.h:

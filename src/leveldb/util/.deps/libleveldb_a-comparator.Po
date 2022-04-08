@@ -4,8 +4,7 @@ leveldb/util/libleveldb_a-comparator.o: leveldb/util/comparator.cc \
  /usr/include/c++/11/x86_64-redhat-linux/bits/c++config.h \
  /usr/include/bits/wordsize.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/os_defines.h \
- /usr/include/features.h /usr/include/features-time64.h \
- /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
+ /usr/include/features.h /usr/include/sys/cdefs.h \
  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
  /usr/include/gnu/stubs-64.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/cpu_defines.h \
@@ -32,14 +31,15 @@ leveldb/util/libleveldb_a-comparator.o: leveldb/util/comparator.cc \
  /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/sys/types.h /usr/include/bits/types.h \
- /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
- /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
- /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
- /usr/include/bits/stdint-intn.h /usr/include/endian.h \
- /usr/include/bits/endian.h /usr/include/bits/endianness.h \
- /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
- /usr/include/sys/select.h /usr/include/bits/select.h \
- /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/timesize.h /usr/include/bits/typesizes.h \
+ /usr/include/bits/time64.h /usr/include/bits/types/clock_t.h \
+ /usr/include/bits/types/clockid_t.h /usr/include/bits/types/time_t.h \
+ /usr/include/bits/types/timer_t.h /usr/include/bits/stdint-intn.h \
+ /usr/include/endian.h /usr/include/bits/endian.h \
+ /usr/include/bits/endianness.h /usr/include/bits/byteswap.h \
+ /usr/include/bits/uintn-identity.h /usr/include/sys/select.h \
+ /usr/include/bits/select.h /usr/include/bits/types/sigset_t.h \
+ /usr/include/bits/types/__sigset_t.h \
  /usr/include/bits/types/struct_timeval.h \
  /usr/include/bits/types/struct_timespec.h /usr/include/bits/select2.h \
  /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
@@ -88,7 +88,6 @@ leveldb/util/libleveldb_a-comparator.o: leveldb/util/comparator.cc \
  /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
- /usr/include/bits/pthread_stack_min-dynamic.h \
  /usr/include/c++/11/x86_64-redhat-linux/bits/atomic_word.h \
  /usr/include/sys/single_threaded.h \
  /usr/include/c++/11/ext/alloc_traits.h \
@@ -122,8 +121,6 @@ leveldb/util/libleveldb_a-comparator.o: leveldb/util/comparator.cc \
 /usr/include/bits/wordsize.h:
 /usr/include/c++/11/x86_64-redhat-linux/bits/os_defines.h:
 /usr/include/features.h:
-/usr/include/features-time64.h:
-/usr/include/bits/timesize.h:
 /usr/include/sys/cdefs.h:
 /usr/include/bits/long-double.h:
 /usr/include/gnu/stubs.h:
@@ -161,6 +158,7 @@ leveldb/util/libleveldb_a-comparator.o: leveldb/util/comparator.cc \
 /usr/include/bits/types/__locale_t.h:
 /usr/include/sys/types.h:
 /usr/include/bits/types.h:
+/usr/include/bits/timesize.h:
 /usr/include/bits/typesizes.h:
 /usr/include/bits/time64.h:
 /usr/include/bits/types/clock_t.h:
@@ -249,7 +247,6 @@ leveldb/include/leveldb/comparator.h:
 /usr/include/bits/types/struct_itimerspec.h:
 /usr/include/bits/setjmp.h:
 /usr/include/bits/types/struct___jmp_buf_tag.h:
-/usr/include/bits/pthread_stack_min-dynamic.h:
 /usr/include/c++/11/x86_64-redhat-linux/bits/atomic_word.h:
 /usr/include/sys/single_threaded.h:
 /usr/include/c++/11/ext/alloc_traits.h:
