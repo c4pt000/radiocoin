@@ -101,7 +101,11 @@ public:
         consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan =  4 * 60 * 60; // 4 hours
 //4 * 60 * 60; // pre-digishield: 4 hours
-        consensus.nPowTargetSpacing =  60; // 1 minute
+    //    consensus.nPowTargetSpacing =  60; // 1 minute
+
+// my original mental mistake peers can't communicate under a minute too quickly to retarget properly more suitable for an hour or half an hour
+   consensus.nPowTargetSpacing =  60 * 20; // 20 minute
+
         consensus.fDigishieldDifficultyCalculation = false;
         consensus.nCoinbaseMaturity = 10;  // set block the number of confirms it takes until a block is available as a regular balance
         consensus.fPowAllowMinDifficultyBlocks = false;
@@ -129,8 +133,11 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("");
-//        consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
+ 
+
+    //   consensus.nMinimumChainWork = uint256S("")   
+
+  consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
 
 
 
@@ -150,12 +157,12 @@ public:
         // Blocks 145000 - 371336 are Digishield without AuxPoW 
 	//enabled at block 2050 for early p2pool chain id mining
         digishieldConsensus = consensus;
-//        digishieldConsensus.nHeightEffective = 145000;
+//             //  digishieldConsensus.nHeightEffective = 145000;
         digishieldConsensus.nHeightEffective = 100;
         digishieldConsensus.fSimplifiedRewards = true;
         digishieldConsensus.fDigishieldDifficultyCalculation = true;
-        digishieldConsensus.nPowTargetTimespan = 60; // post-digishield: 1 minute
-//        digishieldConsensus.nCoinbaseMaturity = 240;
+        digishieldConsensus.nPowTargetTimespan = 60 * 20; // post-digishield: 1 minute
+//               // digishieldConsensus.nCoinbaseMaturity = 240;
         digishieldConsensus.nCoinbaseMaturity = 10;
 
         // Blocks 371337+ are AuxPoW
