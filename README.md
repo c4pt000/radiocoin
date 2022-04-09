@@ -1,3 +1,9 @@
+
+# 04-08-22
+# update to radiocoin 8.0.1 block timespan target adjustment
+* in releases
+
+
 # all CRYPTO currencies require precise computer systems clock for 100% functionality
 # ntpd mandatory must have complete 100% synced time
 ```                                        
