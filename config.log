@@ -29,6 +29,7 @@ uname -v = #1 SMP Wed Apr 7 16:31:13 UTC 2021
 
 PATH: /root/.local/bin
 PATH: /root/bin
+PATH: /usr/lib64/ccache
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
@@ -91,7 +92,7 @@ configure:3640: result: yes
 configure:3665: checking whether make supports nested variables
 configure:3682: result: yes
 configure:3757: checking for g++
-configure:3773: found /usr/bin/g++
+configure:3773: found /usr/lib64/ccache/g++
 configure:3784: result: g++
 configure:3811: checking for C++ compiler version
 configure:3820: g++ --version >&5
@@ -103,7 +104,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 configure:3831: $? = 0
 configure:3820: g++ -v >&5
 Using built-in specs.
-COLLECT_GCC=g++
+COLLECT_GCC=/usr/bin/g++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
 OFFLOAD_TARGET_NAMES=nvptx-none
 OFFLOAD_TARGET_DEFAULT=1
@@ -177,7 +178,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 configure:4974: $? = 0
 configure:4963: g++ -std=c++11 -v >&5
 Using built-in specs.
-COLLECT_GCC=g++
+COLLECT_GCC=/usr/bin/g++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
 OFFLOAD_TARGET_NAMES=nvptx-none
 OFFLOAD_TARGET_DEFAULT=1
@@ -298,7 +299,7 @@ configure:5210: result: gcc3
 configure:5273: checking how to print strings
 configure:5300: result: printf
 configure:5369: checking for gcc
-configure:5385: found /usr/bin/gcc
+configure:5385: found /usr/lib64/ccache/gcc
 configure:5396: result: gcc
 configure:5625: checking for C compiler version
 configure:5634: gcc --version >&5
@@ -310,7 +311,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 configure:5645: $? = 0
 configure:5634: gcc -v >&5
 Using built-in specs.
-COLLECT_GCC=gcc
+COLLECT_GCC=/usr/bin/gcc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
 OFFLOAD_TARGET_NAMES=nvptx-none
 OFFLOAD_TARGET_DEFAULT=1
@@ -3064,6 +3065,7 @@ config.status:1391: creating src/config/bitcoin-config.h
 config.status:1572: src/config/bitcoin-config.h is unchanged
 config.status:1651: executing depfiles commands
 config.status:1728: cd src       && sed -e '/# am--include-marker/d' Makefile         | make -f - am--depfiles
+make: Nothing to be done for 'am--depfiles'.
 config.status:1733: $? = 0
 config.status:1651: executing libtool commands
 configure:33115: === configuring in src/univalue (/opt/radiocoin/src/univalue)
