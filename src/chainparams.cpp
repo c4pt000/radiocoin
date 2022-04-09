@@ -104,15 +104,15 @@ public:
     //    consensus.nPowTargetSpacing =  60; // 1 minute
 
 // my original mental mistake peers can't communicate under a minute too quickly to retarget properly more suitable for an hour or half an hour
-   consensus.nPowTargetSpacing =  60 * 20; // 20 minute
+   consensus.nPowTargetSpacing =  60 * 180; // 20 minute
 
         consensus.fDigishieldDifficultyCalculation = false;
         consensus.nCoinbaseMaturity = 10;  // set block the number of confirms it takes until a block is available as a regular balance
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowAllowDigishieldMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 9576; // 95% of 10,080
-        consensus.nMinerConfirmationWindow = 10080; // 60 * 24 * 7 = 10,080 blocks, or one week
+        consensus.nRuleChangeActivationThreshold = 114; // 95% of 10,080
+        consensus.nMinerConfirmationWindow = 120; // 60 * 24 * 7 = 10,080 blocks, or one week
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0; // January 1, 2008
@@ -121,8 +121,8 @@ public:
 //        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
-        // XXX: BIP heights and hashes all need to be updated to Dogecoin values
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
+      // XXX: BIP heights and hashes all need to be updated to Dogecoin values
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 1;
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // May 1st, 2016
 //        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1462060800; // May 1st, 2016
 
@@ -134,10 +134,9 @@ public:
 
         // The best chain should have at least this much work.
  
+       consensus.nMinimumChainWork = uint256S("");
 
-    //   consensus.nMinimumChainWork = uint256S("")   
-
-  consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
+//  consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000141a39e783aad4f660f");
 
 
 
@@ -161,8 +160,8 @@ public:
         digishieldConsensus.nHeightEffective = 100;
         digishieldConsensus.fSimplifiedRewards = true;
         digishieldConsensus.fDigishieldDifficultyCalculation = true;
-        digishieldConsensus.nPowTargetTimespan = 60 * 20; // post-digishield: 1 minute
-//               // digishieldConsensus.nCoinbaseMaturity = 240;
+        digishieldConsensus.nPowTargetTimespan = 60 * 200; // post-digishield: 1 minute
+//               // digishieldConsensus.noinbaseMaturity = 240;
         digishieldConsensus.nCoinbaseMaturity = 10;
 
         // Blocks 371337+ are AuxPoW
