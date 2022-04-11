@@ -60,8 +60,8 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
 
- const char* pszTimestamp = "RadioCoin wallet";
-    const CScript genesisOutputScript = CScript() << ParseHex("046b8e36534122449a1d0c0c2b380647b23b562fb0be95b698596a2507eb6aa5c5dba4294bc39f31b3b2351994673ce150449ad83bce4b7624b7c488f6ca23aa71") << OP_CHECKSIG;
+ const char* pszTimestamp = "04-11-22 May 28th would have been a year at 05-28-22..339976..RADCv2";
+    const CScript genesisOutputScript = CScript() << ParseHex("044522ae1eaae459e183a2afe0e5c6bdcc01dca3515d7e02dec9fab5b60049dbb768913fd22be929c2e5e6f86a0780e57ac4d44894c1ad528c301e13eef5b8fa95") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 
 }
