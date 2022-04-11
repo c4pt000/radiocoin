@@ -238,8 +238,16 @@ public:
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
 
 
-        assert(consensus.hashGenesisBlock == uint256S("0x000007ce46e6c59844c34fa7ba5b27c8dac0653a27fcfb7340cc0158849e4afd"));
-        assert(genesis.hashMerkleRoot == uint256S("0xa26a8a2fd11aa7f3078cb895e75dbb38e64bc833321e7e18307836717421380b"));
+
+
+
+
+
+
+        assert(consensus.hashGenesisBlock == uint256S("0x000008e30e29353aeae6ccbba14a5e3cbbd88f0cd65b4ee30941d657599c4ae5"));
+
+        assert(genesis.hashMerkleRoot == uint256S("0x082c20336ac0d1597ef6bf182510ac2a9c958cf18a6fadf93d27d22e0a4d10e7"));
+
 
 
 
@@ -439,8 +447,9 @@ Testnet ---
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         minDifficultyConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-        assert(consensus.hashGenesisBlock == uint256S("0x00000a2ee9363d21e47bc10d5b1e39d4ae4bd950491790e522f90dad86d2d1eb"));
-        assert(genesis.hashMerkleRoot == uint256S("0xa26a8a2fd11aa7f3078cb895e75dbb38e64bc833321e7e18307836717421380b"));
+
+        assert(consensus.hashGenesisBlock == uint256S("0x00000d80d1687b559e5075ca93ad69903e6315da8347aa42c8397935b483a197"));
+        assert(genesis.hashMerkleRoot == uint256S("0x082c20336ac0d1597ef6bf182510ac2a9c958cf18a6fadf93d27d22e0a4d10e7"));
 
 	 vFixedSeeds.clear();
         vSeeds.clear();
@@ -608,8 +617,10 @@ RegTestnet ---
      consensus.hashGenesisBlock = genesis.GetHash();
         digishieldConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
         auxpowConsensus.hashGenesisBlock = consensus.hashGenesisBlock;
-        assert(consensus.hashGenesisBlock == uint256S("0x1b38af7fac04373a2619b6f0e8f2fc73f45380fb98bef338b41fb64e893b9cd2"));
-        assert(genesis.hashMerkleRoot == uint256S("0xa26a8a2fd11aa7f3078cb895e75dbb38e64bc833321e7e18307836717421380b"));
+        assert(consensus.hashGenesisBlock == uint256S("0x7294613f112888df1ce9749cda06c8e40c49fab97730ed079073ca1e5a5b16dc"));
+
+
+        assert(genesis.hashMerkleRoot == uint256S("0x082c20336ac0d1597ef6bf182510ac2a9c958cf18a6fadf93d27d22e0a4d10e7"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
