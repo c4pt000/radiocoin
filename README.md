@@ -1,3 +1,5 @@
+no windows or macos only Linux while resetting the Blockchain to 0
+
 # 04-10-22
 # I have to reset the Blockchain all the way back to 0
 # issues with peer connectivity and other issues 
