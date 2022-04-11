@@ -6,11 +6,17 @@
 # personally i am homeless after being robbed for Everything in the last 6 months
 # so being victimized everything is difficult to maintain since this is all of my custom code
 # macos binaries can't be built now
-# might take a week or two to rebuild the Android standard application
+# might take a week or two to rebuild the Android-radiocoin-wallet standard application
 # in order to publish to Google play an updated copy
 
 # electrum-radiocoin for Android should still work
 # and electrum-radiocoin for desktop
+
+
+
+
+
+
 
 # all CRYPTO currencies require precise computer systems clock for 100% functionality
 # ntpd mandatory must have complete 100% synced time
