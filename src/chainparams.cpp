@@ -101,38 +101,38 @@ public:
         consensus.BIP66Height = 1; // 80d1364201e5df97e696c03bdd24dc885e8617b9de51e453c10a4f629b1e797a - this is the last block that could be v2, 1900 blocks past the last v2 block
     //    consensus.powLimit = uint256S("0x00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.powLimit = uint256S("");
-        consensus.nPowTargetTimespan =  4 * 60 * 60; // 4 hours
+        consensus.nPowTargetTimespan =  25 * 60 * 60; // 25 hours
 //4 * 60 * 60; // pre-digishield: 4 hours
     //    consensus.nPowTargetSpacing =  60; // 1 minute
 
 // my original mental mistake peers can't communicate under a minute too quickly to retarget properly more suitable for an hour or half an hour
-   consensus.nPowTargetSpacing =  60 * 180; // 20 minute
+   consensus.nPowTargetSpacing =  60 * 180; // 3 hrs 
 
         consensus.fDigishieldDifficultyCalculation = false;
         consensus.nCoinbaseMaturity = 10;  // set block the number of confirms it takes until a block is available as a regular balance
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowAllowDigishieldMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
-        consensus.nRuleChangeActivationThreshold = 114; // 95% of 10,080
-        consensus.nMinerConfirmationWindow = 120; // 60 * 24 * 7 = 10,080 blocks, or one week
+        consensus.nRuleChangeActivationThreshold = 1368; // 95% of 1440
+        consensus.nMinerConfirmationWindow = 1440; // 60 * 24 * 7 = 10,080 blocks,/7 or one day
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 0; // January 1, 2008
-        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 0; // December 31, 2008
+        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1649677158; // January 1, 2008
+    //    consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 0; // December 31, 2008
 //        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
 //        consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
         // Deployment of BIP68, BIP112, and BIP113.
       // XXX: BIP heights and hashes all need to be updated to Dogecoin values
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // May 1st, 2016
-//        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1462060800; // May 1st, 2016
+       // consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 0; // May 1st, 2016
+      consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 1649677158; // May 1st, 2016
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 0; // November 15th, 2016.
+        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1649677158; // November 15th, 2016.
 //        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nStartTime = 1479168000; // November 15th, 2016.
-        consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
+   //     consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].nTimeout = 0; // Disabled
 
         // The best chain should have at least this much work.
  
@@ -162,7 +162,7 @@ public:
         digishieldConsensus.nHeightEffective = 100;
         digishieldConsensus.fSimplifiedRewards = true;
         digishieldConsensus.fDigishieldDifficultyCalculation = true;
-        digishieldConsensus.nPowTargetTimespan = 60 * 200; // post-digishield: 1 minute
+        digishieldConsensus.nPowTargetTimespan = 60 * 200; // post-digishield: 1 minute 3 hr 20 minutes 
 //               // digishieldConsensus.noinbaseMaturity = 240;
         digishieldConsensus.nCoinbaseMaturity = 10;
 
