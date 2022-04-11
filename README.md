@@ -1,4 +1,4 @@
-no windows or macos only Linux while resetting the Blockchain to 0
+no windows pkgs or macos pkgs only Linux pkgs in releases while resetting the Blockchain to 0
 
 # 04-10-22
 # I have to reset the Blockchain all the way back to 0
