@@ -1,3 +1,17 @@
+# 04-10-22
+# I have to reset the Blockchain all the way back to 0
+# issues with peer connectivity and other issues 
+# (i haven't made $1 yet from buying or selling my coin as radiocoin
+# i still intend to modify Bisq as my current version of radiox-exchange to allow buying and selling of radiocoin
+# personally i am homeless after being robbed for Everything in the last 6 months
+# so being victimized everything is difficult to maintain since this is all of my custom code
+# macos binaries can't be built now
+# might take a week or two to rebuild the Android standard application
+# in order to publish to Google play an updated copy
+
+# electrum-radiocoin for Android should still work
+# and electrum-radiocoin for desktop
+
 # all CRYPTO currencies require precise computer systems clock for 100% functionality
 # ntpd mandatory must have complete 100% synced time
 ```                                        
