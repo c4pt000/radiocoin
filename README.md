@@ -1,3 +1,17 @@
+
+# 01-02-23
+# happy new year
+# radiocoin is currently offline as a cryptocurrency as I have been experiencing troubles in my personal life
+# with the needs to find housing and work in order to have piece of mind to overhaul the project
+# I plan to try and pick up where I left off by merging changes in a few months from bitcoin core
+# instead of using the current dogecoin source code I also intend to do this when I overhaul radiox exchange
+
+# i intend to also overhaul radiox exchange and I plan to implement a few bug free features into radiox and radiocoin wallets
+# for the betterment of the project and also to help add insight into the cryptocurrency community to
+# help enlighten aspiring cryptocurrency designers and professionals 
+# thank you and happy new year to all prospective users (check back on this repo once in a while for new changes)
+
+
 no windows pkgs or macos pkgs only Linux pkgs in releases while resetting the Blockchain to 0
 
 # 04-10-22
