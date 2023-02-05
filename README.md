@@ -1,3 +1,13 @@
+# 02-05-2023
+# radiocoin is now an archive please see the updated coin I have rolled called bitnet-core
+# please see the main project page here
+# https://github.com/bitnet-io/bitnet-core
+# for releases
+# https://github.com/bitnet-io/bitnet-core/releases
+
+
+
+
 
 # 01-02-23
 # happy new year
